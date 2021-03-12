@@ -1,0 +1,14 @@
+- name: Docs
+  tocHref: /
+  topicHref: /
+  items:
+  - name: PowerShell Utility Modules
+    tocHref: /powerShell-docs-modules/
+    topicHref: /powerShell-docs-modules/index
+    items:
+    - name: PowerShell Utility Modules 
+      tocHref: /powershell/powerShell-docs-modules/
+      topicHref: /powershell/powerShell-docs-modules/overview
+    - name: PowerShell Utility Modules 
+      tocHref: /powershell/module/powerShell-docs-modules
+      topicHref: /powershell/module/powerShell-docs-modules/powerShell-docs-modules

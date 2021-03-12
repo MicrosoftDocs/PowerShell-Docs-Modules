@@ -1,0 +1,83 @@
+{
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.md"
+        ],
+        "src": "docs-conceptual",
+        "version": "ps-modules",
+        "dest": "PowerShell-Docs-Modules"
+      },
+      {
+        "files": [
+          "toc.yml"
+        ],
+        "src": "docs-conceptual",
+        "version": "ps-modules",
+        "dest": "PowerShell-Docs-Modules/ce"
+      },
+      {
+        "files": [
+          "**/*.yml"
+        ],
+        "exclude": [
+          "toc.yml" 
+        ],
+        "src": "ps-modules",
+        "version": "ps-modules",
+        "dest": "module"
+      },
+      {
+        "files": [
+          "toc.yml"
+        ],
+        "src": "ps-modules",
+        "version": "ps-modules",
+        "dest": "module/ps-modules"
+      },
+      {
+        "files":[
+          "toc.yml"
+        ],
+        "src": "breadcrumb",
+        "dest": "PowerShell-Docs-Modules/breadcrumb"
+      },
+      {
+        "files": [
+          "**/*.md"
+        ],
+        "src": "virtual-folder",
+        "dest": "module"
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "**/*.png",
+          "**/*.jpg"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**"
+        ]
+      }
+    ],
+    "versions": {
+      "ps-modules": {
+        "dest": "ps-modules"
+      }
+    },
+    "overwrite": [],
+    "externalReference": [],
+    "globalMetadata": {
+      "apiPlatform": "powershell",
+      "breadcrumb_path": "/powershell/PowerShell-Docs-Modules/breadcrumb/toc.json",
+	  "ms.prod": "powershell"
+    },
+    "fileMetadata": {},
+    "template": [],
+    "dest": "PowerShell-Docs-Modules",
+    "markdownEngineName": "markdig"
+  }
+}

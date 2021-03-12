@@ -3,12 +3,12 @@
   topicHref: /
   items:
   - name: PowerShell Utility Modules
-    tocHref: /PowerShell-Docs-Modules/
-    topicHref: /PowerShell-Docs-Modules/index
+    tocHref: /powerShell-docs-modules/
+    topicHref: /powerShell-docs-modules/index
     items:
     - name: PowerShell Utility Modules 
-      tocHref: /powershell/PowerShell-Docs-Modules/
-      topicHref: /powershell/PowerShell-Docs-Modules/overview
+      tocHref: /powershell/powerShell-docs-modules/
+      topicHref: /powershell/powerShell-docs-modules/overview
     - name: PowerShell Utility Modules 
-      tocHref: /powershell/module/PowerShell-Docs-Modules
-      topicHref: /powershell/module/PowerShell-Docs-Modules/PowerShell-Docs-Modules
+      tocHref: /powershell/module/powerShell-docs-modules
+      topicHref: /powershell/module/powerShell-docs-modules/powerShell-docs-modules

@@ -72,7 +72,8 @@
     "externalReference": [],
     "globalMetadata": {
       "apiPlatform": "powershell",
-      "breadcrumb_path": "/powershell/PowerShell-Docs-Modules/breadcrumb/toc.json"
+      "breadcrumb_path": "/powershell/PowerShell-Docs-Modules/breadcrumb/toc.json",
+	  "ms.prod": "powershell"
     },
     "fileMetadata": {},
     "template": [],

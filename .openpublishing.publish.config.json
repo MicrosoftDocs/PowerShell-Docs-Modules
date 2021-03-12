@@ -2,8 +2,8 @@
   "docsets_to_publish": [
     {
       "docset_name": "PowerShell-Docs-Modules",
-      "build_source_folder": "PowerShell-Docs-Modules",
-      "build_output_subfolder": "PowerShell-Docs-Modules",
+      "build_source_folder": "reference",
+      "build_output_subfolder": "reference",
       "locale": "en-us",
       "monikers": [],
       "moniker_ranges": [],

@@ -1,83 +1,106 @@
 {
   "build": {
     "content": [
-      {
-        "files": [
-          "**/*.md"
-        ],
-        "src": "docs-conceptual",
-        "version": "ps-modules",
-        "dest": "PowerShell-Docs-Modules"
-      },
-      {
-        "files": [
-          "toc.yml"
-        ],
-        "src": "docs-conceptual",
-        "version": "ps-modules",
-        "dest": "PowerShell-Docs-Modules/ce"
-      },
-      {
-        "files": [
-          "**/*.yml"
-        ],
-        "exclude": [
-          "toc.yml" 
-        ],
-        "src": "ps-modules",
-        "version": "ps-modules",
-        "dest": "module"
-      },
-      {
-        "files": [
-          "toc.yml"
-        ],
-        "src": "ps-modules",
-        "version": "ps-modules",
-        "dest": "module/ps-modules"
-      },
-      {
-        "files":[
-          "toc.yml"
-        ],
-        "src": "breadcrumb",
-        "dest": "PowerShell-Docs-Modules/breadcrumb"
-      },
-      {
-        "files": [
-          "**/*.md"
-        ],
-        "src": "virtual-folder",
-        "dest": "module"
-      }
+      { "dest": "utility-modules/breadcrumb", "files": [ "toc.yml" ], "src": "breadcrumb" },
+
+      { "dest": "utility-modules/ce", "files": [ "toc.yml" ], "src": "docs-conceptual", "version": "ps-modules" },
+      { "dest": "utility-modules", "files": [ "**/*.md", "**/**.yml" ], "src": "docs-conceptual", "version": "ps-modules" },
+
+      { "dest": "module/ps-modules", "files": [ "toc.yml" ], "src": "ps-modules", "version": "ps-modules" },
+      { "dest": "module", "exclude": [ "docs-conceptual/**"], "files": [ "**/*.yml", "**/About/*.md" ], "src": "ps-modules", "version": "ps-modules" },
+
+      { "dest": "module", "files": [ "**/*.md" ], "src": "virtual-folder" }
     ],
+    "dest": "PowerShell-Docs-Modules",
+    "externalReference": [],
+    "fileMetadata": {
+      "author": {
+        "**/Microsoft.PowerShell.Crescendo/**.md": "JamesWTruher",
+        "**/Microsoft.PowerShell.Crescendo/**.yml": "JamesWTruher",
+        "**/Microsoft.PowerShell.SecretManagement/**.yml": "PaulHigin",
+        "**/Microsoft.PowerShell.SecretStore/**.yml": "PaulHigin",
+        "**/PlatyPS/**.md": "adityapatwardhan",
+        "**/PlatyPS/**.yml": "adityapatwardhan",
+        "**/PSScriptAnalyzer/**.yml": "JamesWTruher",
+        "docs-conceptual/**.md": "sdwheeler"
+      },
+      "feedback_product_url": {
+        "ps-modules/Microsoft.PowerShell.Crescendo/**.md": "https://github.com/PowerShell/Crescendo/issues/new/choose",
+        "ps-modules/Microsoft.PowerShell.Crescendo/**.yml": "https://github.com/PowerShell/Crescendo/issues/new/choose",
+        "ps-modules/Microsoft.PowerShell.SecretManagement/**.yml": "https://github.com/PowerShell/SecretManagement/issues/new/choose",
+        "ps-modules/Microsoft.PowerShell.SecretStore/**.yml": "https://github.com/PowerShell/SecretStore/issues/new/choose",
+        "ps-modules/PlatyPS/**.md": "https://github.com/PowerShell/platyPS/issues/new/choose",
+        "ps-modules/PlatyPS/**.yml": "https://github.com/PowerShell/platyPS/issues/new/choose",
+        "ps-modules/PSScriptAnalyzer/**.yml": "https://github.com/PowerShell/PSScriptAnalyzer/issues/new/choose"
+      },
+      "manager": {
+        "**/**": "sewhee"
+      },
+      "ms.author": {
+        "**/Microsoft.PowerShell.Crescendo/**.md": "jimtru",
+        "**/Microsoft.PowerShell.Crescendo/**.yml": "jimtru",
+        "**/Microsoft.PowerShell.SecretManagement/**.yml": "paulhi",
+        "**/Microsoft.PowerShell.SecretStore/**.yml": "paulhi",
+        "**/PlatyPS/**.md": "adityap",
+        "**/PlatyPS/**.yml": "adityap",
+        "**/PSScriptAnalyzer/**.yml": "jimtru",
+        "docs-conceptual/**.md": "sewhee",
+      },
+      "ms.prod": {
+        "**/**.md": "powershell",
+        "**/**.yml": "powershell"
+      },
+      "ms.technology": {
+        "**/**.md": "powershell-conceptual",
+        "**/**.yml": "powershell-cmdlets",
+        "docs-conceptual/**/**.md": "powershell-conceptual"
+      },
+      "ms.tgt_pltfr": {
+        "**/**": "windows, macos, linux"
+      },
+      "ms.topic": {
+        "ps-modules/**.md": "managed-reference",
+        "docs-conceptual/**/**.md": "conceptual"
+      },
+      "products": {
+        "**/**.md": [ "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3" ],
+        "**/**.yml": [ "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3" ]
+      },
+      "social_image_url": {
+        "**/**.md": "https://docs.microsoft.com/media/logos/logo-powershell-social.png",
+        "**/**.yml": "https://docs.microsoft.com/media/logos/logo-powershell-social.png"
+      }
+    },
+    "globalMetadata": {
+      "ROBOTS": "INDEX, FOLLOW",
+      "apiPlatform": "powershell",
+      "breadcrumb_path": "/powershell/PowerShell-Docs-Modules/breadcrumb/toc.json",
+      "feedback_github_repo": "MicrosoftDocs/PowerShell-Docs-Modules",
+      "feedback_system": "GitHub",
+      "ms.devlang": "powershell",
+      "ms.prod": "powershell"
+      "titleSuffix": "PowerShell",
+      "toc_preview": true,
+      "uhfHeaderId": "MSDocsHeader-Powershell"
+    },
+    "markdownEngineName": "markdig",
+    "overwrite": [],
     "resource": [
       {
+        "exclude": [ "**/obj/**", "**/includes/**" ],
         "files": [
-          "**/*.png",
-          "**/*.jpg"
-        ],
-        "exclude": [
-          "**/obj/**",
-          "**/includes/**"
+          "**/media/**/*.png",
+          "**/media/**/*.gif",
+          "**/media/**/*.jpeg",
+          "**/media/**/*.jpg",
+          "**/media/**/*.svg"
         ]
-      }
-    ],
+      },
+    "template": [],
     "versions": {
       "ps-modules": {
         "dest": "ps-modules"
       }
-    },
-    "overwrite": [],
-    "externalReference": [],
-    "globalMetadata": {
-      "apiPlatform": "powershell",
-      "breadcrumb_path": "/powershell/PowerShell-Docs-Modules/breadcrumb/toc.json",
-	  "ms.prod": "powershell"
-    },
-    "fileMetadata": {},
-    "template": [],
-    "dest": "PowerShell-Docs-Modules",
-    "markdownEngineName": "markdig"
+    }
   }
 }

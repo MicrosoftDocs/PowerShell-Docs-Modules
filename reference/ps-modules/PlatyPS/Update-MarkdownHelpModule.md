@@ -1,6 +1,7 @@
 ---
 external help file: platyPS-help.xml
 Module Name: platyPS
+ms.date: 03/16/2021
 online version: https://github.com/PowerShell/platyPS/blob/master/docs/Update-MarkdownHelpModule.md
 schema: 2.0.0
 ---
@@ -276,7 +277,7 @@ This cmdlet returns a FileInfo[] object for updated and new files.
 
 The module for which you want to update the help should first be imported from the location
 containing the previous version of the help. If this condition is not met, the parameter order will
-be alphabetical in the updated help, even if the parameter *AlphabeticParamsOrder* has not been
+be alphabetical in the updated help, even if the parameter **AlphabeticParamsOrder** has not been
 used.
 
 ## RELATED LINKS

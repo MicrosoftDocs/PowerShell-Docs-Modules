@@ -1,16 +1,19 @@
 ---
 external help file: Microsoft.Windows.PowerShell.ScriptAnalyzer.dll-Help.xml
+Module Name: PSScriptAnalyzer
+ms.date: 03/16/2021
 schema: 2.0.0
 ---
 
 # Invoke-Formatter
+
 ## SYNOPSIS
 Formats a script text based on the input settings or default settings.
 
 ## SYNTAX
 
 ```
-Invoke-Formatter [-ScriptDefinition] <String> [-Settings <object>] [-Range <int[]>]
+Invoke-Formatter [-ScriptDefinition] <String> [[-Settings] <Object>] [[-Range] <Int32[]>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -19,7 +22,7 @@ The Invoke-Formatter cmdlet takes a string parameter named ScriptDefinition and 
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
 $scriptDefinition = @'
 function foo {
@@ -32,7 +35,7 @@ Invoke-Formatter -ScriptDefinition $scriptDefinition
 
 This command formats the input script text using the default settings.
 
-### -------------------------- EXAMPLE 2 --------------------------
+### EXAMPLE 2
 ```
 $scriptDefinition = @'
 function foo {
@@ -58,7 +61,7 @@ Invoke-Formatter -ScriptDefinition $scriptDefinition -Settings $settings
 
 This command formats the input script text using the settings defined in the $settings hashtable.
 
-### -------------------------- EXAMPLE 3 --------------------------
+### EXAMPLE 3
 ```
 Invoke-Formatter -ScriptDefinition $scriptDefinition -Settings /path/to/settings.psd1
 ```
@@ -79,7 +82,7 @@ Aliases:
 
 Required: True
 Position: 1
-Default value:
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -90,6 +93,7 @@ A settings hashtable or a path to a PowerShell data file (.psd1) file that conta
 ```yaml
 Type: Object
 Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: 2
@@ -104,15 +108,26 @@ The range within which formatting should take place. The parameter is an array o
 ```yaml
 Type: Int32[]
 Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: 3
-Default value:
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
 
 ## OUTPUTS
 
 ### System.String
 The formatted string result.
+
+
+## NOTES
+
+## RELATED LINKS

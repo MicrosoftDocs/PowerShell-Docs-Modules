@@ -1,6 +1,7 @@
 ---
 external help file: platyPS-help.xml
 Module Name: platyPS
+ms.date: 03/16/2021
 online version: https://github.com/PowerShell/platyPS/blob/master/docs/New-MarkdownHelp.md
 schema: 2.0.0
 ---

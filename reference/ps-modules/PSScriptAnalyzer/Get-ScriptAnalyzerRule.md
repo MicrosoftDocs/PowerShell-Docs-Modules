@@ -1,17 +1,20 @@
 ---
 external help file: Microsoft.Windows.PowerShell.ScriptAnalyzer.dll-Help.xml
+Module Name: PSScriptAnalyzer
+ms.date: 03/16/2021
 schema: 2.0.0
 ---
 
 # Get-ScriptAnalyzerRule
+
 ## SYNOPSIS
 Gets the script analyzer rules on the local computer.
 
 ## SYNTAX
 
 ```
-Get-ScriptAnalyzerRule [-CustomRulePath <String>] [-RecurseCustomRulePath] [-Name <String[]>]
- [-Severity <String[]>]
+Get-ScriptAnalyzerRule [-CustomRulePath <String[]>] [-RecurseCustomRulePath] [-Name <String[]>]
+ [-Severity <String[]>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -29,21 +32,21 @@ For more information about PSScriptAnalyzer, to contribute or file an issue, see
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
 Get-ScriptAnalyzerRule
 ```
 
 This command gets all Script Analyzer rules on the local computer.
 
-### -------------------------- EXAMPLE 2 --------------------------
+### EXAMPLE 2
 ```
 Get-ScriptAnalyzerRule -Severity Error
 ```
 
 This command gets only rules with the Error severity.
 
-### -------------------------- EXAMPLE 3 --------------------------
+### EXAMPLE 3
 ```
 $DSCError = Get-ScriptAnalyzerRule -Severity Error | Where SourceName -eq PSDSC
 
@@ -56,7 +59,7 @@ This example runs only the DSC rules with the Error severity on the files in the
 
 Using the IncludeRule parameter of Invoke-ScriptAnalyzerRule is much more efficient than using its Severity parameter, which is applied only after using all rules to analyze all module files.
 
-### -------------------------- EXAMPLE 4 --------------------------
+### EXAMPLE 4
 ```
 $TestParameters = Get-ScriptAnalyzerRule -Severity Error, Warning -Name *Parameter*, *Alias*
 ```
@@ -64,7 +67,7 @@ $TestParameters = Get-ScriptAnalyzerRule -Severity Error, Warning -Name *Paramet
 This command gets rules with "Parameter" or "Alias" in the name that generate an Error or Warning.
 Use this set of rules to test the parameters of your script or module.
 
-### -------------------------- EXAMPLE 5 --------------------------
+### EXAMPLE 5
 ```
 Get-ScriptAnalyzerRule -CustomRulePath $home\Documents\WindowsPowerShell\Modules\*StrictRules -RecurseCustomRulePath
 ```
@@ -108,7 +111,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value:
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -129,7 +132,7 @@ Required: False
 Position: Named
 Default value: All rules
 Accept pipeline input: False
-Accept wildcard characters: True
+Accept wildcard characters: False
 ```
 
 ### -Severity
@@ -148,6 +151,9 @@ Default value: All rules
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

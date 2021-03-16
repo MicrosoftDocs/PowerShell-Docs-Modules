@@ -1,6 +1,7 @@
----
+s---
 external help file: Microsoft.PowerShell.SecretManagement.dll-Help.xml
 Module Name: Microsoft.PowerShell.SecretManagement
+ms.date: 03/16/2021
 online version:
 schema: 2.0.0
 ---
@@ -13,18 +14,20 @@ Runs an extension vault self test.
 ## SYNTAX
 
 ```
-Test-SecretVault [[-Name] <string[]>] [<CommonParameters>]
+Test-SecretVault [-Name <String[]>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet runs an extension vault self test, by running the internal vault 'Test-SecretVault' command.
-It will return 'True' if all tests succeeded, and 'False' otherwise.
-Information on failing tests will be written to the error stream as error records.
-For more information during the test run use the `-Verbose` command switch.
+
+This cmdlet runs an extension vault self test, by running the internal vault `Test-SecretVault`
+command. It returns `$true` if all tests succeeded, and `$false` otherwise. Information on failing
+tests will be written to the error stream as error records. For more information during the test run
+use the **Verbose** command switch.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
 PS C:\> Test-SecretVault -Name CredMan -Verbose
 VERBOSE: Invoking command Test-SecretVault on module Microsoft.PowerShell.CredManStore.Extension
@@ -37,23 +40,28 @@ All tests succeeded so no errors are written and 'True' is returned.
 
 ## PARAMETERS
 
-### -Vault
-Name of vault to run self tests on.
+### -Name
+
+The name of the vault to be tested.
 
 ```yaml
-Type: string[]
+Type: String[]
 Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 1
+Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: True
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -62,6 +70,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Boolean
+
 ## NOTES
 
 ## RELATED LINKS

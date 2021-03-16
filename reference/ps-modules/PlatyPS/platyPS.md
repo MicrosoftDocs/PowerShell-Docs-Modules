@@ -1,6 +1,7 @@
 ---
 Module Name: platyPS
 Module Guid: 0bdcabef-a4b7-4a6d-bf7e-d879817ebbff
+ms.date: 03/16/2021
 Download Help Link: https://aka.ms/ps-modules-help
 Help Version: 0.14.1
 Locale: en-US

@@ -1,26 +1,31 @@
 ---
 external help file: Microsoft.Windows.PowerShell.ScriptAnalyzer.dll-Help.xml
+Module Name: PSScriptAnalyzer
+ms.date: 03/16/2021
 schema: 2.0.0
 ---
 
 # Invoke-ScriptAnalyzer
+
 ## SYNOPSIS
 Evaluates a script or module based on selected best practice rules
 
 ## SYNTAX
 
-### UNNAMED_PARAMETER_SET_1
+### File (Default)
 ```
-Invoke-ScriptAnalyzer [-Path] <String> [-CustomRulePath <String>] [-RecurseCustomRulePath]
- [-ExcludeRule <String[]>] [-IncludeRule <String[]>] [-Severity <String[]>] [-Recurse] [-SuppressedOnly] [-Fix] [-EnableExit] [-ReportSummary]
- [-Settings <String>]
+Invoke-ScriptAnalyzer [-Path] <String> [-CustomRulePath <String[]>] [-RecurseCustomRulePath]
+ [-IncludeDefaultRules] [-ExcludeRule <String[]>] [-IncludeRule <String[]>] [-Severity <String[]>] [-Recurse]
+ [-SuppressedOnly] [-Fix] [-EnableExit] [-Settings <Object>] [-SaveDscDependency] [-ReportSummary] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
-### UNNAMED_PARAMETER_SET_2
+### ScriptDefinition
 ```
-Invoke-ScriptAnalyzer [-ScriptDefinition] <String> [-CustomRulePath <String>] [-RecurseCustomRulePath]
- [-ExcludeRule <String[]>] [-IncludeRule <String[]>] [-Severity <String[]>] [-Recurse] [-SuppressedOnly] [-EnableExit] [-ReportSummary]
- [-Settings <String>]
+Invoke-ScriptAnalyzer [-ScriptDefinition] <String> [-CustomRulePath <String[]>] [-RecurseCustomRulePath]
+ [-IncludeDefaultRules] [-ExcludeRule <String[]>] [-IncludeRule <String[]>] [-Severity <String[]>] [-Recurse]
+ [-SuppressedOnly] [-EnableExit] [-Settings <Object>] [-SaveDscDependency] [-ReportSummary] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -46,14 +51,14 @@ For more information about PSScriptAnalyzer, to contribute or file an issue, see
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
 Invoke-ScriptAnalyzer -Path C:\Scripts\Get-LogData.ps1
 ```
 
 This command runs all Script Analyzer rules on the Get-LogData.ps1 script.
 
-### -------------------------- EXAMPLE 2 --------------------------
+### EXAMPLE 2
 ```
 Invoke-ScriptAnalyzer -Path $home\Documents\WindowsPowerShell\Modules -Recurse
 ```
@@ -61,7 +66,7 @@ Invoke-ScriptAnalyzer -Path $home\Documents\WindowsPowerShell\Modules -Recurse
 This command runs all Script Analyzer rules on all .ps1 and .psm1 files in the Modules directory and its
 subdirectories.
 
-### -------------------------- EXAMPLE 3 --------------------------
+### EXAMPLE 3
 ```
 Invoke-ScriptAnalyzer -Path C:\Windows\System32\WindowsPowerShell\v1.0\Modules\PSDiagnostics -IncludeRule PSAvoidUsingPositionalParameters
 ```
@@ -69,21 +74,21 @@ Invoke-ScriptAnalyzer -Path C:\Windows\System32\WindowsPowerShell\v1.0\Modules\P
 This command runs only the PSAvoidUsingPositionalParameters rule on the files in the PSDiagnostics module.
 You might use a command like this to find all instances of a particular rule violation while working to eliminate it.
 
-### -------------------------- EXAMPLE 4 --------------------------
+### EXAMPLE 4
 ```
 Invoke-ScriptAnalyzer -Path C:\ps-test\MyModule -Recurse -ExcludeRule PSAvoidUsingCmdletAliases, PSAvoidUsingInternalURLs
 ```
 
 This command runs Script Analyzer on the .ps1 and .psm1 files in the MyModules directory, including the scripts in its subdirectories, with all rules except for PSAvoidUsingCmdletAliases and PSAvoidUsingInternalURLs.
 
-### -------------------------- EXAMPLE 5 --------------------------
+### EXAMPLE 5
 ```
 Invoke-ScriptAnalyzer -Path D:\test_scripts\Test-Script.ps1 -CustomRulePath C:\CommunityAnalyzerRules
 ```
 
 This command runs Script Analyzer on Test-Script.ps1 with the standard rules and rules in the C:\CommunityAnalyzerRules path.
 
-### -------------------------- EXAMPLE 6 --------------------------
+### EXAMPLE 6
 ```
 $DSCError = Get-ScriptAnalyzerRule -Severity Error | Where SourceName -eq PSDSC
 
@@ -94,7 +99,7 @@ PS C:\> Invoke-ScriptAnalyzerRule -Path $Path -IncludeRule $DSCError -Recurse
 
 This example runs only the rules that are Error severity and have the PSDSC source name.
 
-### -------------------------- EXAMPLE 7 --------------------------
+### EXAMPLE 7
 ```
 function Get-Widgets
 {
@@ -140,7 +145,7 @@ The second command uses the SuppressedOnly parameter to discover the rules that 
 file.
 The output reports the suppressed rules.
 
-### -------------------------- EXAMPLE 8 --------------------------
+### EXAMPLE 8
 ```
 # In .\ScriptAnalyzerProfile.txt
 @{
@@ -162,7 +167,7 @@ Script Analyzer profile.
 If you include a conflicting parameter in the Invoke-ScriptAnalyzer command, such as '-Severity Error',
 Invoke-ScriptAnalyzer uses the profile value and ignores the parameter.
 
-### -------------------------- EXAMPLE 9 --------------------------
+### EXAMPLE 9
 ```
 Invoke-ScriptAnalyzer -ScriptDefinition "function Get-Widgets {Write-Host 'Hello'}"
 
@@ -196,13 +201,13 @@ To analyze files that are not in the root directory of the specified path, use a
 
 ```yaml
 Type: String
-Parameter Sets: UNNAMED_PARAMETER_SET_1
+Parameter Sets: File
 Aliases: PSPath
 
 Required: True
 Position: 0
-Default value:
-Accept pipeline input: False
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
@@ -224,7 +229,7 @@ Aliases: CustomizedRulePath
 
 Required: False
 Position: Named
-Default value:
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -241,7 +246,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value:
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -388,7 +393,7 @@ It tries to preserve the file encoding but there are still some cases where the 
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: UNNAMED_PARAMETER_SET_1
+Parameter Sets: File
 Aliases:
 
 Required: False
@@ -476,7 +481,7 @@ Aliases: Profile
 
 Required: False
 Position: Named
-Default value:
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -489,13 +494,13 @@ Unlike ScriptBlock parameters, the ScriptDefinition parameter requires a string 
 
 ```yaml
 Type: String
-Parameter Sets: UNNAMED_PARAMETER_SET_2
+Parameter Sets: ScriptDefinition
 Aliases:
 
 Required: True
 Position: 0
-Default value:
-Accept pipeline input: False
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
@@ -516,6 +521,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

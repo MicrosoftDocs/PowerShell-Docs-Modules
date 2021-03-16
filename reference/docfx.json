@@ -44,7 +44,7 @@
         "**/PlatyPS/**.md": "adityap",
         "**/PlatyPS/**.yml": "adityap",
         "**/PSScriptAnalyzer/**.yml": "jimtru",
-        "docs-conceptual/**.md": "sewhee",
+        "docs-conceptual/**.md": "sewhee"
       },
       "ms.prod": {
         "**/**.md": "powershell",
@@ -78,7 +78,7 @@
       "feedback_github_repo": "MicrosoftDocs/PowerShell-Docs-Modules",
       "feedback_system": "GitHub",
       "ms.devlang": "powershell",
-      "ms.prod": "powershell"
+      "ms.prod": "powershell",
       "titleSuffix": "PowerShell",
       "toc_preview": true,
       "uhfHeaderId": "MSDocsHeader-Powershell"
@@ -95,7 +95,7 @@
           "**/media/**/*.jpg",
           "**/media/**/*.svg"
         ]
-      },
+      }],
     "template": [],
     "versions": {
       "ps-modules": {

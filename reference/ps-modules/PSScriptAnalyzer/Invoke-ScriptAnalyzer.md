@@ -2,6 +2,7 @@
 external help file: Microsoft.Windows.PowerShell.ScriptAnalyzer.dll-Help.xml
 Module Name: PSScriptAnalyzer
 ms.date: 03/16/2021
+online version: https://docs.microsoft.com/powershell/module/psscriptanalyzer/invoke-scriptanalyzer?view=ps-modules&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

@@ -2,8 +2,9 @@
 external help file: Microsoft.PowerShell.SecretManagement.dll-Help.xml
 Module Name: Microsoft.PowerShell.SecretManagement
 ms.date: 03/16/2021
-wonline version:
+online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.secretmanagement/set-secretinfo?view=ps-modules&wt.mc_id=ps-gethelp
 schema: 2.0.0
+wonline version:
 ---
 
 # Set-Secret

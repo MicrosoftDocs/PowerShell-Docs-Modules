@@ -17,12 +17,16 @@ New-YamlHelp [-Path] <String[]> -OutputFolder <String> [-Encoding <Encoding>] [-
 ```
 
 ## DESCRIPTION
-The **New-YamlHelp** cmdlet works similarly to the **New-ExternalHelp** cmdlet but rather than creating a MAML file to support **Get-Help**, it creates a set of YAML files that can be read by external tools to provide custom rendering of help pages.
+
+The `New-YamlHelp` cmdlet works similarly to the `New-ExternalHelp` cmdlet but rather than creating
+a MAML file to support `Get-Help`, it creates a set of YAML files that can be read by external tools
+to provide custom rendering of help pages.
 
 ## EXAMPLES
 
 ### Example 1: Create YAML files
-```
+
+```powershell
 PS C:\> New-YamlHelp -Path .\docs -OutputFolder .\out\yaml
 
     Directory: D:\Working\PlatyPS\out\yaml
@@ -42,10 +46,12 @@ Mode                LastWriteTime         Length Name
 -a----        6/15/2017  11:13 AM           3350 Update-MarkdownHelpSchema.yml
 ```
 
-This creates one YAML file for each cmdlet so external tools can read the structured data for each cmdlet.
+This creates one YAML file for each cmdlet so external tools can read the structured data for each
+cmdlet.
 
 ### Example 2: Create YAML files with specific encoding
-```
+
+```powershell
 PS C:\> New-YamlHelp -Path .\docs -OutputFolder .\out\yaml -Force -Encoding ([System.Text.Encoding]::Unicode)
 
     Directory: D:\Working\PlatyPS\out\yaml
@@ -65,17 +71,16 @@ Mode                LastWriteTime         Length Name
 -a----        6/15/2017  11:13 AM           3350 Update-MarkdownHelpSchema.yml
 ```
 
-This will both read and write the files in the specified -Encoding.
-The -Force parameter will overwrite files that already exist.
+This will both read and write the files in the specified -Encoding. The **Force** parameter will
+overwrite files that already exist.
 
 ## PARAMETERS
 
 ### -Encoding
-Specifies the character encoding for your external help file.
-Specify a **System.Text.Encoding** object.
-For more information, see [Character Encoding in the .NET Framework](https://msdn.microsoft.com/en-us/library/ms404377.aspx) in the Microsoft Developer Network.
-For example, you can control Byte Order Mark (BOM) preferences.
-For more information, see [Using PowerShell to write a file in UTF-8 without the BOM](http://stackoverflow.com/questions/5596982/using-powershell-to-write-a-file-in-utf-8-without-the-bom) at the Stack Overflow community.
+
+Specifies the character encoding for your external help file. Specify a **System.Text.Encoding**
+object. For more information, see
+[about_Character_Encoding](/powershell/module/microsoft.powershell.core/about/about_character_encoding).
 
 ```yaml
 Type: Encoding
@@ -90,6 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
 Indicates that this cmdlet overwrites an existing file that has the same name.
 
 ```yaml
@@ -105,8 +111,9 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-Specifies an array of paths of markdown files or folders.
-This cmdlet creates external help based on these files and folders.
+
+Specifies an array of paths of markdown files or folders. This cmdlet creates external help based on
+these files and folders.
 
 ```yaml
 Type: String[]
@@ -121,6 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### -OutputFolder
+
 Specifies the folder to create the YAML files in
 
 ```yaml
@@ -136,17 +144,23 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### System.String[]
+
 You can pipe an array of paths to this cmdlet.
 
 ## OUTPUTS
 
 ### System.IO.FileInfo[]
-This cmdlet returns a **FileInfo[]** object for created files.
+
+This cmdlet returns a `FileInfo[]` object for created files.
 
 ## NOTES
 

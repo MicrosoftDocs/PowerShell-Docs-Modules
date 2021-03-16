@@ -17,7 +17,8 @@ New-MarkdownAboutHelp [-OutputFolder] <String> [[-AboutName] <String>] [<CommonP
 ```
 
 ## DESCRIPTION
-The **New-MarkdownAboutHelp** cmdlet generates a Markdown file that is prepopulated with the standard elements of an About Topic.
+
+The `New-MarkdownAboutHelp` cmdlet generates a Markdown file that is prepopulated with the standard elements of an About Topic.
 The cmdlet copies the template MD, renames headers and file name according to the **AboutName** parameter,
 and deposits the file in the directory designated by the **OutputFoler** parameter.
 
@@ -28,7 +29,8 @@ Use the [New-ExternalHelp](New-ExternalHelp.md) cmdlet to convert About Topic ma
 ## EXAMPLES
 
 ### Example 1
-```
+
+```powershell
 PS C:\> New-MarkdownAboutHelp -OutputFolder C:\Test -AboutName
 PS C:\> Get-ChildItem C:\Test
 
@@ -43,7 +45,8 @@ Mode                LastWriteTime         Length Name
 Create and display file info for PowerShell About Topic Markdown File.
 
 ### Example 2
-```
+
+```powershell
 PS C:\> New-ExternalHelp -Path C:\Test\ -OutputPath C:\Test
 
 
@@ -60,6 +63,7 @@ Create PowerShell About Topic Txt file from existing Markdown About file.
 ## PARAMETERS
 
 ### -AboutName
+
 The name of the about topic.
 
 ```yaml
@@ -75,6 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -OutputFolder
+
 The directory to create the about topic in.
 
 ```yaml
@@ -90,7 +95,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -99,9 +108,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 This cmdlet returns a object for created files.
 
 ## NOTES
+
 The about topics will need to be added to a cab file to leverage updatable help.
 
 ## RELATED LINKS

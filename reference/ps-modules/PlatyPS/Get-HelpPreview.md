@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-HelpPreview
 
 ## SYNOPSIS
-Displays your generated external help as **Get-Help** output.
+Displays your generated external help as `Get-Help` output.
 
 ## SYNTAX
 
@@ -17,15 +17,16 @@ Get-HelpPreview -Path <String[]> [-ConvertNotesToList] [-ConvertDoubleDashLists]
 ```
 
 ## DESCRIPTION
-The **Get-HelpPreview** cmdlet displays your generated external help as **Get-Help** output.
+
+The `Get-HelpPreview` cmdlet displays your generated external help as `Get-Help` output.
 Specify one or more files in Microsoft Assistance Markup Language (MAML) format.
 
 ## EXAMPLES
 
 ### Example 1: Preview the PlatyPS help
-```
-PS C:\> $Help = Get-HelpPreview -Path ".\out\platyPS\en-US\PlatyPS-help.xml"
 
+```powershell
+PS C:\> $Help = Get-HelpPreview -Path ".\out\platyPS\en-US\PlatyPS-help.xml"
 PS C:\> $Help.Name
 
 Get-HelpPreview
@@ -46,6 +47,7 @@ The second command displays the **Name** property for each of the objects in $He
 ## PARAMETERS
 
 ### -Path
+
 Specifies an array of paths of MAML external help files.
 
 ```yaml
@@ -61,7 +63,8 @@ Accept wildcard characters: True
 ```
 
 ### -ConvertNotesToList
-Indicates that this cmldet formats multiple paragraph items in the **NOTES** section as single list items.
+
+Indicates that this cmdlet formats multiple paragraph items in the **NOTES** section as single list items.
 This output follows TechNet formatting.
 
 ```yaml
@@ -77,9 +80,10 @@ Accept wildcard characters: False
 ```
 
 ### -ConvertDoubleDashLists
-Indicates that this cmldet converts double-hyphen list bullets into single-hyphen bullets.
-Double-hyphen lists are common in Windows PowerShell documentation.
-Markdown accepts single-hyphens for lists.
+
+Indicates that this cmdlet converts double-hyphen list bullets into single-hyphen bullets.
+Double-hyphen lists are common in Windows PowerShell documentation. Markdown accepts single-hyphens
+for lists.
 
 ```yaml
 Type: SwitchParameter
@@ -94,17 +98,23 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### String[]
+
 You can pipe an array of paths to this cmdlet.
 
 ## OUTPUTS
 
 ### Help Object
-This cmdlet returns a **Help** object, which is the same output as **Get-Help**.
+
+This cmdlet returns a **Help** object, which is the same output as `Get-Help`.
 
 ## NOTES
 

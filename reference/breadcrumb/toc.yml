@@ -7,8 +7,8 @@
       topicHref: /powershell
       items:
         - name: Utility Modules
-          tocHref: /powershell/utility-modules/
-          topicHref: /powershell/utility-modules/index
+          tocHref: /powershell/powerShell-docs-modules/
+          topicHref: /powershell/powerShell-docs-modules/index
         - name: Utility Modules
           tocHref: /powershell/module/
-          topicHref: /powershell/utility-modules/index
+          topicHref: /powershell/module/powerShell-docs-modules/index

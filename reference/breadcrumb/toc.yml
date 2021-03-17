@@ -8,7 +8,7 @@
       items:
         - name: Utility Modules
           tocHref: /powershell/powerShell-docs-modules/
-          topicHref: /powershell/powerShell-docs-modules/index
+          topicHref: /powershell/powerShell-docs-modules/overview
         - name: Utility Modules
           tocHref: /powershell/module/
-          topicHref: /powershell/module/powerShell-docs-modules/index
+          topicHref: /powershell/module/powerShell-docs-modules/

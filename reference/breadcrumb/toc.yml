@@ -7,20 +7,20 @@
       topicHref: /powershell/
       items:
         - name: Utility Modules
-          tocHref: /powershell/PowerShell-Docs-Modules/
-          topicHref: /powershell/PowerShell-Docs-Modules/overview
+          tocHref: /powershell/utility-modules/
+          topicHref: /powershell/utility-modules/overview
         - name: Utility Modules
           tocHref: /powershell/module/Microsoft.PowerShell.Crescendo
-          topicHref: /powershell/PowerShell-Docs-Modules/overview
+          topicHref: /powershell/utility-modules/overview
         - name: Utility Modules
           tocHref: /powershell/module/Microsoft.PowerShell.SecretManagement
-          topicHref: /powershell/PowerShell-Docs-Modules/overview
+          topicHref: /powershell/utility-modules/overview
         - name: Utility Modules
           tocHref: /powershell/module/Microsoft.PowerShell.SecretStore
-          topicHref: /powershell/PowerShell-Docs-Modules/overview
+          topicHref: /powershell/utility-modules/overview
         - name: Utility Modules
           tocHref: /powershell/module/PlatyPS
-          topicHref: /powershell/PowerShell-Docs-Modules/overview
+          topicHref: /powershell/utility-modules/overview
         - name: Utility Modules
           tocHref: /powershell/module/PSScriptAnalyzer
-          topicHref: /powershell/PowerShell-Docs-Modules/overview
+          topicHref: /powershell/utility-modules/overview

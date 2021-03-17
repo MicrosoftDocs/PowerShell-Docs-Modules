@@ -4,10 +4,10 @@
   items:
     - name: PowerShell
       tocHref: /powershell/
-      topicHref: /powershell/
+      topicHref: /powershell/index
       items:
         - name: Utility Modules
-          tocHref: /powershell/powerShell-docs-modules/
+          tocHref: /powershell/utility-modules/
           topicHref: /powershell/utility-modules/overview
         - name: Utility Modules
           tocHref: /powershell/module/Microsoft.PowerShell.Crescendo

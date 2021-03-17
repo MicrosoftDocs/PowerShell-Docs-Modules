@@ -4,11 +4,11 @@
   items:
     - name: PowerShell
       tocHref: /powershell/
-      topicHref: /powershell
+      topicHref: /powershell/
       items:
         - name: Utility Modules
           tocHref: /powershell/powerShell-docs-modules/
           topicHref: /powershell/powerShell-docs-modules/overview
         - name: Utility Modules
           tocHref: /powershell/module/
-          topicHref: /powershell/module/powerShell-docs-modules/
+          topicHref: /powershell/module

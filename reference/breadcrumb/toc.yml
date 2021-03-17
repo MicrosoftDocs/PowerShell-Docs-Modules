@@ -2,9 +2,9 @@
   tocHref: /
   topicHref: /
   items:
-    - name: PowerShell
-      tocHref: /powershell/
-      topicHref: /powershell/index
+    - name: Windows
+      tocHref: /windows/
+      topicHref: /windows/
       items:
         - name: Utility Modules
           tocHref: /powershell/utility-modules/

@@ -1,12 +1,19 @@
-﻿# platyPS
-## about_platyPS
+﻿---
+description: Write PowerShell External Help in Markdown.
+Locale: en-US
+ms.date: 03/16/2021
+schema: 2.0.0
+title: about_platyPS
+---
+# about_platyPS
 
-# SHORT DESCRIPTION
+## Short description
+
 Write PowerShell External Help in Markdown.
 
-# LONG DESCRIPTION
+## Long description
 
-PlatyPS provides a way to
+PlatyPS provides a way to:
 
 - Write PowerShell External Help in Markdown
 - Generate markdown help (example) for your existing modules

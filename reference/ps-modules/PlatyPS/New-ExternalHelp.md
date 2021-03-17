@@ -174,7 +174,7 @@ Accept wildcard characters: False
 
 Specifies the maximum line length when generating "about" help text files. Other help file types are
 not affected by this parameter. For more information, see
-[New-MarkdownAboutHelp](New-MarkdownAboutHelp.md).)
+[New-MarkdownAboutHelp](New-MarkdownAboutHelp.md).
 
 Lines inside code blocks are not wrapped and are not affected by the **MaxAboutWidth** parameter.
 

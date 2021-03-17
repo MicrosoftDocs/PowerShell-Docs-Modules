@@ -3,7 +3,7 @@
     "content": [
       { "dest": "utility-modules/breadcrumb", "files": [ "toc.yml" ], "src": "breadcrumb" },
 
-      { "dest": "utility-modules/ce", "files": [ "toc.yml" ], "src": "docs-conceptual", "version": "ps-modules" },
+      { "dest": "utility-modules", "files": [ "toc.yml" ], "src": "docs-conceptual", "version": "ps-modules" },
       { "dest": "utility-modules", "files": [ "**/*.md", "**/**.yml" ], "src": "docs-conceptual", "version": "ps-modules" },
 
       { "dest": "module/ps-modules", "files": [ "toc.yml" ], "src": "ps-modules", "version": "ps-modules" },

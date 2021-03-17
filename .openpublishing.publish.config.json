@@ -26,7 +26,7 @@
     {
       "base_path": "powershell",
       "build_entry_point": "docs",
-      "build_output_subfolder": "reference",
+      "build_output_subfolder": "PowerShell-Docs-Modules",
       "build_source_folder": "reference",
       "customized_tasks": {
         "docset_prebuild": [

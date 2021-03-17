@@ -1,7 +1,7 @@
 {
     "ps-modules": {
         "conceptualToc": "docs-conceptual/toc.yml",
-        "conceptualTocUrl": "/powershell/utility-modules/ce/toc.json",
+        "conceptualTocUrl": "/powershell/utility-modules/toc.json",
         "referenceTocUrl": "/powershell/module/ps-modules/toc.json",
         "packageRoot": "ps-modules"
     }

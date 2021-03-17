@@ -12,6 +12,10 @@ Locale: en-US
 ## Description
 Local secure store extension vault for Microsoft.PowerShell.SecretManagement module.
 
+> [!NOTE]
+> Support for the module is limited. Please file issues in the source repository using the **This
+> product** button in the Feedback section at the bottom of the page.
+
 ## Microsoft.PowerShell.SecretStore Cmdlets
 
 ### [Get-SecretStoreConfiguration](Get-SecretStoreConfiguration.md)

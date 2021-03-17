@@ -11,18 +11,25 @@ Locale: en-US
 
 ## Description
 
-{{ Fill in the Description }}
+The PowerShell Crescendo module provides a way to more easily take advantage of the PowerShell
+pipeline by invoking the native executable, facilitating parameter handling, and converting text
+output into objects.
+
+> [!NOTE]
+> Support for the module is limited. Please file issues in the source repository using the **This
+> product** button in the Feedback section at the bottom of the page. The module is still very early
+> in the development process, so we expect changes to be made.
 
 ## Microsoft.PowerShell.Crescendo Cmdlets
 
 ### [Export-CrescendoModule](Export-CrescendoModule.md)
-{{ Fill in the Description }}
+Creates a module from PowerShell Crescendo JSON configuration files.
 
 ### [Export-Schema](Export-Schema.md)
 {{ Fill in the Description }}
 
 ### [Import-CommandConfiguration](Import-CommandConfiguration.md)
-{{ Fill in the Description }}
+Import a PowerShell Crescendo json file.
 
 ### [New-CrescendoCommand](New-CrescendoCommand.md)
 {{ Fill in the Description }}

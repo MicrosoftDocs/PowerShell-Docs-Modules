@@ -13,6 +13,10 @@ Locale: en-US
 
 The platyPS module allows you to create PowerShell External Help in Markdown.
 
+> [!NOTE]
+> Support for the module is limited. Please file issues in the source repository using the **This
+> product** button in the Feedback section at the bottom of the page.
+
 ## platyPS Cmdlets
 
 ### [Get-HelpPreview](Get-HelpPreview.md)

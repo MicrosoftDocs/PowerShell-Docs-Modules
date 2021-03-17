@@ -18,6 +18,10 @@ required by SecretManagement. An extension vault can store secrets locally or re
 vaults are registered to the current logged in user context, and will be available only to that
 user.
 
+> [!NOTE]
+> Support for the module is limited. Please file issues in the source repository using the **This
+> product** button in the Feedback section at the bottom of the page.
+
 ## Microsoft.PowerShell.SecretManagement Cmdlets
 
 ### [Get-Secret](Get-Secret.md)

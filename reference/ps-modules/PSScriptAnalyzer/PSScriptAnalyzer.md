@@ -14,6 +14,10 @@ Locale: en-US
 PSScriptAnalyzer is a static code checker for PowerShell modules and scripts. PSScriptAnalyzer
 checks the quality of PowerShell code by running a set of rules.
 
+> [!NOTE]
+> Support for the module is limited. Please file issues in the source repository using the **This
+> product** button in the Feedback section at the bottom of the page.
+
 ## PSScriptAnalyzer Cmdlets
 
 ### [Get-ScriptAnalyzerRule](Get-ScriptAnalyzerRule.md)

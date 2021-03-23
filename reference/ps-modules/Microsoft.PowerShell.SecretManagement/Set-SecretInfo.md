@@ -167,7 +167,7 @@ Accept wildcard characters: False
 
 ### -Secret
 
-{{ Fill Secret Description }}
+A secret value to be added. The object type must be one of the supported types.
 
 ```yaml
 Type: Object
@@ -199,7 +199,7 @@ Accept wildcard characters: False
 
 ### -SecureStringSecret
 
-{{ Fill SecureStringSecret Description }}
+A secret SecretString object to be added.
 
 ```yaml
 Type: SecureString

@@ -19,7 +19,11 @@ vaults are registered to the current logged in user context, and will be availab
 user.
 
 > [!NOTE]
-> Support for the module is limited. Please file issues in the source repository using the **This
+> This module is supported under traditional Microsoft support agreements, including [paid support](https://support.microsoft.com/hub/4343728/support-for-business),
+[Microsoft Enterprise Agreements](https://www.microsoft.com/licensing/licensing-programs/enterprise?rtc=1&activetab=enterprise-tab%3aprimaryr2), and
+[Microsoft Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default.aspx).
+You can also pay for [assisted support](https://support.microsoft.com/assistedsupportproducts) for PowerShell
+by filing a support request for your problem. Please file issues in the source repository using the **This
 > product** button in the Feedback section at the bottom of the page.
 
 ## Microsoft.PowerShell.SecretManagement Cmdlets

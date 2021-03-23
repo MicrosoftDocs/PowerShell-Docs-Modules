@@ -3,7 +3,7 @@
     "content": [
       { "dest": "utility-modules/breadcrumb", "files": [ "toc.yml" ], "src": "breadcrumb" },
 
-      { "dest": "utility-modules", "files": [ "toc.yml" ], "src": "docs-conceptual", "version": "ps-modules" },
+      { "dest": "utility-modules/ce", "files": [ "toc.yml" ], "src": "docs-conceptual", "version": "ps-modules" },
       { "dest": "utility-modules", "files": [ "**/*.md", "**/**.yml" ], "src": "docs-conceptual", "version": "ps-modules" },
 
       { "dest": "module/ps-modules", "files": [ "toc.yml" ], "src": "ps-modules", "version": "ps-modules" },
@@ -44,7 +44,7 @@
         "**/PlatyPS/**.md": "adityap",
         "**/PlatyPS/**.yml": "adityap",
         "**/PSScriptAnalyzer/**.yml": "jimtru",
-        "docs-conceptual/**.md": "sewhee"
+        "docs-conceptual/**.md": "sewhee",
       },
       "ms.prod": {
         "**/**.md": "powershell",
@@ -74,11 +74,11 @@
     "globalMetadata": {
       "ROBOTS": "INDEX, FOLLOW",
       "apiPlatform": "powershell",
-      "breadcrumb_path": "/powershell/utility-modules/breadcrumb/toc.json",
+      "breadcrumb_path": "/powershell/PowerShell-Docs-Modules/breadcrumb/toc.json",
       "feedback_github_repo": "MicrosoftDocs/PowerShell-Docs-Modules",
       "feedback_system": "GitHub",
       "ms.devlang": "powershell",
-      "ms.prod": "powershell",
+      "ms.prod": "powershell"
       "titleSuffix": "PowerShell",
       "toc_preview": true,
       "uhfHeaderId": "MSDocsHeader-Powershell"
@@ -95,7 +95,7 @@
           "**/media/**/*.jpg",
           "**/media/**/*.svg"
         ]
-      }],
+      },
     "template": [],
     "versions": {
       "ps-modules": {

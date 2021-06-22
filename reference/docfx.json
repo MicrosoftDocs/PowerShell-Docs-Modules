@@ -22,6 +22,8 @@
         "**/PlatyPS/**.md": "adityapatwardhan",
         "**/PlatyPS/**.yml": "adityapatwardhan",
         "**/PSScriptAnalyzer/**.yml": "JamesWTruher",
+        "**/PSDesiredStateConfiguration/**.md": "sdwheeler",
+        "**/PSDesiredStateConfiguration/**.yml": "sdwheeler",
         "docs-conceptual/**.md": "sdwheeler"
       },
       "feedback_product_url": {
@@ -44,6 +46,8 @@
         "**/PlatyPS/**.md": "adityap",
         "**/PlatyPS/**.yml": "adityap",
         "**/PSScriptAnalyzer/**.yml": "jimtru",
+        "**/PSDesiredStateConfiguration/**.md": "sewhee",
+        "**/PSDesiredStateConfiguration/**.yml": "sewhee",
         "docs-conceptual/**.md": "sewhee",
       },
       "ms.prod": {

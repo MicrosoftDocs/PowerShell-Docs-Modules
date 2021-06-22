@@ -537,7 +537,7 @@ A new attribute, **System.Management.Automation.HiddenAttribute**, was added,
 so that C# code can have the same semantics within PowerShell.
 
 For more information, see
-[about_Hidden](../../Microsoft.PowerShell.Core/About/about_hidden.md).
+[about_Hidden[(/powershell/module/microsoft.powershell.core/about/about_hidden).
 
 ### Import-DscResource
 
@@ -827,13 +827,12 @@ function Html ([HTML] $doc) { return $doc }
 
 ## See also
 
-[about_Enum](../../Microsoft.PowerShell.Core/About/about_Enum.md)
+[about_Enum](/powershell/module/Microsoft.PowerShell.Core/About/about_Enum)
 
-[about_Hidden](../../Microsoft.PowerShell.Core/About/about_hidden.md)
+[about_Hidden](/powershell/module/Microsoft.PowerShell.Core/About/about_hidden)
 
-[about_Language_Keywords](../../Microsoft.PowerShell.Core/About/about_Language_Keywords.md)
+[about_Language_Keywords](/powershell/module/Microsoft.PowerShell.Core/About/about_Language_Keywords)
 
-[about_Methods](../../Microsoft.PowerShell.Core/About/about_Methods.md)
+[about_Methods](/powershell/module/Microsoft.PowerShell.Core/About/about_Methods)
 
 [Build Custom PowerShell Desired State Configuration Resources](/powershell/scripting/dsc/resources/authoringResource)
-

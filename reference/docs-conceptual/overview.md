@@ -1,6 +1,6 @@
 ---
-description: This article is an introduction to the PowerShell scripting environment and its features.
-ms.date: 05/22/2020
+description: This documentation set contains reference for modules published and maintained by the PowerShell team, but are not part of the PowerShell package.
+ms.date: 06/22/2021
 title:  PowerShell utility modules
 ---
 # PowerShell utility modules
@@ -16,4 +16,5 @@ This documentation set contains cmdlet reference for the following modules.
 - [Microsoft.PowerShell.SecretManagement](/powershell/module/microsoft.powershell.secretmanagement/)
 - [Microsoft.PowerShell.SecretStore](/powershell/module/microsoft.powershell.secretstore/)
 - [PlatyPS](/powershell/module/platyps/)
+- [PSDesiredStateConfiguration](/powershell/module/psdesiredstateconfiguration)
 - [PSScriptAnalyzer](/powershell/module/psscriptanalyzer/)

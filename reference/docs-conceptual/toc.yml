@@ -1,2 +1,6 @@
 - name: Overview
   href: overview.md
+- name: PSDesiredStateConfiguration
+  items:
+  - name: PSDesiredStateConfiguration v2.0.5
+    href: psdesiredstateconfiguration/overview.md

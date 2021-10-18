@@ -1,6 +1,146 @@
-- name: Overview
-  href: overview.md
-- name: PSDesiredStateConfiguration
-  items:
-  - name: PSDesiredStateConfiguration v2.0.5
-    href: psdesiredstateconfiguration/overview.md
+items:
+  - name: Overview
+    href: overview.md
+  - name: PSDesiredStateConfiguration
+    items:
+      - name: PSDesiredStateConfiguration v2.0.5
+        href: PSDesiredStateConfiguration/overview.md
+  - name: PSScriptAnalyzer v1.20
+    items:
+      - name: Overview
+        href: PSScriptAnalyzer/overview.md
+        items:
+          - name: Overview
+            href: PSScriptAnalyzer/Rules/README.md
+          - name: AlignAssignmentStatement
+            href: PSScriptAnalyzer/Rules/AlignAssignmentStatement.md
+          - name: AvoidAssignmentToAutomaticVariable
+            href: PSScriptAnalyzer/Rules/AvoidAssignmentToAutomaticVariable.md
+          - name: AvoidDefaultValueForMandatoryParameter
+            href: PSScriptAnalyzer/Rules/AvoidDefaultValueForMandatoryParameter.md
+          - name: AvoidDefaultValueSwitchParameter
+            href: PSScriptAnalyzer/Rules/AvoidDefaultValueSwitchParameter.md
+          - name: AvoidGlobalAliases
+            href: PSScriptAnalyzer/Rules/AvoidGlobalAliases.md
+          - name: AvoidGlobalFunctions
+            href: PSScriptAnalyzer/Rules/AvoidGlobalFunctions.md
+          - name: AvoidGlobalVars
+            href: PSScriptAnalyzer/Rules/AvoidGlobalVars.md
+          - name: AvoidInvokingEmptyMembers
+            href: PSScriptAnalyzer/Rules/AvoidInvokingEmptyMembers.md
+          - name: AvoidLongLines
+            href: PSScriptAnalyzer/Rules/AvoidLongLines.md
+          - name: AvoidMultipleTypeAttributes
+            href: PSScriptAnalyzer/Rules/AvoidMultipleTypeAttributes.md
+          - name: AvoidNullOrEmptyHelpMessageAttribute
+            href: PSScriptAnalyzer/Rules/AvoidNullOrEmptyHelpMessageAttribute.md
+          - name: AvoidOverwritingBuiltInCmdlets
+            href: PSScriptAnalyzer/Rules/AvoidOverwritingBuiltInCmdlets.md
+          - name: AvoidShouldContinueWithoutForce
+            href: PSScriptAnalyzer/Rules/AvoidShouldContinueWithoutForce.md
+          - name: AvoidTrailingWhitespace
+            href: PSScriptAnalyzer/Rules/AvoidTrailingWhitespace.md
+          - name: AvoidUsingCmdletAliases
+            href: PSScriptAnalyzer/Rules/AvoidUsingCmdletAliases.md
+          - name: AvoidUsingComputerNameHardcoded
+            href: PSScriptAnalyzer/Rules/AvoidUsingComputerNameHardcoded.md
+          - name: AvoidUsingConvertToSecureStringWithPlainText
+            href: PSScriptAnalyzer/Rules/AvoidUsingConvertToSecureStringWithPlainText.md
+          - name: AvoidUsingDeprecatedManifestFields
+            href: PSScriptAnalyzer/Rules/AvoidUsingDeprecatedManifestFields.md
+          - name: AvoidUsingDoubleQuotesForConstantString
+            href: PSScriptAnalyzer/Rules/AvoidUsingDoubleQuotesForConstantString.md
+          - name: AvoidUsingEmptyCatchBlock
+            href: PSScriptAnalyzer/Rules/AvoidUsingEmptyCatchBlock.md
+          - name: AvoidUsingInvokeExpression
+            href: PSScriptAnalyzer/Rules/AvoidUsingInvokeExpression.md
+          - name: AvoidUsingPlainTextForPassword
+            href: PSScriptAnalyzer/Rules/AvoidUsingPlainTextForPassword.md
+          - name: AvoidUsingPositionalParameters
+            href: PSScriptAnalyzer/Rules/AvoidUsingPositionalParameters.md
+          - name: AvoidUsingUsernameAndPasswordParams
+            href: PSScriptAnalyzer/Rules/AvoidUsingUsernameAndPasswordParams.md
+          - name: AvoidUsingWMICmdlet
+            href: PSScriptAnalyzer/Rules/AvoidUsingWMICmdlet.md
+          - name: AvoidUsingWriteHost
+            href: PSScriptAnalyzer/Rules/AvoidUsingWriteHost.md
+          - name: DSCDscExamplesPresent
+            href: PSScriptAnalyzer/Rules/DSCDscExamplesPresent.md
+          - name: DSCDscTestsPresent
+            href: PSScriptAnalyzer/Rules/DSCDscTestsPresent.md
+          - name: DSCReturnCorrectTypesForDSCFunctions
+            href: PSScriptAnalyzer/Rules/DSCReturnCorrectTypesForDSCFunctions.md
+          - name: DSCStandardDSCFunctionsInResource
+            href: PSScriptAnalyzer/Rules/DSCStandardDSCFunctionsInResource.md
+          - name: DSCUseIdenticalMandatoryParametersForDSC
+            href: PSScriptAnalyzer/Rules/DSCUseIdenticalMandatoryParametersForDSC.md
+          - name: DSCUseIdenticalParametersForDSC
+            href: PSScriptAnalyzer/Rules/DSCUseIdenticalParametersForDSC.md
+          - name: DSCUseVerboseMessageInDSCResource
+            href: PSScriptAnalyzer/Rules/DSCUseVerboseMessageInDSCResource.md
+          - name: MisleadingBacktick
+            href: PSScriptAnalyzer/Rules/MisleadingBacktick.md
+          - name: MissingModuleManifestField
+            href: PSScriptAnalyzer/Rules/MissingModuleManifestField.md
+          - name: PlaceCloseBrace
+            href: PSScriptAnalyzer/Rules/PlaceCloseBrace.md
+          - name: PlaceOpenBrace
+            href: PSScriptAnalyzer/Rules/PlaceOpenBrace.md
+          - name: PossibleIncorrectComparisonWithNull
+            href: PSScriptAnalyzer/Rules/PossibleIncorrectComparisonWithNull.md
+          - name: PossibleIncorrectUsageOfAssignmentOperator
+            href: PSScriptAnalyzer/Rules/PossibleIncorrectUsageOfAssignmentOperator.md
+          - name: PossibleIncorrectUsageOfRedirectionOperator
+            href: PSScriptAnalyzer/Rules/PossibleIncorrectUsageOfRedirectionOperator.md
+          - name: ProvideCommentHelp
+            href: PSScriptAnalyzer/Rules/ProvideCommentHelp.md
+          - name: ReservedCmdletChar
+            href: PSScriptAnalyzer/Rules/ReservedCmdletChar.md
+          - name: ReservedParams
+            href: PSScriptAnalyzer/Rules/ReservedParams.md
+          - name: ReviewUnusedParameter
+            href: PSScriptAnalyzer/Rules/ReviewUnusedParameter.md
+          - name: ShouldProcess
+            href: PSScriptAnalyzer/Rules/ShouldProcess.md
+          - name: UseApprovedVerbs
+            href: PSScriptAnalyzer/Rules/UseApprovedVerbs.md
+          - name: UseBOMForUnicodeEncodedFile
+            href: PSScriptAnalyzer/Rules/UseBOMForUnicodeEncodedFile.md
+          - name: UseCmdletCorrectly
+            href: PSScriptAnalyzer/Rules/UseCmdletCorrectly.md
+          - name: UseCompatibleCmdlets
+            href: PSScriptAnalyzer/Rules/UseCompatibleCmdlets.md
+          - name: UseCompatibleCommands
+            href: PSScriptAnalyzer/Rules/UseCompatibleCommands.md
+          - name: UseCompatibleSyntax
+            href: PSScriptAnalyzer/Rules/UseCompatibleSyntax.md
+          - name: UseCompatibleTypes
+            href: PSScriptAnalyzer/Rules/UseCompatibleTypes.md
+          - name: UseConsistentIndentation
+            href: PSScriptAnalyzer/Rules/UseConsistentIndentation.md
+          - name: UseConsistentWhitespace
+            href: PSScriptAnalyzer/Rules/UseConsistentWhitespace.md
+          - name: UseCorrectCasing
+            href: PSScriptAnalyzer/Rules/UseCorrectCasing.md
+          - name: UseDeclaredVarsMoreThanAssignments
+            href: PSScriptAnalyzer/Rules/UseDeclaredVarsMoreThanAssignments.md
+          - name: UseLiteralInitializerForHashtable
+            href: PSScriptAnalyzer/Rules/UseLiteralInitializerForHashtable.md
+          - name: UseOutputTypeCorrectly
+            href: PSScriptAnalyzer/Rules/UseOutputTypeCorrectly.md
+          - name: UseProcessBlockForPipelineCommand
+            href: PSScriptAnalyzer/Rules/UseProcessBlockForPipelineCommand.md
+          - name: UsePSCredentialType
+            href: PSScriptAnalyzer/Rules/UsePSCredentialType.md
+          - name: UseShouldProcessForStateChangingFunctions
+            href: PSScriptAnalyzer/Rules/UseShouldProcessForStateChangingFunctions.md
+          - name: UseSingularNouns
+            href: PSScriptAnalyzer/Rules/UseSingularNouns.md
+          - name: UseSupportsShouldProcess
+            href: PSScriptAnalyzer/Rules/UseSupportsShouldProcess.md
+          - name: UseToExportFieldsInManifest
+            href: PSScriptAnalyzer/Rules/UseToExportFieldsInManifest.md
+          - name: UseUsingScopeModifierInNewRunspaces
+            href: PSScriptAnalyzer/Rules/UseUsingScopeModifierInNewRunspaces.md
+          - name: UseUTF8EncodingForHelpFile
+            href: PSScriptAnalyzer/Rules/UseUTF8EncodingForHelpFile.md

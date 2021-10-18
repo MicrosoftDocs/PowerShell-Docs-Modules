@@ -9,8 +9,9 @@ items:
     items:
       - name: Overview
         href: PSScriptAnalyzer/overview.md
+      - name: Rules
         items:
-          - name: Overview
+          - name: Rules overview
             href: PSScriptAnalyzer/Rules/README.md
           - name: AlignAssignmentStatement
             href: PSScriptAnalyzer/Rules/AlignAssignmentStatement.md

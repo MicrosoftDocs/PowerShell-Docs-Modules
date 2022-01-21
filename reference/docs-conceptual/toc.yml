@@ -1,10 +1,10 @@
 items:
   - name: Overview
     href: overview.md
-  - name: PSDesiredStateConfiguration
-    items:
-      - name: PSDesiredStateConfiguration v2.0.5
-        href: PSDesiredStateConfiguration/overview.md
+  - name: Crescendo
+    href: Crescendo/overview.md
+  - name: PlatyPS
+    href: PlatyPS/overview.md
   - name: PSScriptAnalyzer v1.20
     items:
       - name: Overview
@@ -145,3 +145,7 @@ items:
             href: PSScriptAnalyzer/Rules/UseUsingScopeModifierInNewRunspaces.md
           - name: UseUTF8EncodingForHelpFile
             href: PSScriptAnalyzer/Rules/UseUTF8EncodingForHelpFile.md
+  - name: SecretManagement
+    href: SecretManagement/overview.md
+  - name: SecretStore
+    href: SecretStore/overview.md

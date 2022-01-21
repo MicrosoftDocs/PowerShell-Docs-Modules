@@ -2,9 +2,13 @@ items:
   - name: Overview
     href: overview.md
   - name: Crescendo
-    href: Crescendo/overview.md
+    items:
+      - name: Overview
+        href: Crescendo/overview.md
   - name: PlatyPS
-    href: PlatyPS/overview.md
+    items:
+      - name: Overview
+        href: PlatyPS/overview.md
   - name: PSScriptAnalyzer v1.20
     items:
       - name: Overview
@@ -146,6 +150,10 @@ items:
           - name: UseUTF8EncodingForHelpFile
             href: PSScriptAnalyzer/Rules/UseUTF8EncodingForHelpFile.md
   - name: SecretManagement
-    href: SecretManagement/overview.md
+    items:
+      - name: Overview
+        href: SecretManagement/overview.md
   - name: SecretStore
-    href: SecretStore/overview.md
+    items:
+      - name: Overview
+        href: SecretStore/overview.md

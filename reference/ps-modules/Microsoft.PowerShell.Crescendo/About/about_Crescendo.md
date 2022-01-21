@@ -1,7 +1,7 @@
 ---
-description: Describes arrays, which are data structures designed to store collections of items.
+description: Describes the purpose of the Crescendo module.
 Locale: en-US
-ms.date: 03/16/2021
+ms.date: 01/21/2022
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.crescendo/about/about_Microsoft.PowerShell.Crescendo?view=ps-modules.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Microsoft.PowerShell.Crescendo

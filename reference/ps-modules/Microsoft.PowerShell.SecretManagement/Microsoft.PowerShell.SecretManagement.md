@@ -15,11 +15,10 @@ PowerShell SecretManagement module provides a convenient way for a user to store
 secrets. The secrets are stored in SecretManagement extension vaults. An extension vault is a
 PowerShell module that has been registered to SecretManagement, and exports five module functions
 required by SecretManagement. An extension vault can store secrets locally or remotely. Extension
-vaults are registered to the current logged in user context, and will be available only to that
-user.
+vaults are registered to the current logged in user context, and are available only to that user.
 
 > [!NOTE]
-> This module is supported under traditional Microsoft support agreements, including 
+> This module is supported under traditional Microsoft support agreements, including
 > [paid support](https://support.microsoft.com/hub/4343728/support-for-business),
 > [Microsoft Enterprise Agreements](https://www.microsoft.com/licensing/licensing-programs/enterprise?rtc=1&activetab=enterprise-tab%3aprimaryr2),
 > and [Microsoft Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default.aspx).

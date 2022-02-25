@@ -2,4 +2,4 @@ items:
   - name: SecretStore
     items:
       - name: Overview
-        href: SecretStore/overview.md
+        href: overview.md

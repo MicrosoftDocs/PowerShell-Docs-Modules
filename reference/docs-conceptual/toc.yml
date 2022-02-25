@@ -7,7 +7,7 @@ items:
         href: Crescendo/overview.md
       - name: Get started
         items:
-          - name: Install
+          - name: Install Crescendo
             href: Crescendo/get-started/install-crescendo.md
           - name: Choose a native command
             href: Crescendo/get-started/choose-native-command.md

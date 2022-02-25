@@ -5,6 +5,10 @@ title: Researching the native command syntax and output
 ---
 # Researching the native command syntax and output
 
+- cmdline help text and docs
+- mention experimental parsers and link
+- capturing example output for parsing
+
 ## Next step
 
 > [!div class="nextstepaction"]

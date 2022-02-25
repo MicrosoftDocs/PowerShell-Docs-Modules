@@ -3,7 +3,7 @@ description: How to install the Crescendo module.
 ms.date: 02/25/2022
 title: Installing Crescendo
 ---
-# Install the Microsoft.PowerShell.Crescendo module
+# Install the Crescendo module
 
 To install PowerShellGet:
 

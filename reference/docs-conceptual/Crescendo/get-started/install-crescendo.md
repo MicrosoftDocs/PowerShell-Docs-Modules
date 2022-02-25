@@ -5,13 +5,13 @@ title: Installing Crescendo
 ---
 # Install the Crescendo module
 
-To install PowerShellGet:
+To install using **PowerShellGet 2.x**:
 
 ```powershell
 Install-Module Microsoft.PowerShell.Crescendo -AllowClobber -Force
 ```
 
-To install PowerShellGet 3.0 (beta):
+To install using **PowerShellGet 3.0** (beta):
 
 ```powershell
 Install-PSResource Microsoft.PowerShell.Crescendo -Reinstall

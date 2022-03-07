@@ -9,10 +9,10 @@ items:
         items:
           - name: Install Crescendo
             href: Crescendo/get-started/install-crescendo.md
-          - name: Choose a native command
-            href: Crescendo/get-started/choose-native-command.md
+          - name: Choose a command-line tool
+            href: Crescendo/get-started/choose-command-line-tool.md
           - name: Decide which features to wrap
-            href: Crescendo/get-started/research-command.md
+            href: Crescendo/get-started/research-tool.md
   - name: PlatyPS
     items:
       - name: Overview

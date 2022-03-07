@@ -1,6 +1,6 @@
 ---
 description: How to install the Crescendo module.
-ms.date: 02/25/2022
+ms.date: 03/07/2022
 title: Installing Crescendo
 ---
 # Install the Crescendo module
@@ -8,7 +8,7 @@ title: Installing Crescendo
 To install using **PowerShellGet 2.x**:
 
 ```powershell
-Install-Module Microsoft.PowerShell.Crescendo -AllowClobber -Force
+Install-Module Microsoft.PowerShell.Crescendo -Force
 ```
 
 To install using **PowerShellGet 3.0** (beta):
@@ -17,12 +17,11 @@ To install using **PowerShellGet 3.0** (beta):
 Install-PSResource Microsoft.PowerShell.Crescendo -Reinstall
 ```
 
-The **AllowClobber**, **Force**, or **Reinstall** parameters are only necessary when you have an
-older version of Crescendo installed. However, these parameters work whether you have a previous
-version or not.
+The **Force** or **Reinstall** parameters are only necessary when you have an older version of
+Crescendo installed. However, these parameters work whether you have a previous version or not.
 
-Like the modules that ship with PowerShell, the Crescendo module does not include help. Run the
-following command to get the latest help content:
+The Crescendo module includes full help content. However, to ensure you have the latest help, run
+the following command:
 
 ```powershell
 Update-Help Microsoft.PowerShell.Crescendo -Force
@@ -33,4 +32,4 @@ Using the **Force** parameter ensures that you get the latest available help con
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Choose the native command to wrap](choose-native-command.md)
+> [Choose the command-line tool to wrap](choose-command-line-tool.md)

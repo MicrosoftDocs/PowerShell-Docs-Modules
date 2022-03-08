@@ -11,7 +11,7 @@ items:
             href: Crescendo/get-started/install-crescendo.md
           - name: Choose a command-line tool
             href: Crescendo/get-started/choose-command-line-tool.md
-          - name: Decide which features to wrap
+          - name: Decide which features amplify
             href: Crescendo/get-started/research-tool.md
   - name: PlatyPS
     items:

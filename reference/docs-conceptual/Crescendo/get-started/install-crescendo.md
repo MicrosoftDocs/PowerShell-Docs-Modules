@@ -24,7 +24,7 @@ The Crescendo module includes full help content. However, to ensure you have the
 the following command:
 
 ```powershell
-Update-Help Microsoft.PowerShell.Crescendo -Force
+Update-Help -Module Microsoft.PowerShell.Crescendo -Force
 ```
 
 Using the **Force** parameter ensures that you get the latest available help content.

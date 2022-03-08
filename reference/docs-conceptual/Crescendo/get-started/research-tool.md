@@ -6,19 +6,22 @@ title: Research the command-line tool's syntax and output
 # Research the command-line tool's syntax and output
 
 The [previous article](choose-command-line-tool.md) provided criteria for selecting the command-line
-tool you want to amplify with Crescendo. In this article describe ways to information about the tool
-to help you design cmdlets using Crescendo.
+tool you want to amplify with Crescendo. In this article we describe ways to collect information
+about the tool that helps you design cmdlets using Crescendo.
 
-For the examples in this article we use the Azure Connected Machine agent tool (azcmagent). We chose
-this tool because:
+For the examples in this article, we use the Azure Connected Machine agent tool (`azcmagent`). We
+chose this tool because:
 
 - It is easy to install and remove
 - It doesn't require an active Azure subscription for basic usage
 - It has useful in-console help and online documentation
 - It produces easily consumable output
 
-For more information, see the [Installing the azcmagent tool](#installing-the-azcmagent-tool)
-section of this article.
+> [!TIP]
+> If you don't have this tool, you don't need to install it unless you want to try out the examples.
+>
+> For more information, see the [Installing the azcmagent tool](#installing-the-azcmagent-tool)
+> section of this article.
 
 ## Start with command-line help and documentation
 
@@ -45,7 +48,7 @@ Available Commands:
 ...
 ```
 
-Each of the subcommands can their own subcommands and parameters. For example, the `config`
+Each of the subcommands can have their own subcommands and parameters. For example, the `config`
 subcommand has five subcommands.
 
 ```powershell
@@ -81,12 +84,12 @@ help command to a file that you can use for later reference as you create your C
 > [!TIP]
 > If the help content is structured consistently, it may be possible to create code that builds
 > cmdlets by parsing this help output. Crescendo comes with some experimental help parsers to
-> illustrate how this may be accomplished. See `Experimental` folder in the root folder of the
+> illustrate how this may be accomplished. See the `Experimental` folder in the root folder of the
 > **Microsoft.PowerShell.Crescendo** module.
 
 Take note of the output formats that the command-line tool offers. Many command-line tools can
-output information other formats such as CSV or JSON. These structured formats are easier to convert
-to PowerShell object.
+output information in formats such as CSV or JSON. These structured formats are easily converted to
+PowerShell objects.
 
 ## Capture example output for parsing
 
@@ -95,7 +98,7 @@ from those commands. Redirect the output to a file for each command. Use this ex
 you design the output handlers (parsers) for your Crescendo cmdlets.
 
 As you inspect the sample output, think about the types of data returned. As you construct your
-objects you should converts the strings output by the command-line tool to .NET types. For example,
+objects you should convert the strings output by the command-line tool to .NET types. For example,
 timestamp information can be converted to .NET `[DateTime]` types. Also, look at the formatting of
 the output for markers that separate data fields. Those markers can be used to parse the information
 as you construct your objects for output.
@@ -123,9 +126,9 @@ from the PowerShell Community blog.
 You can download the Azure Connected Machine agent package for Windows and Linux from the locations
 listed below.
 
-- [Windows agent Windows Installer package](https://aka.ms/AzureConnectedMachineAgent) from the
-  Microsoft Download Center.
-- Linux agent is distributed from Microsoft's
+- Download the Windows Installer package for the
+  [Windows agent](https://aka.ms/AzureConnectedMachineAgent) from the Microsoft Download Center.
+- The Linux agent is distributed from Microsoft's
   [package repository](https://packages.microsoft.com/). Choose the preferred package format for the
   distribution (RPM or DEB).
 

@@ -9,9 +9,9 @@ PowerShell is capable of invoking command-line tools like any shell. However, it
 experience if the command-line tool could participate in the PowerShell pipeline and take advantage
 of the parameter behaviors that are part of PowerShell.
 
-Crescendo provides a framework to rapidly develop PowerShell cmdlets that amplify command-line
+Crescendo provides a framework to rapidly develop PowerShell cmdlets that _amplify_ command-line
 tools, regardless of platform. The goal of a Crescendo-based module is to create PowerShell cmdlets
-that use a command-line tool, but unlike that tool, return PowerShell objects instead of plain text.
+that use a command-line tool and, unlike that tool, return PowerShell objects instead of plain text.
 
 ## How Crescendo works
 

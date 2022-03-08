@@ -49,8 +49,8 @@ criteria:
 
   Often the information you need for automation can be obtained quicker than making a cmdlet.
   PowerShell lets you access other frameworks and libraries, such as WMI and .NET. Instead of
-  investing time creating a cmdlet, you might be able to get the information quicker using one of
-  these libraries.
+  investing time creating a cmdlet, you might be able to get the information more quickly using one
+  of these libraries.
 
 - **Is the output trivial?**
 

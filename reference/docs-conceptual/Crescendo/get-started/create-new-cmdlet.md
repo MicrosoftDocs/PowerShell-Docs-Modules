@@ -135,7 +135,7 @@ It is important to have the schema link in the Crescendo configuration file. The
 tools like [Visual Studio Code](https://code.visualstudio.com) with IntelliSense and tooltips during
 the authoring experience.
 
-### Completing the Crescendo command configuration
+## Completing the Crescendo command configuration
 
 In this example, we are creating a configuration for the `azcmagent show` command. The cmdlet
 doesn't require any additional parameters. Since `azcmagent` is a modern tool that provides JSON
@@ -188,7 +188,7 @@ The following example shows the full JSON definition of the new cmdlet after add
 }
 ```
 
-### Defining another cmdlet that has parameters
+## Defining another cmdlet that has parameters
 
 In this example, we create a Crescendo configuration for the `azcmagent config get` command that
 lists property information. A parameter named **Property** is mapped to the original parameter of

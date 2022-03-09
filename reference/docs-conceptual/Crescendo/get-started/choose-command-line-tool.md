@@ -18,7 +18,7 @@ criteria:
   If the tool is simple to use and provides the information you need, there is no need to create a
   cmdlet. However, this isn't always the case with command-line tools. Many command-line tools
   have their own unique syntax, parameters, and output that make it difficult for inexperienced
-  administrators to use the command. Converting the command into a cmdlet provides all the benefits
+  administrators to use the tool's commands. Converting a command into a cmdlet provides all the benefits
   of cmdlet discovery, syntax consistency, and structured output as objects.
 
 - **The command-line tool output is difficult to use in automation.**

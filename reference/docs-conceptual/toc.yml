@@ -13,6 +13,10 @@ items:
             href: Crescendo/get-started/choose-command-line-tool.md
           - name: Decide which features amplify
             href: Crescendo/get-started/research-tool.md
+          - name: Create a Crescendo cmdlet
+            href: Crescendo/get-started/create-new-cmdlet.md
+          - name: Generate and test a Crescendo module
+            href: Crescendo/get-started/generate-module.md
   - name: PlatyPS
     items:
       - name: Overview

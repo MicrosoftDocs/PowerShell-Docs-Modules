@@ -5,29 +5,28 @@ title: Choosing a command-line tool to amplify
 ---
 # Choosing the command-line tool for Crescendo
 
-Using Crescendo is a rapid, reliable way to _amplify_ a command-line tool to
-produce a cmdlet-like experience. Many times, the tool you need to work with is directly tied to the
-technology you are attempting to automate. This makes the tool choice simple. However, not all tools
-work the same way. To optimize your investment when developing a cmdlet, consider the following
-criteria:
+Using Crescendo is a rapid, reliable way to _amplify_ a command-line tool to produce a cmdlet-like
+experience. Many times, the tool you need to work with is directly tied to the technology you are
+attempting to automate. This makes the tool choice simple. However, not all tools work the same way.
+To optimize your investment when developing a cmdlet, consider the following criteria:
 
 ## Command-line tools that make good candidates
 
 - **The original tool is difficult to use.**
 
   If the tool is simple to use and provides the information you need, there is no need to create a
-  cmdlet. However, this isn't always the case with command-line tools. Many command-line tools
-  have their own unique syntax, parameters, and output that make it difficult for inexperienced
-  administrators to use the tool's commands. Converting a command into a cmdlet provides all the benefits
-  of cmdlet discovery, syntax consistency, and structured output as objects.
+  cmdlet. However, this isn't always the case with command-line tools. Many command-line tools have
+  their own unique syntax, parameters, and output that make it difficult for unfamiliar
+  administrators to use the tool's commands. Converting a command into a cmdlet provides all the
+  benefits of cmdlet discovery, syntax consistency, and structured output as objects.
 
 - **The command-line tool output is difficult to use in automation.**
 
   Command-line tools output their information to the screen as string data. This is not the
   structured data (objects) that PowerShell expects in the pipeline, which prevents you from using
   PowerShell cmdlets, such as `Where-Object` and `ForEach-Object`. Crescendo assists you with
-  _amplifying_ the command-line tool experience so that the tool can participate in the
-  PowerShell pipeline.
+  _amplifying_ the command-line tool experience so that the tool can participate in the PowerShell
+  pipeline.
 
 - **The command-line tool doesn't provide adequate help.**
 
@@ -49,8 +48,8 @@ criteria:
 
   Often the information you need for automation can be obtained quicker than making a cmdlet.
   PowerShell lets you access other frameworks and libraries, such as WMI and .NET. Instead of
-  investing time amplifying a command-line tool, you might be able to get the information more quickly using one
-  of these libraries.
+  investing time amplifying a command-line tool, you might be able to get the information more
+  quickly using one of these libraries.
 
 - **Is the output trivial?**
 

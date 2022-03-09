@@ -121,6 +121,10 @@ For more complex examples of parsing output, see this
 [blog post](https://devblogs.microsoft.com/powershell-community/a-closer-look-at-the-parsing-code-of-a-crescendo-output-handler/)
 from the PowerShell Community blog.
 
+> [!NOTE]
+> The `azcmagent` tool must be run with Administrative privilege. This also means that the module
+> you create must be run with Administrative privilege.
+
 ## Installing the azcmagent tool
 
 You can download the Azure Connected Machine agent package for Windows and Linux from the locations

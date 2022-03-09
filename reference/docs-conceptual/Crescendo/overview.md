@@ -5,7 +5,7 @@ title: Crescendo overview
 ---
 # Microsoft.PowerShell.Crescendo overview
 
-PowerShell, like other shells, is capable of invoking command-line tools like any shell. However, it
+PowerShell, like other shells, is capable of invoking command-line tools. However, it
 would improve the experience if the command-line tool could participate in the PowerShell pipeline
 and take advantage of the parameter behaviors that are part of PowerShell.
 

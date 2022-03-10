@@ -1,9 +1,9 @@
 ---
 Module Name: Microsoft.PowerShell.Crescendo
 Module Guid: 2dd09744-1ced-4636-a8ce-09a0bf0e566a
-ms.date: 11/09/2021
+ms.date: 03/10/2022
 Download Help Link: https://aka.ms/ps-modules-help
-Help Version: 0.1.0.0
+Help Version: 1.0.0
 Locale: en-US
 ---
 
@@ -11,14 +11,11 @@ Locale: en-US
 
 ## Description
 
-The PowerShell Crescendo module provides a way to more easily take advantage of the PowerShell
-pipeline by invoking the native executable, facilitating parameter handling, and converting text
-output into objects.
-
-> [!NOTE]
-> Support for the module is limited. Please file issues in the source repository using the **This
-> product** button in the Feedback section at the bottom of the page. The module is still very early
-> in the development process, so we expect changes to be made.
+Crescendo is a development accelerator enabling you to rapidly build PowerShell cmdlets that
+leverage existing command-line tools. Crescendo amplifies the command-line experience of the
+original tool to include object output for the PowerShell pipeline, privilege elevation, and
+integrated help information. A Crescendo module replaces cumbersome command-line tools with
+PowerShell cmdlets that are easier to use in automation and packaged to share with team members.
 
 ## Microsoft.PowerShell.Crescendo Cmdlets
 

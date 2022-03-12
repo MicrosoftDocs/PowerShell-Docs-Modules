@@ -1,9 +1,15 @@
 ---
 description: How to install the Crescendo module.
-ms.date: 03/07/2022
+ms.date: 03/12/2022
 title: Installing Crescendo
 ---
 # Install the Crescendo module
+
+Requirements:
+
+**Microsoft.PowerShell.Crescendo** requires PowerShell 7.0 or higher.
+
+Crescendo can be used to create modules that run on Windows PowerShell 5.1 and newer.
 
 To install using **PowerShellGet 2.x**:
 
@@ -20,8 +26,8 @@ Install-PSResource Microsoft.PowerShell.Crescendo -Reinstall
 The **Force** or **Reinstall** parameters are only necessary when you have an older version of
 Crescendo installed. However, these parameters work whether you have a previous version or not.
 
-The Crescendo module includes full help content. However, to ensure you have the latest help, run
-the following command:
+The Crescendo module includes full help content. To install the latest help, run the following
+command:
 
 ```powershell
 Update-Help -Module Microsoft.PowerShell.Crescendo -Force

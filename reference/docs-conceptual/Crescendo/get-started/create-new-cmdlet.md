@@ -94,7 +94,7 @@ $NewConfiguration | ConvertTo-Json -Depth 3 | Out-File .\AzCmAgent.json
 
 Crescendo configuration file has a JSON schema and can contain one or more cmdlet definitions in an
 array. In this example, `$NewConfiguration` is an object containing the link to the JSON schema and
-and array to contain the cmdlet definitions. The output from `New-CrescendoCommand` is added to the
+an array to contain the cmdlet definitions. The output from `New-CrescendoCommand` is added to the
 **Commands** array. The `$NewConfiguration` is converted to JSON and written to a file. The
 `AzCmAgent.json` file contains the following code:
 

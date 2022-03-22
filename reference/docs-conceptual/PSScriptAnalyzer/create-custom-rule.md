@@ -53,7 +53,7 @@ Param
 )
 ```
 
-The name of the _Token_ parameter name must end with **Token**.
+The name of the **Token** parameter name must end with **Token**.
 
 ```powershell
 Param
@@ -67,12 +67,12 @@ Param
 
 ### DiagnosticRecord should have the required properties
 
-The `DiagnosticRecord` should have at least four properties:
+The **DiagnosticRecord** should have at least four properties:
 
-- Message
-- Extent
-- RuleName
-- Severity
+- **Message**
+- **Extent**
+- **RuleName**
+- **Severity**
 
 ```powershell
 $result = [Microsoft.Windows.PowerShell.ScriptAnalyzer.Generic.DiagnosticRecord[]]@{
@@ -84,7 +84,7 @@ $result = [Microsoft.Windows.PowerShell.ScriptAnalyzer.Generic.DiagnosticRecord[
 ```
 
 Since version 1.17.0, you can include a **SuggestedCorrections** property of type
-`IEnumerable<CorrectionExtent>`. Care must be taken that the type is correct. For example:
+**IEnumerable\<CorrectionExtent\>**. Make sure to specify the correct type. For example:
 
 ```powershell
 [int]$startLineNumber =  $ast.Extent.StartLineNumber

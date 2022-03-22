@@ -7,9 +7,9 @@ title: PSScriptAnalyzer rules and recommendations
 
 The following guidelines come from a combined effort from both the PowerShell team and the
 community. The guidelines are organized by type. Within each type there is a list of rules. The
-rules are grouped by the **Severity** defined in the implementation of the **PSScriptAnalyzer** rule.
-The severity level labeled as 'TBD' means "To be determined". These are recommendations that do not
-currently have rules defined.
+rules are grouped by the **Severity** defined in the implementation of the **PSScriptAnalyzer**
+rule. The severity level labeled as 'TBD' means "To be determined". These are recommendations that
+do not currently have rules defined.
 
 ## Cmdlet Design Rules
 
@@ -19,25 +19,25 @@ No rules defined.
 
 ### Severity: Warning
 
-- Use Only Approved Verbs [UseApprovedVerbs](Rules/UseApprovedVerbs.md)
-- Cmdlets Names: Characters that cannot be Used
+- Use only Approved Verbs [UseApprovedVerbs](Rules/UseApprovedVerbs.md)
+- Cmdlets names with unusable characters
   [AvoidReservedCharInCmdlet](Rules/ReservedCmdletChar.md)
-- Parameter Names that cannot be Used
+- Parameter names that cannot be used
   [AvoidReservedParams](Rules/ReservedParams.md)
-- Support Confirmation Requests
+- Support confirmation requests
   [UseShouldProcessForStateChangingFunctions](Rules/UseShouldProcessForStateChangingFunctions.md)
   and
   [UseShouldProcessForStateChangingFunctions](Rules/UseShouldProcessForStateChangingFunctions.md)
-- Must call ShouldProcess when ShouldProcess attribute is present and vice
-  versa.[UseShouldProcess](Rules/ShouldProcess.md)
+- Must call **ShouldProcess** when the **ShouldProcess** attribute is present and vice
+  versa [UseShouldProcess](Rules/ShouldProcess.md)
 - Nouns should be singular
   [UseSingularNouns](Rules/UseSingularNouns.md)
-- Module Manifest Fields
+- Missing module manifest fields
   [MissingModuleManifestField](Rules/MissingModuleManifestField.md)
-  - Version
-  - Author
-  - Description
-  - LicenseUri (for PowerShell Gallery)
+  - **Version**
+  - **Author**
+  - **Description**
+  - **LicenseUri** (for PowerShell Gallery)
 - Switch parameters should not default to true
   [AvoidDefaultValueSwitchParameter](Rules/AvoidDefaultValueSwitchParameter.md)
 
@@ -70,24 +70,23 @@ No rules defined.
 
 ### Severity: Warning
 
-- Avoid using alias
+- Avoid using aliases
   [AvoidUsingCmdletAliases](Rules/AvoidUsingCmdletAliases.md)
 - Avoid using deprecated WMI cmdlets
   [AvoidUsingWMICmdlet](Rules/AvoidUsingWMICmdlet.md)
-- Empty catch block should not be used
-  [AvoidUsingEmptyCatchBlock](Rules/AvoidUsingEmptyCatchBlock.md)
-- Invoke existing cmdlet with correct parameters
+- Avoid using empty **catch** blocks [AvoidUsingEmptyCatchBlock](Rules/AvoidUsingEmptyCatchBlock.md)
+- Invoke existing cmdlets with correct parameters
   [UseCmdletCorrectly](Rules/UseCmdletCorrectly.md)
-- Cmdlets should have ShouldProcess/ShouldContinue and Force param if certain system-modding verbs
-  are present (Update, Set, Remove, New):
+- Cmdlets should have **ShouldProcess**/**ShouldContinue** and **Force** parameter if using certain
+  system-modifying verbs (Update, Set, Remove, New):
   [UseShouldProcessForStateChangingFunctions](Rules/UseShouldProcessForStateChangingFunctions.md)
-- Positional parameters should be avoided
+- Avoid using positional parameters
   [AvoidUsingPositionalParameters](Rules/AvoidUsingPositionalParameters.md)
-- Global variables should be avoided.
+- Avoid using global variables
   [AvoidGlobalVars](Rules/AvoidGlobalVars.md)
-- Declared variables must be used in more than just their assignment.
+- Declared variables should be used after their assignment
   [UseDeclaredVarsMoreThanAssignments](Rules/UseDeclaredVarsMoreThanAssignments.md)
-- No Invoke-Expression
+- Avoid using `Invoke-Expression`
   [AvoidUsingInvokeExpression](Rules/AvoidUsingInvokeExpression.md)
 
 ### Severity: Information
@@ -96,11 +95,11 @@ No rules defined.
 
 ### Severity: TBD
 
-- `Clear-Host` should not be used
-- File paths should not be used (UNC)
+- Avoid using `Clear-Host`
+- Avoid using UNC file paths
 - Error Handling
   - Use `-ErrorAction Stop` when calling cmdlets
-  - Use $ErrorActionPreference = 'Stop'/' Continue' when calling non-cmdlets
+  - Use `$ErrorActionPreference = 'Stop'/'Continue'` when calling non-cmdlets
   - Avoid using flags to handle errors
   - Avoid using `$?`
   - Avoid testing for a null variable as an error condition
@@ -117,7 +116,7 @@ No rules defined.
 
 ### Severity: Warning
 
-- Don't use `Write-Host` unless writing to the host is all you want to do
+- Avoid using `Write-Host` unless writing to the host is all you want to do
   [AvoidUsingWriteHost](Rules/AvoidUsingWriteHost.md)
 
 ### Severity: Information
@@ -129,7 +128,7 @@ No rules defined.
 
 - Provide usage Examples
 - Use the Notes section for details on how the tool works
-- Should have help on every exported command (including parameter documentation)
+- Every exported command should have help (including parameter documentation)
 - Document the version of PowerShell that the script was written for
 - Indent your code
 - Avoid backticks
@@ -138,18 +137,18 @@ No rules defined.
 
 ### Severity: Error
 
-- Password should be secure string
+- Avoid using plain text passwords
   [AvoidUsingPlainTextForPassword](Rules/AvoidUsingPlainTextForPassword.md)
-- Should never have both `-Username` and `-Password` parameters (should take credentials):
+- Avoid `-Username` and `-Password` parameters (use **PSCredential** instead):
   [UsePSCredentialType](Rules/UsePSCredentialType.md)
-- `-ComputerName` Parameter argument hardcoded should not be used (information disclosure):
+- Avoid hardcoding a `-ComputerName` parameter argument (information disclosure):
   [AvoidUsingComputerNameHardcoded](Rules/AvoidUsingComputerNameHardcoded.md)
-- ConvertTo-SecureString with plaintext should not be used (information disclosure):
+- Avoid using `ConvertTo-SecureString` with plaintext (information disclosure):
   [AvoidUsingConvertToSecureStringWithPlainText](Rules/AvoidUsingConvertToSecureStringWithPlainText.md)
 
 ### Severity: Warning
 
-- Information disclosure - `$Password = 'string'` should not be used.
+- Avoid using `$Password = 'string'` (information disclosure).
   [AvoidUsingUsernameAndPasswordParams](Rules/AvoidUsingUsernameAndPasswordParams.md)
 
 ### Severity: Information
@@ -158,7 +157,7 @@ No rules defined.
 
 ### Severity: TBD
 
-- APIKey and Credentials variables that are initialized (information disclosure)
+- Avoid initializing APIKey and Credentials variables (information disclosure)
 
 ## DSC Related Rules
 
@@ -180,19 +179,20 @@ No rules defined.
 - The following three recommendations are covered by the
   [ReturnCorrectTypesForDSCFunctions](Rules/DSCReturnCorrectTypesForDSCFunctions.md) rule
   - Avoid returning any object from a `Set-TargetResource` or Set (Class Based) function
-  - Returning a Boolean object from a `Test-TargetResource` or Test (Class Based) function
-  - Returning an object from a `Get-TargetResource` or Get (Class Based) function
+  - Return a Boolean value from a `Test-TargetResource` or Test (Class Based) function
+  - Return an object from a `Get-TargetResource` or Get (Class Based) function
 - DSC resources should have DSC tests [DSCTestsPresent](Rules/DSCDscTestsPresent.md)
 - DSC resources should have DSC examples [DSCExamplesPresent](Rules/DSCDscExamplesPresent.md)
 
 ### Severity: TBD
 
-- For PowerShell V4, Resource module contains `.psd1` file and `schema.mof` for every resource
-- MOF has description for each element - see
+- For Windows PowerShell v4, resource modules should have a `.psd1` file and `schema.mof` for every
+  resource
+- MOFs should have a description for each element - see
   [Issue #131](https://github.com/PowerShell/PSScriptAnalyzer/issues/131)
-- Resource module must contain .psd1 file (always) and schema.mof (for non-class resource) - see
+- Resource modules should have a `.psd1` file (always) and `schema.mof` (for non-class resource) see
   [Issue #116](https://github.com/PowerShell/PSScriptAnalyzer/issues/116)
-- Use ShouldProcess for a Set DSC method
+- Use **ShouldProcess** for a **Set** DSC method
 - Resource module contains DscResources folder which contains the resources - see
   [Issue #130](https://github.com/PowerShell/PSScriptAnalyzer/issues/130)
 

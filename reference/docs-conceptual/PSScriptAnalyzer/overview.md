@@ -11,7 +11,7 @@ best practices identified by PowerShell Team and the community. It generates **D
 (errors and warnings) to inform users about potential code defects and suggests possible solutions
 for improvements.
 
-PSScriptAnalyzer is shipped with a collection of built-in rules that check various aspects of
+PSScriptAnalyzer ships with a collection of built-in rules that check various aspects of
 PowerShell code such as:
 
 - The presence of uninitialized variables
@@ -28,7 +28,7 @@ standard style, is easier to read, and is more maintainable.
 Supported PowerShell Versions and Platforms
 
 - Windows PowerShell 3.0 or greater
-- PowerShell Core 7.0.3 or greater on Windows/Linux/macOS
+- PowerShell 7.0.3 or greater on Windows/Linux/macOS
 
 Install using PowerShellGet 2.x:
 
@@ -43,4 +43,5 @@ Install-PSResource -Name PSScriptAnalyzer -Reinstall
 ```
 
 The **Force** or **Reinstall** parameters are only necessary when you have an older version of
-PSScriptAnalyzer installed. However, these parameters work whether you have a previous version or not.
+PSScriptAnalyzer installed. These parameters also work even when you do not have a previous version
+installed.

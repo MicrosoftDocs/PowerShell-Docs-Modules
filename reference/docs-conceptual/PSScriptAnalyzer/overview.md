@@ -43,4 +43,4 @@ Install-PSResource -Name PSScriptAnalyzer -Reinstall
 ```
 
 The **Force** or **Reinstall** parameters are only necessary when you have an older version of
-Crescendo installed. However, these parameters work whether you have a previous version or not.
+PSScriptAnalyzer installed. However, these parameters work whether you have a previous version or not.

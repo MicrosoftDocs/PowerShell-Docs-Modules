@@ -29,7 +29,7 @@ PSUseApprovedVerbs  Warning               1    The cmdlet 'eliminate-file' uses 
                                                unapproved verb.
 ```
 
-The RuleName is set to the `ErrorId` of the parser error.
+The RuleName is set to the **ErrorId** of the parser error.
 
 To suppress **ParseErrors**, do not include it as a value in the **Severity** parameter.
 
@@ -84,8 +84,8 @@ function SuppressTwoVariables()
 Use the **Scope** property of the `SuppressMessageAttribute` to limit rule suppression to functions
 or classes within the attribute's scope.
 
-Use the value `Function` to suppress violations on all functions within the attribute's scope. Use
-the value `Class` to suppress violations on all classes within the attribute's scope:
+Use the value **Function** to suppress violations on all functions within the attribute's scope. Use
+the value **Class** to suppress violations on all classes within the attribute's scope:
 
 ```powershell
 [Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSProvideCommentHelp', '', Scope='Function')]
@@ -104,7 +104,7 @@ You can further restrict suppression based on a function, parameter, class, vari
 name by setting the **Target** property of the `SuppressMessageAttribute` to a regular expression or
 a wildcard pattern.
 
-For example, uppress `PSAvoidUsingWriteHost` rule violation in `start-bar` and `start-baz` but not
+For example, to suppress `PSAvoidUsingWriteHost` rule violation in `start-bar` and `start-baz` but not
 in `start-foo` and `start-bam`:
 
 ```powershell
@@ -146,7 +146,7 @@ Param()
 ## Settings Support in ScriptAnalyzer
 
 You can create settings that describe the ScriptAnalyzer rules to include or exclude based on
-`Severity`. Use the **Settings** parameter of `Invoke-ScriptAnalyzer` to specify configuration. This
+**Severity**. Use the **Settings** parameter of `Invoke-ScriptAnalyzer` to specify configuration. This
 enables a user to create a custom configuration for a specific environment. We support the following
 modes for specifying the settings file.
 
@@ -160,8 +160,8 @@ command.
 Invoke-ScriptAnalyzer -Path /path/to/module/ -Settings PSGallery -Recurse
 ```
 
-Along with `PSGallery` there are a few other built-in presets, including, `DSC` and
-`CodeFormatting`, that can be used. These presets can be tab completed for the **Settings** parameter.
+Along with **PSGallery** there are a few other built-in presets, including, **DSC** and
+**CodeFormatting**, that can be used. These presets can be tab completed for the **Settings** parameter.
 
 ### Explicit
 
@@ -298,14 +298,14 @@ public System.Collections.Generic.IEnumerable<IRule> GetRule(string[] moduleName
 
 Some violations can be fixed by replacing the violation causing content with a suggested
 alternative. You can use the `-Fix` switch to automatically apply the suggestions. Since
-`Invoke-ScriptAnalyzer` implements `SupportsShouldProcess`, you can additionally use `-WhatIf` or
+`Invoke-ScriptAnalyzer` implements **SupportsShouldProcess**, you can additionally use `-WhatIf` or
 `-Confirm` to find out which corrections would be applied. Be sure to use source control when
-applying those corrections since some changes, such as the one for `AvoidUsingPlainTextForPassword`,
+applying those corrections since some changes, such as the one for **AvoidUsingPlainTextForPassword**,
 might require additional script modifications that cannot be made automatically. If your scripts are
 sensitive to encoding, you should also check for that because the initial encoding can not be
 preserved in all cases.
 
-The **SuggestedCorrections** property of the `ErrorRecord` enables quick-fix scenarios in editors
+The **SuggestedCorrections** property of the error record enables quick-fix scenarios in editors
 like VSCode. We provide valid **SuggestedCorrection**  for the following rules:
 
 - AvoidAlias.cs

@@ -41,7 +41,7 @@ Include the `.DESCRIPTION` field. This becomes the description for the customize
 
 ### Each function must have a Token array or an Ast parameter
 
-The name of the _Ast_ parameter name must end with **Ast**.
+The name of the **Ast** parameter name must end with **Ast**.
 
 ```powershell
 Param
@@ -132,7 +132,7 @@ Export-ModuleMember -Function (FunctionName)
     From Windows PowerShell 4.0, the #Requires statement let script developers require that
     sessions be run with elevated user rights (run as Administrator). Script developers does
     not need to write their own methods any more. To fix a violation of this rule, please
-    consider to use #Requires -RunAsAdministrator instead of your own methods.
+    consider using #Requires -RunAsAdministrator instead of your own methods.
     .EXAMPLE
     Measure-RequiresRunAsAdministrator -ScriptBlockAst $ScriptBlockAst
     .INPUTS

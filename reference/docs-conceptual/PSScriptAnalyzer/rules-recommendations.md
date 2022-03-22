@@ -7,7 +7,7 @@ title: PSScriptAnalyzer rules and recommendations
 
 The following guidelines come from a combined effort from both the PowerShell team and the
 community. The guidelines are organized by type. Within each type there is a list of rules. The
-rules are group by the **Severity** defined in the implementation of the **PSScriptAnalyzer** rule.
+rules are grouped by the **Severity** defined in the implementation of the **PSScriptAnalyzer** rule.
 The severity level labeled as 'TBD' means "To be determined". These are recommendations that do not
 currently have rules defined.
 
@@ -129,9 +129,9 @@ No rules defined.
 ### Severity: TBD
 
 - Provide usage Examples
-- Use the Notes section for detail on how the tool work
+- Use the Notes section for details on how the tool works
 - Should have help on every exported command (including parameter documentation)
-- Document the version of PowerShell that script was written for
+- Document the version of PowerShell that the script was written for
 - Indent your code
 - Avoid backticks
 
@@ -140,8 +140,8 @@ No rules defined.
 ### Severity: Error
 
 - Password should be secure string
-  [AvoidUsingPlainTextForPassword](Rules/AvoidUsingPlainTextForPassword.md) - Should never have both
-  -Username and -Password parameters (should take credentials):
+  [AvoidUsingPlainTextForPassword](Rules/AvoidUsingPlainTextForPassword.md)
+- Should never have both `-Username` and `-Password` parameters (should take credentials):
   [UsePSCredentialType](Rules/UsePSCredentialType.md)
 - `-ComputerName` Parameter argument hardcoded should not be used (information disclosure):
   [AvoidUsingComputerNameHardcoded](Rules/AvoidUsingComputerNameHardcoded.md)

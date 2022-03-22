@@ -141,7 +141,8 @@ Suppress violation in `start-bar`, `start-baz` and `start-bam` but not in `start
 Param()
 ```
 
-**Note**: Parser Errors cannot be suppressed via the `SuppressMessageAttribute`
+> [!NOTE]
+> Parser errors cannot be suppressed via the `SuppressMessageAttribute`.
 
 ## Settings Support in ScriptAnalyzer
 

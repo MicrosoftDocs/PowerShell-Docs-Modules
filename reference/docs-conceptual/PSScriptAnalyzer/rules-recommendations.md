@@ -47,12 +47,11 @@ No rules defined.
 
 ### Severity: TBD
 
-- Support Force Parameter for Interactive Session
-- If your cmdlet is used interactively, always provide a Force parameter to override the interactive
-  actions, such as prompts or reading lines of input). This is important because it allows your
-  cmdlet to be used in non-interactive scripts and hosts. The following methods can be implemented
-  by an interactive host.
-- Document Output Objects
+- Support **Force** parameter for interactive sessions. If your cmdlet is used interactively, always
+  provide a **Force** parameter to override the interactive actions, such as prompts or reading
+  lines of input. This is important because it allows your cmdlet to be used in non-interactive
+  scripts and hosts. The following methods can be implemented by an interactive host.
+- Document output objects
 - Module must be loadable
 - No syntax errors
 - Unresolved dependencies are an error
@@ -60,8 +59,8 @@ No rules defined.
 - Specify the Cmdlet Attribute
 - Override an Input Processing Method
 - Specify the OutputType Attribute
-- Write Single Records to the Pipeline
-- Make Cmdlets Case-Insensitive and Case-Preserving
+- Write single records to the pipeline
+- Make cmdlets case-insensitive and case-preserving
 
 ## Script Functions
 
@@ -166,11 +165,11 @@ No rules defined.
 ### Severity: Error
 
 - Use standard DSC methods
-  [StandardDSCFunctionsInResource](Rules/StandardDSCFunctionsInResource.md)
+  [StandardDSCFunctionsInResource](Rules/DSCStandardDSCFunctionsInResource.md)
 - Use identical mandatory parameters for all DSC methods
-  [UseIdenticalMandatoryParametersForDSC](Rules/UseIdenticalMandatoryParametersForDSC.md)
+  [UseIdenticalMandatoryParametersForDSC](Rules/DSCUseIdenticalMandatoryParametersForDSC.md)
 - Use identical parameters for Set and Test DSC methods
-  [UseIdenticalParametersForDSC](Rules/UseIdenticalParametersForDSC.md)
+  [UseIdenticalParametersForDSC](Rules/DSCUseIdenticalParametersForDSC.md)
 
 ### Severity: Warning
 
@@ -179,12 +178,12 @@ No rules defined.
 ### Severity: Information
 
 - The following three recommendations are covered by the
-  [ReturnCorrectTypesForDSCFunctions](Rules/ReturnCorrectTypesForDSCFunctions.md) rule
+  [ReturnCorrectTypesForDSCFunctions](Rules/DSCReturnCorrectTypesForDSCFunctions.md) rule
   - Avoid returning any object from a `Set-TargetResource` or Set (Class Based) function
   - Returning a Boolean object from a `Test-TargetResource` or Test (Class Based) function
   - Returning an object from a `Get-TargetResource` or Get (Class Based) function
-- DSC resources should have DSC tests [DSCTestsPresent](Rules/DscTestsPresent.md)
-- DSC resources should have DSC examples [DSCExamplesPresent](Rules/DscExamplesPresent.md)
+- DSC resources should have DSC tests [DSCTestsPresent](Rules/DSCDscTestsPresent.md)
+- DSC resources should have DSC examples [DSCExamplesPresent](Rules/DSCDscExamplesPresent.md)
 
 ### Severity: TBD
 

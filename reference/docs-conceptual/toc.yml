@@ -27,7 +27,13 @@ items:
     items:
       - name: Overview
         href: PSScriptAnalyzer/overview.md
-      - name: Rules
+      - name: Using PSScriptAnalyzer
+        href: PSScriptAnalyzer/using-scriptanalyzer.md
+      - name: Rules and recommendations
+        href: PSScriptAnalyzer/rules-recommendations.md
+      - name: Creating custom rules
+        href: PSScriptAnalyzer/create-custom-rule.md
+      - name: Rules reference
         items:
           - name: Rules overview
             href: PSScriptAnalyzer/Rules/README.md

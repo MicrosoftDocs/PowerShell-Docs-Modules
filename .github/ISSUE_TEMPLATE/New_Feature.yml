@@ -1,4 +1,4 @@
-sname: Describe new feature or change in behavior 🚀
+name: Describe new feature or change in behavior 🚀
 description: Update existing documentation for a change in behavior or add new documentation for a new feature.
 labels:
   - needs-triage

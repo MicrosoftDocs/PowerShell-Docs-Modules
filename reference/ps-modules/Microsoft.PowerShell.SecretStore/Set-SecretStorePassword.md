@@ -19,7 +19,7 @@ Replaces the current SecretStore password with a new one.
 Set-SecretStorePassword [<CommonParameters>]
 ```
 
-### ParameterSet
+### PARAMETERSet
 
 ```
 Set-SecretStorePassword -NewPassword <SecureString> [-Password <SecureString>] [<CommonParameters>]

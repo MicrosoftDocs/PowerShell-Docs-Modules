@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.PowerShell.Crescendo-help.xml
 Module Name: Microsoft.PowerShell.Crescendo
 ms.date: 11/09/2021

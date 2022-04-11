@@ -13,7 +13,7 @@ Sets SecretStore configuration properties.
 
 ## SYNTAX
 
-### ParameterSet (Default)
+### PARAMETERSet (Default)
 
 ```
 Set-SecretStoreConfiguration [-Scope <SecureStoreScope>] [-Authentication <Authenticate>]

@@ -8,9 +8,9 @@ title: Create a Crescendo configuration using the Crescendo cmdlets
 The Crescendo module includes a set of cmdlets that create various Crescendo object types. You can
 use these cmdlets to create a Crescendo configuration without the need to manually edit a JSON file.
 
-During the design of Crescendo, these cmdlets were created as helper functions that were not
-intended to be exported for public use. Because of this, these cmdlets do not provide the best
-developer experience for creating a configuration.
+During the design of Crescendo, these cmdlets were created before the decision that module and
+cmdlet creation could be better served by a declarative approach. Their utility was still obvious,
+so the decision was made to support both approaches.
 
 > [!IMPORTANT]
 > Since developer tools like Visual Studio Code (VS Code) provide IntelliSense based on the JSON
@@ -104,7 +104,6 @@ $newCommand.Usage = New-UsageInfo -usage $newCommand.Description
 $newCommand.Platform = @('Windows')
 
 ### Add an example to the command
-$newCommand.Examples = @()
 $example = @{
     Command = 'Get-VssProvider'
     Description = 'Get a list of VSS Providers'
@@ -113,7 +112,6 @@ $example = @{
 $newCommand.Examples += New-ExampleInfo @example
 
 ### Add an Output Handler to the command
-$newCommand.OutputHandlers = @()
 $handler = New-OutputHandler
 $handler.ParameterSetName = 'Default'
 $handler.HandlerType = 'Function'
@@ -138,7 +136,6 @@ $newCommand.Usage = New-UsageInfo -usage 'List existing volume shadow copies.'
 $newCommand.Platform = ,'Windows'
 
 ### Add multiple examples to the command
-$newCommand.Examples = @()
 $example = @{
     Command = 'Get-VssShadow'
     Description = 'Get a list of VSS shadow copies'
@@ -162,36 +159,34 @@ $newCommand.Examples += New-ExampleInfo @example
 $newCommand.DefaultParameterSetName = 'Default'
 
 #### Add a new parameter to the command
-$newCommand.Parameters = @()
-$parameters = New-ParameterInfo -OriginalName '/For=' -Name 'For'
-$parameters.ParameterType = 'string'
-$parameters.ParameterSetName = @('Default','ByShadowId','BySetId')
-$parameters.NoGap = $true
-$parameters.Description = "List the shadow copies for volume name like 'C:'"
-$newCommand.Parameters += $parameters
+$parameter = New-ParameterInfo -OriginalName '/For=' -Name 'For'
+$parameter.ParameterType = 'string'
+$parameter.ParameterSetName = @('Default','ByShadowId','BySetId')
+$parameter.NoGap = $true
+$parameter.Description = "List the shadow copies for volume name like 'C:'"
+$newCommand.Parameters += $parameter
 
 #### Add a new parameter to the command
-$parameters = New-ParameterInfo -OriginalName '/Shadow=' -Name 'Shadow'
-$parameters.ParameterType = 'string'
-$parameters.ParameterSetName = @('ByShadowId')
-$parameters.NoGap = $true
-$parameters.Mandatory = $true
-$parameters.Description = "List shadow copies matching the Id in GUID format: " +
+$parameter = New-ParameterInfo -OriginalName '/Shadow=' -Name 'Shadow'
+$parameter.ParameterType = 'string'
+$parameter.ParameterSetName = @('ByShadowId')
+$parameter.NoGap = $true
+$parameter.Mandatory = $true
+$parameter.Description = "List shadow copies matching the Id in GUID format: " +
     "'{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}'"
-$newCommand.Parameters += $parameters
+$newCommand.Parameters += $parameter
 
 #### Add a new parameter to the command
-$parameters = New-ParameterInfo -OriginalName '/Set=' -Name 'Set'
-$parameters.ParameterType = 'string'
-$parameters.ParameterSetName = @('BySetId')
-$parameters.NoGap = $true
-$parameters.Mandatory = $true
-$parameters.Description = "List shadow copies matching the shadow set Id in GUID format: " +
+$parameter = New-ParameterInfo -OriginalName '/Set=' -Name 'Set'
+$parameter.ParameterType = 'string'
+$parameter.ParameterSetName = @('BySetId')
+$parameter.NoGap = $true
+$parameter.Mandatory = $true
+$parameter.Description = "List shadow copies matching the shadow set Id in GUID format: " +
     "'{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}'"
-$newCommand.Parameters += $parameters
+$newCommand.Parameters += $parameter
 
 ### Add an Output Handler to the command
-$newCommand.OutputHandlers = @()
 $handler = New-OutputHandler
 $handler.ParameterSetName = 'Default'
 $handler.HandlerType = 'Function'

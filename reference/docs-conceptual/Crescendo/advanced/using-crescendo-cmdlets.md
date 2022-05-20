@@ -17,7 +17,7 @@ developer experience for creating a configuration.
 > schema, creating the configuration by editing the JSON file is the preferred method for authoring
 > a configuration. This article is provided as an example for how the cmdlets could be used.
 
-## Example - Create a configuration for two cmdlets
+## Create a configuration for two cmdlets
 
 This example shows how to create the configuration for two cmdlets that wrap the Windows
 command-line tool `VSSAdmin.exe`. Specifically, the script creates cmdlets for the

@@ -17,6 +17,10 @@ items:
             href: Crescendo/get-started/create-new-cmdlet.md
           - name: Generate and test a Crescendo module
             href: Crescendo/get-started/generate-module.md
+      - name: Advanced topics
+        items:
+          - name: Create a configuration using the cmdlets
+            href: Crescendo/advanced/using-crescendo-cmdlets.md
   - name: PlatyPS
     items:
       - name: Overview

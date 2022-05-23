@@ -173,11 +173,17 @@ items:
             href: PSScriptAnalyzer/Rules/UseUsingScopeModifierInNewRunspaces.md
           - name: UseUTF8EncodingForHelpFile
             href: PSScriptAnalyzer/Rules/UseUTF8EncodingForHelpFile.md
-  - name: SecretManagement
+  - name: SecretManagement and SecretStore
     items:
       - name: Overview
         href: SecretManagement/overview.md
-  - name: SecretStore
-    items:
-      - name: Overview
-        href: SecretStore/overview.md
+      - name: Get started
+        items:
+          - name: Get started with the SecretStore module
+            href: SecretManagement/get-started/use-secretstore.md
+          - name: Understanding the SecretManagement module
+            href: SecretManagement/get-started/understanding-secretmanagement.md
+      - name: How to
+        items:
+          - name: Managing a SecretStore vault
+            href: SecretManagement/how-to/manage-secretstore.md

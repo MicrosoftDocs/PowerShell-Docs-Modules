@@ -1,0 +1,12 @@
+trigger:
+  - live
+  
+stages:
+- stage: CheckOPSBuildStatus
+  jobs:
+  - job: WaitForOPSBuild
+    pool: Server
+    steps:
+    - task: Delay@1
+      inputs:
+        delayForMinutes: 1

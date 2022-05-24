@@ -180,7 +180,7 @@ items:
       - name: Get started
         items:
           - name: Get started with the SecretStore module
-            href: SecretManagement/get-started/use-secretstore.md
+            href: SecretManagement/get-started/using-secretstore.md
           - name: Understanding the SecretManagement module
             href: SecretManagement/get-started/understanding-secretmanagement.md
       - name: How to

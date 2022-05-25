@@ -29,11 +29,22 @@ choose.
 Register-SecretVault -Name SecretStore -ModuleName Microsoft.PowerShell.SecretStore -DefaultVault
 ```
 
+The **DefaultVault** parameter makes this the default vault.
+
 Now you can create a secret.
 
 ```powershell
 Set-Secret -Name TestSecret -Secret "TestSecretPassword"
 ```
+
+This example passes a plaintext string for the value of the secret. The secret value can be one of
+five supported types:
+
+- **byte[]**
+- **String**
+- **SecureString**
+- **PSCredential**
+- **Hashtable**
 
 The first time you access the vault you must provide a password for the new vault. This password is
 used to lock and unlock the vault.
@@ -63,3 +74,9 @@ Name       Type   VaultName
 ----       ----   ---------
 TestSecret String SecretStore
 ```
+
+## Related links
+
+- [Register-SecretVault](xref:Microsoft.PowerShell.SecretManagement.Register-SecretVault)
+- [Get-Secret](xref:Microsoft.PowerShell.SecretManagement.Get-Secret)
+- [Set-Secret](xref:Microsoft.PowerShell.SecretManagement.Set-Secret)

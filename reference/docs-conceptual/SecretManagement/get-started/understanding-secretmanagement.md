@@ -26,7 +26,7 @@ separately from vault data files. The file location depends on the platform oper
 ## Getting started with SecretManagement
 
 Once you have **SecretManagement** installed you can run `Get-SecretVault` to see what secret vaults
-you have registered. If this is your first time using the module, this command return nothing. Once
+you have registered. If this is your first time using the module, this command returns nothing. Once
 you have a vault registered you can use the **SecretManagement** cmdlets to view, get, set, and
 remove secrets. To see an example of registering a vault, see
 [Get started with the SecretStore module](using-secretstore.md).
@@ -42,7 +42,7 @@ The value of the **SecretManagement** interface comes from the underlying vault 
 useful with each extension vault module. For more information on the design of SecretManagement and
 how to build extension vaults, see the
 [design document](https://github.com/PowerShell/SecretManagement/blob/master/Docs/ARCHITECTURE.md)
-in the **SecretManagement** repository. This document describes a reference implementation a
+in the **SecretManagement** repository. This document describes a reference implementation
 **TestVault** module. Also, reviewing the source code of the
 [SecretStore](https://github.com/PowerShell/SecretStore) module may serve as an example for
 extension vault authors looking to build off of existing vaults.

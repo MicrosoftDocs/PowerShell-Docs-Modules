@@ -13,7 +13,7 @@ Install-Module Microsoft.PowerShell.SecretManagement
 Install-Module Microsoft.PowerShell.SecretStore
 ```
 
-Once you have installed the modules you can load the modules and begin using creating new secrets.
+Once you have installed the modules you can load the modules and begin using or creating new secrets.
 
 ```powershell
 Import-Module Microsoft.PowerShell.SecretManagement

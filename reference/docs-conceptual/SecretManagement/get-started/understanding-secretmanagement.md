@@ -9,7 +9,7 @@ The purpose of the **SecretManagement** module is to provide secure storage and 
 through registered extension vaults. The registered extension vaults are PowerShell modules that
 conform to **SecretManagement** module requirements. The extension vaults perform the actual work of
 authentication and securely storing and retrieving secrets. An extension vault can store secrets
-locally or remotely for a cloud based store.
+locally or remotely for a cloud-based store.
 
 The **SecretManagement** module provides commands for registering vault extensions, and accessing
 vault secrets. This greatly reduces the temptation to hardcode secrets directly into production
@@ -52,4 +52,4 @@ extension vault authors looking to build off of existing vaults.
 **SecretManagement** does not currently work for Windows managed accounts. The module depends on
 both `$env:LOCALAPPDATA` folders to store registry information and Windows Data Protection APIs
 (DPAPI) for safely handling secrets with the .NET **SecureString** type. Windows managed accounts do
-not have profiles or `$env:LOCALAPPDATA`% folders and DPAPI doesn't support managed accounts.
+not have profiles or `$env:LOCALAPPDATA` folders and DPAPI doesn't support managed accounts.

@@ -6,7 +6,7 @@ title: Overview of the SecretManagement and SecretStore modules
 # Overview of the SecretManagement and SecretStore modules
 
 The **SecretManagement** module helps users manage secrets by providing a common set of cmdlets that
-interface with secrets vaults. SecretManagement provides an extensible model where local and remote
+interface with secrets vaults. **SecretManagement** provides an extensible model where local and remote
 vaults can be registered for use. This allows you to separate the specific details for accessing and
 managing the vault from your scripts that need secrets.
 

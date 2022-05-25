@@ -14,7 +14,7 @@ protection. **SecretStore** also supports the storage of metadata about secrets.
 ## Registering a new vault
 
 Before you can create new secret you must register a vault. The **Name** parameter is a friendly
-name and can be anything you choose.
+name and can be any valid string.
 
 ```powershell
 Register-SecretVault -Name SecretStore -ModuleName Microsoft.PowerShell.SecretStore -DefaultVault
@@ -23,7 +23,7 @@ Register-SecretVault -Name SecretStore -ModuleName Microsoft.PowerShell.SecretSt
 > [!IMPORTANT]
 > The **SecretManagement** module allows an extension vault to be registered multiple times, because
 > it's possible that an extension vault may support different contexts via the registration
-> **VaultParameters**. However, the **SecretStore** vault currently always operates in the logged on
+> **VaultParameters**. However, the **SecretStore** vault currently _always_ operates in the logged on
 > user scope. Registering multiple **SecretStore** vaults with different names just results in
 > duplication of the same store.
 
@@ -65,7 +65,7 @@ For non-interactive automation scenarios, the **Interaction** can be configured 
 suppress user prompting. If a password is required, vault commands return
 **Microsoft.PowerShell.SecretStore.PasswordRequiredException** exception if there is no valid
 session password. The `Unlock-SecretStore` cmdlet can be used to provide the password for the
-current PowerShell session. The password remains valid until the password timeout expires.
+current PowerShell session. The vault remains unlocked until the timeout expires.
 
 Vault configuration and data are stored in separate files. The file location depends on the platform
 operating system.
@@ -90,9 +90,10 @@ There are two way to set the password on the vault.
 ### Adding metadata
 
 The **SecretStore** module allows you to add non-sensitive metadata to your secrets. The metadata
-can be used to document the intended purpose of a secret, for example, a particular subscription or
-application scenario. You could also add metadata about the secret's creation date, expiration time,
-or other information used to manage the secret lifecycle.
+can be used to document the intended purpose of a secret. For example, to indicate that a secret
+is intended for a particular subscription or application scenario. You could also add metadata
+about the secret's creation date, expiration time, or other information used to manage the secret
+lifecycle.
 
 The metadata can be any arbitrary key-value pair. The **SecretStore** module supports the following
 value types for metadata:

@@ -22,8 +22,8 @@ Import-Module Microsoft.PowerShell.SecretStore
 
 ## Create a vault and add a secret
 
-First you must register the vault. The **Name** parameter is a friendly name and can be anything you
-choose.
+First you must register the vault. The **Name** parameter is a friendly name and can be any valid
+string.
 
 ```powershell
 Register-SecretVault -Name SecretStore -ModuleName Microsoft.PowerShell.SecretStore -DefaultVault
@@ -65,7 +65,7 @@ PS> Get-Secret -Name TestSecret -AsPlainText
 TestSecretPassword
 ```
 
-To a list of your secrets, can run:
+To get the list of all of your secrets, you can run:
 
 ```powershell
 PS> Get-SecretInfo

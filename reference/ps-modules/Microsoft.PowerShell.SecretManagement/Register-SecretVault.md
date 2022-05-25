@@ -14,43 +14,49 @@ Registers a SecretManagement extension vault module for the current user.
 ## SYNTAX
 
 ```
-Register-SecretVault [-ModuleName] <String> [[-Name] <String>] [-VaultParameters <Hashtable>] [-DefaultVault]
- [-AllowClobber] [-PassThru] [-Description <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Register-SecretVault [-ModuleName] <String> [[-Name] <String>] [-VaultParameters <Hashtable>]
+ [-DefaultVault] [-AllowClobber] [-PassThru] [-Description <String>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-This cmdlet adds a provided SecretManagement extension vault module to the current user vault
-registry. An extension vault module is a PowerShell module that conforms to the required extension
-vault format. This cmdlet will first verify that the provided module meets conformance requirements,
-and then add it to the extension vault registry. Extension vaults are registered to the current user
-and do not affect other user vault registrations.
+This cmdlet adds a **SecretManagement** extension vault to the current user's vault registry. An
+extension vault is a PowerShell module that conforms to the required extension vault format. This
+cmdlet verifies that the specified module meets conformance requirements before adding it to the
+extension vault registry. Extension vaults are registered to the current user and do not affect
+other user vault registrations.
+
+The first fault registered with this cmdlet is automatically defined as the default vault even if
+the **DefaultVault** parameter is not specified.
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-PS C:\> Register-SecretVault -Name LocalStore -ModuleName Microsoft.PowerShell.SecretStore  -DefaultVault
-PS C:\> Get-SecretVault
+Register-SecretVault -Name LocalStore -ModuleName Microsoft.PowerShell.SecretStore -DefaultVault
+Get-SecretVault
+```
 
+```output
 VaultName  ModuleName                        IsDefaultVault
 ---------  ----------                        --------------
 CredMan    Microsoft.PowerShell.CredManStore False
 LocalStore Microsoft.PowerShell.SecretStore  True
 ```
 
-This example registers the Microsoft.PowerShell.SecretStore extension vault module for the current
-user. The module is installed in a known PowerShell module path, so just the module name is needed.
-It uses the **DefaultVault** parameter switch to make it the default module for the user. The
-`Get-SecretVault` command is run next to list all registered vaults for the user, and verifies the
-vault was registered and set as the default vault.
+This example registers a **Microsoft.PowerShell.SecretStore** extension vault for the current user.
+It uses the **DefaultVault** parameter to make the registered vault the default vault for the user.
+`Get-SecretVault` lists all registered vaults for the user, verifying the vault was registered and
+set as the default vault.
 
 ## PARAMETERS
 
 ### -AllowClobber
 
-When used this parameter overwrites an existing registered extension vault with the same name.
+If specified, allows the cmdlet to overwrite an existing registered extension vault with the same
+name.
 
 ```yaml
 Type: SwitchParameter
@@ -64,25 +70,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DefaultVault
 
-This parameter switch makes the new extension vault the default vault for the current user.
+If specified, sets the new extension vault as the default vault for the current user.
 
 ```yaml
 Type: SwitchParameter
@@ -98,7 +88,7 @@ Accept wildcard characters: False
 
 ### -Description
 
-This parameter takes a description string that is included in the vault registry information.
+Describes the vault. This value is included in the vault registry information.
 
 ```yaml
 Type: String
@@ -114,9 +104,9 @@ Accept wildcard characters: False
 
 ### -ModuleName
 
-Name of the PowerShell module that implements the extension vault. It can be a simple name, in which
-case PowerShell will search for it in its known module paths. Alternatively, a pathname can be
-provided and PowerShell will look in the specific path for the module.
+Specifies the name of the PowerShell module that implements the extension vault. Enter the name of a
+module or the path to the module. If you specify a name, PowerShell searches for it in the known
+module paths. If you specify a path, PowerShell searches that path for the module.
 
 ```yaml
 Type: String
@@ -132,7 +122,8 @@ Accept wildcard characters: False
 
 ### -Name
 
-Name of the extension vault to be registered. If no name is provide, the module name will be used.
+Specifies the name of the extension vault. If no name is specified, the module name is used as the
+vault name.
 
 ```yaml
 Type: String
@@ -148,8 +139,8 @@ Accept wildcard characters: False
 
 ### -PassThru
 
-When used this parameter will return the **SecretVaultInfo** object for the successfully registered
-extension vault.
+Indicates that the cmdlet should return the **SecretVaultInfo** object for the successfully
+registered extension vault. By default this cmdlet does not return any output.
 
 ```yaml
 Type: SwitchParameter
@@ -165,13 +156,30 @@ Accept wildcard characters: False
 
 ### -VaultParameters
 
-This takes a hashtable object that contains optional parameter name-value pairs needed by the
-extension vault. These optional parameters are provided to the extension vault when invoked.
+Specifies a **Hashtable** object containing optional key-value pairs used as parameters by the
+extension vault. These parameters are optional. Consult the documentation of the vault extension
+module to see what values are required.
 
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

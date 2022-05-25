@@ -33,9 +33,8 @@ Set-SecretVaultDefault [-ClearDefault] [-WhatIf] [-Confirm] [<CommonParameters>]
 
 ## DESCRIPTION
 
-This cmdlet updates the vault registry to indicate the provided vault name as the default vault.
-Only one registered vault can be the default vault. If this cmdlet is run without specifying the
-**Name** parameter, then no registered vault is the default vault.
+This cmdlet updates the vault registry to set the provided vault name as the default vault. Only one
+registered vault can be the default vault.
 
 ## EXAMPLES
 
@@ -57,7 +56,7 @@ VaultName  ModuleName                        IsDefaultVault
 CredMan    Microsoft.PowerShell.CredManStore True
 LocalStore Microsoft.PowerShell.SecretStore  False
 
-PS C:\> Set-SecretVaultDefault
+PS C:\> Set-SecretVaultDefault -ClearDefault
 PS C:\> Get-SecretVault
 
 VaultName  ModuleName                        IsDefaultVault
@@ -66,19 +65,18 @@ CredMan    Microsoft.PowerShell.CredManStore False
 LocalStore Microsoft.PowerShell.SecretStore  False
 ```
 
-This cmdlet first runs `Get-SecretVault` command to get all registered vault information, and shows
-that the 'LocalStore' is currently the default vault for the user. Next, the
-`Set-SecretVaultDefault` command is run to make the 'CredMan' vault the default vault. The
-`Get-SecretVault` command is run a second time to verify 'CredMan' vault is now default, and
-'LocalStore' vault is no longer default. Finally, the `Set-SecretVaultDefault` command is run with
-no **Name** parameter, to remove the default designation from any registered vault. The
-`Get-SecretVault` is run once again to verify there is no default vault.
+This example shows how to set and unset the default vault for the current user. The first command
+gets information about all registered vaults and shows that the `LocalStore` is the default vault
+for the user. The second command makes the `CredMan` vault the default vault. The third command
+shows that the `CredMan` vault is now default, and `LocalStore` vault is no longer default. The
+fourth command uses the **ClearDefault** parameter to remove the default designation from any
+registered vault. The last command shows that there is no default vault.
 
 ## PARAMETERS
 
 ### -ClearDefault
 
-Makes no registered vault the default vault.
+Sets the **IsDefault** property to `$false` for all registered vaults.
 
 ```yaml
 Type: SwitchParameter
@@ -94,7 +92,8 @@ Accept wildcard characters: False
 
 ### -Name
 
-Name of registered vault to be made the default vault.
+Specifies the name of a registered vault to set as the default vault. Wildcard characters (`*`) are
+not permitted.
 
 ```yaml
 Type: String
@@ -110,7 +109,8 @@ Accept wildcard characters: False
 
 ### -SecretVault
 
-A **SecretVaultInfo** object that represents the registered vault to be made the default vault.
+Specifies a **SecretVaultInfo** object representing the registered vault to set as the default
+vault.
 
 ```yaml
 Type: SecretVaultInfo

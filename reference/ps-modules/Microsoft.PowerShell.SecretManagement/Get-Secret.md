@@ -28,44 +28,50 @@ Get-Secret [-InputObject] <SecretInformation> [-AsPlainText] [<CommonParameters>
 ## DESCRIPTION
 
 This cmdlet finds and returns the first secret that matches the provided name. If a vault name is
-specified, then only that vault will be searched. Otherwise, all vaults are searched and the first
-found result is returned. If a `Default` vault is specified, then that vault is searched before any
-other registered vault. Secrets that are string or **SecureString** types are returned as
-**SecureString** objects by default. Unless the **AsPlainText** parameter switch is used, in which
-case the secret is returned as a String type in plain text.
+specified, only that vault is searched. Otherwise, it searches all vaults and returns the first
+matching result. If the vault registry has a default vault, the cmdlet searches that vault before
+any other registered vault. Secrets that are **String** or **SecureString** types are returned as
+**SecureString** objects by default.
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-PS C:\> Get-Secret -Name Secret1 -Vault CredMan
-System.Security.SecureString
+Get-Secret -Name Secret1 -Vault CredMan
+Get-Secret -Name Secret1 -Vault CredMan -AsPlainText
+```
 
-PS C:\> Get-Secret -Name Secret1 -Vault CredMan -AsPlainText
+```output
+System.Security.SecureString
 PlainTextSecretString
 ```
 
-This example searches for a secret with the name 'Secret1', which is a **String** type secret. The
-first time returns the secret as a **SecureString** object. The second time uses the **AsPlainText**
-and so the secret string is returned as a **String** object, and is displayed in plain text.
+This example searches for a secret with the name `Secret1`, which is a **String** type secret. The
+first command returns the secret as a **SecureString** object. The second command uses the
+**AsPlainText** parameter to return the secret as a **String** object instead, displaying in the
+console as plain text.
 
 ### Example 2
 
 ```powershell
-PS C:\> Get-SecretInfo -Name Secret2 -Vault SecretStore | Get-Secret -AsPlainText
+Get-SecretInfo -Name Secret2 -Vault SecretStore | Get-Secret -AsPlainText
 ```
 
-This example retrieves secret information for the secret named 'Secret2' and then pipe the result to
-`Get-Secret`. The secret is then looked up in the SecretStore vault and returned as plain text.
+This example retrieves secret information for the secret named `Secret2` in the vault named
+`SecretStore`. It then sends the result through the pipeline to `Get-Secret`, which searches for the
+secret and returns it as plain text.
 
 ## PARAMETERS
 
 ### -AsPlainText
 
-Switch parameter that when used returns either a string or **SecureString** secret type as a
-**String** type (in plain text). If the secret being retrieved is not of string or **SecureString**
-type, this switch parameter has no effect.
+Specifies that a secret whose type is **String** or **SecureString** should be returned as a
+**String** (in plain text) instead of a **SecureString**. If the secret being retrieved is not a
+**String** or **SecureString**, this parameter has no effect.
+
+> [!CAUTION]
+> To ensure security, you should avoid using plaintext strings whenever possible.
 
 ```yaml
 Type: SwitchParameter
@@ -81,7 +87,9 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-**SecretInformation** object that describes a vault secret.
+Specifies a **SecretInformation** object representing a vault secret instead of specifying the
+**Name** and **Vault** parameters. You can get a **SecretInformation** object with the
+`Get-SecretInfo` cmdlet.
 
 ```yaml
 Type: SecretInformation
@@ -97,7 +105,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-Name of the secret to be retrieved. Wildcard characters are not allowed.
+Specifies the name of the secret to retrieve. Wildcard characters are not permitted.
 
 ```yaml
 Type: String
@@ -113,8 +121,10 @@ Accept wildcard characters: False
 
 ### -Vault
 
-Optional name of the registered vault to retrieve the secret from. If no vault name is specified,
-then all registered vaults are searched.
+Specifies the name of the registered vault to retrieve the secret from. If no vault name is
+specified, then all registered vaults are searched. If the vault registry has a default vault and
+this parameter is not specified, then the default vault is searched before the other registered
+vaults.
 
 ```yaml
 Type: String

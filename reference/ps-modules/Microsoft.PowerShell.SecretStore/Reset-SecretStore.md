@@ -21,12 +21,12 @@ Reset-SecretStore [-Scope <SecureStoreScope>] [-Authentication <Authenticate>] [
 
 ## DESCRIPTION
 
-This cmdlet completely resets the SecretStore by deleting all secret data it may contain, and
+This cmdlet completely resets the **SecretStore** by deleting all secret data it may contain, and
 resetting configuration options to their default values. It is intended to be used only if a
-required password is lost, or data files become corrupted so that SecretStore no longer functions
-and secret data cannot be accessed.
+required password is lost, or data files become corrupted so that **SecretStore** no longer
+functions and secret data cannot be accessed.
 
-Default configuration options can be overridden by specifying individual command configuration
+The default configuration options can be overridden by specifying individual command configuration
 option parameters.
 
 ## EXAMPLES
@@ -52,23 +52,28 @@ Enter password again for verification:
 CurrentUser       Password             900      Prompt
 ```
 
-This example resets the SecretStore for the current user, by deleting all secrets and forcing
-configuration settings to default values. The user is warned of the consequences of this action and
-prompted to confirm before continuing.
+This example resets the **SecretStore** for the current user. The cmdlet warns about the
+consequences of this action and prompts the user for confirmation before continuing. After
+confirmation, the cmdlet deletes all secrets and sets every configuration setting to its default
+value.
 
 ## PARAMETERS
 
 ### -Authentication
 
-Configuration option to set authentication for store access. Configuration options are 'Password' or
-'None'. When 'Password' is selected, SecretStore is configured to require a password for accessing
-secrets. Default authentication is 'Password', as this provides the strongest protection of secret
-data.
+Specifies how to authenticate access to the **SecretStore**. The value must be `Password` or `None`.
+If specified as `None`, the cmdlet enables access to the **SecretStore** without a password. The
+default authentication is `Password`.
+
+> [!CAUTION]
+> Setting the **Authentication** to `None` is less secure than `Password`. Specifying `None` may be
+> useful for testing scenarios but should not be used with important secrets.
 
 ```yaml
 Type: Authenticate
 Parameter Sets: (All)
 Aliases:
+Accepted values: None, Password
 
 Required: False
 Position: Named
@@ -79,8 +84,8 @@ Accept wildcard characters: False
 
 ### -Force
 
-When used, the user will not be asked to confirm and the SecretStore will be reset without
-prompting. Default value is false, and user will be asked to confirm the operation.
+Indicates that the cmdlet should reset the **SecretStore** without prompting. By default, the cmdlet
+warns about the impact of resetting the **SecretStore** and prompts the user for confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -96,8 +101,9 @@ Accept wildcard characters: False
 
 ### -Password
 
-Sets the provided Password to the newly reset store. If the reset store is not configured for
-password authentication, an error will be returned.
+Specifies the password the **SecretStore** should require for access. If **Authentication** is
+specified as `None`, the cmdlet returns an error. If **Authentication** is `Password` and this
+parameter is not specified, the cmdlet prompts the user to enter the password securely.
 
 ```yaml
 Type: SecureString
@@ -113,7 +119,8 @@ Accept wildcard characters: False
 
 ### -PassThru
 
-Writes the newly reset store configuration object (**SecureStorConfig**) to the pipeline.
+Indicates that the cmdlet should return the **SecretStore** configuration after resetting it. By
+default, the cmdlet returns no output.
 
 ```yaml
 Type: SwitchParameter
@@ -129,9 +136,9 @@ Accept wildcard characters: False
 
 ### -PasswordTimeout
 
-Configuration option that provides the session password timeout in seconds. Takes an argument whose
-value determines the session password timeout in seconds. When the timeout value is reached, the
-current password value is invalidated for the session.
+Specifies how long the **SecretStore** remains unlocked after authenticating with a password. When
+the timeout value is reached, the current password value is invalidated for the session. Accessing
+the **SecretStore** after the timeout requires the password again.
 
 ```yaml
 Type: Int32
@@ -147,8 +154,8 @@ Accept wildcard characters: False
 
 ### -Scope
 
-Configuration option that determines SecretStore operation scope. Currently only 'CurrentUser' scope
-is supported.
+Specifies the context the **SecretStore** is configured for. Only `CurrentUser` is currently
+supported.
 
 ```yaml
 Type: SecureStoreScope
@@ -165,16 +172,17 @@ Accept wildcard characters: False
 
 ### -Interaction
 
-Configuration option to allow or suppress user prompting. Configuration options are 'Prompt' or
-'None'. When 'None' is selected, no prompt will be presented in an interactive session to provide a
-session password. Default value is 'Prompt', and users will be prompted for password when needed.
-When 'None' is selected and a session password is required, a
-**Microsoft.PowerShell.SecretStore.PasswordRequiredException** error is thrown.
+Specifies whether the **SecretStore** should prompt a user when they access it. If the value is
+`Prompt`, the user is prompted for their password in interactive sessions when required. If the
+value is `None`, the user is not prompted for a password. If the value is `None` and a password is
+required, the cmdlet requiring the password throws a
+**Microsoft.PowerShell.SecretStore.PasswordRequiredException** error.
 
 ```yaml
 Type: Interaction
 Parameter Sets: (All)
 Aliases:
+Accepted values: None, Prompt
 
 Required: False
 Position: Named

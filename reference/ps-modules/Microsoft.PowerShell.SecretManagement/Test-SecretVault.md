@@ -19,10 +19,10 @@ Test-SecretVault [-Name <String[]>] [<CommonParameters>]
 
 ## DESCRIPTION
 
-This cmdlet runs an extension vault self test, by running the internal vault `Test-SecretVault`
+This cmdlet runs an extension vault self-test, by running the internal vault `Test-SecretVault`
 command. It returns `$true` if all tests succeeded, and `$false` otherwise. Information on failing
-tests will be written to the error stream as error records. For more information during the test run
-use the **Verbose** command switch.
+tests is written to the error stream as error records. For more information during the test run use
+the **Verbose** parameter.
 
 ## EXAMPLES
 
@@ -35,14 +35,16 @@ VERBOSE: Vault CredMan succeeded validation test
 True
 ```
 
-This example runs self tests on the 'CredMan' extension vault.
-All tests succeeded so no errors are written and 'True' is returned.
+This example runs the self-tests on the `CredMan` extension vault. All tests succeeded.
 
 ## PARAMETERS
 
 ### -Name
 
-The name of the vault to be tested.
+Specifies the name of one or more vaults to test. Enter a name or name pattern. Wildcard characters
+(`*`) are permitted.
+
+If the **Name** parameter is not specified, this cmdlet runs the tests for all registered vaults.
 
 ```yaml
 Type: String[]

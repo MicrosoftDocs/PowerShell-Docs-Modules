@@ -27,39 +27,45 @@ Remove-Secret [-InputObject] <SecretInformation> [-WhatIf] [-Confirm] [<CommonPa
 
 ## DESCRIPTION
 
-This cmdlet will remove a secret by name from a registered extension vault. Both the secret name and
-extension vault name must be provided.
+Removes a secret by name from a registered extension vault. Both the secret name and extension vault
+name must be provided.
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-PS C:\> Remove-Secret -Name secretTest -Vault CredMan
-PS C:\> Get-Secret -Name secretTest -Vault CredMan
+Remove-Secret -Name secretTest -Vault CredMan
+Get-Secret -Name secretTest -Vault CredMan
+```
+
+```output
 Get-Secret: The secret secretTest was not found.
 ```
 
-This example runs the command to remove the secret 'secretTest' from the CredMan vault. The
-`Get-Secret` command is next run to verify the secret no longer exists in the vault.
+This example removes the `secretTest` secret from the `CredMan` vault. The `Get-Secret` command
+verifies that the secret no longer exists in the vault.
 
 ### Example 2
 
 ```powershell
-PS C:\> Get-SecretInfo -Name Secret2 -Vault CredMan | Remove-Secret
-PS C:\> Get-Secret -Name Secret2 -Vault CredMan
+Get-SecretInfo -Name Secret2 -Vault CredMan | Remove-Secret
+Get-Secret -Name Secret2 -Vault CredMan
+```
+
+```output
 Get-Secret: The secret Secret2 was not found.
 ```
 
-This example first obtains secret information for the 'Secret2' secret and pipes the results to this
-command. `Remove-Secret` then removes the secret from the vault using the piped in secret
-information.
+This example removes the `Secret2` secret from the `CredMan` vault. `Get-SecretInfo` retrieves the
+information for the secret and sends the result through the pipeline to `Remove-Secret`.
+`Get-Secret` verifies that the secret no longer exists in the vault.
 
 ## PARAMETERS
 
 ### -InputObject
 
-SecretInformation object that describes a vault secret.
+Specifies a **SecretInformation** object that describes a vault secret.
 
 ```yaml
 Type: SecretInformation
@@ -75,7 +81,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-Name of the secret to remove.
+Specifies the name of the secret to remove. Wildcard characters (`*`) are not permitted.
 
 ```yaml
 Type: String
@@ -91,7 +97,8 @@ Accept wildcard characters: False
 
 ### -Vault
 
-Name of the vault from which the secret is to be removed.
+Specifies the name of the vault to remove the secret from. Wildcard characters (`*`) are not
+permitted.
 
 ```yaml
 Type: String

@@ -1,7 +1,7 @@
 ---
 Module Name: Microsoft.PowerShell.SecretManagement
 Module Guid: a5c858f6-4a8e-41f1-b1ee-0ff8f6ad69d3
-ms.date: 03/16/2021
+ms.date: 05/31/2022
 Download Help Link: https://aka.ms/ps-modules-help
 Help Version: 0.1.0.0
 Locale: en-US
@@ -32,7 +32,7 @@ vaults are registered to the current logged in user context, and are available o
 Finds and returns a secret by name from registered vaults.
 
 ### [Get-SecretInfo](Get-SecretInfo.md)
-Finds and returns secret metadata information of one or more secrets.
+Finds and returns metadata information about secrets in registered vaults.
 
 ### [Get-SecretVault](Get-SecretVault.md)
 Finds and returns registered vault information.
@@ -45,6 +45,9 @@ Removes a secret from a specified registered extension vault.
 
 ### [Set-Secret](Set-Secret.md)
 Adds a secret to a SecretManagement registered vault.
+
+### [Set-SecretInfo](Set-SecretInfo.md)
+Adds or replaces additional secret metadata to a secret currently stored in a vault.
 
 ### [Set-SecretVaultDefault](Set-SecretVaultDefault.md)
 Sets the provided vault name as the default vault for the current user.

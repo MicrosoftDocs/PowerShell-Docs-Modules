@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.PowerShell.SecretStore.dll-Help.xml
 Module Name: Microsoft.PowerShell.SecretStore
-ms.date: 03/16/2021
+ms.date: 05/31/2022
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.secretstore/unlock-secretstore?view=ps-modules&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
@@ -19,20 +19,19 @@ Unlock-SecretStore -Password <SecureString> [-PasswordTimeout <Int32>] [<CommonP
 
 ## DESCRIPTION
 
-This cmdlet unlocks SecretStore for the current user with the provided password. It can be used to
-unlock SecretStore when the configuration requires a password and the prompt configuration option is
-disabled. The provided password will be applied to the current session, and will become invalid
-after the **PasswordTimeout** time elapses. If no password is provided by parameter argument, the
-user will be safely prompted for the password.
+This cmdlet unlocks the **SecretStore** for the current user with the provided password. It can be
+used to unlock the **SecretStore** when the configuration requires a password and the prompt
+configuration option is disabled. The **SecretStore** remains unlocked in the session until its
+configured password timeout elapses.
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-PS C:\> Get-Secret secret1 -Vault LocalStore
+PS C:\> Get-Secret Secret1 -Vault LocalStore
 Get-Secret: A valid password is required to access the Microsoft.PowerShell.SecretStore vault.
-Get-Secret: The secret secret1 was not found.
+Get-Secret: The secret Secret1 was not found.
 
 PS C:\> Unlock-SecretStore
 
@@ -40,20 +39,20 @@ cmdlet Unlock-SecretStore at command pipeline position 1
 Supply values for the following parameters:
 SecureStringPassword: *******
 
-PS C:\> Get-Secret secret1 -Vault LocalStore
+PS C:\> Get-Secret Secret1 -Vault LocalStore
 System.Security.SecureString
 ```
 
-In this example, the SecretManagement `Get-Secret` command fails to retrieve secret1 because the
-SecretStore vault is locked. The `Unlock-SecretStore` command is run to unlock the vault. No
-password parameter argument was provided to the `Unlock-SecretStore` command, so the user is
-prompted for the password. Running `Get-Secret` again now works and returns the secret as a
-SecureString object.
+In this example, `Get-Secret` fails to retrieve `Secret1` because the **SecretStore** vault is
+locked. `Unlock-SecretStore` unlocks the vault. The cmdlet prompts for the password because the
+**Password** parameter was not specified. With the vault unlocked, `Get-Secret` returns `Secret1` as
+a **SecureString** object.
 
 ## PARAMETERS
 
 ### -Password
-This parameter takes the password argument as a SecureString object.
+
+Specifies the password needed to access the **SecretStore**.
 
 ```yaml
 Type: SecureString
@@ -69,8 +68,10 @@ Accept wildcard characters: False
 
 ### -PasswordTimeout
 
-This parameter takes a password timeout argument in seconds, and overrides the configuration
-password timeout value. The password timeout value remains in effect for the session until changed.
+Specifies how many seconds the **SecretStore** remains unlocked after authenticating with a
+password. This parameter overrides the configured password timeout value. After the timeout has
+elapsed, the current password value is invalidated for the session. Accessing the **SecretStore**
+after the timeout requires the password again.
 
 ```yaml
 Type: Int32
@@ -96,6 +97,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### System.Security.SecureString
 
 ## OUTPUTS
+
+### None
 
 ## NOTES
 

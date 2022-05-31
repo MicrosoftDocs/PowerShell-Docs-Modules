@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.PowerShell.SecretStore.dll-Help.xml
 Module Name: Microsoft.PowerShell.SecretStore
-ms.date: 03/16/2021
+ms.date: 05/31/2022
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.secretstore/get-secretstoreconfiguration?view=ps-modules&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
@@ -19,13 +19,7 @@ Get-SecretStoreConfiguration [<CommonParameters>]
 
 ## DESCRIPTION
 
-This cmdlet reads the SecretStore configuration file and writes configuration information to the
-pipeline. Configuration information includes:
-
-- Scope
-- Authentication
-- PasswordTimeout (in seconds)
-- Interaction
+This cmdlet reads the SecretStore configuration file and returns the defined settings.
 
 ## EXAMPLES
 
@@ -39,14 +33,9 @@ PS C:\> Get-SecretStoreConfiguration
 CurrentUser       Password             900      Prompt
 ```
 
-This example runs the command from a command shell prompt and displays four SecretStore
-configuration properties:
-
-- Scope : 'CurrentUser'.
-- Authentication : A password is required to access the SecretStore.
-- PasswordTimeout : The session password timeout time is 15 minutes.
-- Interaction : The user will be prompted for a password if the command is run in an interactive
-  session.
+This example shows the current configuration for **SecretStore**. It is configured for the current
+user. It requires a password for initial access in a session and prompts the user for it in an
+interactive session. After fifteen minutes, the password is required again for access.
 
 ## PARAMETERS
 
@@ -60,11 +49,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
+
 ## OUTPUTS
 
 ### Microsoft.PowerShell.SecretStore.SecureStoreConfig
+
 ## NOTES
 
-'AllUsers' scope is currently not supported.  Configuration scope is always 'CurrentUser'.
+The `AllUsers` **Scope** is not supported. The **Scope** is always `CurrentUser`.
 
 ## RELATED LINKS

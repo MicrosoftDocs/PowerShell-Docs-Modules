@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.PowerShell.SecretStore.dll-Help.xml
 Module Name: Microsoft.PowerShell.SecretStore
-ms.date: 03/16/2021
+ms.date: 05/31/2022
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.secretstore/set-secretstoreconfiguration?view=ps-modules&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
@@ -9,7 +9,7 @@ schema: 2.0.0
 # Set-SecretStoreConfiguration
 
 ## SYNOPSIS
-Sets SecretStore configuration properties.
+Configures the **SecretStore**.
 
 ## SYNTAX
 
@@ -30,8 +30,7 @@ Set-SecretStoreConfiguration [-Default] [-Password <SecureString>] [-PassThru] [
 
 ## DESCRIPTION
 
-This cmdlet takes individual parameter arguments that determine SecretStore configuration. Or the
-**Default** parameter can be used to restore SecretStore configuration to default settings.
+This cmdlet configures the **SecretStore** for the current user.
 
 ## EXAMPLES
 
@@ -50,17 +49,19 @@ Performing the operation "Changes local store configuration" on target "SecretSt
 CurrentUser       Password             900      Prompt
 ```
 
-This example uses the command to restore the SecretStore configuration settings to their default
-values.
+This example restores the **SecretStore** to its default configuration.
 
 ## PARAMETERS
 
 ### -Authentication
 
-Configuration option to set authentication for store access. Configuration options are 'Password' or
-'None'. When 'Password' is selected, SecretStore is configured to require a password for accessing
-secrets. Default authentication is 'Password', as this provides the strongest protection of secret
-data.
+Specifies how to authenticate access to the **SecretStore**. The value must be `Password` or `None`.
+If specified as `None`, the cmdlet enables access to the **SecretStore** without a password. The
+default authentication is `Password`.
+
+> [!CAUTION]
+> Setting the **Authentication** to `None` is less secure than `Password`. Specifying `None` may be
+> useful for testing scenarios but should not be used with important secrets.
 
 ```yaml
 Type: Authenticate
@@ -76,7 +77,7 @@ Accept wildcard characters: False
 
 ### -Default
 
-This parameter switch sets SecretStore configuration to its default settings.
+Indicates that the **SecretStore** should be set to its default configuration.
 
 ```yaml
 Type: SwitchParameter
@@ -90,9 +91,30 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Interaction
+
+Specifies whether the **SecretStore** should prompt a user when they access it. If the value is
+`Prompt`, the user is prompted for their password in interactive sessions when required. If the
+value is `None`, the user is not prompted for a password. If the value is `None` and a password is
+required, the cmdlet requiring the password throws a
+**Microsoft.PowerShell.SecretStore.PasswordRequiredException** error.
+
+```yaml
+Type: Interaction
+Parameter Sets: ParameterSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PassThru
 
-When used, will write the current SecretStore configuration to the pipeline.
+Indicates that the cmdlet should return the **SecretStore** configuration after updating it. By
+default, the cmdlet returns no output.
 
 ```yaml
 Type: SwitchParameter
@@ -108,12 +130,16 @@ Accept wildcard characters: False
 
 ### -Password
 
-Password to be applied when changing the authentication configuration. When changing the
-configuration from no password required to password required, the provided password will be set as
-the new store password. When changing the configuration from password required to no password
-required, the provided password will be used to authorize the configuration change, and must be the
-current password used to unlock the store. This command cannot be used to change the store password.
-To change an existing password, use the `Set-SecretStorePassword` command.
+Specifies the password needed to access the **SecretStore**. This parameter cannot be used to change
+the existing password. To change the existing password, use `Set-SecretStorePassword`.
+
+When this parameter is used with the **Authenticate** parameter to change the configuration for
+authentication from `None` to `Password`, this parameter's value is set as the new password for the
+**SecretStore**.
+
+When this parameter is used with the **Authenticate** parameter to change the configuration for
+authentication from `Password` to `None`, this parameter's value must be the current password for the
+**SecretStore**. It is used to authorize the configuration change.
 
 ```yaml
 Type: SecureString
@@ -129,9 +155,9 @@ Accept wildcard characters: False
 
 ### -PasswordTimeout
 
-Configuration option that provides the session password timeout in seconds.
-Takes an argument whose value determines the session password timeout in seconds.
-When the timeout value is reached, the current password value is invalidated for the session.
+Specifies how many seconds the **SecretStore** remains unlocked after authenticating with a
+password. After the timeout has elapsed, the current password value is invalidated for the session.
+Accessing the **SecretStore** after the timeout requires the password again.
 
 ```yaml
 Type: Int32
@@ -147,8 +173,8 @@ Accept wildcard characters: False
 
 ### -Scope
 
-Configuration option that determines SecretStore operation scope.
-Currently only 'CurrentUser' scope is supported.
+Specifies the context the **SecretStore** is configured for. Only `CurrentUser` is currently
+supported.
 
 ```yaml
 Type: SecureStoreScope
@@ -159,26 +185,6 @@ Accepted values: CurrentUser, AllUsers
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Interaction
-
-Configuration option to allow or suppress user prompting. Configuration options are 'Prompt' or
-'None'. When 'None' is selected, no prompt will be presented in an interactive session to provide a
-session password. Default value is 'Prompt', and users will be prompted for password when needed.
-When 'None' is selected and a session password is required, a
-Microsoft.PowerShell.SecretStore.PasswordRequiredException error is thrown.
-
-```yaml
-Type: Interaction
-Parameter Sets: ParameterSet
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

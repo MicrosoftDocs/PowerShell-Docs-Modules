@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.PowerShell.SecretStore.dll-Help.xml
 Module Name: Microsoft.PowerShell.SecretStore
-ms.date: 03/16/2021
+ms.date: 05/31/2022
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.secretstore/reset-secretstore?view=ps-modules&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
@@ -99,20 +99,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Password
+### -Interaction
 
-Specifies the password the **SecretStore** should require for access. If **Authentication** is
-specified as `None`, the cmdlet returns an error. If **Authentication** is `Password` and this
-parameter is not specified, the cmdlet prompts the user to enter the password securely.
+Specifies whether the **SecretStore** should prompt a user when they access it. If the value is
+`Prompt`, the user is prompted for their password in interactive sessions when required. If the
+value is `None`, the user is not prompted for a password. If the value is `None` and a password is
+required, the cmdlet requiring the password throws a
+**Microsoft.PowerShell.SecretStore.PasswordRequiredException** error.
 
 ```yaml
-Type: SecureString
+Type: Interaction
 Parameter Sets: (All)
 Aliases:
+Accepted values: None, Prompt
 
 Required: False
 Position: Named
-Default value: None
+Default value: Prompt
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -130,6 +133,24 @@ Aliases:
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Password
+
+Specifies the password the **SecretStore** should require for access. If **Authentication** is
+specified as `None`, the cmdlet returns an error. If **Authentication** is `Password` and this
+parameter is not specified, the cmdlet prompts the user to enter the password securely.
+
+```yaml
+Type: SecureString
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -166,27 +187,6 @@ Accepted values: CurrentUser, AllUsers
 Required: False
 Position: Named
 Default value: CurrentUser
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Interaction
-
-Specifies whether the **SecretStore** should prompt a user when they access it. If the value is
-`Prompt`, the user is prompted for their password in interactive sessions when required. If the
-value is `None`, the user is not prompted for a password. If the value is `None` and a password is
-required, the cmdlet requiring the password throws a
-**Microsoft.PowerShell.SecretStore.PasswordRequiredException** error.
-
-```yaml
-Type: Interaction
-Parameter Sets: (All)
-Aliases:
-Accepted values: None, Prompt
-
-Required: False
-Position: Named
-Default value: Prompt
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

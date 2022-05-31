@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.PowerShell.SecretStore.dll-Help.xml
 Module Name: Microsoft.PowerShell.SecretStore
-ms.date: 03/16/2021
+ms.date: 05/31/2022
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.secretstore/set-secretstoreconfiguration?view=ps-modules&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
@@ -91,6 +91,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Interaction
+
+Specifies whether the **SecretStore** should prompt a user when they access it. If the value is
+`Prompt`, the user is prompted for their password in interactive sessions when required. If the
+value is `None`, the user is not prompted for a password. If the value is `None` and a password is
+required, the cmdlet requiring the password throws a
+**Microsoft.PowerShell.SecretStore.PasswordRequiredException** error.
+
+```yaml
+Type: Interaction
+Parameter Sets: ParameterSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PassThru
 
 Indicates that the cmdlet should return the **SecretStore** configuration after updating it. By
@@ -165,26 +185,6 @@ Accepted values: CurrentUser, AllUsers
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Interaction
-
-Specifies whether the **SecretStore** should prompt a user when they access it. If the value is
-`Prompt`, the user is prompted for their password in interactive sessions when required. If the
-value is `None`, the user is not prompted for a password. If the value is `None` and a password is
-required, the cmdlet requiring the password throws a
-**Microsoft.PowerShell.SecretStore.PasswordRequiredException** error.
-
-```yaml
-Type: Interaction
-Parameter Sets: ParameterSet
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

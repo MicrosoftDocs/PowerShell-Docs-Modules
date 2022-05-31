@@ -1,10 +1,9 @@
 ---
 external help file: Microsoft.PowerShell.SecretManagement.dll-Help.xml
 Module Name: Microsoft.PowerShell.SecretManagement
-ms.date: 03/16/2021
+ms.date: 05/31/2022
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.secretmanagement/set-secretinfo?view=ps-modules&wt.mc_id=ps-gethelp
 schema: 2.0.0
-wonline version:
 ---
 
 # Set-Secret
@@ -117,24 +116,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Vault
-
-Specifies the name of the vault containing the secret to add or update the metadata for. Wildcard
-characters (`*`) are not permitted. By default, this cmdlet looks for the secret in the current
-user's default vault.
-
-```yaml
-Type: String
-Parameter Sets: SecureStringParameterSet, ObjectParameterSet
-Aliases:
-
-Required: False (SecureStringParameterSet, ObjectParameterSet), True (SecretInfoParameterSet)
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -NoClobber
 
 Indicates that the command should error if a secret with the same name already exists in the vault.
@@ -207,6 +188,24 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+### -Vault
+
+Specifies the name of the vault containing the secret to add or update the metadata for. Wildcard
+characters (`*`) are not permitted. By default, this cmdlet looks for the secret in the current
+user's default vault.
+
+```yaml
+Type: String
+Parameter Sets: SecureStringParameterSet, ObjectParameterSet
+Aliases:
+
+Required: False (SecureStringParameterSet, ObjectParameterSet), True (SecretInfoParameterSet)
+Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
 
 Prompts you for confirmation before running the cmdlet.
@@ -251,6 +250,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### System.Collections.Hashtable
 
 ## OUTPUTS
+
+### None
 
 ## NOTES
 

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.PowerShell.SecretStore.dll-Help.xml
 Module Name: Microsoft.PowerShell.SecretStore
-ms.date: 03/16/2021
+ms.date: 05/31/2022
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.secretstore/unlock-secretstore?view=ps-modules&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
@@ -97,6 +97,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### System.Security.SecureString
 
 ## OUTPUTS
+
+### None
 
 ## NOTES
 

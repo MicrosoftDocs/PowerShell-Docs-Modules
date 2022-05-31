@@ -7,7 +7,7 @@ title: AvoidUsingPlainTextForPassword
 ---
 # AvoidUsingPlainTextForPassword
 
-**Severity Level: Warning**
+**Severity Level: Error**
 
 ## Description
 

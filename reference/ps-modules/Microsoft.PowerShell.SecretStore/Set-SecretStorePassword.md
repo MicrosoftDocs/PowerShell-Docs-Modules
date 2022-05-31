@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.PowerShell.SecretStore.dll-Help.xml
 Module Name: Microsoft.PowerShell.SecretStore
-ms.date: 03/16/2021
+ms.date: 05/31/2022
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.secretstore/set-secretstorepassword?view=ps-modules&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
@@ -27,8 +27,7 @@ Set-SecretStorePassword -NewPassword <SecureString> [-Password <SecureString>] [
 
 ## DESCRIPTION
 
-This cmdlet updates the password for SecretStore. It takes no parameters and prompts the user for
-both the old and new passwords.
+This cmdlet updates the password for **SecretStore**.
 
 ## EXAMPLES
 
@@ -62,7 +61,9 @@ set.
 
 ### -NewPassword
 
-New password to be applied to the store.
+Specifies the new password for accessing the **SecretStore**. If this parameter is not specified and
+the cmdlet is run in an interactive session, it prompts the user for the value. If this parameter is
+not specified and the cmdlet is run in a non-interactive session, it returns an error.
 
 ```yaml
 Type: SecureString
@@ -80,6 +81,14 @@ Accept wildcard characters: False
 
 Existing password needed to unlock the store. This can be ignored if the store doesn't currently use
 a password.
+
+Specifies the existing password for accessing the **SecretStore**. If the **SecretStore** is not
+configured to require a password, this parameter is ignored.
+
+If the **SecretStore** is configured to require a password, this parameter is not specified, and the
+cmdlet is run in an interactive session, it prompts the user for the value. If the **SecretStore**
+is configured to require a password, this parameter is not specified and the cmdlet is run in a
+non-interactive session, it returns an error.
 
 ```yaml
 Type: SecureString
@@ -105,6 +114,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### None
 
 ## OUTPUTS
+
+### None
 
 ## NOTES
 

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.PowerShell.SecretManagement.dll-Help.xml
 Module Name: Microsoft.PowerShell.SecretManagement
-ms.date: 03/16/2021
+ms.date: 05/31/2022
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.secretmanagement/get-secretvault?view=ps-modules&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
@@ -19,33 +19,53 @@ Get-SecretVault [[-Name] <String[]>] [<CommonParameters>]
 
 ## DESCRIPTION
 
-This cmdlet finds and returns information of registered vaults. It takes an array of vault name
-strings, which can contain wildcard characters. If no **Name** parameter is specified, all
-registered vault information is returned. The registered vault information includes the vault name,
-vault implementing module name, and optional default parameters.
+This cmdlet finds and returns information about registered vaults. By default, it returns
+information for every registered vault.
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-PS C:\> Get-SecretVault
+Get-SecretVault
+```
 
+```output
 VaultName  ModuleName                        IsDefaultVault
 ---------  ----------                        --------------
 CredMan    Microsoft.PowerShell.CredManStore False
 LocalStore Microsoft.PowerShell.SecretStore  True
 ```
 
-This example runs the command without any parameter arguments, and so returns information on all
-registered vaults. The 'LocalStore' vault is shown to be set as the default vault.
+This example runs the command without any parameters to return information on all registered vaults.
+The `LocalStore` vault is shown to be set as the default vault.
+
+### Example 2
+
+```powershell
+Get-SecretVault -Name LocalStore | Format-List -Property *
+```
+
+```output
+Name            : LocalStore
+ModuleName      : Microsoft.PowerShell.SecretStore
+ModulePath      : C:\Users\User01\Documents\PowerShell\Modules\Microsoft.PowerShell.SecretStore
+Description     : Personal secrets for non-production use.
+VaultParameters : {}
+IsDefault       : True
+```
+
+This example shows additional information about the `LocalStore` vault.
 
 ## PARAMETERS
 
 ### -Name
 
-This parameter takes a **String** argument, including wildcard characters. It is used to filter the
-search results on vault names that match the provided name pattern.
+Specifies the name of a vault. This cmdlet only gets information for vaults that have the specified
+name. Enter a name or name pattern. Wildcard characters are permitted.
+
+If the **Name** parameter is not specified, this cmdlet returns the information for all registered
+vaults.
 
 ```yaml
 Type: String[]

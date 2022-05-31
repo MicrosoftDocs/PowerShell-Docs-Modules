@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.PowerShell.SecretManagement.dll-Help.xml
 Module Name: Microsoft.PowerShell.SecretManagement
-ms.date: 03/16/2021
+ms.date: 05/31/2022
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.secretmanagement/unregister-secretvault?view=ps-modules&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
@@ -28,7 +28,7 @@ Unregister-SecretVault [-SecretVault] <SecretVaultInfo> [-WhatIf] [-Confirm] [<C
 ## DESCRIPTION
 
 This cmdlet un-registers the specified extension vault. Once un-registered, the vault is no longer
-available to SecretManagement, for the current user.
+available to **SecretManagement** for the current user.
 
 ## EXAMPLES
 
@@ -64,46 +64,35 @@ PS C:\> Get-Secret -Name Secret5
 System.Security.SecureString
 ```
 
-In this example, `Get-SecretVault` command is run to see what vaults are registered for the current
-user. Next, the 'LocalStore' vault is un-registered. `Get-SecretVault` command is run again to
-verify the vault no longer appears in the registry. An attempt is made to retrieve 'Secret5', but it
-is not found since its vault was un-registered. The vault is re-registered, under a different name,
-and set to be the default vault. `Get-SecretVault` is run again to verify the newly registered
-vault. Finally, the 'Secret5' secret is retrieved successfully from the new default vault.
+The first command lists the registered vaults for the current user. The second command un-registers
+the `LocalStore` vault. The third command verifies that the vault no longer appears in the registry.
+The fourth command attempts to retrieve `Secret5`, but it is not found since its vault was
+un-registered. The fifth command re-registers the vault under a different name and sets it as the
+user's default vault. The sixth command verifies that the vault has been re-registered as
+`SecretStore` and is the default vault. Finally, the last command retrieves `Secret5` from the
+re-registered vault.
 
 ### Example 2
 
 ```powershell
 PS C:\> Get-SecretVault | Unregister-SecretVault
 PS C:\> Get-SecretVault
-PS C:\>
+
 ```
 
-In this example, `Get-SecretVault` output is piped to this `Unregister-SecretVault` cmdlet to
-un-register all extension vaults for the current user. Next, `Get-SecretVault` is run again to show
-that no vaults are registered.
+This example un-registers all extension vaults for the current user. The second command shows that
+no vaults are registered.
+
+This example un-registers all extension vaults for the current user. `Get-SecretVault` retrieves all
+registered vaults for the current user and sends the result through the pipeline to
+`Unregister-SecretVault`. `Get-SecretVault` shows that the secret no longer exists in the vault.
 
 ## PARAMETERS
 
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Name
 
-Name of the vault to un-register.
+Specifies the name of the vault to un-register. Enter a name or name pattern. Wildcard characters
+(`*`) are permitted.
 
 ```yaml
 Type: String[]
@@ -119,7 +108,7 @@ Accept wildcard characters: True
 
 ### -SecretVault
 
-**SecretVaultInfo** object representing the vault to be un-registered.
+Specifies a **SecretVaultInfo** object representing the vault to un-register.
 
 ```yaml
 Type: SecretVaultInfo
@@ -130,6 +119,22 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -161,6 +166,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### Microsoft.PowerShell.SecretManagement.SecretVaultInfo
 
 ## OUTPUTS
+
+### None
 
 ## NOTES
 

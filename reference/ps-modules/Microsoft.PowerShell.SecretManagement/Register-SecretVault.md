@@ -27,7 +27,7 @@ cmdlet verifies that the specified module meets conformance requirements before 
 extension vault registry. Extension vaults are registered to the current user and do not affect
 other user vault registrations.
 
-The first fault registered with this cmdlet is automatically defined as the default vault even if
+The first vault registered with this cmdlet is automatically defined as the default vault even if
 the **DefaultVault** parameter is not specified.
 
 ## EXAMPLES

@@ -1,27 +1,49 @@
-# Getting Started with Azure Key Vault
+---
+description: This article explains how to use a Azure Key Vault in an automation scenario to securely retrieve an use passwords or other secret material.
+ms.date: 06/24/2022
+title: Using Azure Key Vault in automation
+---
+# Using Azure Key Vault in automation
 
-Setup a Key Vault in Azure.
+This article provides an example for using Azure Key Vault in an automation scenario. Azure Key
+Vault provides you a way to securely store and retrieve the passwords, tokens and other secrets you
+need to use in your automation pipeline.
 
-https://docs.microsoft.com/en-us/azure/key-vault/keys/quick-create-powershell
+## Setting up the host the runs the automation
 
-The Azure Key Vault extension is available on the PowerShell Gallery beginning in
-[Az.KeyVault module](https://www.powershellgallery.com/packages/Az.KeyVault/3.4.0) v3.3.0. This
-vault extension uses a common authentication system with the rest of
-[the Az PowerShell module](https://github.com/Azure/azure-powershell#--microsoft-azure-powershell),
-and allows users to interact with an existing Azure Key Vault through the SecretManagement
-interface.
+Beginning with **Az.KeyVault** 3.3.0, the module includes a **SecretManagement** extension that
+allows you to use the **SecretManagement** cmdlets to interact with secrets store in Azure Key
+Vault.
 
-To utilize Azure Key Vault with SecretManagement first ensure that you have
-[the Az.KeyVault module](https://www.powershellgallery.com/packages/Az.KeyVault/3.4.0) installed
-(`Install-Module Az.KeyVault`). You can then register the vault using your AZKVaultName and
-SubscriptionID:
+First, you should create a Key Vault in your Azure subscription and add your secrets. For more
+information, see
+[Quickstart: Set and retrieve a key from Azure Key Vault using Azure PowerShell][azkv-quick].
+
+To use the Azure Key Vault with **SecretManagement** first ensure that you have the
+[Az.KeyVault][Az.KeyVault].
+
+Next, register the vault using your **AZKVaultName** and **SubscriptionId**. These commands must be
+run in the user context of the automation account on the automation host.
 
 ```powershell
-Register-SecretVault -Module Az.KeyVault -Name AzKV -VaultParameters @{ AZKVaultName = $vaultName; SubscriptionId = $subID}
+Install-Module -Name Microsoft.PowerShell.SecretManagement -Repository PSGallery -Force
+Install-Module Az.KeyVault -Repository PSGallery -Force
+Import-Module Microsoft.PowerShell.SecretManagement
+Import-Module Az.KeyVault
+
+$VaultParameters = @{
+    AZKVaultName = $vaultName
+    SubscriptionId = $subID
+}
+Register-SecretVault -Module Az.KeyVault -Name AzKV -VaultParameters $VaultParameters
 ```
 
-From there you can view the secrets you have (`Get-SecretInfo`), get secrets you may need
-(`Get-Secret`), create and update secrets (`Set-Secret`), and remove secrets (`Remove-Secret`).
+## Using Azure Key Vault secrets in automation
 
-For any feature requests or support with the Azure Key Vault extension please refer to their
-[GitHub repository](https://github.com/Azure/azure-powershell).
+Now that you have registered your Azure Key Vault with **SecretManagement** you can view secrets
+with `Get-SecretInfo`, get secrets with `Get-Secret`, create and update secrets with `Set-Secret`,
+and remove secrets with `Remove-Secret`.
+
+<!-- reference links -->
+[azkv-quick]: /azure/key-vault/keys/quick-create-powershell
+[Az.KeyVault]: https://www.powershellgallery.com/packages/Az.KeyVault

@@ -1,18 +1,53 @@
 ---
-description:
-ms.date: 05/24/2022
+description: This article explains how to use a SecretStore vault in an automation scenario to securely retrieve an use passwords or other secret material.
+ms.date: 06/24/2022
 title: Using the SecretStore in automation
 ---
 # Using the SecretStore in automation
 
-This is an example of automation script that installs and configures the
-**Microsoft.PowerShell.SecretStore** module without user prompting. The configuration requires a
-password and sets user interaction to `None`, so that **SecretStore** never prompts the user. The
-configuration also requires a password, and the password is passed in as a SecureString object. The
-`-Confirm:false` parameter is used so that PowerShell does not prompt for confirmation.
+This article provides an example for using a **Microsoft.PowerShell.SecretStore** vault in an
+automation scenario. A **SecretStore** vault provides you a way to securely store and retrieve the
+passwords, tokens and other secrets you need to use in your automation pipeline.
+
+## Setting up the host the runs the automation
+
+For this example you must first install and configure the SecretManagement modules. This example
+assume that your automation host is running Windows. These commands must be run in the user context
+of the automation account on the host.
 
 ```powershell
 Install-Module -Name Microsoft.PowerShell.SecretStore -Repository PSGallery -Force
+Install-Module -Name Microsoft.PowerShell.SecretManagement -Repository PSGallery -Force
+Import-Module Microsoft.PowerShell.SecretStore
+Import-Module Microsoft.PowerShell.SecretManagement
+```
+
+You must also create a password as a **SecureString** that is securely exported to an XML file and
+encrypted by Windows Data Protection (DPAPI). The following command prompts you for a password. In
+this example the **UserName** is unimportant.
+
+```powershell
+PS> $credential = Get-Credential -UserName 'SecureStore'
+
+PowerShell credential request
+Enter your credentials.
+Password for user SecureStore: **************
+```
+
+Once you have the password you can save it to an encrypted XML file.
+
+```powershell
+$securePasswordPath = 'C:\automation\passwd.xml'
+$credential.Password |  Export-Clixml -Path $securePasswordPath
+```
+
+Next you must configure the **SecretStore** vault. The configuration sets user interaction to
+`None`, so that **SecretStore** never prompts the user. The configuration requires a password,
+and the password is passed in as a **SecureString** object. The `-Confirm:false` parameter is used
+so that PowerShell does not prompt for confirmation.
+
+```powershell
+Register-SecretVault -Name SecretStore -ModuleName Microsoft.PowerShell.SecretStore -DefaultVault
 $password = Import-CliXml -Path $securePasswordPath
 
 $storeConfiguration = @{
@@ -25,21 +60,25 @@ $storeConfiguration = @{
 Set-SecretStoreConfiguration @storeConfiguration
 ```
 
+Now that you have the vault installed and configured, you can use `Set-Secret` to add the secrets
+you need for your automation scripts.
+
+## Using secrets in automation
+
 The **SecretStore** password must be provided in a secure fashion. Here the password is being
-imported from a file that was encrypted using Windows Data Protection (DPAPI). This is a
-Windows-only solution, but another option is to use a secure variable provided by CI system like
-GitHub Actions.
+imported from a file that was encrypted using Windows Data Protection (DPAPI).
 
-Next, the **SecretManagement** module is installed and the **SecretStore** module registered so that
-the SecretStore secrets can be managed.
+> [!NOTE]
+> This is a Windows-only solution, but another option is to use a secure variable provided by CI
+> system like GitHub Actions.
 
-The `Unlock-SecretStore` cmdlet is used to unlock the **SecretStore** for this session. The password
-timeout was configured for 1 hour and **SecretStore** will remain unlocked in the session for that
-amount of time, after which it will need to be unlocked again before secrets can be accessed.
+The automation script needs to unlock the vault to retrieve the screts needed in the script. The
+`Unlock-SecretStore` cmdlet is used to unlock the **SecretStore** for this session. The password
+timeout was configured for 1 hour. The vault remains unlocked in the session for that amount of
+time. After the timeout, the vault must be unlocked again before secrets can be accessed.
 
 ```powershell
-Install-Module -Name Microsoft.PowerShell.SecretManagement -Repository PSGallery -Force
-Register-SecretVault -Name SecretStore -ModuleName Microsoft.PowerShell.SecretStore -DefaultVault
-
+$password = Import-CliXml -Path $securePasswordPath
 Unlock-SecretStore -Password $password
+$automationPassword = Get-Secret -Name CIJobSecret
 ```

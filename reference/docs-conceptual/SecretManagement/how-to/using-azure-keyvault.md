@@ -20,7 +20,7 @@ information, see
 [Quickstart: Set and retrieve a key from Azure Key Vault using Azure PowerShell][azkv-quick].
 
 To use the Azure Key Vault with **SecretManagement** first ensure that you have the
-[Az.KeyVault][Az.KeyVault].
+[Az.KeyVault][Az.KeyVault] module.
 
 Next, register the vault using your **AZKVaultName** and **SubscriptionId**. These commands must be
 run in the user context of the automation account on the automation host.

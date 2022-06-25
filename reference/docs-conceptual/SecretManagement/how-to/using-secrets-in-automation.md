@@ -69,7 +69,7 @@ The **SecretStore** password must be provided in a secure fashion. Here the pass
 imported from a file that was encrypted using Windows Data Protection (DPAPI).
 
 > [!NOTE]
-> This is a Windows-only solution, but another option is to use a secure variable provided by CI
+> This is a Windows-only solution, but another option is to use a secure variable provided by a CI
 > system like GitHub Actions.
 
 The automation script needs to unlock the vault to retrieve the screts needed in the script. The

@@ -6,7 +6,7 @@ title: Understanding the security features of SecretManagement and SecretStore
 # Understanding the security features of SecretManagement and SecretStore
 
 The security of **SecretManagement** is dependent on the extension vaults it hosts. These vaults
-preform the actual functions of storing and retrieving the secrets. **SecretManagement** does not
+perform the actual functions of storing and retrieving the secrets. **SecretManagement** does not
 return secrets as plain text by default. By default, any text secrets are returned as
 **SecureString** objects unless the user explicitly requests the secret as plain text using the
 **AsPlaintext** switch.

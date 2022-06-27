@@ -7,7 +7,7 @@ title: Using the SecretStore in automation
 
 This article provides an example for using a **Microsoft.PowerShell.SecretStore** vault in an
 automation scenario. A **SecretStore** vault provides you a way to securely store and retrieve the
-passwords, tokens and other secrets you need to use in your automation pipeline.
+passwords, tokens and other secrets you need to use in your automation pipeline on the local machine.
 
 ## Setting up the host the runs the automation
 

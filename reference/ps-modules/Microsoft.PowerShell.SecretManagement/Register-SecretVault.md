@@ -54,7 +54,7 @@ set as the default vault.
 ### Example 2
 
 ```powershell
-Register-SecretVault -ModuleName Az.KeyVault -Name Azure -VaultParameters @{ AZKVaultName = "AzureKeyVault"; SubscriptionId = (Get-AzContext).Subscription.Id } -DefaultVault
+Register-SecretVault -Name Azure -ModuleName Az.KeyVault -VaultParameters @{ AZKVaultName = "AzureKeyVault"; SubscriptionId = (Get-AzContext).Subscription.Id } -DefaultVault
 Get-SecretVault
 ```
 

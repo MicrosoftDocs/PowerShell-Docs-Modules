@@ -51,6 +51,23 @@ It uses the **DefaultVault** parameter to make the registered vault the default 
 `Get-SecretVault` lists all registered vaults for the user, verifying the vault was registered and
 set as the default vault.
 
+### Example 2
+
+```powershell
+Register-SecretVault -ModuleName Az.KeyVault -Name Azure -VaultParameters @{ AZKVaultName = "AzureKeyVault"; SubscriptionId = (Get-AzContext).Subscription.Id } -DefaultVault
+Get-SecretVault
+```
+
+```output
+Name  ModuleName  IsDefaultVault
+----  ----------  --------------
+Azure Az.KeyVault True
+```
+
+This example registers an **Az.KeyVault** extension vault for the current user.
+The [Az.KeyVault](https://www.powershellgallery.com/packages/Az.KeyVault/) module needs to be installed on prior.
+`AZKVaultName` is the name of the Key Vault on Azure. `SubscriptionId` is the ID of the subscription where the Key Vault is created in.
+
 ## PARAMETERS
 
 ### -AllowClobber

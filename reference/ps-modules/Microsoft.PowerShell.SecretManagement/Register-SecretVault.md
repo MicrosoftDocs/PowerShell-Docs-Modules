@@ -54,19 +54,31 @@ set as the default vault.
 ### Example 2
 
 ```powershell
-Register-SecretVault -Name Azure -ModuleName Az.KeyVault -VaultParameters @{ AZKVaultName = "AzureKeyVault"; SubscriptionId = (Get-AzContext).Subscription.Id } -DefaultVault
+$parameters = @{
+    Name = 'Azure'
+    ModuleName = 'Az.KeyVault'
+    VaultParameters = @{ 
+        AZKVaultName = 'AzureKeyVault'
+        SubscriptionId = (Get-AzContext).Subscription.Id
+    } 
+    DefaultVault = $true
+}
+Register-SecretVault @parameters
 Get-SecretVault
 ```
 
-```output
+```Output
 Name  ModuleName  IsDefaultVault
 ----  ----------  --------------
 Azure Az.KeyVault True
 ```
 
-This example registers an **Az.KeyVault** extension vault for the current user.
-The [Az.KeyVault](https://www.powershellgallery.com/packages/Az.KeyVault/) module needs to be installed on prior.
-`AZKVaultName` is the name of the Key Vault on Azure. `SubscriptionId` is the ID of the subscription where the Key Vault is created in.
+This example registers an **Az.KeyVault** extension vault for the current user. The
+[Az.KeyVault](https://www.powershellgallery.com/packages/Az.KeyVault/) module needs to be installed
+on prior. For the **VaultParameters**:
+
+- `AZKVaultName` specifies the name of the Key Vault on Azure
+- `SubscriptionId` specifies the ID of the subscription where the Key Vault is created in
 
 ## PARAMETERS
 

@@ -8,9 +8,9 @@ title: Create a Crescendo configuration using the Crescendo cmdlets
 The Crescendo module includes a set of cmdlets that create various Crescendo object types. You can
 use these cmdlets to create a Crescendo configuration without the need to manually edit a JSON file.
 
-During the design of Crescendo, these cmdlets were created before the decision that module and
-cmdlet creation could be better served by a declarative approach. Their utility was still obvious,
-so the decision was made to support both approaches.
+During the design of Crescendo, we created these cmdlets before the decision that module and cmdlet
+creation could be better served by a declarative approach. Their utility was still appreciated, so
+we decided to support both approaches.
 
 > [!IMPORTANT]
 > Since developer tools like Visual Studio Code (VS Code) provide IntelliSense based on the JSON
@@ -204,15 +204,14 @@ Export-CrescendoModule -ConfigurationFile vssadmin.json -ModuleName .\vssadmin.p
 ## Advanced use cases
 
 The Crescendo cmdlets are powerful tools that can be used in advanced scenarios to create
-configurations and build modules. There are several advanced examples that come bundled with the
-Crescendo module. These can be found in the `Experimental\HelpParsers` folder of the
-**Microsoft.PowerShell.Crescendo** module. These experimental examples show how you can parse the
-help output of a command-line tool and use that information to create a Crescendo configuration for
-a module that wrap the tool. The [README.md][README.md] file provides a detailed explanation of the
-design of these help parsers.
+configurations and build modules. There are several advanced in the `Experimental\HelpParsers`
+folder of the **Microsoft.PowerShell.Crescendo** module. These experimental examples show how you
+can parse the help output of a command-line tool and use that information to create a Crescendo
+configuration for a module that wrap the tool. The [README.md][README.md] file provides a detailed
+explanation of the design of these help parsers.
 
-Examples like these help parsers could be used in a CI/CD pipeline to build new versions of a module
-when the command-line tool changes.
+You could use these help parsers in a CI/CD pipeline to build new versions of a module when the
+command-line tool changes.
 
 <!-- link references -->
 [blog]: https://devblogs.microsoft.com/powershell-community/tag/crescendo/

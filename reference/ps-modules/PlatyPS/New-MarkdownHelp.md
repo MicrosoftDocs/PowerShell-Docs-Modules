@@ -60,7 +60,7 @@ Mode                LastWriteTime         Length Name
 -a----        5/22/2016   6:53 PM            664 Command03.md
 ```
 
-The first command creates a function named Command03 by using standard Windows PowerShell syntax.
+The first command creates a function named Command03 using standard Windows PowerShell syntax.
 
 The second command creates help for that stub function in the .\docs folder.
 
@@ -86,7 +86,8 @@ Mode                LastWriteTime         Length Name
 -a----        5/22/2016   6:54 PM           1630 Update-MarkdownHelpSchema.md
 ```
 
-The first command loads the PlatyPS module into the current session by using the `Import-Module` cmdlet.
+The first command loads the PlatyPS module into the current session using the `Import-Module`
+cmdlet.
 
 The second command creates help for all the cmdlets in the PlatyPS module. It stores them in the
 `.\docs` folder. This command specifies the **Force** parameter. Therefore, it overwrites existing
@@ -109,7 +110,7 @@ Mode                LastWriteTime         Length Name
 -a----        5/22/2016   6:56 PM          15320 Set-PSReadLineOption.md
 ```
 
-This command creates help in markdown format for the specified help MAML file. You do not have to
+This command creates help in markdown format for the specified help MAML file. You don't have to
 load the module, as in the previous example. If the module is already loaded, this command creates
 help based on the MAML file, not on the currently installed module.
 
@@ -263,7 +264,7 @@ Specifies metadata that this cmdlet includes in the help markdown files as a has
 string-to-sting key-value pairs. This cmdlet writes the metadata in the header of each markdown help
 file.
 
-The `New-ExternalHelp` cmdlet does not use this metadata. External tools can use this metadata.
+The `New-ExternalHelp` cmdlet doesn't use this metadata. External tools can use this metadata.
 
 ```yaml
 Type: Hashtable
@@ -329,7 +330,7 @@ Accept wildcard characters: False
 
 ### -NoMetadata
 
-Indicates that this cmdlet does not write any metadata in the generated markdown.
+Indicates that this cmdlet doesn't write any metadata in the generated markdown.
 
 ```yaml
 Type: SwitchParameter
@@ -345,8 +346,8 @@ Accept wildcard characters: False
 
 ### -OnlineVersionUrl
 
-Specifies the URL where the updatable help function downloads updated help. If you do not specify a
-value, the cmdlet uses an empty string.
+Specifies the address where the updatable help function downloads updated help. If you don't specify
+a value, the cmdlet uses an empty string.
 
 ```yaml
 Type: String
@@ -379,8 +380,8 @@ Accept wildcard characters: False
 ### -WithModulePage
 
 Indicates that this cmdlet creates a module page in the output folder. This file has the name that
-the **ModuleName** parameter specifies. If you did not specify that parameter, the cmdlet supplies
-the default name MamlModule. You can overwrite this setting by using **ModulePagePath** which allows
+the **ModuleName** parameter specifies. If you didn't specify that parameter, the cmdlet supplies
+the default name MamlModule. You can overwrite this setting using **ModulePagePath** which allows
 you to define different path for module page
 
 ```yaml

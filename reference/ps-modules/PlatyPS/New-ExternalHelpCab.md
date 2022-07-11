@@ -28,7 +28,7 @@ We recommend that you provide as content only about_ topics and the output from 
 
 This cmdlet uses metadata stored in the module markdown file to name your .cab file. This naming
 matches the pattern that the Windows PowerShell help system requires for use as updatable help. This
-metadata is part of the module file created by using the [New-MarkdownHelp](New-MarkdownHelp.md)
+metadata is part of the module file created using the [New-MarkdownHelp](New-MarkdownHelp.md)
 cmdlet with the **WithModulePage** parameter.
 
 This cmdlet also generates or updates an existing `helpinfo.xml` file. That file provides versioning
@@ -65,8 +65,9 @@ Accept wildcard characters: False
 
 ### -LandingPagePath
 
-Specifies the full path of the Module Markdown file that contains all the metadata required to name the .cab file.
-For the required metadata, run `New-MarkdownHelp` with the *WithLandingPage* parameter.
+Specifies the full path of the Module Markdown file that contains all the metadata required to name
+the .cab file. For the required metadata, run `New-MarkdownHelp` with the **WithLandingPage**
+parameter.
 
 ```yaml
 Type: String
@@ -123,13 +124,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### None
 
-You cannot pipe values to this cmdlet.
+You can't pipe values to this cmdlet.
 
 ## OUTPUTS
 
 ### None
 
-This cmdlet does not generate output. The cmdlet saves its results in the output folder that the
+This cmdlet doesn't generate output. The cmdlet saves its results in the output folder that the
 **OutputPath** parameter specifies.
 
 ## NOTES

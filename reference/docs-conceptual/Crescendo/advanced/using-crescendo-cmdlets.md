@@ -204,10 +204,10 @@ Export-CrescendoModule -ConfigurationFile vssadmin.json -ModuleName .\vssadmin.p
 ## Advanced use cases
 
 The Crescendo cmdlets are powerful tools that can be used in advanced scenarios to create
-configurations and build modules. There are several advanced in the `Experimental\HelpParsers`
+configurations and build modules. There are several advanced examples in the `Experimental\HelpParsers`
 folder of the **Microsoft.PowerShell.Crescendo** module. These experimental examples show how you
 can parse the help output of a command-line tool and use that information to create a Crescendo
-configuration for a module that wrap the tool. The [README.md][README.md] file provides a detailed
+configuration for a module that wraps the tool. The [README.md][README.md] file provides a detailed
 explanation of the design of these help parsers.
 
 You could use these help parsers in a CI/CD pipeline to build new versions of a module when the

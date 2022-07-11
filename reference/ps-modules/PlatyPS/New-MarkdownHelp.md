@@ -60,7 +60,7 @@ Mode                LastWriteTime         Length Name
 -a----        5/22/2016   6:53 PM            664 Command03.md
 ```
 
-The first command creates a function named Command03 using standard Windows PowerShell syntax.
+The first command creates a function named `Command03` using standard Windows PowerShell syntax.
 
 The second command creates help for that stub function in the .\docs folder.
 
@@ -86,7 +86,7 @@ Mode                LastWriteTime         Length Name
 -a----        5/22/2016   6:54 PM           1630 Update-MarkdownHelpSchema.md
 ```
 
-The first command loads the PlatyPS module into the current session using the `Import-Module`
+The first command loads the **PlatyPS** module into the current session using the `Import-Module`
 cmdlet.
 
 The second command creates help for all the cmdlets in the PlatyPS module. It stores them in the
@@ -381,7 +381,7 @@ Accept wildcard characters: False
 
 Indicates that this cmdlet creates a module page in the output folder. This file has the name that
 the **ModuleName** parameter specifies. If you didn't specify that parameter, the cmdlet supplies
-the default name MamlModule. You can overwrite this setting using **ModulePagePath** which allows
+the default name `MamlModule`. You can overwrite this setting using **ModulePagePath** which allows
 you to define different path for module page
 
 ```yaml

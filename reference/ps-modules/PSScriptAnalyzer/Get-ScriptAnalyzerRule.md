@@ -92,7 +92,7 @@ Enter the path to a .NET assembly or module that contains Script Analyzer rules.
 one value, but wildcards are supported. To get rules in subdirectories of the path, use the
 **RecurseCustomRulePath** parameter.
 
-You can create custom rules using a custom .NET assembly or a PowerShell module, such as the
+You can create custom rules using a .NET assembly or a PowerShell module, such as the
 [Community Analyzer Rules](https://github.com/PowerShell/PSScriptAnalyzer/blob/development/Tests/Engine/CommunityAnalyzerRules/CommunityAnalyzerRules.psm1)
 in the GitHub repository.
 

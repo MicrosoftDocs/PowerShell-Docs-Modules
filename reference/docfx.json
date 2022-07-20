@@ -78,7 +78,7 @@
     "globalMetadata": {
       "ROBOTS": "INDEX, FOLLOW",
       "apiPlatform": "powershell",
-      "breadcrumb_path": "/powershell/PowerShell-Docs-Modules/breadcrumb/toc.json",
+      "breadcrumb_path": "/powershell/utility-modules/breadcrumb/toc.json",
       "feedback_github_repo": "MicrosoftDocs/PowerShell-Docs-Modules",
       "feedback_system": "GitHub",
       "ms.devlang": "powershell",

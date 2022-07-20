@@ -1,15 +1,25 @@
-items:
-  - name: Docs
-    tocHref: /
-    topicHref: /
+- name: Docs
+  tocHref: /
+  topicHref: /
+  items:
+  - name: PowerShell
+    tocHref: /powershell/
+    topicHref: /powershell
     items:
-      - name: PowerShell
-        tocHref: /powershell/
-        topicHref: /powershell
-        items:
-          - name: Utility Modules
-            tocHref: /powershell/utility-modules/
-            topicHref: /powershell/utility-modules/overview
-          - name: Utility Modules
-            tocHref: /powershell/module/
-            topicHref: /powershell/utility-modules/overview
+    - name: Utility Modules
+      tocHref: /powershell/utility-modules/
+      topicHref: /powershell/utility-modules/overview
+      items:
+      - name: Crescendo
+        tocHref: /powershell/module/crescendo/
+        topicHref: /powershell/utility-modules/crescendo/overview
+      - name: PlatyPS
+        tocHref: /powershell/module/platyps/
+        topicHref: /powershell/utility-modules/platyps/overview
+      - name: PSScriptAnalyzer
+        tocHref: /powershell/module/psscriptanalyzer/
+        topicHref: /powershell/utility-modules/psscriptanalyzer/overview
+      - name: SecretManagement and SecretStore
+        tocHref: /powershell/module/secretmanagement/
+        topicHref: /powershell/utility-modules/secretmanagement/overview
+        

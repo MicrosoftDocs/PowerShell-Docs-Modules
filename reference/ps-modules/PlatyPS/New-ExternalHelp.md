@@ -21,9 +21,9 @@ New-ExternalHelp -Path <String[]> -OutputPath <String> [-ApplicableTag <String[]
 ## DESCRIPTION
 
 The `New-ExternalHelp` cmdlet creates an external help file based on markdown help files supported
-by PlatyPS. You can ship this with a module to provide help by using the `Get-Help` cmdlet.
+by PlatyPS. You can ship this with a module to provide help using the `Get-Help` cmdlet.
 
-If the markdown files that you specify do not follow the PlatyPS
+If the markdown files that you specify don't follow the PlatyPS
 [Schema](https://github.com/PowerShell/platyPS/blob/master/platyPS.schema.md), this cmdlet returns
 error messages.
 
@@ -60,8 +60,8 @@ Mode                LastWriteTime         Length Name
 ```
 
 This command creates an external help file in the specified location. This command specifies the
-*Force* parameter, therefore, it overwrites an existing file. The command specifies Unicode encoding
-for the created file.
+**Force** parameter, therefore, it overwrites an existing file. The command specifies Unicode
+encoding for the created file.
 
 ### Example 3: Write warnings and errors to file
 
@@ -176,7 +176,7 @@ Specifies the maximum line length when generating "about" help text files. Other
 not affected by this parameter. For more information, see
 [New-MarkdownAboutHelp](New-MarkdownAboutHelp.md).
 
-Lines inside code blocks are not wrapped and are not affected by the **MaxAboutWidth** parameter.
+Lines inside code blocks aren't wrapped and aren't affected by the **MaxAboutWidth** parameter.
 
 ```yaml
 Type: Int32
@@ -198,7 +198,7 @@ The path must include the location and name of the folder and file name with the
 JSON object contains three properties: **Message**, **FilePath**, and **Severity** (Warning or
 Error).
 
-If this path is not provided, no log will be generated.
+If this path isn't provided, no log is generated.
 
 ```yaml
 Type: String

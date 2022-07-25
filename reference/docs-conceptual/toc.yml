@@ -65,6 +65,8 @@ items:
             href: PSScriptAnalyzer/Rules/AvoidNullOrEmptyHelpMessageAttribute.md
           - name: AvoidOverwritingBuiltInCmdlets
             href: PSScriptAnalyzer/Rules/AvoidOverwritingBuiltInCmdlets.md
+          - name: AvoidSemicolonsAsLineTerminators
+            href: PSScriptAnalyzer/Rules/AvoidSemicolonsAsLineTerminators.md
           - name: AvoidShouldContinueWithoutForce
             href: PSScriptAnalyzer/Rules/AvoidShouldContinueWithoutForce.md
           - name: AvoidTrailingWhitespace

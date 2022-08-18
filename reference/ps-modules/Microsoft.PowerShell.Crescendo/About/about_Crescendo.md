@@ -130,7 +130,7 @@ to enable using other PowerShell cmdlets. When run, this provides an object
 that encapsulates the `apt` output
 
 ```powershell
-PS> get-installedpackage | ?{ $_.name -match "libc"}
+PS> Get-InstalledPackage | Where-Object { $_.name -match "libc"}
 
 Name        Version            Architecture State
 ----        -------            ------------ -----
@@ -140,7 +140,7 @@ libcap-ng0  0.7.9-2.1build1    amd64        {installed, local}
 libcom-err2 1.45.5-2ubuntu1    amd64        {installed, local}
 libcrypt1   1:4.4.10-10ubuntu4 amd64        {installed, local}
 
-PS> get-installedpackage | Group-Object Architecture
+PS> Get-InstalledPackage | Group-Object Architecture
 
 Count Name  Group
 ----- ----  -----
@@ -159,8 +159,10 @@ The GitHub repository may be found at:
 PowerShell Blog posts that present the rational and approaches for native
 command wrapping can be found here:
 
+**Native commands in PowerShell a new approach**
+
 - [Part 1](https://devblogs.microsoft.com/powershell/native-commands-in-powershell-a-new-approach/)
-- [Part 2](https://devblogs.microsoft.com/powershell/native-commands-in-powershell-a-new-approach-part-2))
+- [Part 2](https://devblogs.microsoft.com/powershell/native-commands-in-powershell-a-new-approach-part-2)
 
 ## Keywords
 

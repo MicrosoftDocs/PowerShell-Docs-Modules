@@ -43,7 +43,7 @@ Export-CrescendoModule netsh netsh*.json -force
 
 ### -ConfigurationFile
 
-This is a list of JSON files which represent the proxies for the module
+This is a list of JSON files that represent the proxies for the module.
 
 ```yaml
 Type: System.String[]
@@ -59,9 +59,8 @@ Accept wildcard characters: True
 
 ### -Force
 
-By default, if `Export-CrescendoModule` finds an already created module, it will not overwrite the
-existing file. Use the **Force** parameter to overwrite the existing file, or remove it prior to
-running `Export-CrescendoModule`.
+By default, if `Export-CrescendoModule` does not overwrite an existing module. Use the **Force**
+parameter to overwrite the existing file, or remove it before running `Export-CrescendoModule`.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -109,7 +108,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs. The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -143,6 +142,13 @@ object. All files provided in the **ConfigurationFile** parameter are then used 
 individual function. Finally, all proxies are used to create an `Export-ModuleMember` command
 invocation, so when the resultant module is imported, the module has all the command proxies
 available.
+
+`Export-CrescendoModule` adds the **CrescendoBuilt** tag to the module manifest. You can use this
+tag to find modules in the PowerShell Gallery that were created using Crescendo. For more
+information, see:
+
+- [Gallery Search Syntax](/powershell/scripting/gallery/how-to/finding-packages/search-syntax)
+- [Find-Module](/powershell/module/powershellget/find-module)
 
 ## RELATED LINKS
 

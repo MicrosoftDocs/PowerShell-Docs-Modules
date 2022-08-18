@@ -71,6 +71,8 @@ items:
             href: PSScriptAnalyzer/Rules/AvoidShouldContinueWithoutForce.md
           - name: AvoidTrailingWhitespace
             href: PSScriptAnalyzer/Rules/AvoidTrailingWhitespace.md
+          - name: AvoidUsingBrokenHashAlgorithms
+            href: PSScriptAnalyzer/Rules/AvoidUsingBrokenHashAlgorithms.md
           - name: AvoidUsingCmdletAliases
             href: PSScriptAnalyzer/Rules/AvoidUsingCmdletAliases.md
           - name: AvoidUsingComputerNameHardcoded

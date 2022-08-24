@@ -1,4 +1,0 @@
-{
-  "extends": "../../../../.markdownlint.json",
-  "no-emphasis-as-heading": false
-}

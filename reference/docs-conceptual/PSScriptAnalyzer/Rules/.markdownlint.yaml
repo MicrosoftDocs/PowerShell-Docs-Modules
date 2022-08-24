@@ -1,0 +1,4 @@
+# PSScriptAnalyzer rules declare their severity level as bold text after the H1.
+# This violates MD036, which is good practice for most other documentation.
+extends: ../../../../.markdownlint.yaml
+MD036: false # no-emphasis-as-heading

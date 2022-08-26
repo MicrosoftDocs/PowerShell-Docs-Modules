@@ -1,0 +1,7 @@
+targethost
+azcmagent
+azinfo
+gcarcservice
+extensionservice
+himds
+vssadmin

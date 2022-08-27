@@ -1,0 +1,4 @@
+PSDSC
+analyzersettings
+Allman
+PSScriptAnalzyer

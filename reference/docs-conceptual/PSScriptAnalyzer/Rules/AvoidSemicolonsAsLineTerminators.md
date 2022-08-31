@@ -1,11 +1,10 @@
 ---
 description: Avoid semicolons as line terminators
 ms.custom: PSSA v1.21.0
-ms.date: 07/25/2022
+ms.date: 06/15/2022
 ms.topic: reference
 title: AvoidSemicolonsAsLineTerminators
 ---
-
 # AvoidSemicolonsAsLineTerminators
 
 **Severity Level: Warning**
@@ -14,8 +13,7 @@ title: AvoidSemicolonsAsLineTerminators
 
 Lines should not end with a semicolon.
 
-> [!NOTE]
-> This rule is not enabled by default. The user needs to enable it through settings.
+**Note**: This rule is not enabled by default. The user needs to enable it through settings.
 
 ## Example
 

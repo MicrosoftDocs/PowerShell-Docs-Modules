@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Windows.PowerShell.ScriptAnalyzer.dll-Help.xml
 Module Name: PSScriptAnalyzer
-ms.custom: PSSA v1.20.0
+ms.custom: PSSA v1.21.0
 ms.date: 10/07/2021
 online version: https://docs.microsoft.com/powershell/module/psscriptanalyzer/invoke-formatter?view=ps-modules&wt.mc_id=ps-gethelp
 schema: 2.0.0
@@ -104,7 +104,7 @@ Aliases:
 Required: False
 Position: 3
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -121,7 +121,7 @@ Aliases:
 Required: True
 Position: 1
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
@@ -137,7 +137,7 @@ Aliases:
 Required: False
 Position: 2
 Default value: CodeFormatting
-Accept pipeline input: False
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

@@ -1,6 +1,6 @@
 ---
 description: List of PSScriptAnalyzer rules
-ms.custom: PSSA v1.20.0
+ms.custom: PSSA v1.21.0
 ms.date: 10/18/2021
 ms.topic: reference
 title: List of PSScriptAnalyzer rules
@@ -57,7 +57,7 @@ The PSScriptAnalyzer contains the following rule definitions.
 | [ReservedCmdletChar](./ReservedCmdletChar.md)                                                     | Error       |        Yes         |                 |
 | [ReservedParams](./ReservedParams.md)                                                             | Error       |        Yes         |                 |
 | [ReviewUnusedParameter](./ReviewUnusedParameter.md)                                               | Warning     |        Yes         |                 |
-| [ShouldProcess](./ShouldProcess.md)                                                               | Error       |        Yes         |                 |
+| [ShouldProcess](./ShouldProcess.md)                                                               | Warning     |        Yes         |                 |
 | [UseApprovedVerbs](./UseApprovedVerbs.md)                                                         | Warning     |        Yes         |                 |
 | [UseBOMForUnicodeEncodedFile](./UseBOMForUnicodeEncodedFile.md)                                   | Warning     |        Yes         |                 |
 | [UseCmdletCorrectly](./UseCmdletCorrectly.md)                                                     | Warning     |        Yes         |                 |

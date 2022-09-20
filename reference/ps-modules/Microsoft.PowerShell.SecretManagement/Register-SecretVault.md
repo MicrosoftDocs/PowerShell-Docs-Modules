@@ -57,10 +57,10 @@ set as the default vault.
 $parameters = @{
     Name = 'Azure'
     ModuleName = 'Az.KeyVault'
-    VaultParameters = @{ 
+    VaultParameters = @{
         AZKVaultName = 'AzureKeyVault'
         SubscriptionId = (Get-AzContext).Subscription.Id
-    } 
+    }
     DefaultVault = $true
 }
 Register-SecretVault @parameters

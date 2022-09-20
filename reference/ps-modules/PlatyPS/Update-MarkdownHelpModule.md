@@ -2,7 +2,7 @@
 external help file: platyPS-help.xml
 Module Name: platyPS
 ms.date: 03/16/2021
-online version: https://docs.microsoft.com/powershell/module/platyps/update-markdownhelpmodule?view=ps-modules&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/platyps/update-markdownhelpmodule?view=ps-modules&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

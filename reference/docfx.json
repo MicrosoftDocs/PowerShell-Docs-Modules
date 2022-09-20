@@ -71,8 +71,8 @@
         "**/**.yml": [ "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3" ]
       },
       "social_image_url": {
-        "**/**.md": "https://docs.microsoft.com/media/logos/logo-powershell-social.png",
-        "**/**.yml": "https://docs.microsoft.com/media/logos/logo-powershell-social.png"
+        "**/**.md": "https://learn.microsoft.com/media/logos/logo-powershell-social.png",
+        "**/**.yml": "https://learn.microsoft.com/media/logos/logo-powershell-social.png"
       }
     },
     "globalMetadata": {

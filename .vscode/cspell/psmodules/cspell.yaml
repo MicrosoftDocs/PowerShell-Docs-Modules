@@ -1,0 +1,53 @@
+name: psmodules
+description: >
+  This cSpell configuration is for terminology specific to the PowerShell modules in this
+  repository. Only add to the dictionaries defined here if the terms specifically apply to one of
+  the modules. If they apply to PowerShell more broadly, contribute those changes back to the psdocs
+  configuration and dictionaries in the MicrosoftDocs/PowerShell-Docs repository, not here.
+
+dictionaryDefinitions:
+  - name: crescendo
+    description: >
+      Dictionary of common terms for the Crescendo module. Add entries to this dictionary for words
+      used in the Crescendo documentation but not broader PowerShell or other documentation.
+    path: ./dictionaries/crescendo.txt
+  - name: platyps
+    description: >
+      Dictionary of common terms for the PlatyPS module. Add entries to this dictionary for words
+      used in the PlatyPS documentation but not broader PowerShell or other documentation.
+    path: ./dictionaries/platyps.txt
+  - name: pssa
+    description: >
+      Dictionary of common terms for the PSScriptAnalyzer module. Add entries to this dictionary for
+      words used in the PSSA documentation but not broader PowerShell or other documentation.
+    path: ./dictionaries/pssa.txt
+  - name: secretManagement
+    description: >
+      Dictionary of common terms for the SecretManagement module. Add entries to this dictionary for
+      words used in the SecretManagement documentation but not broader PowerShell or other
+      documentation.
+    path: ./dictionaries/secretManagement.txt
+  - name: secretStore
+    description: >
+      Dictionary of common terms for the SecretStore module. Add entries to this dictionary for
+      words used in the SecretStore documentation but not broader PowerShell or other documentation.
+    path: ./dictionaries/secretStore.txt
+
+overrides:
+  - filename: '**/{Crescendo,Microsoft.PowerShell.Crescendo}/**/*.md'
+    dictionaries:
+      - crescendo
+  - filename: '**/PlatyPS/**/*.md'
+    dictionaries:
+      - platyps
+  - filename: '**/PSScriptAnalyzer/**/*.md'
+    dictionaries:
+      - pssa
+  - filename: '**/SecretManagement/**/*.md'
+    dictionaries:
+      - secretManagement
+      - secretStore
+  - filename: '**/Microsoft.PowerShell.Secret*/**/*.md'
+    dictionaries:
+      - secretManagement
+      - secretStore

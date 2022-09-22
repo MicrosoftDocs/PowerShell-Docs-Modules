@@ -1,0 +1,4 @@
+Lync
+helpinfo
+ExcludeDontShow
+DontShow

@@ -45,7 +45,7 @@ an improved developer experience, a
 
 You can review the schema to see the required and optional configuration
 settings, their descriptions, and the value types they accept. When you
-[author your configuration file in Visual Studio Code Code][vscode-json],
+[author your configuration file in Visual Studio Code][vscode-json],
 you get numerous helpful features, including IntelliSense, validation while you
 edit, and more.
 

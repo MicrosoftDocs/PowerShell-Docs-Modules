@@ -28,7 +28,7 @@ standard style, is easier to read, and is more maintainable.
 Supported PowerShell Versions and Platforms
 
 - Windows PowerShell 3.0 or greater
-- PowerShell 7.0.3 or greater on Windows/Linux/macOS
+- PowerShell 7.0.11 or greater on Windows/Linux/macOS
 
 Install using PowerShellGet 2.x:
 

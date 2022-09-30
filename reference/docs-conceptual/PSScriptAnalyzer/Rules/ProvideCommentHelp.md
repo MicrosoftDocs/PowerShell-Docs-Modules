@@ -1,6 +1,6 @@
 ---
 description: Basic Comment Help
-ms.custom: PSSA v1.20.0
+ms.custom: PSSA v1.21.0
 ms.date: 10/18/2021
 ms.topic: reference
 title: ProvideCommentHelp
@@ -19,7 +19,7 @@ following articles:
 
 - [Writing Comment-based Help](/powershell/scripting/developer/help/writing-comment-based-help-topics)
 - [Writing Help for PowerShell Cmdlets](/powershell/scripting/developer/help/writing-help-for-windows-powershell-cmdlets)
-- [Create XML-based help using PlatyPS](/powershell/scripting/dev-cross-plat/create-help-using-platyps)
+- [Create XML-based help using PlatyPS](/powershell/utility-modules/platyps/create-help-using-platyps)
 
 ## Configuration
 

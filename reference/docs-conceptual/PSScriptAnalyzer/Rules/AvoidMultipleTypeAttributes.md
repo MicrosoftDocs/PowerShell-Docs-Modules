@@ -1,6 +1,6 @@
 ---
 description: Avoid multiple type specifiers on parameters.
-ms.custom: PSSA v1.20.0
+ms.custom: PSSA v1.21.0
 ms.date: 10/18/2021
 ms.topic: reference
 title: AvoidMultipleTypeAttributes
@@ -12,7 +12,7 @@ title: AvoidMultipleTypeAttributes
 ## Description
 
 Parameters should not have more than one type specifier. Multiple type specifiers on parameters
-cause runtime errors.
+can cause runtime errors.
 
 ## How
 
@@ -28,14 +28,10 @@ function Test-Script
     [CmdletBinding()]
     Param
     (
-        [String]
-        $Param1,
-
         [switch]
-        [bool]
+        [int]
         $Switch
     )
-    ...
 }
 ```
 
@@ -47,12 +43,8 @@ function Test-Script
     [CmdletBinding()]
     Param
     (
-        [String]
-        $Param1,
-
         [switch]
         $Switch
     )
-    ...
 }
 ```

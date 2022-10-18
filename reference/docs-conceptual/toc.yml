@@ -197,3 +197,7 @@ items:
             href: SecretManagement/how-to/using-secrets-in-automation.md
           - name: Using Azure Key Vault in automation
             href: SecretManagement/how-to/using-azure-keyvault.md
+  - name: UnixTabCompletion
+    items:
+      - name: Overview
+        href: UnixTabCompletion/overview.md

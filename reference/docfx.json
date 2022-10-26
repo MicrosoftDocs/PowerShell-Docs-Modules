@@ -36,7 +36,7 @@
         "ps-modules/PSScriptAnalyzer/**.yml": "https://github.com/PowerShell/PSScriptAnalyzer/issues/new/choose"
       },
       "manager": {
-        "**/**": "sewhee"
+        "**/**": "mkluck"
       },
       "ms.author": {
         "**/Microsoft.PowerShell.Crescendo/**.md": "jimtru",

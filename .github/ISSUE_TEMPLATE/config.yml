@@ -1,28 +1,28 @@
 blank_issues_enabled: false
 contact_links:
-  - name: Quality Contributions
+  - name: Looking to give feedback on PowerShell?
+    url: https://github.com/PowerShell/PowerShell/issues/new/choose
+    about: Please open feature requests and bug reports for current PowerShell here.
+  - name: Looking to give feedback on Crescendo?
+    url: https://github.com/PowerShell/Crescendo/issues/new/choose
+    about: Please open feature requests and bug reports for Crescendo here.
+  - name: Looking to give feedback on PlatyPS?
+    url: https://github.com/PowerShell/PlatyPS/issues/new/choose
+    about: Please open feature requests and bug reports for PlatyPS here.
+  - name: Looking to give feedback on PSScriptAnalyzer?
+    url: https://github.com/PowerShell/PSScriptAnalyzer/issues/new/choose
+    about: Please open feature requests and bug reports for PSScriptAnalyzer here.
+  - name: Looking to give feedback on SecretManagement?
+    url: https://github.com/PowerShell/SecretManagement/issues/new/choose
+    about: Please open feature requests and bug reports for SecretManagement here.
+  - name: Looking to give feedback on SecretStore?
+    url: https://github.com/PowerShell/SecretStore/issues/new/choose
+    about: Please open feature requests and bug reports for SecretStore here.
+  - name: Looking for support?
+    url: https://learn.microsoft.com/powershell/scripting/community/community-support
+    about: PowerShell Support Questions/Help
+  - name: What's the Quality Contributions Project?
     url: https://learn.microsoft.com/powershell/scripting/community/contributing/quality-improvements
     about: >-
       If you'd like to commit to improving quality for the documentation, before filing an issue,
       check the info and instructions.
-  - name: PowerShell Product Feedback
-    url: https://github.com/PowerShell/PowerShell/issues/new/choose
-    about: Please open feature requests and bug reports for current PowerShell here.
-  - name: Crescendo Product Feedback
-    url: https://github.com/PowerShell/Crescendo/issues/new/choose
-    about: Please open feature requests and bug reports for Crescendo here.
-  - name: PlatyPS Product Feedback
-    url: https://github.com/PowerShell/PlatyPS/issues/new/choose
-    about: Please open feature requests and bug reports for PlatyPS here.
-  - name: PSScriptAnalyzer Product Feedback
-    url: https://github.com/PowerShell/PSScriptAnalyzer/issues/new/choose
-    about: Please open feature requests and bug reports for PSScriptAnalyzer here.
-  - name: SecretManagement Product Feedback
-    url: https://github.com/PowerShell/SecretManagement/issues/new/choose
-    about: Please open feature requests and bug reports for SecretManagement here.
-  - name: SecretStore Product Feedback
-    url: https://github.com/PowerShell/SecretStore/issues/new/choose
-    about: Please open feature requests and bug reports for SecretStore here.
-  - name: Community Support
-    url: https://learn.microsoft.com/powershell/scripting/community/community-support
-    about: PowerShell Support Questions/Help

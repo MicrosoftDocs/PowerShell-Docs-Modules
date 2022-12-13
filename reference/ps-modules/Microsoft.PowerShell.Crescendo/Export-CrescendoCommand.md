@@ -61,7 +61,7 @@ Mode                 LastWriteTime         Length Name
 -a---          12/13/2022  3:24 PM           4973 Resize-VssShadowStorage.crescendo.json
 ```
 
-### Example 1 - Create a new JSON configuration file for existing commands
+### Example 2 - Create a new JSON configuration file for existing commands
 
 In this example, **Command** objects are imported from an existing JSON configuration file.
 `Export-CrescendoCommand` is used to create a new JSON configuration file containing all the

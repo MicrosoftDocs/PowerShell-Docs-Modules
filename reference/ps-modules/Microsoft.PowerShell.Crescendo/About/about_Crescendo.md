@@ -1,7 +1,7 @@
 ---
 description: Describes the purpose of the Crescendo module.
 Locale: en-US
-ms.date: 08/18/2022
+ms.date: 12/13/2022
 online version: https://learn.microsoft.com/powershell/module/microsoft.powershell.crescendo/about/about_Microsoft.PowerShell.Crescendo?view=ps-modules.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Microsoft.PowerShell.Crescendo
@@ -36,8 +36,8 @@ authoring process.
 
 ## Parameter handling
 
-The PowerShell Crescendo module allows you to interact with parameters of native
-commands in the same way you do with cmdlets.
+The PowerShell Crescendo module allows you to interact with parameters of
+native commands in the same way you do with cmdlets.
 
 ## Output Handling
 
@@ -86,15 +86,14 @@ The following JSON is a minimal example that wraps the unix `/bin/ls` command:
 
 The name of the proxy function is `Get-FileList` and has two parameters:
 
-- **Path**
-  - Which is Position 0, and has a default value of "."
-- **Detail**
-  - Which is a switch parameter and adds `-l` to the native command parameters
+- **Path** - Which is Position 0, and has a default value of "."
+- **Detail** - Which is a switch parameter and adds `-l` to the native command
+  parameters
 
 A couple of things to note about the Path parameter
 
 - The `OriginalPosition` is set to 1 and the `OriginalName` is set to an empty
-  string. This is because some native commands have a parameter that is _not_
+  string. This is because some native commands have a parameter that's _not_
   named and must be the last parameter when executed. All parameters get
   ordered by the value of `OriginalPosition` (the default is 0). When the
   native command is called, those parameters (and their values) are put in that
@@ -154,16 +153,15 @@ The PowerShell Crescendo module is still in the development process, so we
 expect changes to be made.
 
 The GitHub repository may be found at:
-[https://github.com/PowerShell/Crescendo](https://github.com/PowerShell/Crescendo).
+[https://github.com/PowerShell/Crescendo][03].
 
-PowerShell Blog posts that present the rational and approaches for native
-command wrapping can be found here:
+The following PowerShell Blog posts present the rational and approaches for
+native command wrapping:
 
-**Native commands in PowerShell a new approach**
+- [Native commands in PowerShell a new approach - Part 1][02]
+- [Native commands in PowerShell a new approach - Part 2][01]
 
-- [Part 1](https://devblogs.microsoft.com/powershell/native-commands-in-powershell-a-new-approach/)
-- [Part 2](https://devblogs.microsoft.com/powershell/native-commands-in-powershell-a-new-approach-part-2)
-
-## Keywords
-
-Native Command
+<!-- link references -->
+[01]: https://devblogs.microsoft.com/powershell/native-commands-in-powershell-a-new-approach-part-2
+[02]: https://devblogs.microsoft.com/powershell/native-commands-in-powershell-a-new-approach/
+[03]: https://github.com/PowerShell/Crescendo

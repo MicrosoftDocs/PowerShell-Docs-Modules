@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.PowerShell.Crescendo-help.xml
 Module Name: Microsoft.PowerShell.Crescendo
-ms.date: 11/09/2021
+ms.date: 12/13/2022
 online version: https://learn.microsoft.com/powershell/module/microsoft.powershell.crescendo/new-outputhandler?view=ps-modules&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
@@ -28,12 +28,14 @@ command object or it can be converted to JSON to be inserted in the configuratio
 ### Example 1 - Create a new output handler object and convert it to JSON
 
 ```powershell
-PS> $outhandler = New-OutputHandler
-PS> $outhandler.ParameterSetName = 'Default'
-PS> $outhandler.Handler = 'ParseShadowStorage'
-PS> $outhandler.HandlerType = 'Function'
-PS> $outhandler | ConvertTo-Json
+$outhandler = New-OutputHandler
+$outhandler.ParameterSetName = 'Default'
+$outhandler.Handler = 'ParseShadowStorage'
+$outhandler.HandlerType = 'Function'
+$outhandler | ConvertTo-Json
+```
 
+```Output
 {
   "ParameterSetName": "Default",
   "Handler": "ParseShadowStorage",

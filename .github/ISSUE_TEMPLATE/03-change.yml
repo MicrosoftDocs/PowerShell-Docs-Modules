@@ -1,6 +1,6 @@
-name: "💡 New Document Request/Idea"
+name: "🛠 Document a product change"
 description: >-
-  Suggest a new document or major rewrite of an existing one.
+  Request documentation for a new or updated feature, cmdlet, parameter, or behavior.
 labels:
   - doc-idea
   - needs-triage
@@ -44,12 +44,19 @@ body:
     attributes:
       label: Summary
       description: >-
-        Write a clear and concise description of the proposed document. Why is it needed? What gap
-        will it fill? Who is the intended audience? What scenarios will it address?
+        Write a clear and concise description of change requiring documentation.
       placeholder: |
-        Try formulating the need for this documentation as a user story.
+        Describe the impact of the change and high-level examples, if possible. Include any new or
+        changed parameters and changed output. Put code and output inside code blocks. For example:
 
-        > As a user of <module>, I need a document about <topic> so that <synopsis of value>.
+        ```powershell
+        # Anything in this block is rendered as PowerShell code.
+        Get-ChildItem -Path 'Some/Folder'
+        ```
+
+        ```text
+        Anything in this block is rendered as mono-spaced plain text without highlighting.
+        ```
   - type: textarea
     id: details
     validations:
@@ -74,24 +81,39 @@ body:
         - Concept
         - Quickstart
         - How-to
-  - type: input
-    id: title
-    validations:
-      required: false
-    attributes:
-      label: Proposed Title
   - type: textarea
-    id: related_documents
+    id: file_list
     validations:
       required: false
     attributes:
-      label: Related Articles
+      label: Articles
       description: >-
-        Provide a list of links to the documentation page(s) that are related to this request. Use
-        the markdown list syntax for each item. If the entire article is relevant, just link to the
-        permalink for its source or the live page. If only a section of the article is relevant, use
-        the permalink to the lines for the most relevant section of the source or the anchor link to
-        the nearest header for the relevant content instead of the page itself.
+        Provide a list of files that need to be updated or created. If possible, include the path to
+        the file relative to the repository's root folder. Use the markdown list syntax for each
+        item. Cmdlet reference and about topics go in the `ps-modules` folder. Other articles
+        typically go in the `docs-conceptual` folder.
       placeholder: |
-        - https://github.com/MicrosoftDocs/PowerShell-Docs-Modules/blob/2d7879a4c26b4a9d3aac906d18847f27ae509cdd/reference/docs-conceptual/Crescendo/overview.md?plain=1#L31-L38
-        - https://docs.microsoft.com/powershell/utility-modules/crescendo/overview?view=ps-modules#crescendo-specific-terminology
+        - reference\ps-modules\ModuleName
+        - reference\docs-conceptual\ModuleName
+  - type: textarea
+    id: source_prs
+    validations:
+      required: true
+    attributes:
+      label: Related Source Pull Requests
+      description: >-
+        Provide the list of PRs in the source repository that are related to this requirement. Use
+        the markdown list syntax for each item.
+      placeholder: |
+        - PowerShell/Crescendo#12345
+  - type: textarea
+    id: source_issues
+    validations:
+      required: true
+    attributes:
+      label: Related Source Issues
+      description: >-
+        Provide the list of issues in the source repository that are related to this requirement.
+        Use the markdown list syntax for each item.
+      placeholder: |
+        - PowerShell/Crescendo#12345

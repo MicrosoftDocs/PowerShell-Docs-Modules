@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.PowerShell.Crescendo-help.xml
 Module Name: Microsoft.PowerShell.Crescendo
-ms.date: 11/09/2021
+ms.date: 12/13/2022
 online version: https://learn.microsoft.com/powershell/module/microsoft.powershell.crescendo/test-iscrescendocommand?view=ps-modules&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
@@ -9,7 +9,7 @@ schema: 2.0.0
 # Test-IsCrescendoCommand
 
 ## SYNOPSIS
-Tests a cmdlet to see if it was created by Crescendo.
+Tests whether a cmdlet was created by Crescendo.
 
 ## SYNTAX
 
@@ -25,19 +25,30 @@ Tests a cmdlet to see if it was created by Crescendo.
 ### Example 1 - Test various cmdlet to see if they were created by Crescendo
 
 ```powershell
-PS> Test-IsCrescendoCommand Get-Command
+Test-IsCrescendoCommand Get-Command
+```
+
+```Output
 Test-IsCrescendoCommand: 'Get-Command' is not a function
+```
 
-PS> Test-IsCrescendoCommand Expand-Archive
+```powershell
+Test-IsCrescendoCommand Expand-Archive
+```
 
+```Output
    Module: Microsoft.PowerShell.Archive
 
 Name           IsCrescendoCommand RequiresElevation
 ----           ------------------ -----------------
 Expand-Archive False              False
+```
 
-PS> Test-IsCrescendoCommand Get-VssProvider
+```powershell
+Test-IsCrescendoCommand Get-VssProvider
+```
 
+```Output
    Module: VssAdmin
 
 Name            IsCrescendoCommand RequiresElevation

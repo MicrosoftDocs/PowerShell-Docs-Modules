@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.PowerShell.Crescendo-help.xml
 Module Name: Microsoft.PowerShell.Crescendo
-ms.date: 11/09/2021
+ms.date: 12/13/2022
 online version: https://learn.microsoft.com/powershell/module/microsoft.powershell.crescendo/new-parameterinfo?view=ps-modules&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
@@ -28,9 +28,11 @@ a command object or it can be converted to JSON to be inserted in the configurat
 ### Example 1 - Create a new parameter object
 
 ```powershell
-PS> $param = New-ParameterInfo -Name ComputerName -OriginalName '--targethost'
-PS> $param
+$param = New-ParameterInfo -Name ComputerName -OriginalName '--targethost'
+$param
+```
 
+```Output
 Name                            : ComputerName
 OriginalName                    : --targethost
 OriginalText                    :
@@ -50,8 +52,6 @@ ValueFromPipelineByPropertyName : False
 ValueFromRemainingArguments     : False
 NoGap                           : False
 ```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 

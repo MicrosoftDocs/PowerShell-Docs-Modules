@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.PowerShell.Crescendo-help.xml
 Module Name: Microsoft.PowerShell.Crescendo
-ms.date: 03/16/2021
+ms.date: 12/13/2022
 online version: https://learn.microsoft.com/powershell/module/microsoft.powershell.crescendo/import-commandconfiguration?view=ps-modules&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
@@ -21,9 +21,9 @@ Import-CommandConfiguration [-file] <String> [<CommonParameters>]
 
 This cmdlet exports an object that can be converted into a function that acts as a proxy for the
 platform specific command. The resultant object may then be used to call a native command that can
-participate in the PowerShell pipeline. The `ToString` method of the output object returns a
-string that can be used to create a function that calls the native command. Microsoft Windows,
-Linux, and macOS can run the generated function, if the native command is on all of the platform.
+participate in the PowerShell pipeline. The `ToString` method of the output object returns a string
+that can be used to create a function that calls the native command. Microsoft Windows, Linux, and
+macOS can run the generated function, if the native command is on all platforms.
 
 ## EXAMPLES
 
@@ -33,7 +33,7 @@ Linux, and macOS can run the generated function, if the native command is on all
 Import-CommandConfiguration ifconfig.crescendo.json
 ```
 
-```output
+```Output
 Verb                    : Invoke
 Noun                    : ifconfig
 OriginalName            : ifconfig
@@ -58,7 +58,7 @@ OutputHandlers          :
 
 ### -file
 
-The json file which represents the command to be wrapped.
+The JSON file that represents the command to be wrapped.
 
 ```yaml
 Type: System.String
@@ -90,7 +90,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 The object returned by `Import-CommandConfiguration` is converted through the `ToString` method.
-Generally, you should use the `Export-CrescendoModule`, which creates a PowerShell `.psm1` file.
+Generally, you should use the `Export-CrescendoModule` to create a PowerShell `.psm1` file.
 
 ## RELATED LINKS
 

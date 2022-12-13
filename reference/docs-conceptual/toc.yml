@@ -17,6 +17,10 @@ items:
             href: Crescendo/get-started/create-new-cmdlet.md
           - name: Generate and test a Crescendo module
             href: Crescendo/get-started/generate-module.md
+      - name: What's new
+        items:
+          - name: What's new in Crescendo 1.1
+            href: Crescendo/whats-new/whats-new-in-crescendo-11.md
       - name: Advanced topics
         items:
           - name: Create a configuration using the cmdlets

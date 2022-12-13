@@ -71,7 +71,7 @@ To bypass all output handling by Crescendo:
 
 Previously, native command errors weren't captured by Crescendo and allowed to stream directly to
 the user. This prevented you from creating enhanced error handling. Crescendo now captures the
-generated command error output (stderr) and is now available to the output handler . Error messages
+generated command error output (stderr) and it's now available to the output handler . Error messages
 are placed in a queue. You can access the queue in your output handler using a new internal
 function, `Pop-CrescendoNativeError`.
 

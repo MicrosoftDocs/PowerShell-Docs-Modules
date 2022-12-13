@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.PowerShell.Crescendo-help.xml
 Module Name: Microsoft.PowerShell.Crescendo
-ms.date: 11/09/2021
+ms.date: 12/13/2022
 online version: https://learn.microsoft.com/powershell/module/microsoft.powershell.crescendo/new-usageinfo?view=ps-modules&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
@@ -29,9 +29,11 @@ the object is inserted in the module as comment-based help under the `.SYNOPSIS`
 ### Example 1 - Create a Usage object and convert it to JSON
 
 ```powershell
-PS> $usage = New-UsageInfo -usage 'This is a description for how to use the cmdlet.'
-PS> $usage | ConvertTo-Json
+$usage = New-UsageInfo -usage 'This is a description for how to use the cmdlet.'
+$usage | ConvertTo-Json
+```
 
+```Output
 {
   "Synopsis": "This is a description for how to use the cmdlet.",
   "SupportsFlags": false,

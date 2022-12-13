@@ -1,10 +1,10 @@
 ---
-Module Name: Microsoft.PowerShell.Crescendo
-Module Guid: 2dd09744-1ced-4636-a8ce-09a0bf0e566a
-ms.date: 03/10/2022
 Download Help Link: https://aka.ms/ps-modules-help
-Help Version: 1.0.0
+Help Version: 1.1.0
 Locale: en-US
+Module Guid: 2dd09744-1ced-4636-a8ce-09a0bf0e566a
+Module Name: Microsoft.PowerShell.Crescendo
+ms.date: 12/13/2022
 ---
 
 # Microsoft.PowerShell.Crescendo Module
@@ -18,6 +18,9 @@ integrated help information. A Crescendo module replaces cumbersome command-line
 PowerShell cmdlets that are easier to use in automation and packaged to share with team members.
 
 ## Microsoft.PowerShell.Crescendo Cmdlets
+
+### [Export-CrescendoCommand](Export-CrescendoCommand.md)
+Creates JSON configuration files for Crescendo **Command** objects.
 
 ### [Export-CrescendoModule](Export-CrescendoModule.md)
 Creates a module from PowerShell Crescendo JSON configuration files
@@ -44,4 +47,4 @@ Creates a PowerShell object representing a Crescendo Parameter definition.
 Creates a PowerShell object representing a Crescendo Usage definition.
 
 ### [Test-IsCrescendoCommand](Test-IsCrescendoCommand.md)
-Tests a cmdlet to see if it was created by Crescendo.
+Tests whether a cmdlet was created by Crescendo.

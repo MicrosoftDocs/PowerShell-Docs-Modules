@@ -21,7 +21,7 @@ The Crescendo framework has two main components:
 - Output handler functions that parse the output from the command-line tool and return objects
 
 The Crescendo module provides cmdlets to help you create the JSON configurations and build a module
-containing the the cmdlets you defined. You must write your own output handler functions that return
+containing the cmdlets you defined. You must write your own output handler functions that return
 PowerShell objects.
 
 ### Crescendo-specific terminology

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.PowerShell.Crescendo-help.xml
 Module Name: Microsoft.PowerShell.Crescendo
-ms.date: 11/09/2021
+ms.date: 12/13/2022
 online version: https://learn.microsoft.com/powershell/module/microsoft.powershell.crescendo/new-exampleinfo?view=ps-modules&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
@@ -14,23 +14,26 @@ Creates a PowerShell object representing an example used in a Crescendo command 
 ## SYNTAX
 
 ```
-New-ExampleInfo [-command] <String> [-originalCommand] <String> [-description] <String> [<CommonParameters>]
+New-ExampleInfo [-command] <String> [-description] <String> [[-originalCommand] <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
 Creates a PowerShell object representing an example used in a Crescendo command object. The
 resulting object can be converted to JSON to be inserted into a configuration file or added to a
-command object coversion to JSON later.
+command object conversion to JSON later.
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-PS> New-ExampleInfo -command Get-Something -originalCommand native.exe -description 'this is some text' |
+New-ExampleInfo -command Get-Something -originalCommand native.exe -description 'this is some text' |
     ConvertTo-Json
+```
 
+```Output
 {
   "Command": "Get-Something",
   "OriginalCommand": "native.exe",
@@ -66,7 +69,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
-Position: 2
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -74,15 +77,15 @@ Accept wildcard characters: False
 
 ### -originalCommand
 
-The original native command that is run for this cmdlet example.
+The original native command that's run for this cmdlet example.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
 
-Required: True
-Position: 1
+Required: False
+Position: 2
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

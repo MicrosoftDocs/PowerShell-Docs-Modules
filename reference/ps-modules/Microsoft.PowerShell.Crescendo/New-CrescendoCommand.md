@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.PowerShell.Crescendo-help.xml
 Module Name: Microsoft.PowerShell.Crescendo
-ms.date: 11/09/2021
+ms.date: 12/13/2022
 online version: https://learn.microsoft.com/powershell/module/microsoft.powershell.crescendo/new-crescendocommand?view=ps-modules&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
@@ -28,7 +28,10 @@ you are defining. The resulting object can be converted to JSON to be added to a
 ### Example 1 - Create a new command and convert it to JSON
 
 ```powershell
-PS> New-CrescendoCommand -Verb Get -Noun Something -OriginalName "native.exe" | ConvertTo-Json
+New-CrescendoCommand -Verb Get -Noun Something -OriginalName "native.exe" | ConvertTo-Json
+```
+
+```Output
 {
   "Verb": "Get",
   "Noun": "Something",

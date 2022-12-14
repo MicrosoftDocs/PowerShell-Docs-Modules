@@ -1,6 +1,6 @@
 ---
 description: How to create a Crescendo cmdlet.
-ms.date: 03/09/2022
+ms.date: 12/14/2022
 title: Create a Crescendo cmdlet
 ---
 # Create a Crescendo cmdlet
@@ -79,17 +79,13 @@ OutputHandlers          :
 The following example shows how to create a new configuration file.
 
 ```powershell
-$NewConfiguration = @{
-    '$schema' = 'https://aka.ms/PowerShell/Crescendo/Schemas/2021-11'
-    Commands = @()
-}
 $parameters = @{
     Verb = 'Show'
     Noun = 'AzCmAgent'
     OriginalName = "c:/program files/AzureConnectedMachineAgent/azcmagent.exe"
 }
-$NewConfiguration.Commands += New-CrescendoCommand @parameters
-$NewConfiguration | ConvertTo-Json -Depth 3 | Out-File .\AzCmAgent.json
+$CrescendoCommands += New-CrescendoCommand @parameters
+Export-CrescendoCommand -command $CrescendoCommands -fileName .\AzCmAgent.json
 ```
 
 Crescendo configuration file has a JSON schema and can contain one or more cmdlet definitions in an
@@ -100,32 +96,22 @@ an array to contain the cmdlet definitions. The output from `New-CrescendoComman
 
 ```json
 {
-  "$schema": "https://aka.ms/PowerShell/Crescendo/Schemas/2021-11",
+  "$schema": "https://aka.ms/PowerShell/Crescendo/Schemas/2022-06",
   "Commands": [
     {
       "Verb": "Show",
       "Noun": "AzCmAgent",
       "OriginalName": "c:/program files/AzureConnectedMachineAgent/azcmagent.exe",
-      "OriginalCommandElements": null,
       "Platform": [
         "Windows",
         "Linux",
         "MacOS"
       ],
-      "Elevation": null,
-      "Aliases": null,
-      "DefaultParameterSetName": null,
       "SupportsShouldProcess": false,
-      "ConfirmImpact": null,
       "SupportsTransactions": false,
       "NoInvocation": false,
-      "Description": null,
-      "Usage": null,
       "Parameters": [],
-      "Examples": [],
-      "OriginalText": null,
-      "HelpLinks": null,
-      "OutputHandlers": null
+      "Examples": []
     }
   ]
 }
@@ -159,32 +145,37 @@ The following example shows the full JSON definition of the new cmdlet after add
 
 ```json
 {
-    "$schema": "https://aka.ms/PowerShell/Crescendo/Schemas/2021-11",
-    "Commands": [
+  "$schema": "https://aka.ms/PowerShell/Crescendo/Schemas/2022-06",
+  "Commands": [
+    {
+      "Verb": "Show",
+      "Noun": "AzCmAgent",
+      "OriginalName": "c:/program files/AzureConnectedMachineAgent/azcmagent.exe",
+      "OriginalCommandElements": [
+         "show",
+         "--json"
+      ],
+      "Platform": [
+        "Windows",
+      ],
+      "Description": "Gets machine metadata and Agent status. This is primarily useful for troubleshooting.",
+      "Aliases": [
+        "azinfo"
+      ],
+      "OutputHandlers": [
         {
-            "Verb": "Show",
-            "Noun": "AzCmAgent",
-            "Platform": [
-                "Windows"
-            ],
-            "OriginalName": "c:/program files/AzureConnectedMachineAgent/azcmagent.exe",
-            "OriginalCommandElements": [
-                "show",
-                "--json"
-            ],
-            "Description": "Gets machine metadata and Agent status. This is primarily useful for troubleshooting.",
-            "Aliases": [
-                "azinfo"
-            ],
-            "OutputHandlers": [
-                {
-                    "ParameterSetName": "Default",
-                    "HandlerType": "Inline",
-                    "Handler": "$args[0] | ConvertFrom-Json"
-                }
-            ]
+            "ParameterSetName": "Default",
+            "HandlerType": "Inline",
+            "Handler": "$args[0] | ConvertFrom-Json"
         }
-    ]
+      ],
+      "SupportsShouldProcess": false,
+      "SupportsTransactions": false,
+      "NoInvocation": false,
+      "Parameters": [],
+      "Examples": []
+    }
+  ]
 }
 ```
 
@@ -241,7 +232,12 @@ definition in a new JSON file or add it to the **Commands** array of the previou
             "HandlerType": "Inline",
             "Handler": "$args[0] | ConvertFrom-Json"
         }
-    ]
+    ],
+    "SupportsShouldProcess": false,
+    "SupportsTransactions": false,
+    "NoInvocation": false,
+    "Parameters": [],
+    "Examples": []
 }
 ```
 

@@ -1,6 +1,6 @@
 ---
 description: This article provides examples for using the Crescendo cmdlets to create a configuration. This can be used as an alternate for manually created the JSON configuration file.
-ms.date: 05/20/2022
+ms.date: 12/14/2022
 title: Create a Crescendo configuration using the Crescendo cmdlets
 ---
 # Create a Crescendo configuration using the Crescendo cmdlets
@@ -85,11 +85,8 @@ configuration to create a new PowerShell module. For a detailed explanation of t
 Handlers, see [this series of posts][blog] on the **PowerShell Community** blog.
 
 ```powershell
-# Create an empty configuration object
-$NewConfiguration = [ordered]@{
-    '$schema' = 'https://aka.ms/PowerShell/Crescendo/Schemas/2021-11'
-    Commands = @()
-}
+# Create an empty array for Command object
+$CrescendoCommands = @()
 
 ## Create first Crescendo command and set its properties
 $cmdlet = @{
@@ -119,7 +116,7 @@ $handler.Handler = 'ParseProvider'
 $newCommand.OutputHandlers += $handler
 
 ## Add the command to the Commands collection of the configuration
-$NewConfiguration.Commands += $newCommand
+$CrescendoCommands += $newCommand
 
 ## Create second Crescendo command and set its properties
 $cmdlet = @{
@@ -194,10 +191,10 @@ $handler.Handler = 'ParseShadow'
 $newCommand.OutputHandlers += $handler
 
 ## Add the command to the Commands collection of the configuration
-$NewConfiguration.Commands += $newCommand
+$CrescendoCommands += $newCommand
 
 # Export the configuration to a JSON file and create the module
-$NewConfiguration | ConvertTo-Json -Depth 5 | Out-File .\vssadmin.json -Force
+Export-CrescendoCommand -command $CrescendoCommands -fileName .\vssadmin.json
 Export-CrescendoModule -ConfigurationFile vssadmin.json -ModuleName .\vssadmin.psm1 -Force
 ```
 

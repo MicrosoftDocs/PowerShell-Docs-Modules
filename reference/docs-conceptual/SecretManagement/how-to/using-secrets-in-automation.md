@@ -12,7 +12,7 @@ passwords, tokens and other secrets you need to use in your automation pipeline 
 ## Setting up the host the runs the automation
 
 For this example you must first install and configure the SecretManagement modules. This example
-assume that your automation host is running Windows. These commands must be run in the user context
+assumes that your automation host is running Windows. These commands must be run in the user context
 of the automation account on the host.
 
 ```powershell
@@ -72,7 +72,7 @@ imported from a file that was encrypted using Windows Data Protection (DPAPI).
 > This is a Windows-only solution, but another option is to use a secure variable provided by a CI
 > system like GitHub Actions.
 
-The automation script needs to unlock the vault to retrieve the screts needed in the script. The
+The automation script needs to unlock the vault to retrieve the secrets needed in the script. The
 `Unlock-SecretStore` cmdlet is used to unlock the **SecretStore** for this session. The password
 timeout was configured for 1 hour. The vault remains unlocked in the session for that amount of
 time. After the timeout, the vault must be unlocked again before secrets can be accessed.

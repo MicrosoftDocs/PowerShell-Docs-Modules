@@ -80,7 +80,7 @@ cmdlet provides the parameters **Authentication**, **PasswordTimeout**, and **In
 used to change the corresponding configuration properties. There is also a **Default** parameter to
 reset the configuration back to the default values.
 
-There are two way to set the password on the vault.
+There are two ways to set the password on the vault.
 
 1. The `Set-SecretStoreConfiguration` cmdlet has the **Password** parameter that takes a
    **SecureString** value.

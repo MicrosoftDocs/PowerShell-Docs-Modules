@@ -1,7 +1,7 @@
 ---
 title: What's new in Crescendo 1.1
 description: New features and changes released in Crescendo 1.1
-ms.date: 12/13/2022
+ms.date: 04/05/2023
 ---
 # What's new in Crescendo 1.1
 
@@ -69,18 +69,24 @@ To bypass all output handling by Crescendo:
 
 ## Handling error output
 
-Previously, native command errors weren't captured by Crescendo and allowed to stream directly to
-the user. This prevented you from creating enhanced error handling. Crescendo now captures the
-generated command error output (stderr) and it's now available to the output handler . Error messages
-are placed in a queue. You can access the queue in your output handler using a new internal
-function, `Pop-CrescendoNativeError`.
+Previously, native command errors were streamed directly to the user. They weren't captured by
+Crescendo. This prevented you from creating enhanced error handling. Crescendo now captures the
+generated command error output (stderr). If you don't define an output handler, Crescendo uses the
+default handler. The default output handler ensures that errors respect the `-ErrorVariable` and
+`-ErrorAction` parameters and adds errors to `$Error`.
 
-If you don't define an output handler, Crescendo uses the default handler. The default output
-handler ensures that errors respect the `-ErrorVariable` and `-ErrorAction` parameters and adds
-errors to `$Error`.
+Crescendo v1.1 adds two internal functions to manage errors.
+
+- `Push-CrescendoNativeError` adds an error to an error queue. This function is automatically
+  called by the output handler. You don't have to call it directly.
+- `Pop-CrescendoNativeError` removes an error from the error queue. Use this function to inspect
+  errors in the output handler.
 
 Adding an output handler that includes `Pop-CrescendoNativeError` allows you to inspect errors in
 the output handler so you can handle them or pass them through to the caller.
+
+The following output handler definition uses `Pop-CrescendoNativeError` to return errors to the
+user.
 
 ```json
 "OutputHandlers": [

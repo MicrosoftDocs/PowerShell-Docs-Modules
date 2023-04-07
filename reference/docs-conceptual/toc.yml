@@ -25,6 +25,10 @@ items:
         items:
           - name: Create a configuration using the cmdlets
             href: Crescendo/advanced/using-crescendo-cmdlets.md
+          - name: Handling errors in Crescendo
+            href: Crescendo/advanced/handling-errors.md
+          - name: Transforming arguments in Crescendo
+            href: Crescendo/advanced/transforming-arguments.md
   - name: PlatyPS
     items:
       - name: Overview

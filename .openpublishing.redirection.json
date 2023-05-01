@@ -1,9 +1,9 @@
 {
     "redirections": [
-      {
-        "source_path": "reference/docs-conceptual/index.md",
-        "redirect_url": "/powershell/utility-modules/overview",
-        "redirect_document_id": true
-      }
+        {
+            "redirect_document_id": true,
+            "redirect_url": "/powershell/utility-modules/overview",
+            "source_path": "reference/docs-conceptual/index.md"
+        }
     ]
 }

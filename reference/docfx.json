@@ -48,7 +48,7 @@
         "**/PSScriptAnalyzer/**.yml": "jimtru",
         "**/PSDesiredStateConfiguration/**.md": "sewhee",
         "**/PSDesiredStateConfiguration/**.yml": "sewhee",
-        "docs-conceptual/**.md": "sewhee",
+        "docs-conceptual/**.md": "sewhee"
       },
       "ms.prod": {
         "**/**.md": "powershell",

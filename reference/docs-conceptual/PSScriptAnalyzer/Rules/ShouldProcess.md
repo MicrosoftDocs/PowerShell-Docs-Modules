@@ -42,7 +42,7 @@ function Set-File
         [Parameter(Mandatory=$true)]
         $Path
     )
-    "String" | Out-File -FilePath $Path
+    'String' | Out-File -FilePath $Path
 }
 ```
 

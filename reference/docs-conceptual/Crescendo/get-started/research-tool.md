@@ -1,6 +1,6 @@
 ---
 description: How to collect information about the command-line tool to decide which features to implement in your cmdlets.
-ms.date: 03/07/2022
+ms.date: 06/28/2023
 title: Research the command-line tool's syntax and output
 ---
 # Research the command-line tool's syntax and output

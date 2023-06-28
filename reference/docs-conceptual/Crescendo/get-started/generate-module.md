@@ -1,6 +1,6 @@
 ---
 description: How to generate a Crescendo module from a configuration.
-ms.date: 03/09/2022
+ms.date: 06/28/2023
 title: Generate and test a Crescendo module
 ---
 # Generate and test a Crescendo module

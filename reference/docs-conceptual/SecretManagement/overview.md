@@ -1,6 +1,6 @@
 ---
 description: Overview of the SecretManagement and SecretStore modules
-ms.date: 05/24/2022
+ms.date: 06/28/2023
 title: Overview of the SecretManagement and SecretStore modules
 ---
 # Overview of the SecretManagement and SecretStore modules

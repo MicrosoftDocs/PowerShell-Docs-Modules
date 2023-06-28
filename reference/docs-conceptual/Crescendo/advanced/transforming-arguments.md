@@ -1,7 +1,7 @@
 ---
-title: Transforming arguments in Crescendo
 description: This article describes how to transform arguments from the input format to the format needed by the native command.
-ms.date: 04/06/2023
+ms.date: 06/28/2023
+title: Transforming arguments in Crescendo
 ---
 # Transforming arguments in Crescendo
 

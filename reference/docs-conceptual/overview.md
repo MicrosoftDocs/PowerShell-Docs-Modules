@@ -1,7 +1,7 @@
 ---
 description: This documentation set contains reference for modules published and maintained by the PowerShell team, but are not part of the PowerShell package.
-ms.date: 01/21/2022
-title:  PowerShell utility modules
+ms.date: 06/28/2023
+title: PowerShell utility modules
 ---
 # PowerShell utility modules
 

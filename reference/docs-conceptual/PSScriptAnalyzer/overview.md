@@ -1,6 +1,6 @@
 ---
 description: This article explains the purpose of the PSScriptAnalyzer module.
-ms.date: 10/18/2021
+ms.date: 06/28/2023
 title: PSScriptAnalyzer module
 ---
 # PSScriptAnalyzer module

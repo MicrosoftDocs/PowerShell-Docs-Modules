@@ -1,6 +1,6 @@
 ---
 description: Explains concepts and usage of the SecretManagement module
-ms.date: 05/24/2022
+ms.date: 06/28/2023
 title: Understanding the SecretManagement module
 ---
 # Understanding the SecretManagement module

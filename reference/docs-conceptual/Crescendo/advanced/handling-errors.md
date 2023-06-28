@@ -1,7 +1,7 @@
 ---
-title: Handling errors in Crescendo
 description: This article describes how to handle native command errors in your Crescendo output handler.
-ms.date: 04/06/2023
+ms.date: 06/28/2023
+title: Handling errors in Crescendo
 ---
 # Handling errors in Crescendo
 

@@ -1,6 +1,6 @@
 ---
 description: This article lists best-practice recommendations and the rules associated with them.
-ms.date: 03/22/2022
+ms.date: 06/28/2023
 title: PSScriptAnalyzer rules and recommendations
 ---
 # PSScriptAnalyzer rules and recommendations

@@ -1,6 +1,6 @@
 ---
 description: How to select a command-line tool to amplify using Crescendo.
-ms.date: 03/08/2022
+ms.date: 06/28/2023
 title: Choosing a command-line tool to amplify
 ---
 # Choosing the command-line tool for Crescendo

@@ -1,6 +1,6 @@
 ---
 description: This article provides a basic guide for creating your own customized rules.
-ms.date: 03/22/2022
+ms.date: 06/28/2023
 title: Creating custom rules
 ---
 # Creating custom rules

@@ -1,6 +1,6 @@
 ---
 description: How to install and use the SecretManagement and SecretStore modules
-ms.date: 05/24/2022
+ms.date: 06/28/2023
 title: Get started with the SecretStore module
 ---
 # Get started with the SecretStore module

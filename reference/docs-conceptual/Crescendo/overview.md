@@ -39,7 +39,7 @@ The documentation for Crescendo includes some new terminology.
 
 ### The Crescendo configuration file schema
 
-When you author a Crescendo configuration file, you're writing JSON. For convenience,validation, and
+When you author a Crescendo configuration file, you're writing JSON. For convenience, validation, and
 an improved developer experience, a [schema file is available][01].
 
 You can review the schema to see the required and optional configuration settings, their

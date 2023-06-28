@@ -16,7 +16,7 @@ the complex, and deeply nested, MAML content by hand.
 
 This is where the [PlatyPS][19] module can help.
 
-## what's PlatyPS?
+## What is PlatyPS?
 
 PlatyPS is an [open-source][16] tool that started as a _hackathon_ project to make the creation and
 maintenance of MAML easier. PlatyPS documents the syntax of parameter sets and the individual

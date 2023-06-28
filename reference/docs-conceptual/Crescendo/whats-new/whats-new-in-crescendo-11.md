@@ -1,7 +1,7 @@
 ---
-title: What's new in Crescendo 1.1
 description: New features and changes released in Crescendo 1.1
-ms.date: 04/05/2023
+ms.date: 06/28/2023
+title: What's new in Crescendo 1.1
 ---
 # What's new in Crescendo 1.1
 

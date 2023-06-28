@@ -1,6 +1,6 @@
 ---
 description: How to install the Crescendo module.
-ms.date: 03/12/2022
+ms.date: 06/28/2023
 title: Installing Crescendo
 ---
 # Install the Crescendo module

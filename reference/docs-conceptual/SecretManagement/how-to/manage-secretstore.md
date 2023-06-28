@@ -1,6 +1,6 @@
 ---
 description: Explains how to manage a local SecretStore vault
-ms.date: 05/24/2022
+ms.date: 06/28/2023
 title: Managing a SecretStore vault
 ---
 # Managing a SecretStore vault

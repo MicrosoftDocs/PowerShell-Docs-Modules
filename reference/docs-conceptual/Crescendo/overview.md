@@ -1,6 +1,6 @@
 ---
 description: Overview of the Crescendo module
-ms.date: 03/07/2022
+ms.date: 06/28/2023
 title: Crescendo overview
 ---
 # Microsoft.PowerShell.Crescendo overview
@@ -39,15 +39,14 @@ The documentation for Crescendo includes some new terminology.
 
 ### The Crescendo configuration file schema
 
-When you author a Crescendo configuration file, you're writing JSON. For convenience,validation, and
-an improved developer experience, a
-[schema file is available][crescendo-schema].
+When you author a Crescendo configuration file, you're writing JSON. For convenience, validation, and
+an improved developer experience, a [schema file is available][01].
 
-You can review the schema to see the required and optional configuration
-settings, their descriptions, and the value types they accept. When you
-[author your configuration file in Visual Studio Code][vscode-json],
-you get numerous helpful features, including IntelliSense, validation while you
-edit, and more.
+You can review the schema to see the required and optional configuration settings, their
+descriptions, and the value types they accept. When you author your configuration file in
+[Visual Studio Code][02], you get numerous helpful features, including IntelliSense, validation
+while you edit, and more.
 
-[crescendo-schema]: https://aka.ms/PowerShell/Crescendo/Schemas/2021-11
-[vscode-json]: https://code.visualstudio.com/Docs/languages/json
+<!-- link references -->
+[01]: https://aka.ms/PowerShell/Crescendo/Schemas/2021-11
+[02]: https://code.visualstudio.com/Docs/languages/json

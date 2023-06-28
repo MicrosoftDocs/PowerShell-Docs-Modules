@@ -13,7 +13,8 @@ Install-Module Microsoft.PowerShell.SecretManagement
 Install-Module Microsoft.PowerShell.SecretStore
 ```
 
-Once you have installed the modules you can load the modules and begin using or creating new secrets.
+Once you have installed the modules you can load the modules and begin using or creating new
+secrets.
 
 ```powershell
 Import-Module Microsoft.PowerShell.SecretManagement
@@ -77,6 +78,11 @@ TestSecret String SecretStore
 
 ## Related links
 
-- [Register-SecretVault](xref:Microsoft.PowerShell.SecretManagement.Register-SecretVault)
-- [Get-Secret](xref:Microsoft.PowerShell.SecretManagement.Get-Secret)
-- [Set-Secret](xref:Microsoft.PowerShell.SecretManagement.Set-Secret)
+- [Register-SecretVault][02]
+- [Get-Secret][01]
+- [Set-Secret][03]
+
+<!-- link references -->
+[01]: xref:Microsoft.PowerShell.SecretManagement.Get-Secret
+[02]: xref:Microsoft.PowerShell.SecretManagement.Register-SecretVault
+[03]: xref:Microsoft.PowerShell.SecretManagement.Set-Secret

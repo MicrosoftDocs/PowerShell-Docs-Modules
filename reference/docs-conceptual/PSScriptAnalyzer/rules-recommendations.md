@@ -9,7 +9,7 @@ The following guidelines come from a combined effort from both the PowerShell te
 community. The guidelines are organized by type. Within each type there is a list of rules. The
 rules are grouped by the **Severity** defined in the implementation of the **PSScriptAnalyzer**
 rule. The severity level labeled as 'TBD' means "To be determined". These are recommendations that
-do not currently have rules defined.
+don't currently have rules defined.
 
 ## Cmdlet Design Rules
 
@@ -19,27 +19,20 @@ No rules defined.
 
 ### Severity: Warning
 
-- Use only Approved Verbs [UseApprovedVerbs](Rules/UseApprovedVerbs.md)
-- Cmdlets names with unusable characters
-  [AvoidReservedCharInCmdlet](Rules/ReservedCmdletChar.md)
-- Parameter names that cannot be used
-  [AvoidReservedParams](Rules/ReservedParams.md)
-- Support confirmation requests
-  [UseShouldProcessForStateChangingFunctions](Rules/UseShouldProcessForStateChangingFunctions.md)
-  and
-  [UseShouldProcessForStateChangingFunctions](Rules/UseShouldProcessForStateChangingFunctions.md)
-- Must call **ShouldProcess** when the **ShouldProcess** attribute is present and vice
-  versa [UseShouldProcess](Rules/ShouldProcess.md)
-- Nouns should be singular
-  [UseSingularNouns](Rules/UseSingularNouns.md)
-- Missing module manifest fields
-  [MissingModuleManifestField](Rules/MissingModuleManifestField.md)
+- Use only Approved Verbs [UseApprovedVerbs][33]
+- Cmdlets names with unusable characters [AvoidReservedCharInCmdlet][30]
+- Parameter names that can't be used [AvoidReservedParams][31]
+- Support confirmation requests [UseShouldProcessForStateChangingFunctions][37] and
+  [UseShouldProcessForStateChangingFunctions][37]
+- Must call **ShouldProcess** when the **ShouldProcess** attribute is present and vice versa
+  [UseShouldProcess][32]
+- Nouns should be singular [UseSingularNouns][38]
+- Missing module manifest fields [MissingModuleManifestField][28]
   - **Version**
   - **Author**
   - **Description**
   - **LicenseUri** (for PowerShell Gallery)
-- Switch parameters should not default to true
-  [AvoidDefaultValueSwitchParameter](Rules/AvoidDefaultValueSwitchParameter.md)
+- Switch parameters shouldn't default to true [AvoidDefaultValueSwitchParameter][10]
 
 ### Severity: Information
 
@@ -70,24 +63,17 @@ No rules defined.
 
 ### Severity: Warning
 
-- Avoid using aliases
-  [AvoidUsingCmdletAliases](Rules/AvoidUsingCmdletAliases.md)
-- Avoid using deprecated WMI cmdlets
-  [AvoidUsingWMICmdlet](Rules/AvoidUsingWMICmdlet.md)
-- Avoid using empty **catch** blocks [AvoidUsingEmptyCatchBlock](Rules/AvoidUsingEmptyCatchBlock.md)
-- Invoke existing cmdlets with correct parameters
-  [UseCmdletCorrectly](Rules/UseCmdletCorrectly.md)
+- Avoid using aliases [AvoidUsingCmdletAliases][12]
+- Avoid using deprecated WMI cmdlets [AvoidUsingWMICmdlet][20]
+- Avoid using empty **catch** blocks [AvoidUsingEmptyCatchBlock][15]
+- Invoke existing cmdlets with correct parameters [UseCmdletCorrectly][34]
 - Cmdlets should have **ShouldProcess**/**ShouldContinue** and **Force** parameter if using certain
   system-modifying verbs (Update, Set, Remove, New):
-  [UseShouldProcessForStateChangingFunctions](Rules/UseShouldProcessForStateChangingFunctions.md)
-- Avoid using positional parameters
-  [AvoidUsingPositionalParameters](Rules/AvoidUsingPositionalParameters.md)
-- Avoid using global variables
-  [AvoidGlobalVars](Rules/AvoidGlobalVars.md)
-- Declared variables should be used after their assignment
-  [UseDeclaredVarsMoreThanAssignments](Rules/UseDeclaredVarsMoreThanAssignments.md)
-- Avoid using `Invoke-Expression`
-  [AvoidUsingInvokeExpression](Rules/AvoidUsingInvokeExpression.md)
+  [UseShouldProcessForStateChangingFunctions][37]
+- Avoid using positional parameters [AvoidUsingPositionalParameters][18]
+- Avoid using global variables [AvoidGlobalVars][11]
+- Declared variables should be used after their assignment [UseDeclaredVarsMoreThanAssignments][35]
+- Avoid using `Invoke-Expression` [AvoidUsingInvokeExpression][16]
 
 ### Severity: Information
 
@@ -117,12 +103,12 @@ No rules defined.
 ### Severity: Warning
 
 - Avoid using `Write-Host` unless writing to the host is all you want to do
-  [AvoidUsingWriteHost](Rules/AvoidUsingWriteHost.md)
+  [AvoidUsingWriteHost][21]
 
 ### Severity: Information
 
 - Write comment-based help
-  [ProvideCommentHelp](Rules/ProvideCommentHelp.md)
+  [ProvideCommentHelp][29]
 
 ### Severity: TBD
 
@@ -137,19 +123,18 @@ No rules defined.
 
 ### Severity: Error
 
-- Avoid using plain text passwords
-  [AvoidUsingPlainTextForPassword](Rules/AvoidUsingPlainTextForPassword.md)
+- Avoid using plain text passwords [AvoidUsingPlainTextForPassword][17]
 - Avoid `-Username` and `-Password` parameters (use **PSCredential** instead):
-  [UsePSCredentialType](Rules/UsePSCredentialType.md)
+  [UsePSCredentialType][36]
 - Avoid hardcoding a `-ComputerName` parameter argument (information disclosure):
-  [AvoidUsingComputerNameHardcoded](Rules/AvoidUsingComputerNameHardcoded.md)
+  [AvoidUsingComputerNameHardcoded][13]
 - Avoid using `ConvertTo-SecureString` with plaintext (information disclosure):
-  [AvoidUsingConvertToSecureStringWithPlainText](Rules/AvoidUsingConvertToSecureStringWithPlainText.md)
+  [AvoidUsingConvertToSecureStringWithPlainText][14]
 
 ### Severity: Warning
 
 - Avoid using `$Password = 'string'` (information disclosure).
-  [AvoidUsingUsernameAndPasswordParams](Rules/AvoidUsingUsernameAndPasswordParams.md)
+  [AvoidUsingUsernameAndPasswordParams][19]
 
 ### Severity: Information
 
@@ -163,12 +148,9 @@ No rules defined.
 
 ### Severity: Error
 
-- Use standard DSC methods
-  [StandardDSCFunctionsInResource](Rules/DSCStandardDSCFunctionsInResource.md)
-- Use identical mandatory parameters for all DSC methods
-  [UseIdenticalMandatoryParametersForDSC](Rules/DSCUseIdenticalMandatoryParametersForDSC.md)
-- Use identical parameters for Set and Test DSC methods
-  [UseIdenticalParametersForDSC](Rules/DSCUseIdenticalParametersForDSC.md)
+- Use standard DSC methods [StandardDSCFunctionsInResource][25]
+- Use identical mandatory parameters for all DSC methods [UseIdenticalMandatoryParametersForDSC][26]
+- Use identical parameters for Set and Test DSC methods [UseIdenticalParametersForDSC][27]
 
 ### Severity: Warning
 
@@ -176,32 +158,70 @@ No rules defined.
 
 ### Severity: Information
 
-- The following three recommendations are covered by the
-  [ReturnCorrectTypesForDSCFunctions](Rules/DSCReturnCorrectTypesForDSCFunctions.md) rule
+- The following three recommendations are covered by the [ReturnCorrectTypesForDSCFunctions][24]
+  rule
   - Avoid returning any object from a `Set-TargetResource` or Set (Class Based) function
   - Return a Boolean value from a `Test-TargetResource` or Test (Class Based) function
   - Return an object from a `Get-TargetResource` or Get (Class Based) function
-- DSC resources should have DSC tests [DSCTestsPresent](Rules/DSCDscTestsPresent.md)
-- DSC resources should have DSC examples [DSCExamplesPresent](Rules/DSCDscExamplesPresent.md)
+- DSC resources should have DSC tests [DSCTestsPresent][23]
+- DSC resources should have DSC examples [DSCExamplesPresent][22]
 
 ### Severity: TBD
 
 - For Windows PowerShell v4, resource modules should have a `.psd1` file and `schema.mof` for every
   resource
-- MOFs should have a description for each element - see
-  [Issue #131](https://github.com/PowerShell/PSScriptAnalyzer/issues/131)
+- MOFs should have a description for each element - see [Issue #131][131]
 - Resource modules should have a `.psd1` file (always) and `schema.mof` (for non-class resource) see
-  [Issue #116](https://github.com/PowerShell/PSScriptAnalyzer/issues/116)
+  [Issue #116][116]
 - Use **ShouldProcess** for a **Set** DSC method
-- Resource module contains DscResources folder which contains the resources - see
-  [Issue #130](https://github.com/PowerShell/PSScriptAnalyzer/issues/130)
+- Resource module contains DscResources folder which contains the resources - see [Issue #130][130]
 
 ### References
 
-- [Cmdlet Development Guidelines](/powershell/scripting/developer/cmdlet/cmdlet-development-guidelines)
-- [PowerShell DSC Resource Design and Testing Checklist](https://devblogs.microsoft.com/powershell/powershell-dsc-resource-design-and-testing-checklist/)
+- [Cmdlet Development Guidelines][01]
+- [PowerShell DSC Resource Design and Testing Checklist][02]
 - DSC Guidelines can also be found in the DSC Resources Repository
-  - [DSC Resource Style Guidelines & Best Practices](https://github.com/PowerShell/DscResources/blob/master/StyleGuidelines.md)
-  - [DSC Resource Naming](https://github.com/PowerShell/DscResources/blob/master/Naming.md)
-  - [Creating a High Quality DSC Resource Module](https://github.com/PowerShell/DscResources/blob/master/HighQualityModuleGuidelines.md)
-- [The Unofficial PowerShell Best Practices and Style Guide](https://github.com/PoshCode/PowerShellPracticeAndStyle)
+  - [DSC Resource Style Guidelines & Best Practices][06]
+  - [DSC Resource Naming][05]
+  - [Creating a High Quality DSC Resource Module][04]
+- [The Unofficial PowerShell Best Practices and Style Guide][03]
+
+<!-- link references -->
+[01]: /powershell/scripting/developer/cmdlet/cmdlet-development-guidelines
+[02]: https://devblogs.microsoft.com/powershell/powershell-dsc-resource-design-and-testing-checklist/
+[03]: https://github.com/PoshCode/PowerShellPracticeAndStyle
+[04]: https://github.com/PowerShell/DscResources/blob/master/HighQualityModuleGuidelines.md
+[05]: https://github.com/PowerShell/DscResources/blob/master/Naming.md
+[06]: https://github.com/PowerShell/DscResources/blob/master/StyleGuidelines.md
+[10]: Rules/AvoidDefaultValueSwitchParameter.md
+[11]: Rules/AvoidGlobalVars.md
+[12]: Rules/AvoidUsingCmdletAliases.md
+[13]: Rules/AvoidUsingComputerNameHardcoded.md
+[14]: Rules/AvoidUsingConvertToSecureStringWithPlainText.md
+[15]: Rules/AvoidUsingEmptyCatchBlock.md
+[16]: Rules/AvoidUsingInvokeExpression.md
+[17]: Rules/AvoidUsingPlainTextForPassword.md
+[18]: Rules/AvoidUsingPositionalParameters.md
+[19]: Rules/AvoidUsingUsernameAndPasswordParams.md
+[20]: Rules/AvoidUsingWMICmdlet.md
+[21]: Rules/AvoidUsingWriteHost.md
+[22]: Rules/DSCDscExamplesPresent.md
+[23]: Rules/DSCDscTestsPresent.md
+[24]: Rules/DSCReturnCorrectTypesForDSCFunctions.md
+[25]: Rules/DSCStandardDSCFunctionsInResource.md
+[26]: Rules/DSCUseIdenticalMandatoryParametersForDSC.md
+[27]: Rules/DSCUseIdenticalParametersForDSC.md
+[28]: Rules/MissingModuleManifestField.md
+[29]: Rules/ProvideCommentHelp.md
+[30]: Rules/ReservedCmdletChar.md
+[31]: Rules/ReservedParams.md
+[32]: Rules/ShouldProcess.md
+[33]: Rules/UseApprovedVerbs.md
+[34]: Rules/UseCmdletCorrectly.md
+[35]: Rules/UseDeclaredVarsMoreThanAssignments.md
+[36]: Rules/UsePSCredentialType.md
+[37]: Rules/UseShouldProcessForStateChangingFunctions.md
+[38]: Rules/UseSingularNouns.md
+[116]: https://github.com/PowerShell/PSScriptAnalyzer/issues/116
+[130]: https://github.com/PowerShell/PSScriptAnalyzer/issues/130
+[131]: https://github.com/PowerShell/PSScriptAnalyzer/issues/131

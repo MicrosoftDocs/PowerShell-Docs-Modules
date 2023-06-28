@@ -5,8 +5,8 @@ title: Creating custom rules
 ---
 # Creating custom rules
 
-PSScriptAnalyzer uses the [Managed Extensibility Framework (MEF)](/dotnet/framework/mef/) to import
-all rules defined in the assembly. It can also consume rules written in PowerShell scripts.
+PSScriptAnalyzer uses the [Managed Extensibility Framework (MEF)][01] to import all rules defined in
+the assembly. It can also consume rules written in PowerShell scripts.
 
 When calling `Invoke-ScriptAnalyzer`, users can specify custom rules using the
 **CustomizedRulePath** parameter.
@@ -236,6 +236,8 @@ function Measure-RequiresRunAsAdministrator
 }
 ```
 
-More examples can be found in the
-[CommunityAnalyzerRules](https://github.com/PowerShell/PSScriptAnalyzer/tree/master/Tests/Engine/CommunityAnalyzerRules)
-folder on GitHub.
+More examples can be found in the [CommunityAnalyzerRules][02] folder on GitHub.
+
+<!-- link references -->
+[01]: /dotnet/framework/mef/
+[02]: https://github.com/PowerShell/PSScriptAnalyzer/tree/master/Tests/Engine/CommunityAnalyzerRules

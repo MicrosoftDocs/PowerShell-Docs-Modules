@@ -1,6 +1,6 @@
 ---
 description: Overview of the PlatyPS module
-ms.date: 01/21/2022
+ms.date: 06/28/2023
 title: PlatyPS overview
 ---
 # PlatyPS overview

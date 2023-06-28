@@ -1,27 +1,27 @@
 ---
 description: Using PlatyPS is the fast and efficient way to create XML-based help.
-ms.date: 03/22/2022
+ms.date: 06/28/2023
 title: Create XML-based help using PlatyPS
 ---
 # Create XML-based help using PlatyPS
 
-When creating a PowerShell module, it is always recommended that you include detailed help for the
+When creating a PowerShell module, it's always recommended that you include detailed help for the
 cmdlets you create. If your cmdlets are implemented in compiled code, you must use the XML-based
 help. This XML format is known as the Microsoft Assistance Markup Language (MAML).
 
-The legacy PowerShell SDK documentation covers the details of creating help for PowerShell
-cmdlets packaged into modules. However, PowerShell does not provide any tools for creating the
-XML-based help. The SDK documentation explains the structure of MAML help, but leaves you the
-task of creating the complex, and deeply nested, MAML content by hand.
+The legacy PowerShell SDK documentation covers the details of creating help for PowerShell cmdlets
+packaged into modules. However, PowerShell doesn't provide any tools for creating the XML-based
+help. The SDK documentation explains the structure of MAML help, but leaves you the task of creating
+the complex, and deeply nested, MAML content by hand.
 
-This is where the [PlatyPS][platyps] module can help.
+This is where the [PlatyPS][19] module can help.
 
 ## What is PlatyPS?
 
-PlatyPS is an [open-source][platyps-repo] tool that started as a _hackathon_ project to make the
-creation and maintenance of MAML easier. PlatyPS documents the syntax of parameter sets and the
-individual parameters for each cmdlet in your module. PlatyPS creates structured [Markdown][MD]
-files that contain the syntax information. It can't create descriptions or provide examples.
+PlatyPS is an [open-source][16] tool that started as a _hackathon_ project to make the creation and
+maintenance of MAML easier. PlatyPS documents the syntax of parameter sets and the individual
+parameters for each cmdlet in your module. PlatyPS creates structured [Markdown][15] files that
+contain the syntax information. It can't create descriptions or provide examples.
 
 PlatyPS creates placeholders for you to fill in descriptions and examples. After adding the required
 information, PlatyPS compiles the Markdown files into MAML files. PowerShell's help system also
@@ -73,17 +73,17 @@ The following flowchart outlines the process for creating or updating PowerShell
    New-MarkdownAboutHelp -OutputFolder $OutputFolder -AboutName "topic_name"
    ```
 
-   If the output folder does not exist, `New-MarkdownHelp` creates it. In this example,
+   If the output folder doesn't exist, `New-MarkdownHelp` creates it. In this example,
    `New-MarkdownHelp` creates a Markdown file for each cmdlet in the module. It also creates the
    _module page_ in a file named `<ModuleName>.md`. This module page contains a list of the cmdlets
    contained in the module and placeholders for the **Synopsis** description. The metadata in the
    module page comes from the module manifest and is used by PlatyPS to create the HelpInfo XML file
-   (as explained [below](#creating-an-updateable-help-package)).
+   (as explained [below][14]).
 
    `New-MarkdownAboutHelp` creates a new _about_ file named `about_topic_name.md`.
 
-   For more information, see [New-MarkdownHelp][New-MarkdownHelp] and
-   [New-MarkdownAboutHelp][New-MarkdownAboutHelp].
+   For more information, see [New-MarkdownHelp][08] and
+   [New-MarkdownAboutHelp][07].
 
 ### Update existing Markdown content when the module changes
 
@@ -115,7 +115,7 @@ modules that have new cmdlets, new parameters, or parameters that have changed.
    ```
 
    `Update-MarkdownHelpModule` updates the cmdlet and module Markdown files in the specified folder.
-   It does not update the `about_*.md` files. The module file (`ModuleName.md`) receives any new
+   It doesn't update the `about_*.md` files. The module file (`ModuleName.md`) receives any new
    **Synopsis** text that has been added to the cmdlet files. Updates to cmdlet files include the
    following change:
 
@@ -124,7 +124,7 @@ modules that have new cmdlets, new parameters, or parameters that have changed.
    - Updated parameter metadata
    - Updated input and output type information
 
-   For more information, see [Update-MarkdownHelpModule][Update-MarkdownHelpModule].
+   For more information, see [Update-MarkdownHelpModule][09].
 
 ## Edit the new or updated Markdown files
 
@@ -139,15 +139,14 @@ at least one example.
 
 For detailed information about writing PowerShell content, see the following articles:
 
-- [PowerShell style guide](/powershell/scripting/community/contributing/powershell-style-guide)
-- [Editing reference articles](/powershell/scripting/community/contributing/editing-cmdlet-ref)
+- [PowerShell style guide][11]
+- [Editing reference articles][10]
 
 > [!NOTE]
-> PlatyPS has a specific schema that is uses for cmdlet reference. That schema only allows certain
+> PlatyPS has a specific schema that's uses for cmdlet reference. That schema only allows certain
 > Markdown blocks in specific sections of the document. If you put content in the wrong location,
-> the PlatyPS build step fails. For more information, see the [schema][schema] documentation in the
-> PlatyPS repository. For a complete example of well-formed cmdlet reference, see
-> [Get-Item][Get-Item].
+> the PlatyPS build step fails. For more information, see the [schema][17] documentation in the
+> PlatyPS repository. For a complete example of well-formed cmdlet reference, see [Get-Item][01].
 
 After providing the required content for each of your cmdlets, you need to make sure that you update
 the module landing page. Verify your module has the correct `Module Guid` and `Download Help Link`
@@ -177,7 +176,7 @@ New-ExternalHelp -Path <folder with MDs> -OutputPath <output help folder>
 `New-ExternalHelp` converts all cmdlet Markdown files into one (or more) MAML files. About files are
 converted to plain-text files with the following name format: `about_topic_name.help.txt`. The
 Markdown content must meet the requirement of the PlatyPS schema. `New-ExternalHelp` exits with
-errors when the content does not follow the schema. You must edit the files to fix the schema
+errors when the content doesn't follow the schema. You must edit the files to fix the schema
 violations.
 
 > [!CAUTION]
@@ -188,11 +187,11 @@ violations.
 Once this step is complete, you will see `*-help.xml` and `about_*.help.txt` files in the target
 output folder.
 
-For more information, see [New-ExternalHelp][New-ExternalHelp]
+For more information, see [New-ExternalHelp][05]
 
 ### Test the compiled help files
 
-You can verify the content with the [Get-HelpPreview][Get-HelpPreview] cmdlet:
+You can verify the content with the [Get-HelpPreview][04] cmdlet:
 
 ```powershell
 Get-HelpPreview -Path "<ModuleName>-Help.xml"
@@ -215,7 +214,7 @@ files available to users. There are two options for providing help in the PowerS
 
 ### Packaging help with the module
 
-The help files can be packaged with your module. See [Writing Help for Modules][writing] for details
+The help files can be packaged with your module. See [Writing Help for Modules][13] for details
 of the folder structure. You should include the list of Help files in the value of the **FileList**
 key in the module manifest.
 
@@ -229,7 +228,7 @@ At a high level, the steps to create updateable help include:
 1. Create CAB files
 1. Upload your files
 
-For more information, see [Supporting Updateable Help: Step-by-step][step-by-step].
+For more information, see [Supporting Updateable Help: Step-by-step][12].
 
 PlatyPS assists you with  some of these steps.
 
@@ -241,8 +240,8 @@ other information from the module manifest and the HelpInfo XML file.
 
 > [!IMPORTANT]
 > The **HelpInfoURI** must end with a forward-slash character (`/`). Without that character,
-> `Update-Help` cannot construct the correct file paths to download the content. Also, most
-> HTTP-based file services are case-sensitive. It is important that the module metadata in the
+> `Update-Help` can't construct the correct file paths to download the content. Also, most
+> HTTP-based file services are case-sensitive. It's important that the module metadata in the
 > HelpInfo XML file contains the proper letter case.
 
 The `New-ExternalHelp` cmdlet creates the HelpInfo XML file in the output folder. The HelpInfo XML
@@ -264,41 +263,40 @@ New-ExternalHelpCab @helpCabParameters
 After creating the ZIP and CAB files, upload the ZIP, CAB, and HelpInfo XML files to your HTTP file
 server. Put the files in the location indicated by the **HelpInfoURI**.
 
-For more information, see [New-ExternalHelpCab][New-ExternalHelpCab].
+For more information, see [New-ExternalHelpCab][06].
 
 ### Other publishing options
 
-Markdown is a versatile format that is easy to transform to other formats for publishing. Using a
-tool like [Pandoc][Pandoc], you can convert your Markdown help files to many different document
+Markdown is a versatile format that's easy to transform to other formats for publishing. Using a
+tool like [Pandoc][18], you can convert your Markdown help files to many different document
 formats, including plain text, HTML, PDF, and Office document formats.
 
-Also, the cmdlets [ConvertFrom-Markdown]ConvertFrom-Markdown] and [Show-Markdown][Show-Markdown] in
-PowerShell 6 and higher can be used to convert Markdown to HTML or create a colorful display in the
-PowerShell console.
+Also, the cmdlets [ConvertFrom-Markdown][02] and [Show-Markdown][03] in PowerShell 6 and higher can
+be used to convert Markdown to HTML or create a colorful display in the PowerShell console.
 
 ## Known issues
 
-PlatyPS is very sensitive to the [schema][schema] for the structure of the Markdown files it creates
-and compiles. It is very easy write valid Markdown that violates this schema. For more information,
-see the [PowerShell style guide][style] and [Editing reference articles][edit].
+PlatyPS is very sensitive to the [schema][17] for the structure of the Markdown files it creates and
+compiles. It's very easy write valid Markdown that violates this schema. For more information, see
+the [PowerShell style guide][11] and [Editing reference articles][10].
 
 <!-- link references -->
-[platyps-repo]: https://github.com/PowerShell/platyps
-[PlatyPS]: https://www.powershellgallery.com/packages/platyPS/
-[MD]: https://commonmark.org
-[schema]: https://github.com/PowerShell/platyPS/blob/master/platyPS.schema.md
-[style]: /powershell/scripting/community/contributing/powershell-style-guide
-[edit]: /powershell/scripting/community/contributing/editing-cmdlet-ref
-[writing]: /powershell/scripting/developer/help/writing-help-for-windows-powershell-modules
-[step-by-step]: /powershell/scripting/developer/help/updatable-help-authoring-step-by-step
-[Pandoc]: https://pandoc.org
-
-[Get-Item]: /powershell/module/microsoft.powershell.management/get-item
-[New-MarkdownHelp]: /powershell/module/platyps/new-markdownhelp
-[Update-MarkdownHelpModule]: /powershell/module/platyps/update-markdownhelpmodule
-[New-MarkdownAboutHelp]: /powershell/module/platyps/new-markdownabouthelp
-[New-ExternalHelp]: /powershell/module/platyps/new-externalhelp
-[Get-HelpPreview]: /powershell/module/platyps/Get-HelpPreview
-[New-ExternalHelpCab]: /powershell/module/platyps/new-externalhelpcab
-[ConvertFrom-Markdown]: /powershell/module/microsoft.powershell.utility/convertfrom-markdown
-[Show-Markdown]: /powershell/module/microsoft.powershell.utility/show-markdown
+[01]: /powershell/module/microsoft.powershell.management/get-item
+[02]: /powershell/module/microsoft.powershell.utility/convertfrom-markdown
+[03]: /powershell/module/microsoft.powershell.utility/show-markdown
+[04]: /powershell/module/platyps/Get-HelpPreview
+[05]: /powershell/module/platyps/new-externalhelp
+[06]: /powershell/module/platyps/new-externalhelpcab
+[07]: /powershell/module/platyps/new-markdownabouthelp
+[08]: /powershell/module/platyps/new-markdownhelp
+[09]: /powershell/module/platyps/update-markdownhelpmodule
+[10]: /powershell/scripting/community/contributing/editing-cmdlet-ref
+[11]: /powershell/scripting/community/contributing/powershell-style-guide
+[12]: /powershell/scripting/developer/help/updatable-help-authoring-step-by-step
+[13]: /powershell/scripting/developer/help/writing-help-for-windows-powershell-modules
+[14]: #creating-an-updateable-help-package
+[15]: https://commonmark.org
+[16]: https://github.com/PowerShell/platyps
+[17]: https://github.com/PowerShell/platyPS/blob/master/platyPS.schema.md
+[18]: https://pandoc.org
+[19]: https://www.powershellgallery.com/packages/platyPS/

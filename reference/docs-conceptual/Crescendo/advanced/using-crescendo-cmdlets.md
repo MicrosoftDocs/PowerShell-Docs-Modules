@@ -1,6 +1,6 @@
 ---
 description: This article provides examples for using the Crescendo cmdlets to create a configuration. This can be used as an alternate for manually created the JSON configuration file.
-ms.date: 12/14/2022
+ms.date: 06/28/2023
 title: Create a Crescendo configuration using the Crescendo cmdlets
 ---
 # Create a Crescendo configuration using the Crescendo cmdlets

@@ -1,6 +1,6 @@
 ---
 description: This article explains how to use a SecretStore vault in an automation scenario to securely retrieve an use passwords or other secret material.
-ms.date: 06/24/2022
+ms.date: 06/28/2023
 title: Using the SecretStore in automation
 ---
 # Using the SecretStore in automation

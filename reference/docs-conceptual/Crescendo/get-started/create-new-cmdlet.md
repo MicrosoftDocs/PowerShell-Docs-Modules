@@ -1,6 +1,6 @@
 ---
 description: How to create a Crescendo cmdlet.
-ms.date: 12/14/2022
+ms.date: 06/28/2023
 title: Create a Crescendo cmdlet
 ---
 # Create a Crescendo cmdlet

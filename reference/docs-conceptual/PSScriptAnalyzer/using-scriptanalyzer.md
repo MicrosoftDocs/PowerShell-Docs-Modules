@@ -1,6 +1,6 @@
 ---
 description: This article describes various features of PSScriptAnalyzer and how to use them.
-ms.date: 03/22/2022
+ms.date: 06/28/2023
 title: Using PSScriptAnalyzer
 ---
 # Using PSScriptAnalyzer

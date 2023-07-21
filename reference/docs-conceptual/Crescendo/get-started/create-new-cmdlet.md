@@ -76,7 +76,7 @@ HelpLinks               :
 OutputHandlers          :
 ```
 
-The following example shows how to create a new configuration file.
+The following example shows how to create a new configuration file. The file will be saved as Show-AzCmAgent.crescendo.json.
 
 ```powershell
 $parameters = @{
@@ -85,7 +85,7 @@ $parameters = @{
     OriginalName = "c:/program files/AzureConnectedMachineAgent/azcmagent.exe"
 }
 $CrescendoCommands += New-CrescendoCommand @parameters
-Export-CrescendoCommand -command $CrescendoCommands -fileName .\AzCmAgent.json
+Export-CrescendoCommand -command $CrescendoCommands
 ```
 
 Crescendo configuration file has a JSON schema and can contain one or more cmdlet definitions in an

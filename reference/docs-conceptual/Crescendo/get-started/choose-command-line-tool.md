@@ -1,6 +1,6 @@
 ---
 description: How to select a command-line tool to amplify using Crescendo.
-ms.date: 06/28/2023
+ms.date: 08/16/2023
 title: Choosing a command-line tool to amplify
 ---
 # Choosing the command-line tool for Crescendo
@@ -22,7 +22,7 @@ To optimize your investment when developing a cmdlet, consider the following cri
 
 - **The command-line tool output is difficult to use in automation.**
 
-  Command-line tools output their information to the screen as string data. This is not the
+  Command-line tools output their information to the screen as string data. This isn't the
   structured data (objects) that PowerShell expects in the pipeline, which prevents you from using
   PowerShell cmdlets, such as `Where-Object` and `ForEach-Object`. Crescendo assists you with
   _amplifying_ the command-line tool experience so that the tool can participate in the PowerShell
@@ -41,7 +41,7 @@ To optimize your investment when developing a cmdlet, consider the following cri
   PowerShell has a well-established ecosystem of modules that extend the built-in capabilities of
   PowerShell. Before deciding to amplify a command-line tool with Crescendo, first check to see if a
   cmdlet already exists that performs your intended goal. For example, wrapping the Windows command
-  `ipconfig.exe` to get the current IP address is a poor choice because the module **NetAdapter**
+  `ipconfig.exe` to get the current IP address is a poor choice because the module **NetTCPIP**
   contains `Get-NetIPConfiguration`, which provides the same information with structured output.
 
 - **Are there better ways?**
@@ -53,7 +53,7 @@ To optimize your investment when developing a cmdlet, consider the following cri
 
 - **Is the output trivial?**
 
-  In some situations, the command-line tool may produce output that is easy to use in your
+  In some situations, the command-line tool may produce output that's easy to use in your
   automation. If this is the case, investing time in creating a cmdlet with structured output may
   not be worth the effort of creating an amplified cmdlet.
 
@@ -61,7 +61,7 @@ To optimize your investment when developing a cmdlet, consider the following cri
 
 - **Optimize your time investment by focusing on what you need.**
 
-  When examining a command-line tool for automation, remember you are not required to replicate all
+  When examining a command-line tool for automation, remember you aren't required to replicate all
   features of the tool in the amplified cmdlet. In other words, focus on the features of the tool
   you need to accomplish your goal. If a tool has 12 use cases and you only need the functionality
   of two, create a Crescendo configuration only for the two scenarios you need.

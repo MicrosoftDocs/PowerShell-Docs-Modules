@@ -195,9 +195,9 @@ to true prevents the argument from being sent to the native application. The def
 ```
 
 For this example, the string argument passed to the **Filter** parameter is stored in the variable
-`$Filter`. This variable is available for use in your output handler. The `$Filter` variable could
-used by the output handler to filter the output of the native command, rather than returning all
-output.
+`$Filter`. This variable is available for use in your output handler. The output handler could use
+the value of the `$Filter` variable to filter the output of the native command, rather than
+returning all output.
 
 ## Installing Crescendo
 

@@ -23,7 +23,7 @@ Crescendo v1.1 adds two internal functions to manage errors.
 
 By default, `$PSNativeCommandUseErrorActionPreference` is set to `$true`. This causes Crescendo to
 produce an additional error record for every error. To prevent this, Crescendo changes the value to
-`$false` for each generated cmdlet. This change is scoped to you cmdlets in the generated module, so
+`$false` for each generated cmdlet. This change is scoped to your cmdlets in the generated module, so
 it doesn't affect cmdlets outside of the module.
 
 ## Returning errors to the user

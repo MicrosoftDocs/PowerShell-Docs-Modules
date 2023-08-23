@@ -1,18 +1,18 @@
 ---
 description: How to collect information about the command-line tool to decide which features to implement in your cmdlets.
-ms.date: 06/28/2023
+ms.date: 08/23/2023
 title: Research the command-line tool's syntax and output
 ---
 # Research the command-line tool's syntax and output
 
-The [previous article](choose-command-line-tool.md) provided criteria for selecting the command-line
-tool you want to amplify with Crescendo. In this article we describe ways to collect information
-about the tool that helps you design cmdlets using Crescendo.
+The [previous article][03] provided criteria for selecting the command-line tool you want to amplify
+with Crescendo. In this article we describe ways to collect information about the tool that helps
+you design cmdlets using Crescendo.
 
 For the examples in this article, we use the Azure Connected Machine agent tool (`azcmagent`). We
 chose this tool because:
 
-- It is easy to install and remove
+- It's easy to install and remove
 - It doesn't require an active Azure subscription for basic usage
 - It has useful in-console help and online documentation
 - It produces easily consumable output
@@ -20,8 +20,7 @@ chose this tool because:
 > [!TIP]
 > If you don't have this tool, you don't need to install it unless you want to try out the examples.
 >
-> For more information, see the [Installing the azcmagent tool](#installing-the-azcmagent-tool)
-> section of this article.
+> For more information, see the [Installing the azcmagent tool][02] section of this article.
 
 ## Start with command-line help and documentation
 
@@ -117,9 +116,8 @@ Extension Service extensionservice running
 Agent Service     himds            running
 ```
 
-For more complex examples of parsing output, see this
-[blog post](https://devblogs.microsoft.com/powershell-community/a-closer-look-at-the-parsing-code-of-a-crescendo-output-handler/)
-from the PowerShell Community blog.
+For more complex examples of parsing output, see this [blog post][06] from the PowerShell Community
+blog.
 
 > [!NOTE]
 > The `azcmagent` tool must be run with Administrative privilege. This also means that the module
@@ -130,16 +128,24 @@ from the PowerShell Community blog.
 You can download the Azure Connected Machine agent package for Windows and Linux from the locations
 listed below.
 
-- Download the Windows Installer package for the
-  [Windows agent](https://aka.ms/AzureConnectedMachineAgent) from the Microsoft Download Center.
-- The Linux agent is distributed from Microsoft's
-  [package repository](https://packages.microsoft.com/). Choose the preferred package format for the
-  distribution (RPM or DEB).
+- Download the Windows Installer package for the [Windows agent][05] from the Microsoft Download
+  Center.
+- The Linux agent is distributed from Microsoft's [package repository][07]. Choose the preferred
+  package format for the distribution (RPM or DEB).
 
 For more information about the Azure Connected Machine agent, see
-[Managing and maintaining the Connected Machine agent](/azure/azure-arc/servers/manage-agent).
+[Managing and maintaining the Connected Machine agent][01].
 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Create a cmdlet configuration](create-new-cmdlet.md)
+> [Create a cmdlet configuration][04]
+
+<!-- link references -->
+[01]: /azure/azure-arc/servers/manage-agent
+[02]: #installing-the-azcmagent-tool
+[03]: choose-command-line-tool.md
+[04]: create-new-cmdlet.md
+[05]: https://aka.ms/AzureConnectedMachineAgent
+[06]: https://devblogs.microsoft.com/powershell-community/a-closer-look-at-the-parsing-code-of-a-crescendo-output-handler/
+[07]: https://packages.microsoft.com/

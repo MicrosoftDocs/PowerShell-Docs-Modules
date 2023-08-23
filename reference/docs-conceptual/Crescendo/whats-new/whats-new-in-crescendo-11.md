@@ -1,6 +1,6 @@
 ---
 description: New features and changes released in Crescendo 1.1
-ms.date: 06/28/2023
+ms.date: 08/23/2023
 title: What's new in Crescendo 1.1
 ---
 # What's new in Crescendo 1.1
@@ -10,9 +10,9 @@ ability to bypass the output handler, and improved error handling.
 
 ## New schema version
 
-The Crescendo schema has been updated to include support for two new members to the **Parameter**
-class, `ArgumentTransform` and `ArgumentTransformType`. The schema works with supported tools like
-Visual Studio Code to provide IntelliSense and tooltips during the authoring experience.
+The Crescendo schema now includes support for three new members to the **Parameter** class:
+`ExcludeAsArgument`, `ArgumentTransform` and `ArgumentTransformType`. With tools like Visual Studio
+Code, the schema provides IntelliSense and tooltips during the authoring experience.
 
 URL location of the always-available Crescendo schema:
 
@@ -31,7 +31,7 @@ JSON file per **Command** object or create one JSON file containing all objects 
 Crescendo **Command** objects can be created using `New-CrescendoCommand` or imported from an
 existing configuration using `Import-CommandConfiguration`.
 
-For more information, see [Export-CrescendoCommand][01].
+For more information, see [Export-CrescendoCommand][02].
 
 ## Prevent overwriting of the module manifest
 
@@ -51,7 +51,7 @@ Export-CrescendoModule -ConfigurationFile .\myconfig.json -ModuleName .\Mymodule
 ## Bypass output handling entirely
 
 Some native commands create different output depending on whether the output is sent to the screen
-or the pipeline. [Pastel][02] is an example of a command that changes its output from a graphical
+or the pipeline. [Pastel][03] is an example of a command that changes its output from a graphical
 screen representation to a single string value when used in a pipeline. Crescendo output handling is
 pipeline based and can cause these applications to return unwanted results. Crescendo now supports
 the ability to bypass the output handler entirely.
@@ -104,9 +104,19 @@ user.
 You may find situations where the input values handed to a Crescendo wrapped command should be
 translated to a different value for the underlying native command. Crescendo now supports argument
 transformation to support these scenarios. We updated the schema to add two new members to the
-**Parameter** class, `ArgumentTransform` and `ArgumentTransformType`. Use these members to transform
-parameter arguments inline or invoke a script block that takes the parameter value as an argument.
-The default value for `ArgumentTransformType` is inline.
+**Parameter** class, `ArgumentTransform` and `ArgumentTransformType`. These members work like the
+`Handler` and `HandlerType` members. The value `ArgumentTransformType` can be `Inline`, `Function`,
+or `Script`. The default value for `ArgumentTransformType` is `Inline`.
+
+- If the `ArgumentTransformType` is `Inline`, the value of `ArgumentTransform` must be a string
+  containing a scriptblock.
+- If the `ArgumentTransformType` is `Function`, the value of `ArgumentTransform` must be the name
+  of a function that is loaded in the current session.
+- If the `ArgumentTransformType` is `Script`, the value of `ArgumentTransform` must be the path to a
+  script file.
+
+Crescendo passes the parameter's argument values to the argument transformation code. The code must
+return the transformed values.
 
 Example: Multiplication of a value.
 
@@ -117,7 +127,8 @@ Example: Multiplication of a value.
         "OriginalName": "--p3",
         "ParameterType": "int",
         "OriginalPosition": 2,
-        "ArgumentTransform": "param([int]$v) $v * 2"
+        "ArgumentTransform": "param([int]$v) $v * 2",
+        "ArgumentTransformType": "Inline"
     }
 ]
 ```
@@ -131,7 +142,8 @@ Example: Accepting an ordered hashtable.
         "OriginalName": "--p1ordered",
         "ParameterType": "System.Collections.Specialized.OrderedDictionary",
         "OriginalPosition": 0,
-        "ArgumentTransform": "param([System.Collections.Specialized.OrderedDictionary]$v) $v.Keys.ForEach({''{0}={1}'' -f $_,$v[$_]}) -join '',''"
+        "ArgumentTransform": "param([System.Collections.Specialized.OrderedDictionary]$v) $v.Keys.ForEach({''{0}={1}'' -f $_,$v[$_]}) -join '',''",
+        "ArgumentTransformType": "Inline"
     }
 ]
 ```
@@ -145,12 +157,13 @@ Example: Argument transformation with join.
         "OriginalName": "--p2",
         "ParameterType": "string[]",
         "OriginalPosition": 1,
-        "ArgumentTransform": "param([string[]]$v) $v -join '',''"
+        "ArgumentTransform": "param([string[]]$v) $v -join '',''",
+        "ArgumentTransformType": "Inline"
     }
 ]
 ```
 
-Example: Calling a script based transformation.
+Example: Calling a function based transformation.
 
 ```json
 "Parameters": [
@@ -162,25 +175,35 @@ Example: Calling a script based transformation.
 ]
 ```
 
+## Creating cmdlet parameters that are not used by the native command
+
+Crescendo is designed to pass parameters defined in the configuration as arguments to the native
+application. There are times when you may want to use a parameter value in the output handler but
+not the native application. To enable this, a new boolean parameter property `ExcludeAsArgument` set
+to true prevents the argument from being sent to the native application. The default is `false`.
+
+```json
+"Parameters": [
+        {
+            "Name": "Filter",
+            "ParameterType": "string",
+            "ExcludeAsArgument": true,
+            "Mandatory": false,
+            "Description": "Variable not sent to native app"
+        }
+    ],
+```
+
+For this example, the string argument passed to the **Filter** parameter is stored in the variable
+`$Filter`. This variable is available for use in your output handler. The output handler could use
+the value of the `$Filter` variable to filter the output of the native command, rather than
+returning all output.
+
 ## Installing Crescendo
 
-Requirements:
-
-- **Microsoft.PowerShell.Crescendo** requires PowerShell 7.0 or higher
-
-To install **Microsoft.PowerShell.Crescendo** using the new **PowerShellGet** v2.x:
-
-```powershell
-Install-Module -Name Microsoft.PowerShell.Crescendo -AllowPreRelease
-```
-
-To install **Microsoft.PowerShell.Crescendo** using the new [PowerShellGet v3][03]:
-
-```powershell
-Install-PSResource -Name Microsoft.PowerShell.Crescendo -AllowPreRelease
-```
+For information about installing Crescendo, see [Installing Crescendo][01].
 
 <!-- link references -->
-[01]: /powershell/module/microsoft.powershell.crescendo/export-crescendocommand
-[02]: https://github.com/sharkdp/pastel
-[03]: https://www.powershellgallery.com/packages/PowerShellGet/3.0.17-beta
+[01]: ../get-started/install-crescendo.md
+[02]: /powershell/module/microsoft.powershell.crescendo/export-crescendocommand
+[03]: https://github.com/sharkdp/pastel

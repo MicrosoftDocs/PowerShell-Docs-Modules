@@ -1,14 +1,14 @@
 ---
 description: How to create a Crescendo cmdlet.
-ms.date: 06/28/2023
+ms.date: 08/23/2023
 title: Create a Crescendo cmdlet
 ---
 # Create a Crescendo cmdlet
 
-Modern command-line tools provide commands for effective management of domain-specific
-technologies. Administrative users can confidently execute these commands inside of PowerShell and
-get the expected results. However, PowerShell users prefer the syntax, readability, and object-based
-output that cmdlets provide, especially in automation.
+Modern command-line tools provide commands for effective management of domain-specific technologies.
+Administrative users can confidently execute these commands inside of PowerShell and get the
+expected results. However, PowerShell users prefer the syntax, readability, and object-based output
+that cmdlets provide, especially in automation.
 
 As previously discussed, there are several reasons you may want to amplify a command-line tool:
 
@@ -16,9 +16,9 @@ As previously discussed, there are several reasons you may want to amplify a com
 - The command syntax is difficult to use or remember
 - The tool lacks informative help documentation
 
-In the [previous article](research-tool.md), we discussed how to discover and choose the feature of
-the tool that you want to amplify with Crescendo. For the examples in this article, we continue to
-use the `azcmagent` command-line tool that was previously introduced.
+In the [previous article][04], we discussed how to discover and choose the feature of the tool that
+you want to amplify with Crescendo. For the examples in this article, we continue to use the
+`azcmagent` command-line tool that was previously introduced.
 
 ## Creating the configuration for a Crescendo cmdlet
 
@@ -117,13 +117,12 @@ an array to contain the cmdlet definitions. The output from `New-CrescendoComman
 }
 ```
 
-It is important to have the schema link in the Crescendo configuration file. The schema provides
-tools like [Visual Studio Code](https://code.visualstudio.com) with IntelliSense and tooltips during
-the authoring experience.
+It's important to have the schema link in the Crescendo configuration file. The schema provides
+tools like [Visual Studio Code][02] with IntelliSense and tooltips during the authoring experience.
 
 ## Completing the Crescendo command configuration
 
-In this example, we are creating a configuration for the `azcmagent show` command. The cmdlet
+In this example, we're creating a configuration for the `azcmagent show` command. The cmdlet
 doesn't require any additional parameters. Since `azcmagent` is a modern tool that provides JSON
 output, the example includes a simple output handler to convert the JSON output to objects.
 
@@ -133,9 +132,9 @@ The command definition includes the following properties:
 - **Noun**: The name of the cmdlet noun
 - **Platform**: The platform that this Crescendo command run on (Windows, Linux, MacOS)
 - **OriginalName**: The original native command name and location
-- **OriginalCommandElements**: Some CLI commands have additional mandatory switches to execute
-  properly for a given scenario
-- **Description**: Description for the cmdlet that is seen in Help
+- **OriginalCommandElements**: Some command-line tools have additional mandatory switches for a
+  given scenario
+- **Description**: Description for the cmdlet that's seen in Help
 - **Aliases**: An alias, or short name, for the new cmdlet
 - **OutputHandlers**: The output handler that captures the string output from the command-line tool
   and transforms it into PowerShell objects
@@ -156,7 +155,7 @@ The following example shows the full JSON definition of the new cmdlet after add
          "--json"
       ],
       "Platform": [
-        "Windows",
+        "Windows"
       ],
       "Description": "Gets machine metadata and Agent status. This is primarily useful for troubleshooting.",
       "Aliases": [
@@ -193,9 +192,9 @@ A parameter definition includes the following properties:
 - **Name**: This is the name of the PowerShell parameter for the generated cmdlet
 - **OriginalName**: The name of the parameter
 - **ParameterType**: Defines the data type of the parameter value
-- **ParameterSetName**: Defines which parameter set this parameter is included
+- **ParameterSetName**: Defines which parameter set this parameter belongs to
 - **Mandatory**: Setting that determines if the parameter is required to have a value
-- **Description**: Description for the parameter that is seen in Help
+- **Description**: Description for the parameter that's seen in Help
 
 The following example shows the full JSON definition of the new cmdlet. You can put this to a
 definition in a new JSON file or add it to the **Commands** array of the previous JSON file.
@@ -236,17 +235,22 @@ definition in a new JSON file or add it to the **Commands** array of the previou
     "SupportsShouldProcess": false,
     "SupportsTransactions": false,
     "NoInvocation": false,
-    "Parameters": [],
     "Examples": []
 }
 ```
 
 For a more detailed configuration example, see the blog post
-[https://devblogs.microsoft.com/powershell-community/a-closer-look-at-the-crescendo-configuration/](https://devblogs.microsoft.com/powershell-community/a-closer-look-at-the-crescendo-configuration/).
+[A closer look at the Crescendo configuration][03].
 
 ## Next steps
 
 Now that you have defined your cmdlets, you are ready to generate your new module.
 
 > [!div class="nextstepaction"]
-> [Generate and test your module](generate-module.md)
+> [Generate and test your module][01]
+
+<!-- link references -->
+[01]: generate-module.md
+[02]: https://code.visualstudio.com
+[03]: https://devblogs.microsoft.com/powershell-community/a-closer-look-at-the-crescendo-configuration/
+[04]: research-tool.md

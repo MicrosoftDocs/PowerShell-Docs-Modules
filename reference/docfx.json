@@ -15,16 +15,8 @@
     "externalReference": [],
     "fileMetadata": {
       "author": {
-        "**/Microsoft.PowerShell.Crescendo/**.md": "JamesWTruher",
-        "**/Microsoft.PowerShell.Crescendo/**.yml": "JamesWTruher",
-        "**/Microsoft.PowerShell.SecretManagement/**.yml": "PaulHigin",
-        "**/Microsoft.PowerShell.SecretStore/**.yml": "PaulHigin",
-        "**/PlatyPS/**.md": "adityapatwardhan",
-        "**/PlatyPS/**.yml": "adityapatwardhan",
-        "**/PSScriptAnalyzer/**.yml": "JamesWTruher",
-        "**/PSDesiredStateConfiguration/**.md": "sdwheeler",
-        "**/PSDesiredStateConfiguration/**.yml": "sdwheeler",
-        "docs-conceptual/**.md": "sdwheeler"
+        "**/**.md": "sdwheeler",
+        "**/**.yml": "sdwheeler"
       },
       "feedback_product_url": {
         "ps-modules/Microsoft.PowerShell.Crescendo/**.md": "https://github.com/PowerShell/Crescendo/issues/new/choose",
@@ -39,16 +31,8 @@
         "**/**": "mkluck"
       },
       "ms.author": {
-        "**/Microsoft.PowerShell.Crescendo/**.md": "jimtru",
-        "**/Microsoft.PowerShell.Crescendo/**.yml": "jimtru",
-        "**/Microsoft.PowerShell.SecretManagement/**.yml": "paulhi",
-        "**/Microsoft.PowerShell.SecretStore/**.yml": "paulhi",
-        "**/PlatyPS/**.md": "adityap",
-        "**/PlatyPS/**.yml": "adityap",
-        "**/PSScriptAnalyzer/**.yml": "jimtru",
-        "**/PSDesiredStateConfiguration/**.md": "sewhee",
-        "**/PSDesiredStateConfiguration/**.yml": "sewhee",
-        "docs-conceptual/**.md": "sewhee"
+        "**/**.md": "sewhee",
+        "**/**.yml": "sewhee"
       },
       "ms.prod": {
         "**/**.md": "powershell",

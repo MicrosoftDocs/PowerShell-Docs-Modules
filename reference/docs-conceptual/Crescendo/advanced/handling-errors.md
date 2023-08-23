@@ -1,6 +1,6 @@
 ---
 description: This article describes how to handle native command errors in your Crescendo output handler.
-ms.date: 06/28/2023
+ms.date: 08/23/2023
 title: Handling errors in Crescendo
 ---
 # Handling errors in Crescendo
@@ -20,6 +20,13 @@ Crescendo v1.1 adds two internal functions to manage errors.
   by the output handler. You don't have to call it directly.
 - `Pop-CrescendoNativeError` removes an error from the error queue. Use this function to inspect
   errors in the output handler so you can handle them or pass them through to the caller.
+
+By default, `$PSNativeCommandUseErrorActionPreference` is set to `$true`. This causes Crescendo to
+produce an additional error record for every error. To prevent this, Crescendo changes the value to
+`$false` for each generated cmdlet. This change is scoped to you cmdlets in the generated module, so
+it doesn't affect cmdlets outside of the module.
+
+## Returning errors to the user
 
 The following output handler definition uses `Pop-CrescendoNativeError` to return errors to the
 user.
@@ -107,7 +114,7 @@ fizztool.exe v1.0.0 (c) 2021 Tailspin Toys, Ltd.
 ERROR: Key not found: buzz
 ```
 
-## Handling the errors in Crescendo
+### Handling the errors in Crescendo
 
 The following Crescendo configuration defines the cmdlet `Get-FizzBuzz` that calls the
 `fizztool.exe`, processes the output, and handles error conditions.
@@ -171,7 +178,7 @@ The `FizzToolParser` function does the following actions:
   - You could inspect the errors and handle them or pass them through to the caller, as shown in the
     function.
 
-## Using the new cmdlet
+### Using the new cmdlet
 
 ```powershell
 Get-FizzBuzz -Key fizz

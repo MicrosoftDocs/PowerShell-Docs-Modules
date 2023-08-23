@@ -1,16 +1,16 @@
 ---
 description: How to generate a Crescendo module from a configuration.
-ms.date: 06/28/2023
+ms.date: 08/23/2023
 title: Generate and test a Crescendo module
 ---
 # Generate and test a Crescendo module
 
-In the [previous article](create-new-cmdlet.md) we created configurations for two new cmdlets. Using
-this configuration, Crescendo can generate a new PowerShell script module.
+In the [previous article][01] we created configurations for two new cmdlets. Using this
+configuration, Crescendo can generate a new PowerShell script module.
 
 ## Generate your new module
 
-Now we are ready to create your module. Use the `Export-CrescendoModule` cmdlet to generate the new
+Now you're ready to create your module. Use the `Export-CrescendoModule` cmdlet to generate the new
 PowerShell script module.
 
 ```powershell
@@ -21,9 +21,9 @@ The **ConfigurationFile** can take an array of filenames. This allows you to cre
 files for each cmdlet. The **ModuleName** parameter specifies the full path and filename for the
 module file being created. In this example, the files are being created in the current directory.
 
-As seen the the following output, `Export-CrescendoModule` creates two files -- the module (PSM1)
-file and the module manifest (PSD1) file. These are the only files that end user of your module
-needs to install.
+As seen the following output, `Export-CrescendoModule` creates two files -- the module (PSM1) file
+and the module manifest (PSD1) file. These are the only files that end user of your module needs to
+install.
 
 ```output
     Directory: D:\temp\azcmagent
@@ -142,10 +142,5 @@ Get-AzCmAgentConfigProperty True               False
 > for privilege elevation for all platforms. However, we didn't include elevation in our
 > configuration examples.
 
-## Upcoming articles
-
-We are still working on more documentation for Crescendo. Check back for new content that covers the
-following topics:
-
-- Creating cmdlets that require privilege elevation
-- Packaging your module for distribution
+<!-- link references -->
+[01]: create-new-cmdlet.md

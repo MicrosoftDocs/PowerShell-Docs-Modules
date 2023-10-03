@@ -166,7 +166,7 @@ These presets can be tab completed for the **Settings** parameter.
 ### Explicit
 
 The following example excludes two rules from the default set of rules and any rule with a
-severity other than **Error* and **Warning**.
+severity other than **Error** and **Warning**.
 
 ```powershell
 # PSScriptAnalyzerSettings.psd1
@@ -307,7 +307,7 @@ automatically apply suggestions, you should check your file's encoding if your s
 particular encoding.
 
 The **SuggestedCorrections** property of the error record enables quick-fix scenarios in editors
-like VSCode. We provide valid **SuggestedCorrection**  for the following rules:
+like VSCode. We provide valid **SuggestedCorrection** for the following rules:
 
 - **AvoidAlias**
 - **AvoidUsingPlainTextForPassword**

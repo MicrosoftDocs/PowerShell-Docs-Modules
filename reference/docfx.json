@@ -15,16 +15,16 @@
     "externalReference": [],
     "fileMetadata": {
       "feedback_product_url": {
-        "Microsoft.PowerShell.Crescendo/*.md": "https://github.com/PowerShell/Crescendo/issues/new/choose",
-        "Microsoft.PowerShell.Crescendo/*.yml": "https://github.com/PowerShell/Crescendo/issues/new/choose",
-        "Microsoft.PowerShell.SecretManagement/*.md": "https://github.com/PowerShell/SecretManagement/issues/new/choose",
-        "Microsoft.PowerShell.SecretManagement/*.yml": "https://github.com/PowerShell/SecretManagement/issues/new/choose",
-        "Microsoft.PowerShell.SecretStore/*.md": "https://github.com/PowerShell/SecretStore/issues/new/choose",
-        "Microsoft.PowerShell.SecretStore/*.yml": "https://github.com/PowerShell/SecretStore/issues/new/choose",
-        "PlatyPS/*.md": "https://github.com/PowerShell/platyPS/issues/new/choose",
-        "PlatyPS/*.yml": "https://github.com/PowerShell/platyPS/issues/new/choose",
-        "PSScriptAnalyzer/*.md": "https://github.com/PowerShell/PSScriptAnalyzer/issues/new/choose",
-        "PSScriptAnalyzer/*.yml": "https://github.com/PowerShell/PSScriptAnalyzer/issues/new/choose",
+        "ps-modules/Microsoft.PowerShell.Crescendo/*.md": "https://github.com/PowerShell/Crescendo/issues/new/choose",
+        "ps-modules/Microsoft.PowerShell.Crescendo/*.yml": "https://github.com/PowerShell/Crescendo/issues/new/choose",
+        "ps-modules/Microsoft.PowerShell.SecretManagement/*.md": "https://github.com/PowerShell/SecretManagement/issues/new/choose",
+        "ps-modules/Microsoft.PowerShell.SecretManagement/*.yml": "https://github.com/PowerShell/SecretManagement/issues/new/choose",
+        "ps-modules/Microsoft.PowerShell.SecretStore/*.md": "https://github.com/PowerShell/SecretStore/issues/new/choose",
+        "ps-modules/Microsoft.PowerShell.SecretStore/*.yml": "https://github.com/PowerShell/SecretStore/issues/new/choose",
+        "ps-modules/PlatyPS/*.md": "https://github.com/PowerShell/platyPS/issues/new/choose",
+        "ps-modules/PlatyPS/*.yml": "https://github.com/PowerShell/platyPS/issues/new/choose",
+        "ps-modules/PSScriptAnalyzer/*.md": "https://github.com/PowerShell/PSScriptAnalyzer/issues/new/choose",
+        "ps-modules/PSScriptAnalyzer/*.yml": "https://github.com/PowerShell/PSScriptAnalyzer/issues/new/choose",
         "docs-conceptual/Microsoft.PowerShell.Crescendo/*.md": "https://github.com/PowerShell/Crescendo/issues/new/choose",
         "docs-conceptual/Microsoft.PowerShell.Crescendo/*.yml": "https://github.com/PowerShell/Crescendo/issues/new/choose",
         "docs-conceptual/Microsoft.PowerShell.SecretManagement/*.md": "https://github.com/PowerShell/SecretManagement/issues/new/choose",
@@ -37,12 +37,12 @@
         "docs-conceptual/PSScriptAnalyzer/*.yml": "https://github.com/PowerShell/PSScriptAnalyzer/issues/new/choose"
       },
       "ms.technology": {
-        "**/*.md": "powershell-conceptual",
-        "**/*.yml": "powershell-cmdlets",
+        "ps-modules/**/*.md": "powershell-conceptual",
+        "ps-modules/**/*.yml": "powershell-cmdlets",
         "docs-conceptual/**/*.md": "powershell-conceptual"
       },
       "ms.topic": {
-        "**/*.md": "managed-reference",
+        "ps-modules/**/*.md": "managed-reference",
         "docs-conceptual/**/*.md": "conceptual"
       }
     },

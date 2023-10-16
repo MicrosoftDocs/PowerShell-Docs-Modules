@@ -37,12 +37,11 @@
         "docs-conceptual/PSScriptAnalyzer/*.yml": "https://github.com/PowerShell/PSScriptAnalyzer/issues/new/choose"
       },
       "ms.technology": {
-        "ps-modules/**/*.md": "powershell-conceptual",
-        "ps-modules/**/*.yml": "powershell-cmdlets",
+        "ps-modules/**/*": "powershell-cmdlets",
         "docs-conceptual/**/*.md": "powershell-conceptual"
       },
       "ms.topic": {
-        "ps-modules/**/*.md": "managed-reference",
+        "ps-modules/**/*": "managed-reference",
         "docs-conceptual/**/*.md": "conceptual"
       }
     },

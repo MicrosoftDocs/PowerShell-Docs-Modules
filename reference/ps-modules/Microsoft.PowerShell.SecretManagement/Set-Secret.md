@@ -36,13 +36,12 @@ Set-Secret -SecretInfo <SecretInformation> [-Vault] <String> [-NoClobber] [-What
 
 ## DESCRIPTION
 
-This cmdlet adds a secret value by name to a vault. If no vault name is specified the secret is
-added to the default vault. If a secret with that name exists, it is overwritten. Additional data
+This cmdlet adds a secret value by name to a vault. When no vault name is specified, the secret is
+added to the default vault. If a secret with that name exists, it's overwritten. Additional data
 can be included with the secret if supported by the extension vault.
 
 The default parameter set takes a **SecureString** object. If you run the command without specifying
-the secret value, the cmdlet prompts you to to enter a **SecureString**. The text of the string is
-not visible in the console.
+the secret value, the cmdlet prompts you to enter a **SecureString**. The text of the string isn't visible in the console.
 
 ## EXAMPLES
 
@@ -107,14 +106,14 @@ Set-Secret: Cannot store secret PublishSecret. Vault LocalStore2 does not suppor
 ```
 
 This example adds a secret named `PublishSecret` to the `LocalStore2` vault with extra metadata.
-However, vault `LocalStore2` does not support secret metadata and the operation returns an error.
+However, vault `LocalStore2` doesn't support secret metadata and the operation returns an error.
 
 ## PARAMETERS
 
 ### -Metadata
 
 Specifies a **Hashtable** containing key-value pairs to associate with the secret in the vault. The
-specified extension vault may not support secret metadata. If the vault does not support metadata,
+specified extension vault might not support secret metadata. If the vault doesn't support metadata,
 the operation fails and returns an error. The values of any metadata in the hashtable must be one of
 the following types:
 
@@ -122,7 +121,7 @@ the following types:
 - **int**
 - **DateTime**
 
-Metadata is not stored securely in a vault. Metadata should not contain sensitive information.
+Metadata isn't stored securely in a vault. Metadata shouldn't contain sensitive information.
 
 ```yaml
 Type: Hashtable
@@ -138,7 +137,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-Specifies the name of the secret to add or update. Wildcard characters (`*`) are not permitted.
+Specifies the name of the secret to add or update. Wildcard characters (`*`) aren't permitted.
 
 ```yaml
 Type: String
@@ -154,8 +153,8 @@ Accept wildcard characters: False
 
 ### -NoClobber
 
-Indicates that the command should error if a secret with the same name already exists in the vault.
-By default, this cmdlet updates the secret with the new value if it already exists.
+Causes the command to return an error if a secret with the same name already exists in the vault. By
+default, this cmdlet updates the secret with the new value if it already exists.
 
 ```yaml
 Type: SwitchParameter
@@ -226,7 +225,7 @@ Accept wildcard characters: False
 
 ### -Vault
 
-Specifies the name of the vault to add or update the secret in. Wildcard characters (`*`) are not
+Specifies the name of the vault to add or update the secret in. Wildcard characters (`*`) aren't
 permitted. By default, the secret is added or updated in the current user's default vault.
 
 ```yaml
@@ -259,7 +258,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs. The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.PowerShell.SecretManagement.dll-Help.xml
 Module Name: Microsoft.PowerShell.SecretManagement
-ms.date: 05/31/2022
+ms.date: 10/18/2023
 online version: https://learn.microsoft.com/powershell/module/microsoft.powershell.secretmanagement/set-secret?view=ps-modules&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
@@ -289,5 +289,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### None
 
 ## NOTES
+
+When you run `Set-Secret` with the **Name** parameter to specify the name of the secret, the cmdlet
+calls `GetSecret()` that's implemented by the vault extension. `Set-Secret` passes through the name
+as provided by the user. The vault extension looks up the secret by that name. If `GetGecret()`
+returns a match, `Set-Secret` overwrites the secret unless you use the **NoClobber** parameter. The
+vault extension always writes the secret information it receives.
+
+It's up to the vault extension implementation to decide whether or not to use a case-sensitive
+comparison on the name. For example, secret names in the **Microsoft.PowerShell.SecretStore**
+extension vault are case-insensitive. If the name you pass to `Set-Secret` differs only by case with
+the name of an existing secret in a SecretStore vault, the name is overwritten with the new value
+you provided.
 
 ## RELATED LINKS

@@ -1,6 +1,6 @@
 ---
 description: How to install and use the SecretManagement and SecretStore modules
-ms.date: 06/28/2023
+ms.date: 10/18/2023
 title: Get started with the SecretStore module
 ---
 # Get started with the SecretStore module
@@ -75,6 +75,20 @@ Name       Type   VaultName
 ----       ----   ---------
 TestSecret String SecretStore
 ```
+
+## Notes
+
+When you run `Set-Secret` with the **Name** parameter to specify the name of the secret, the cmdlet
+calls `GetSecret()` that's implemented by the vault extension. `Set-Secret` passes through the name
+as provided by the user. The vault extension looks up the secret by that name. If `GetGecret()`
+returns a match, `Set-Secret` overwrites the secret unless you use the **NoClobber** parameter. The
+vault extension always writes the secret information it receives.
+
+It's up to the vault extension implementation to decide whether or not to use a case-sensitive
+comparison on the name. For example, secret names in the **Microsoft.PowerShell.SecretStore**
+extension vault are case-insensitive. If the name you pass to `Set-Secret` differs only by case with
+the name of an existing secret in a SecretStore vault, the name is overwritten with the new value
+you provided.
 
 ## Related links
 

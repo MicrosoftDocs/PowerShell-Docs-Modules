@@ -1,6 +1,6 @@
 ---
 description: How to install the Crescendo module.
-ms.date: 08/23/2023
+ms.date: 11/10/2023
 title: Installing Crescendo
 ---
 # Install the Crescendo module
@@ -16,17 +16,13 @@ To install using **PowerShellGet 2.x**:
 ```powershell
 # Install the current release
 Install-Module Microsoft.PowerShell.Crescendo -Force
-# Install the preview release
-Install-Module Microsoft.PowerShell.Crescendo -AllowPrerelease -Force
 ```
 
-To install using **Microsoft.PowerShell.PSResourceGet** (beta):
+To install using **Microsoft.PowerShell.PSResourceGet**:
 
 ```powershell
 # Install the current release
 Install-PSResource Microsoft.PowerShell.Crescendo -Reinstall
-# Install the preview release
-Install-PSResource Microsoft.PowerShell.Crescendo -Prerelease -Reinstall
 ```
 
 The **Force** or **Reinstall** parameters are only necessary when you have an older version of

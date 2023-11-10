@@ -1,6 +1,6 @@
 ---
 description: How to install and use the SecretManagement and SecretStore modules
-ms.date: 10/18/2023
+ms.date: 11/10/2023
 title: Get started with the SecretStore module
 ---
 # Get started with the SecretStore module
@@ -9,8 +9,13 @@ The **SecretManagement** and **SecretStore** modules are available from the Powe
 can be installed using **PowerShellGet** commands.
 
 ```powershell
+# Install with PowerShellGet 2.x
 Install-Module Microsoft.PowerShell.SecretManagement
 Install-Module Microsoft.PowerShell.SecretStore
+
+# Install with PSResourceGet 1.x
+Install-PSResource Microsoft.PowerShell.SecretManagement
+Install-PSResource Microsoft.PowerShell.SecretStore
 ```
 
 Once you have installed the modules, you can load the modules and begin using or creating new

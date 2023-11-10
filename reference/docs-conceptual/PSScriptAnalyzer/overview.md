@@ -1,6 +1,6 @@
 ---
 description: This article explains the purpose of the PSScriptAnalyzer module.
-ms.date: 06/28/2023
+ms.date: 11/10/2023
 title: PSScriptAnalyzer module
 ---
 # PSScriptAnalyzer module
@@ -19,9 +19,9 @@ PowerShell code such as:
 - Use of `Invoke-Expression`
 - And many more
 
-You can choose which rules to include or exclude for your modules and scripts. PSScriptAnalyzer also
-has the ability to fix the formatting of your code. This helps you produce code that conforms to a
-standard style, is easier to read, and is more maintainable.
+You can choose the rules to include or exclude for your modules and scripts. PSScriptAnalyzer can
+also fix the formatting of your code. This helps you produce code that conforms to a standard style,
+is easier to read, and is more maintainable.
 
 ## Installing PSScriptAnalyzer
 
@@ -36,12 +36,12 @@ Install using PowerShellGet 2.x:
 Install-Module -Name PSScriptAnalyzer -Force
 ```
 
-Install using PowerShellGet 3.x:
+Install using PSResourceGet 1.x:
 
 ```powershell
 Install-PSResource -Name PSScriptAnalyzer -Reinstall
 ```
 
 The **Force** or **Reinstall** parameters are only necessary when you have an older version of
-PSScriptAnalyzer installed. These parameters also work even when you do not have a previous version
+PSScriptAnalyzer installed. These parameters also work even when you don't have a previous version
 installed.

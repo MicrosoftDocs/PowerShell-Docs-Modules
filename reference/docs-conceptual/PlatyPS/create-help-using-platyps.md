@@ -1,6 +1,6 @@
 ---
 description: Using PlatyPS is the fast and efficient way to create XML-based help.
-ms.date: 06/28/2023
+ms.date: 11/10/2023
 title: Create XML-based help using PlatyPS
 ---
 # Create XML-based help using PlatyPS
@@ -37,7 +37,16 @@ the help files into a CAB package that can be hosted for updateable help.
 First you must install PlatyPS from the PowerShell Gallery.
 
 ```powershell
+# Install using PowerShellGet 2.x
 Install-Module platyps -Force
+
+# Install using PSResourceGet 1.x
+Install-PSResource platyps -Force
+```
+
+After installing PlatyPS, import the module into your session.
+
+```powershell
 Import-Module platyps
 ```
 

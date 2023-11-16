@@ -32,7 +32,7 @@ Use the [New-ExternalHelp](New-ExternalHelp.md) cmdlet to convert About Topic ma
 ### Example 1
 
 ```powershell
-PS C:\> New-MarkdownAboutHelp -OutputFolder C:\Test -AboutName
+PS C:\> New-MarkdownAboutHelp -OutputFolder C:\Test -AboutName TestAboutTopic
 PS C:\> Get-ChildItem C:\Test
 
     Directory: C:\Test
@@ -40,7 +40,7 @@ PS C:\> Get-ChildItem C:\Test
 
 Mode                LastWriteTime         Length Name
 ----                -------------         ------ ----
--a----        7/13/2016   2:12 PM           1491 TestAboutTopic.md
+-a----        7/13/2016   2:12 PM           1491 about_TestAboutTopic.md
 ```
 
 Create and display file info for PowerShell About Topic Markdown File.
@@ -56,7 +56,7 @@ PS C:\> New-ExternalHelp -Path C:\Test\ -OutputPath C:\Test
 
 Mode                LastWriteTime         Length Name
 ----                -------------         ------ ----
--a----        7/13/2016   2:15 PM           1550 TestAboutTopic.txt
+-a----        7/13/2016   2:15 PM           1550 about_TestAboutTopic.help.txt
 ```
 
 Create PowerShell About Topic Txt file from existing Markdown About file.

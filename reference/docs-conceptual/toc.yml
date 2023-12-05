@@ -201,7 +201,7 @@ items:
         items:
           - name: Managing a SecretStore vault
             href: SecretManagement/how-to/manage-secretstore.md
-          - name: Using the SecretStore in automation
+          - name: Use the SecretStore in automation
             href: SecretManagement/how-to/using-secrets-in-automation.md
-          - name: Using Azure Key Vault in automation
+          - name: Use Azure Key Vault in automation
             href: SecretManagement/how-to/using-azure-keyvault.md

@@ -1,15 +1,15 @@
 ---
 description: This article explains how to use a SecretStore vault in an automation scenario to securely retrieve an use passwords or other secret material.
-ms.date: 06/28/2023
-title: Using the SecretStore in automation
+ms.date: 12/05/2023
+title: Use the SecretStore in automation
 ---
-# Using the SecretStore in automation
+# Use the SecretStore in automation
 
 This article provides an example for using a **Microsoft.PowerShell.SecretStore** vault in an
 automation scenario. A **SecretStore** vault provides you a way to securely store and retrieve the
 passwords, tokens and other secrets you need to use in your automation pipeline on the local machine.
 
-## Setting up the host the runs the automation
+## Set up the host that runs the automation
 
 For this example you must first install and configure the SecretManagement modules. This example
 assumes that your automation host is running Windows. These commands must be run in the user context
@@ -63,7 +63,7 @@ Set-SecretStoreConfiguration @storeConfiguration
 Now that you have the vault installed and configured, you can use `Set-Secret` to add the secrets
 you need for your automation scripts.
 
-## Using secrets in automation
+## Use secrets in automation
 
 The **SecretStore** password must be provided in a secure fashion. Here the password is being
 imported from a file that was encrypted using Windows Data Protection (DPAPI).

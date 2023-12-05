@@ -1,15 +1,15 @@
 ---
 description: This article explains how to use an Azure Key Vault module, as a SecretManagement extension vault, in an automation scenario to securely retrieve and use passwords or other secret material.
-ms.date: 06/28/2023
-title: Using Azure Key Vault in automation
+ms.date: 12/05/2023
+title: Use Azure Key Vault in automation
 ---
-# Using Azure Key Vault in automation
+# Use Azure Key Vault in automation
 
 This article provides an example for using Azure Key Vault in an automation scenario. Azure Key
-Vault provides you a way to securely store and retrieve the passwords, tokens and other secrets, that are stored outside of the local machine, and use them
-in your automation pipeline.
+Vault provides you a way to securely store and retrieve the passwords, tokens and other secrets,
+that are stored outside of the local machine, and use them in your automation pipeline.
 
-## Setting up the host that runs the automation
+## Set up the host that runs the automation
 
 Beginning with **Az.KeyVault** 3.3.0, the module includes a **SecretManagement** extension that
 allows you to use the **SecretManagement** cmdlets to interact with secrets stored in Azure Key
@@ -38,7 +38,7 @@ $VaultParameters = @{
 Register-SecretVault -Module Az.KeyVault -Name AzKV -VaultParameters $VaultParameters
 ```
 
-## Using Azure Key Vault secrets in automation
+## Use Azure Key Vault secrets in automation
 
 Now that you have registered your Azure Key Vault with **SecretManagement** you can view secrets
 with `Get-SecretInfo`, get secrets with `Get-Secret`, create and update secrets with `Set-Secret`,

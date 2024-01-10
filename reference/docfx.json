@@ -34,9 +34,9 @@
         "docs-conceptual/PSScriptAnalyzer/*.md": "https://github.com/PowerShell/PSScriptAnalyzer/issues/new/choose",
         "docs-conceptual/PSScriptAnalyzer/*.yml": "https://github.com/PowerShell/PSScriptAnalyzer/issues/new/choose"
       },
-      "ms.technology": {
-        "ps-modules/**/*": "powershell-cmdlets",
-        "docs-conceptual/**/*.md": "powershell-conceptual"
+      "ms.subservice": {
+        "ps-modules/**/*": "cmdlets",
+        "docs-conceptual/**/*.md": "conceptual"
       },
       "ms.topic": {
         "ps-modules/**/*": "managed-reference",
@@ -61,7 +61,7 @@
       "manager": "jasongroce",
       "ms.author": "sewhee",
       "ms.devlang": "powershell",
-      "ms.prod": "powershell",
+      "ms.service": "powershell",
       "ms.tgt_pltfr": "windows, macos, linux",
       "products": [ "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3" ],
       "social_image_url": "https://learn.microsoft.com/media/logos/logo-powershell-social.png",

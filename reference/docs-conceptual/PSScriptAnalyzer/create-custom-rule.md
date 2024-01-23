@@ -97,7 +97,7 @@ Since version 1.17.0, you can include a **SuggestedCorrections** property of typ
 $objParams = @{
   TypeName = 'Microsoft.Windows.PowerShell.ScriptAnalyzer.Generic.CorrectionExtent'
   ArgumentList = $startLineNumber, $endLineNumber, $startColumnNumber,
-                 $endColumnNumber, $correction, $optionalDescription
+                 $endColumnNumber, $correction, $file, $optionalDescription
 }
 $correctionExtent = New-Object @objParams
 $suggestedCorrections = New-Object System.Collections.ObjectModel.Collection[$($objParams.TypeName)]

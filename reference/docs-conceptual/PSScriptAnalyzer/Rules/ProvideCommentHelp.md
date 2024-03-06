@@ -19,7 +19,7 @@ following articles:
 
 - [Writing Comment-based Help](/powershell/scripting/developer/help/writing-comment-based-help-topics)
 - [Writing Help for PowerShell Cmdlets](/powershell/scripting/developer/help/writing-help-for-windows-powershell-cmdlets)
-- [Create XML-based help using PlatyPS](/powershell/utility-modules/platyps/create-help-using-platyps)
+- [Create XML-based help using PlatyPS](../../platyps/create-help-using-platyps.md)
 
 ## Configuration
 

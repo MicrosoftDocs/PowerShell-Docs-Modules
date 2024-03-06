@@ -49,4 +49,4 @@ function Test
 }
 ```
 
-[01]: https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters
+[01]: /powershell/module/microsoft.powershell.core/about/about_commonparameters

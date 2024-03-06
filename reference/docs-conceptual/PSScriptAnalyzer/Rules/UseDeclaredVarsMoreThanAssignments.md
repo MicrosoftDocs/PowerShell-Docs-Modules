@@ -47,7 +47,7 @@ function Test
 ### Special cases
 
 The following examples trigger the **PSUseDeclaredVarsMoreThanAssignments** warning. This behavior
-is a limitation of the rule. There is no way to avoid this false positive warnings.
+is a limitation of the rule. There is no way to avoid these false positive warnings.
 
 In this case, the warning is triggered because `$bar` is not used within the scriptblock where it
 was defined.

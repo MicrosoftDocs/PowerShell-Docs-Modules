@@ -1,13 +1,14 @@
 ---
 description: This article explains how to use a SecretStore vault in an automation scenario to securely retrieve an use passwords or other secret material.
-ms.date: 12/05/2023
+ms.date: 03/06/2024
 title: Use the SecretStore in automation
 ---
 # Use the SecretStore in automation
 
 This article provides an example for using a **Microsoft.PowerShell.SecretStore** vault in an
 automation scenario. A **SecretStore** vault provides you a way to securely store and retrieve the
-passwords, tokens and other secrets you need to use in your automation pipeline on the local machine.
+passwords, tokens and other secrets you need to use in your automation pipeline on the local
+machine.
 
 ## Set up the host that runs the automation
 
@@ -22,7 +23,14 @@ Import-Module Microsoft.PowerShell.SecretStore
 Import-Module Microsoft.PowerShell.SecretManagement
 ```
 
-You must also create a password as a **SecureString** that is securely exported to an XML file and
+## Configure the SecretStore vault
+
+You must also create a password as a **SecureString** that's used to secure the SecretStore vault.
+The automation system you use might have a way to securely provide a password that you can use to
+secure the vault. For example, GitHub provides a way to securely store and use secrets in GitHub
+Actions. For more information, see [Using secrets in GitHub Actions][01].
+
+In this example, the password is a **SecureString** that is securely exported to an XML file and
 encrypted by Windows Data Protection (DPAPI). The following command prompts you for a password. In
 this example the **UserName** is unimportant.
 
@@ -42,9 +50,9 @@ $credential.Password |  Export-Clixml -Path $securePasswordPath
 ```
 
 Next you must configure the **SecretStore** vault. The configuration sets user interaction to
-`None`, so that **SecretStore** never prompts the user. The configuration requires a password,
-and the password is passed in as a **SecureString** object. The `-Confirm:false` parameter is used
-so that PowerShell does not prompt for confirmation.
+`None`, so that **SecretStore** never prompts the user. The configuration requires a password, and
+the password is passed in as a **SecureString** object. The `-Confirm:false` parameter is used so
+that PowerShell does not prompt for confirmation.
 
 ```powershell
 Register-SecretVault -Name SecretStore -ModuleName Microsoft.PowerShell.SecretStore -DefaultVault
@@ -82,3 +90,6 @@ $password = Import-CliXml -Path $securePasswordPath
 Unlock-SecretStore -Password $password
 $automationPassword = Get-Secret -Name CIJobSecret
 ```
+
+<!-- link references -->
+[01]: https://docs.github.com/actions/security-guides/using-secrets-in-github-actions

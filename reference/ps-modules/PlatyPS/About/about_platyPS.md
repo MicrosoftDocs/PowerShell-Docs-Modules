@@ -2,6 +2,7 @@
 description: Write PowerShell External Help in Markdown.
 Locale: en-US
 ms.date: 03/16/2021
+ms.topic: conceptual
 schema: 2.0.0
 title: about_platyPS
 ---
@@ -19,7 +20,7 @@ PlatyPS provides a way to:
 - Generate markdown help (example) for your existing modules
 - Keep markdown help up-to-date with your code
 
-Markdown help docs can be generated from old external help files (also known as MAML-xml help),
-the command objects (reflection), or both.
+Markdown help docs can be generated from old external help files (also known as
+MAML-xml help), the command objects (reflection), or both.
 
-PlatyPS can also generate cab files for Update-Help.
+PlatyPS can also generate cab files for `Update-Help`.

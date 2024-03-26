@@ -54,7 +54,7 @@ Rules = @{
 }
 ```
 
-`SuppressMessageAttribute()` allows to suppress just specific function names, for example:
+`SuppressMessageAttribute()` allows you to suppress specific function names, for example:
 
 ```powershell
 function Get-Elements {

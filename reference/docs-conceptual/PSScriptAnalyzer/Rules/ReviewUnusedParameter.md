@@ -23,7 +23,7 @@ been used in that scope.
 ```powershell
 @{
     Rules = @{
-        ReviewUnusedParameter = @{
+        PSReviewUnusedParameter = @{
             CommandsToTraverse = @(
                 'Invoke-PSFProtectedCommand'
             )

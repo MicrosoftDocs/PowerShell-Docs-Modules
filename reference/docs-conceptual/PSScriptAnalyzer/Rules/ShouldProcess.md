@@ -18,9 +18,9 @@ but makes no calls to `ShouldProcess` or it calls `ShouldProcess` but does not d
 
 For more information, see the following articles:
 
-- [about_Functions_Advanced_Methods](/powershell/module/microsoft.powershell.core/about/about_functions_advanced_methods)
-- [about_Functions_CmdletBindingAttribute](/powershell/module/microsoft.powershell.core/about/about_Functions_CmdletBindingAttribute)
-- [Everything you wanted to know about ShouldProcess](/powershell/scripting/learn/deep-dives/everything-about-shouldprocess)
+- [about_Functions_Advanced_Methods][01]
+- [about_Functions_CmdletBindingAttribute][02]
+- [Everything you wanted to know about ShouldProcess][03]
 
 ## How
 
@@ -73,3 +73,7 @@ function Set-File
     }
 }
 ```
+<!-- link references -->
+[01]: /powershell/module/microsoft.powershell.core/about/about_functions_advanced_methods
+[02]: /powershell/module/microsoft.powershell.core/about/about_Functions_CmdletBindingAttribute
+[03]: /powershell/scripting/learn/deep-dives/everything-about-shouldprocess

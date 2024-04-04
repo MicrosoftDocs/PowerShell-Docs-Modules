@@ -17,7 +17,7 @@ items:
             href: Crescendo/get-started/create-new-cmdlet.md
           - name: Generate and test a Crescendo module
             href: Crescendo/get-started/generate-module.md
-      - name: What's new
+      - name: What's new in Crescendo
         items:
           - name: What's new in Crescendo 1.1
             href: Crescendo/whats-new/whats-new-in-crescendo-11.md
@@ -39,12 +39,16 @@ items:
     items:
       - name: Overview
         href: PSScriptAnalyzer/overview.md
-      - name: Using PSScriptAnalyzer
-        href: PSScriptAnalyzer/using-scriptanalyzer.md
-      - name: Rules and recommendations
-        href: PSScriptAnalyzer/rules-recommendations.md
-      - name: Creating custom rules
-        href: PSScriptAnalyzer/create-custom-rule.md
+      - name: What's new in PSScriptAnalyzer
+        href: PSScriptAnalyzer/whats-new-in-pssa.md
+      - name: How to
+        items:
+          - name: Using PSScriptAnalyzer
+            href: PSScriptAnalyzer/using-scriptanalyzer.md
+          - name: Rules and recommendations
+            href: PSScriptAnalyzer/rules-recommendations.md
+          - name: Creating custom rules
+            href: PSScriptAnalyzer/create-custom-rule.md
       - name: Rules reference
         items:
           - name: Rules overview

@@ -1,12 +1,16 @@
 ---
 description: This article lists the updates to the PSScriptAnalyzer module.
-ms.date: 04/04/2024
+ms.date: 04/25/2024
 title: What's new in PSScriptAnalyzer
 ---
 # What's new in PSScriptAnalyzer
 
 PSScriptAnalyzer is a static code checker for PowerShell modules and scripts. This article outlines
 the changes in each version of PSScriptAnalyzer.
+
+## PSScriptAnalyzer 1.22.1 - 2024-04-25
+
+Small maintenance release to update the build pipeline. No changes to PSScriptAnalyzer.
 
 ## PSScriptAnalyzer 1.22.0 - 2024-03-05
 

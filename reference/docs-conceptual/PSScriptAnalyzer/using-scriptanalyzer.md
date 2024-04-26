@@ -1,6 +1,6 @@
 ---
 description: This article describes various features of PSScriptAnalyzer and how to use them.
-ms.date: 06/28/2023
+ms.date: 04/26/2024
 title: Using PSScriptAnalyzer
 ---
 # Using PSScriptAnalyzer
@@ -19,10 +19,10 @@ Invoke-ScriptAnalyzer -ScriptDefinition '"b" = "b"; function eliminate-file () {
 ```Output
 RuleName            Severity   ScriptName Line Message
 --------            --------   ---------- ---- -------
-InvalidLeftHandSide ParseError            1    The assignment expression is not
+InvalidLeftHandSide ParseError            1    The assignment expression isn't
                                                valid. The input to an
                                                assignment operator must be an
-                                               object that is able to accept
+                                               object that's able to accept
                                                assignments, such as a variable
                                                or a property.
 PSUseApprovedVerbs  Warning               1    The cmdlet 'eliminate-file' uses an
@@ -31,10 +31,14 @@ PSUseApprovedVerbs  Warning               1    The cmdlet 'eliminate-file' uses 
 
 The **RuleName** is set to the **ErrorId** of the parser error.
 
-To suppress **ParseErrors**, do not include it as a value in the **Severity** parameter.
+To suppress **ParseErrors**, don't include it as a value in the **Severity** parameter.
 
 ```powershell
-Invoke-ScriptAnalyzer -ScriptDefinition '"b" = "b"; function eliminate-file () { }' -Severity Warning
+$invokeScriptAnalyzerSplat = @{
+    ScriptDefinition = '"b" = "b"; function eliminate-file () { }'
+    Severity = 'Warning'
+}
+Invoke-ScriptAnalyzer @invokeScriptAnalyzerSplat
 ```
 
 ```Output
@@ -47,7 +51,7 @@ PSUseApprovedVerbs Warning             1    The cmdlet 'eliminate-file' uses an
 ## Suppressing Rules
 
 You can suppress a rule by decorating a script, function, or parameter with .NET's
-[SuppressMessageAttribute](/dotnet/api/system.diagnostics.codeanalysis.suppressmessageattribute).
+[SuppressMessageAttribute][01].
 The constructor for **SuppressMessageAttribute** takes two parameters: a category and a check ID. Set
 the **categoryID** parameter to the name of the rule you want to suppress and set the **checkID**
 parameter to a null or empty string. You can optionally add a third named parameter with a
@@ -56,7 +60,8 @@ justification for suppressing the message:
 ```powershell
 function SuppressMe()
 {
-    [Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSProvideCommentHelp', '', Justification='Just an example')]
+    [Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSProvideCommentHelp', '',
+        Justification='Just an example')]
     param()
 
     Write-Verbose -Message "I'm making a difference!"
@@ -67,7 +72,7 @@ function SuppressMe()
 Within the scope of the script, function, or parameter that you decorated, all rule violations are
 suppressed.
 
-To suppress a message on a specific parameter, set the **CheckId** parameter of 
+To suppress a message on a specific parameter, set the **CheckId** parameter of
 **SuppressMessageAttribute** to the name of the parameter:
 
 ```powershell
@@ -89,8 +94,7 @@ the value **Class** to suppress violations on all classes within the attribute's
 
 ```powershell
 [Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSProvideCommentHelp', '', Scope='Function')]
-param(
-)
+param()
 
 function InternalFunction
 {
@@ -108,7 +112,8 @@ For example, to suppress the **PSAvoidUsingWriteHost** rule violation in `start-
 `start-baz` but not in `start-foo` and `start-bam`:
 
 ```powershell
-[System.Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSAvoidUsingWriteHost', '', Scope='Function', Target='start-ba[rz]')]
+[System.Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSAvoidUsingWriteHost', '',
+    Scope='Function', Target='start-ba[rz]')]
 param()
 function start-foo {
     write-host "start-foo"
@@ -130,19 +135,21 @@ function start-bam {
 To suppress violations in all of the functions:
 
 ```powershell
-[Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSAvoidUsingWriteHost', '', Scope='Function', Target='*')]
+[Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSAvoidUsingWriteHost', '',
+    Scope='Function', Target='*')]
 Param()
 ```
 
 To suppress violations in `start-bar`, `start-baz` and `start-bam` but not in `start-foo`:
 
 ```powershell
-[Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSAvoidUsingWriteHost', '', Scope='Function', Target='start-b*')]
+[Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSAvoidUsingWriteHost', '',
+    Scope='Function', Target='start-b*')]
 Param()
 ```
 
 > [!NOTE]
-> Parser errors cannot be suppressed with **SuppressMessageAttribute**.
+> Parser errors can't be suppressed with **SuppressMessageAttribute**.
 
 ## Settings Support in ScriptAnalyzer
 
@@ -172,8 +179,7 @@ severity other than **Error** and **Warning**.
 # PSScriptAnalyzerSettings.psd1
 @{
     Severity=@('Error','Warning')
-    ExcludeRules=@('PSAvoidUsingCmdletAliases',
-                'PSAvoidUsingWriteHost')
+    ExcludeRules=@('PSAvoidUsingCmdletAliases', 'PSAvoidUsingWriteHost')
 }
 ```
 
@@ -211,15 +217,33 @@ Invoke-ScriptAnalyzer -Path "C:\path\to\project" -Recurse
 Note that providing settings explicitly takes higher precedence over this implicit mode. Sample
 settings files are provided in the `Settings` folder of the **PSScriptAnalyzer** module.
 
+## Check PowerShell version compatibility
+
+**PSScriptAnalyzer** can check PowerShell scripts for incompatibilities with other PowerShell
+versions and environments. **PSScriptAnalyzer** includes four rules that check for compatibility
+issues:
+
+- [PSUseCompatibleCmdlets][03] checks whether cmdlets used in a script are available in other
+  PowerShell environments
+- [PSUseCompatibleCommands][04] checks whether commands used in a script are available in other
+  PowerShell environments
+- [PSUseCompatibleSyntax][05] checks whether a syntax used in a script will work in other PowerShell
+  versions
+- [PSUseCompatibleTypes][06] checks whether .NET types and static methods or properties are
+  available in other PowerShell environments
+
+For more information about how to use these rules, see
+[Using PSScriptAnalyzer to check PowerShell version compatibility][02] on the PowerShell Team blog.
+
 ## Custom rules
 
-It is possible to provide one or more paths to custom rules in the settings file. It is important
-that these paths point either to a module's folder, which implicitly uses the module manifest, or to
-the module's script file (`.psm1`). The module must export the custom rule functions using
+It's possible to provide one or more paths to custom rules in the settings file. It's important that
+these paths point either to a module's folder, which implicitly uses the module manifest, or to the
+module's script file (`.psm1`). The module must export the custom rule functions using
 `Export-ModuleMember` for them to be available to **PSScriptAnalyzer**.
 
-In this example the property **CustomRulePath** points to two different modules. Both modules
-export the rule functions with the verb **Measure** so `Measure-*` is used for the property
+In this example the property **CustomRulePath** points to two different modules. Both modules export
+the rule functions with the verb **Measure** so `Measure-*` is used for the property
 **IncludeRules**.
 
 ```powershell
@@ -236,7 +260,7 @@ export the rule functions with the verb **Measure** so `Measure-*` is used for t
 ```
 
 You can also add default rules by listing the rules in the **IncludeRules** property. When including
-default rules, it is important that you set the property **IncludeDefaultRules** to `$true`;
+default rules, it's important that you set the property **IncludeDefaultRules** to `$true`;
 otherwise the default rules are used.
 
 ```powershell
@@ -261,7 +285,7 @@ otherwise the default rules are used.
 
 ### Using custom rules in Visual Studio Code
 
-It is also possible to use the custom rules that are provided in the settings file in Visual Studio
+It's also possible to use the custom rules that are provided in the settings file in Visual Studio
 Code. This is done by adding a Visual Studio Code workspace settings file (`.vscode/settings.json`).
 
 ```json
@@ -292,19 +316,19 @@ Microsoft.Windows.PowerShell.ScriptAnalyzer.IOutputWriter outputWriter,
 public System.Collections.Generic.IEnumerable<DiagnosticRecord> AnalyzePath(string path,
     [bool searchRecursively = false])
 
-public System.Collections.Generic.IEnumerable<IRule> GetRule(string[] moduleNames, string[] ruleNames)
+public System.Collections.Generic.IEnumerable<IRule> GetRule(string[] moduleNames,
+    string[] ruleNames)
 ```
 
 ## Violation Correction
 
 You can use the **Fix** switch to to automatically replace violation-causing content with a
 suggested alternative. Additionally, because `Invoke-ScriptAnalyzer` implements
-**SupportsShouldProcess**, you can use **WhatIf** or **Confirm** to find out which corrections
-would be applied. You should use source control when applying corrections as some changes, such as
-the one for **AvoidUsingPlainTextForPassword**, might require additional script modifications that
-can't be made automatically. Because initial encoding can't always be preserved when you
-automatically apply suggestions, you should check your file's encoding if your scripts depend on a
-particular encoding.
+**SupportsShouldProcess**, you can use **WhatIf** or **Confirm** to find out which corrections would
+be applied. You should use source control when applying corrections as some changes, such as the one
+for **AvoidUsingPlainTextForPassword**, might require additional script modifications that can't be
+made automatically. Because initial encoding can't always be preserved when you automatically apply
+suggestions, you should check your file's encoding if your scripts depend on a particular encoding.
 
 The **SuggestedCorrections** property of the error record enables quick-fix scenarios in editors
 like VSCode. We provide valid **SuggestedCorrection** for the following rules:
@@ -314,3 +338,11 @@ like VSCode. We provide valid **SuggestedCorrection** for the following rules:
 - **MisleadingBacktick**
 - **MissingModuleManifestField**
 - **UseToExportFieldsInManifest**
+
+<!-- link references -->
+[01]: /dotnet/api/system.diagnostics.codeanalysis.suppressmessageattribute
+[02]: https://devblogs.microsoft.com/powershell/using-psscriptanalyzer-to-check-powershell-version-compatibility/
+[03]: rules/UseCompatibleCmdlets.md
+[04]: rules/UseCompatibleCommands.md
+[05]: rules/UseCompatibleSyntax.md
+[06]: rules/UseCompatibleTypes.md

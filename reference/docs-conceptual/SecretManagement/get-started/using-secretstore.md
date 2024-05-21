@@ -12,7 +12,11 @@ can be installed using **PowerShellGet** commands.
 # Install with PowerShellGet 2.x
 Install-Module Microsoft.PowerShell.SecretManagement
 Install-Module Microsoft.PowerShell.SecretStore
+```
 
+or
+
+```powershell
 # Install with PSResourceGet 1.x
 Install-PSResource Microsoft.PowerShell.SecretManagement
 Install-PSResource Microsoft.PowerShell.SecretStore

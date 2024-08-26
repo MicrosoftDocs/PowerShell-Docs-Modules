@@ -1,7 +1,7 @@
 ---
 Module Name: Microsoft.PowerShell.SecretManagement
 Module Guid: a5c858f6-4a8e-41f1-b1ee-0ff8f6ad69d3
-ms.date: 05/31/2022
+ms.date: 08/26/2024
 Download Help Link: https://aka.ms/ps-modules-help
 Help Version: 0.1.0.0
 Locale: en-US
@@ -16,15 +16,6 @@ secrets. The secrets are stored in SecretManagement extension vaults. An extensi
 PowerShell module that has been registered to SecretManagement, and exports five module functions
 required by SecretManagement. An extension vault can store secrets locally or remotely. Extension
 vaults are registered to the current logged in user context, and are available only to that user.
-
-> [!NOTE]
-> This module is supported under traditional Microsoft support agreements, including
-> [paid support](https://support.microsoft.com/hub/4343728/support-for-business),
-> [Microsoft Enterprise Agreements](https://www.microsoft.com/licensing/licensing-programs/enterprise?rtc=1&activetab=enterprise-tab%3aprimaryr2),
-> and [Microsoft Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default.aspx).
-> You can also pay for [support](https://support.microsoft.com/contactus) for PowerShell by filing a
-> support request for your problem. Please file issues in the source repository using the
-> **This product** button in the Feedback section at the bottom of the page.
 
 ## Microsoft.PowerShell.SecretManagement Cmdlets
 
@@ -54,6 +45,9 @@ Sets the provided vault name as the default vault for the current user.
 
 ### [Test-SecretVault](Test-SecretVault.md)
 Runs an extension vault self test.
+
+### [Unlock-SecretVault](Unlock-SecretVault.md)
+Unlocks an extension vault so that it can be access in the current session.
 
 ### [Unregister-SecretVault](Unregister-SecretVault.md)
 Un-registers an extension vault from SecretManagement for the current user.

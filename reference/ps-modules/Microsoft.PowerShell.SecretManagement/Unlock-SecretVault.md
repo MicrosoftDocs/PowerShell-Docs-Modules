@@ -9,7 +9,7 @@ schema: 2.0.0
 # Unlock-SecretVault
 
 ## SYNOPSIS
-Unlocks an extension vault so that it can be access in the current session.
+Unlocks an extension vault so that it can be accessed in the current session.
 
 ## SYNTAX
 

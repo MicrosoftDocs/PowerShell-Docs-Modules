@@ -40,7 +40,7 @@ Secret1          SecureString SecretStore
 Secret2          SecureString SecretStore
 ```
 
-This example uses the command to unlock the SecretStore vault. It then runs the `Get-SecretInfo`
+This example uses the command to unlock the `SecretStore` vault. It then runs the `Get-SecretInfo`
 command on the vault without being prompted for the vault password.
 
 ### Example 2
@@ -54,8 +54,8 @@ WARNING: Cannot unlock extension vault 'CredMan': The vault does not support the
 function.
 ```
 
-This example uses the command to unlock the CredMan vault. But the vault doesn't support unlocking
-so the command has no effect. A warning is displayed informing that CredMan vault doesn't support
+This example uses the command to unlock the `CredMan` vault. But the vault doesn't support unlocking
+so the command has no effect. A warning is displayed informing that `CredMan` vault doesn't support
 unlocking.
 
 ## PARAMETERS

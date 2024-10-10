@@ -1,6 +1,5 @@
 ---
 description: Avoid Using SecureString With Plain Text
-ms.custom: PSSA v1.22.1
 ms.date: 06/28/2023
 ms.topic: reference
 title: AvoidUsingConvertToSecureStringWithPlainText

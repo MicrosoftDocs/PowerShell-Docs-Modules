@@ -1,6 +1,6 @@
 ---
 description: This article explains the purpose of the PSScriptAnalyzer module.
-ms.date: 11/10/2023
+ms.date: 10/10/2024
 title: PSScriptAnalyzer module
 ---
 # PSScriptAnalyzer module
@@ -27,8 +27,8 @@ is easier to read, and is more maintainable.
 
 Supported PowerShell Versions and Platforms
 
-- Windows PowerShell 3.0 or greater
-- PowerShell 7.0.11 or greater on Windows/Linux/macOS
+- Windows PowerShell 5.1 or greater
+- PowerShell 7.2.11 or greater on Windows/Linux/macOS
 
 Install using PowerShellGet 2.x:
 

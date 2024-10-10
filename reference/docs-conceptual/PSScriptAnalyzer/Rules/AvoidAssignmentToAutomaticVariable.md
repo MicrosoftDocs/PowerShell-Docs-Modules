@@ -1,6 +1,5 @@
 ---
 description: Changing automatic variables might have undesired side effects
-ms.custom: PSSA v1.22.1
 ms.date: 06/28/2023
 ms.topic: reference
 title: AvoidAssignmentToAutomaticVariable
@@ -16,6 +15,11 @@ PowerShell throws an error when trying to assign an value on those. Other automa
 only be assigned in certain special cases to achieve a certain effect as a special technique.
 
 To understand more about automatic variables, see `Get-Help about_Automatic_Variables`.
+
+<!-- TODO
+Ability to suppress was added in https://github.com/PowerShell/PSScriptAnalyzer/pull/1896
+Need documentation for how to configure suppression of this rule.
+-->
 
 ## How
 

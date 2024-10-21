@@ -47,7 +47,7 @@ and locale details to the PowerShell help system.
 $params = @{
     CabFilesFolder  = 'C:\Module\ExternalHelpContent'
     LandingPagePath = 'C:\Module\ModuleName.md'
-    OutputPath      = 'C:\Module\Cab\'
+    OutputFolder    = 'C:\Module\Cab\'
 }
 New-ExternalHelpCab @params
 ```

@@ -1,0 +1,155 @@
+﻿---
+external help file: Microsoft.PowerShell.PlatyPS.dll-Help.xml
+online version: https://learn.microsoft.com/powershell/module/microsoft.powershell.platyps/import-yamlcommandhelp?view=ps-modules&WT.mc_id=ps-gethelp
+Locale: en-US
+Module Name: Microsoft.PowerShell.PlatyPS
+ms.custom: preview1
+ms.date: 10/25/2024
+schema: 2.0.0
+title: Import-YamlCommandHelp
+---
+
+# Import-YamlCommandHelp
+
+## SYNOPSIS
+
+Imports Yaml help content into **CommandHelp** objects.
+
+## SYNTAX
+
+### Path (Default)
+
+```
+Import-YamlCommandHelp [-Path] <string[]> [-AsDictionary] [<CommonParameters>]
+```
+
+### LiteralPath
+
+```
+Import-YamlCommandHelp -LiteralPath <string[]> [-AsDictionary] [<CommonParameters>]
+```
+
+## DESCRIPTION
+
+The command imports Yaml files containing command help and creates **CommandHelp** objects. The
+**CommandHelp** object is a structured representation of the help content that can be used to export
+to different formats.
+
+## EXAMPLES
+
+### Example 1 - Import all cmdlet Yaml files in a folder
+
+The following example import cmdlet Markdown files in a folder and converts them to **CommandHelp**
+objects. These objects can be used to export to different formats.
+
+```powershell
+Import-YamlCommandHelp -Path .\v2\yaml\*-*.yml | Select-Object Title
+```
+
+```Output
+Title
+-----
+Compare-CommandHelp
+Export-MamlCommandHelp
+Export-MarkdownCommandHelp
+Export-MarkdownModuleFile
+Export-YamlCommandHelp
+Export-YamlModuleFile
+Import-MamlHelp
+Import-MarkdownCommandHelp
+Import-MarkdownModuleFile
+Import-YamlCommandHelp
+Import-YamlModuleFile
+Measure-PlatyPSMarkdown
+New-CommandHelp
+New-MarkdownCommandHelp
+New-MarkdownModuleFile
+Test-MarkdownCommandHelp
+Update-CommandHelp
+Update-MarkdownCommandHelp
+Update-MarkdownModuleFile
+```
+
+## PARAMETERS
+
+### -AsDictionary
+
+By default this cmdlet returns **CommandHelp** objects. When you use this parameter. the cmdlet
+returns the same information as an **OrderedDictionary** object.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Accepted values:
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LiteralPath
+
+Specifies a path to one or more Yaml command files. The value of LiteralPath is used exactly as it's
+typed. No characters are interpreted as wildcards. If the path includes escape characters, enclose
+it in single quotation marks. Single quotation marks tell PowerShell not to interpret any characters
+as escape sequences.
+
+For more information, see
+[about_Quoting_Rules](/powershell/module/microsoft.powershell.core/about/about_quoting_rules).
+
+```yaml
+Type: System.String[]
+Parameter Sets: LiteralPath
+Aliases:
+Accepted values:
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Path
+
+The path to the Yaml command file. Specifies a path to one or more locations.
+
+```yaml
+Type: System.String[]
+Parameter Sets: Path
+Aliases: FullName
+Accepted values:
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: True
+```
+
+### CommonParameters
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+-ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+### System.String
+
+## OUTPUTS
+
+### System.Collections.Specialized.OrderedDictionary
+
+This cmdlet returns an **OrderedDictionary** object when you use the **AsDictionary** parameter.
+
+### Microsoft.PowerShell.PlatyPS.Model.CommandHelp
+
+By default, this cmdlet returns **CommandHelp** objects.
+
+## NOTES
+
+## RELATED LINKS
+
+- [Export-YamlCommandHelp](Export-YamlCommandHelp.md)

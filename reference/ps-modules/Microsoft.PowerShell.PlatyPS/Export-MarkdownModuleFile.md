@@ -128,24 +128,6 @@ The **ModuleFileInfo** object to export to a markdown file. This object is creat
 
 ```yaml
 Type: Microsoft.PowerShell.PlatyPS.ModuleFileInfo[]
-DefaultValue: ''
-SupportsWildcards: false
-ParameterValue: []
-Aliases: []
-ParameterSets:
-- Name: (All)
-  Position: 0
-  IsRequired: true
-  ValueFromPipeline: true
-  ValueFromPipelineByPropertyName: false
-  ValueFromRemainingArguments: false
-DontShow: false
-AcceptedValues: []
-HelpMessage: ''
-```
-
-```yaml
-Type: Microsoft.PowerShell.PlatyPS.ModuleFileInfo[]
 Parameter Sets: (All)
 Aliases:
 Accepted values:

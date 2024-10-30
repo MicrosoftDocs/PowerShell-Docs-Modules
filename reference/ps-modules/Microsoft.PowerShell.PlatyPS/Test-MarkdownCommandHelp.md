@@ -41,13 +41,12 @@ information.
 ### Example 1 - Test a Markdown help file
 
 For this example, we test the structure of a Markdown Module help file. This test fails because the
-command expects to test a Markdown Command help file.
+command expects to test a Markdown Command help file. The output shows the kind of information you
+can expect from the **DetailView** parameter.
 
 ```powershell
 Test-MarkdownCommandHelp .\v2\Microsoft.PowerShell.PlatyPS\Microsoft.PowerShell.PlatyPS.md -DetailView
 ```
-
-The output shows the kind of information you can expect from the **DetailView** parameter.
 
 ```Output
 Test-MarkdownCommandHelp

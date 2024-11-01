@@ -89,7 +89,7 @@ TestSecret String SecretStore
 
 When you run `Set-Secret` with the **Name** parameter to specify the name of the secret, the cmdlet
 calls `GetSecret()` that's implemented by the vault extension. `Set-Secret` passes through the name
-as provided by the user. The vault extension looks up the secret by that name. If `GetGecret()`
+as provided by the user. The vault extension looks up the secret by that name. If `GetSecret()`
 returns a match, `Set-Secret` overwrites the secret unless you use the **NoClobber** parameter. The
 vault extension always writes the secret information it receives.
 

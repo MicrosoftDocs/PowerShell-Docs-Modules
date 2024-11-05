@@ -186,5 +186,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-- [Export-MarkdownModuleFile](Export-MarkdownModuleFile.md)
-- [Import-MarkdownModuleFile](Import-MarkdownModuleFile.md)
+[Export-MarkdownModuleFile](Export-MarkdownModuleFile.md)
+
+[Import-MarkdownModuleFile](Import-MarkdownModuleFile.md)

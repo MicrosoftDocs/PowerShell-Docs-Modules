@@ -135,4 +135,4 @@ to validate the structure of the markdown file.
 
 ## RELATED LINKS
 
-- [Test-MarkdownCommandHelp](Test-MarkdownCommandHelp.md)
+[Test-MarkdownCommandHelp](Test-MarkdownCommandHelp.md)

@@ -152,4 +152,4 @@ By default, this cmdlet returns **CommandHelp** objects.
 
 ## RELATED LINKS
 
-- [Export-YamlCommandHelp](Export-YamlCommandHelp.md)
+[Export-YamlCommandHelp](Export-YamlCommandHelp.md)

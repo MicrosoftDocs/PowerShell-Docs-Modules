@@ -106,4 +106,4 @@ is not a complete representation of the original command.
 
 ## RELATED LINKS
 
-- [Export-MamlHelp](Export-MamlCommandHelp.md)
+[Export-MamlHelp](Export-MamlCommandHelp.md)

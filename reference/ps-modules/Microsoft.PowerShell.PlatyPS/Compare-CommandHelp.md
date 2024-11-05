@@ -109,5 +109,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-- [Import-MarkdownCommandHelp](Import-MarkdownCommandHelp.md)
-- [Import-YamlCommandHelp](Import-YamlCommandHelp.md)
+[Import-MarkdownCommandHelp](Import-MarkdownCommandHelp.md)
+
+[Import-YamlCommandHelp](Import-YamlCommandHelp.md)

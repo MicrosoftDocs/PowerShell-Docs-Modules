@@ -131,4 +131,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-- [Import-MarkdownModuleFile](Import-MarkdownModuleFile.md)
+[Import-MarkdownModuleFile](Import-MarkdownModuleFile.md)

@@ -321,4 +321,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-- [Export-MarkdownCommandHelp](Export-MarkdownCommandHelp.md)
+[Export-MarkdownCommandHelp](Export-MarkdownCommandHelp.md)

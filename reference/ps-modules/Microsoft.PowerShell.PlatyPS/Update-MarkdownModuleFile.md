@@ -296,4 +296,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-- [New-MarkdownModuleFile](New-MarkdownModuleFile.md)
+[New-MarkdownModuleFile](New-MarkdownModuleFile.md)

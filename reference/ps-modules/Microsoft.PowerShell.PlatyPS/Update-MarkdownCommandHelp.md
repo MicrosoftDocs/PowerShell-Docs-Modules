@@ -174,4 +174,4 @@ This command is similar to the `Update-CommandHelp` cmdlet, but it updates the s
 
 ## RELATED LINKS
 
-- [Update-CommandHelp](Update-CommandHelp.md)
+[Update-CommandHelp](Update-CommandHelp.md)

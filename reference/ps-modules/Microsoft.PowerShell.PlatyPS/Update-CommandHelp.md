@@ -145,4 +145,4 @@ This command is similar to the `Update-MarkdownCommandHelp` cmdlet, but it updat
 
 ## RELATED LINKS
 
-- [Update-MarkdownCommandHelp](Update-MarkdownCommandHelp.md)
+[Update-MarkdownCommandHelp](Update-MarkdownCommandHelp.md)

@@ -140,4 +140,4 @@ This cmdlet returns a `MamlCommandHelpInfo` objects. This is the same object tha
 
 ## RELATED LINKS
 
-- [Get-Help](xref:Microsoft.PowerShell.Core.Get-Help)
+[Get-Help](xref:Microsoft.PowerShell.Core.Get-Help)

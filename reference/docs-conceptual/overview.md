@@ -12,15 +12,17 @@ level of support for each module varies. For more details, see the landing page 
 
 This documentation set contains cmdlet reference for the following modules.
 
-- [Microsoft.PowerShell.Crescendo][01]
-- [Microsoft.PowerShell.SecretManagement][02]
-- [Microsoft.PowerShell.SecretStore][03]
-- [PlatyPS][04]
-- [PSScriptAnalyzer][05]
+- [AIShell][01]
+- [Microsoft.PowerShell.Crescendo][02]
+- [Microsoft.PowerShell.SecretManagement][03]
+- [Microsoft.PowerShell.SecretStore][04]
+- [PlatyPS][05]
+- [PSScriptAnalyzer][06]
 
 <!-- link references -->
-[01]: /powershell/module/microsoft.powershell.crescendo/
-[02]: /powershell/module/microsoft.powershell.secretmanagement/
-[03]: /powershell/module/microsoft.powershell.secretstore/
-[04]: /powershell/module/platyps/
-[05]: /powershell/module/psscriptanalyzer/
+[01]: /powershell/module/aishell
+[02]: /powershell/module/microsoft.powershell.crescendo/
+[03]: /powershell/module/microsoft.powershell.secretmanagement/
+[04]: /powershell/module/microsoft.powershell.secretstore/
+[05]: /powershell/module/platyps/
+[06]: /powershell/module/psscriptanalyzer/

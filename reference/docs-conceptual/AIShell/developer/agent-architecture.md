@@ -7,7 +7,7 @@ ms.topic: concept-article
 
 # AI Shell architecture
 
-[AI Shell architecture diagram.][01]
+![AI Shell architecture diagram.][01]
 
 ## AIShell.Abstraction
 

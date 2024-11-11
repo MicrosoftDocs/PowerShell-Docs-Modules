@@ -72,6 +72,6 @@ recommend sharing it on the [discussions page][06] of the Project Mercury reposi
 [01]: ../get-started/aishell-powershell.md
 [02]: ../how-to/agent-azure.md
 [03]: ../how-to/agent-openai.md
-[04]: developer/agent-architecture.md
-[05]: developer/create-ollama-agent.md
+[04]: ../developer/agent-architecture.md
+[05]: ../developer/create-ollama-agent.md
 [06]: https://github.com/PowerShell/ProjectMercury/discussions/categories/agent-sharing

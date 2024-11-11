@@ -92,5 +92,5 @@ custom key bindings will be supported in a future release.
 | <kbd>Ctrl</kbd>+<kbd>\<n\></kbd>              | `/code copy <n>` | Copy the _n-th_ generated code snippet to clipboard |
 
 <!-- link references -->
-[01]: get-started-powershell.md
+[01]: aishell-powershell.md
 [02]: media/aishell-standalone/standalone-startup.gif

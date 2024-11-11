@@ -1,10 +1,10 @@
 ---
-Module Name: AIShell
-Module Guid: ecb8bee0-59b9-4dae-9d7b-a990b480279a
-Download Help Link:
+Download Help Link: ''
 Help Version: 0.1.0
-ms.date: 10/29/2024
 Locale: en-US
+Module Guid: ecb8bee0-59b9-4dae-9d7b-a990b480279a
+Module Name: AIShell
+ms.date: 10/29/2024
 title: AIShell Module
 ---
 

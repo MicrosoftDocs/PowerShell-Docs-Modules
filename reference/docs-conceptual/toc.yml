@@ -2,9 +2,7 @@ items:
   - name: Overview
     href: overview.md
   - name: AIShell
-    items:
-      - name: AIShell overview
-        href: AIShell/aishell-overview.md
+    href: AIShell/toc.yml
   - name: Crescendo
     items:
       - name: Overview

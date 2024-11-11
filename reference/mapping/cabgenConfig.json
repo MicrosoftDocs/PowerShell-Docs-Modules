@@ -1,0 +1,11 @@
+{
+    "monikers": [
+        {
+            "ps-modules": {
+                "exclude": [
+                    "reference/ps-modules/AIShell"
+                ]
+            }
+        }
+    ]
+}

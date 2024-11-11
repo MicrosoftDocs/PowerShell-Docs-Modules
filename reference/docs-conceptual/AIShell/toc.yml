@@ -1,0 +1,33 @@
+items:
+  - name: What is AI Shell?
+    href: overview.md
+  - name: Install AI Shell
+    href: install-aishell.md
+  - name: Get started
+    items:
+      - name: Get started with AI Shell in PowerShell
+        href: get-started/aishell-powershell.md
+      - name: Get started with AI Shell (standalone)
+        href: get-started/aishell-standalone.md
+  - name: Concepts
+    items:
+      - name: What is a command shell?
+        href: concepts/what-is-a-command-shell.md
+      - name: AI Shell FAQ
+        href: concepts/FAQ.md
+  - name: How to use AI Shell
+    items:
+      - name: AI Shell command reference
+        href: how-to/aishell-reference.md
+      - name: Azure agent README
+        href: how-to/agent-azure.md
+      - name: OpenAI agent README
+        href: how-to/agent-openai.md
+  - name: Developer guide
+    items:
+      - name: Architecture of AI Shell
+        href: developer/agent-architecture.md
+      - name: How to create an agent for Ollama
+        href: developer/create-ollama-agent.md
+      - name: Ollama agent README
+        href: developer/ollama-agent-readme.md

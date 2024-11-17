@@ -14,23 +14,7 @@ packages you need to install to have a complete AI Shell experience.
 
 This article explains how to install these packages on your system.
 
-<!-- TODO add details for an installer script for users to run and bypass most of the steps -->
 
-For convenience we have provided a simple command to download and install script and run it. This script will download the necessary packages and add them to your PATH.
-
-On windows this script will
-- Install aish.exe to `$env:LOCALAPPDATA\Programs\AIShell`
-- Install the AI Shell module to your module path location
-
-Due to some limitations on macOS, the script will only install the aish executable to
-/usr/local/AIShell. The AI Shell module will not be installed.
-
->!NOTE This script will only work on Windows and Mac systems. Linux users will need to follow the manual installation steps below.
-
-TODO CHANGE TO VALID LINK
-```powershell
-Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/ExampleUser/ExampleRepo/main/script.ps1')) 
-```
 ## System requirements
 
 AI Shell is supported on the following platforms:
@@ -63,6 +47,20 @@ AI Shell is supported on the following platforms:
 
 ## Install AI Shell
 
+For convenience we have provided a simple command to download and install script and run it. This script will download the necessary packages and add them to your PATH.
+
+On windows this script will
+- Install aish.exe to `$env:LOCALAPPDATA\Programs\AIShell`
+- Install the AI Shell module to your module path location
+
+Due to some limitations on macOS, the script will only install the `aish` executable to
+/usr/local/AIShell. The AI Shell module will not be installed.
+
+>!NOTE This script will only work on Windows and Mac systems. Linux users will need to follow the manual installation steps below.
+
+```powershell
+Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/PowerShell/AIShell/tools/scipts/installaishell.ps1')) 
+```
 <!-- markdownlint-disable MD023 MD024 MD051 -->
 ### [Windows](#tab/windows)
 

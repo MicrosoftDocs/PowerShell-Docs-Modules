@@ -14,7 +14,6 @@ packages you need to install to have a complete AI Shell experience.
 
 This article explains how to install these packages on your system.
 
-
 ## System requirements
 
 AI Shell is supported on the following platforms:

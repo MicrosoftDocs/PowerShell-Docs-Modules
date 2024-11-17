@@ -19,7 +19,7 @@ This article explains how to install these packages on your system.
 For convenience we have provided a simple command to download and install script and run it. This script will download the necessary packages and add them to your PATH.
 
 On windows this script will
-- Install aish.exe to $env:LOCALAPPDATA\Programs\AIShell
+- Install aish.exe to `$env:LOCALAPPDATA\Programs\AIShell`
 - Install the AI Shell module to your module path location
 
 Due to some limitations on macOS, the script will only install the aish executable to

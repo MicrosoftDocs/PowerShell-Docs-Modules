@@ -54,6 +54,8 @@ This current release of AI Shell has some known issues that we're actively worki
   new terminal window running a different version of Windows Terminal.
 - If you started Window Terminal as an administrator, the `Start-AIShell` command opens a new
   terminal window running Windows Terminal without elevation.
+- If you are using the default Mac Terminal, the colors may not render correctly and may be
+  difficult to read the code generated.
 
 If you encounter any other issues, please report them to our [GitHub repository][03].
 

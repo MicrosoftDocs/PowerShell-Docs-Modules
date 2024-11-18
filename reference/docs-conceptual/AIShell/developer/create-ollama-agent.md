@@ -18,7 +18,7 @@ For details about the `AIShell.Abstraction` layer and `AIShell.Kernel`, see the
 ## Prerequisites
 
 - .NET 8 SDK or newer
-- PowerShell 7.4 or newer
+- PowerShell 7.4.6 or newer
 
 ## Steps to create an agent
 
@@ -29,10 +29,8 @@ the repository.
 
 ### Step 1: Create a new project
 
-Currently, the only way to import an agent is for it to be included in the folder structure of this
-repository. We suggest creating an agent under the `shell/agents` folder. Create a new folder with
-the prefix `AIShell.<AgentName>`. Within that folder, create a new C# project with the same name.
-Run the following command from the folder where you want to create the agent:
+First step is to create a new classlib project; create a new folder named `OllamaAgent` and then run
+the following command to create a new project:
 
 ```shell
 dotnet new classlib
@@ -40,11 +38,14 @@ dotnet new classlib
 
 ### Step 2: Add the necessary packages
 
-Within the newly created project, add a reference to the `AIShell.Abstraction` package. To reduce
-the number of files created by the build, you can disable the generation of PDB and deps.json for
-release builds.
+Within the newly created project, you will need to install the `AIShell.Abstraction` package. This
+package is available on the nuget gallery at [AIShell.Abstraction][07]. You can install the package
+using the following command:
 
-Your `.csproj` file should contain the following elements:
+```shell
+dotnet add package AIShell.Abstraction --version 1.0.0-preview.1
+```
+This will add the package to your `.csproj` file, this is what your `.csproj` file should look like:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -56,44 +57,13 @@ Your `.csproj` file should contain the following elements:
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AIShell.Abstraction" Version="0.1.0-alpha.11">
-      <ExcludeAssets>contentFiles</ExcludeAssets>
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
+    <PackageReference Include="AIShell.Abstraction" Version="1.0.0-preview.1" />
   </ItemGroup>
-
 </Project>
 ```
 
 > [!IMPORTANT]
-> Be sure to replace the version number with the latest version of the package. That can be found in
-> the [`shell/shell.common.props`][06] file.
-
-### Step 3: Modify the build script
-
-Modify the build script so that you can build and test your agent during development. The
-`build.ps1` script is located in the root of the repository. This script builds the kernel and all
-agents. The following lines were added to the script to build the new agent.
-
-```powershell
-$ollama_agent_dir = Join-Path $agent_dir "AIShell.Ollama.Agent"
-
-$ollama_out_dir =  Join-Path $app_out_dir "agents" "AIShell.Ollama.Agent"
-
-if ($LASTEXITCODE -eq 0 -and $AgentToInclude -contains 'ollama') {
-    Write-Host "`n[Build the Ollama agent ...]`n" -ForegroundColor Green
-    $ollama_csproj = GetProjectFile $ollama_agent_dir
-    dotnet publish $ollama_csproj -c $Configuration -o $ollama_out_dir
-}
-```
-
-Be sure to put this code after definition of the `$agent_dir`, `$app_out_dir`, and
-`$AgentToInclude`. Also add the name of the agent to the `$AgentToInclude` array and parameter
-validation.
-
-```powershell
-$AgentToInclude ??= @('openai-gpt', 'interpreter', 'ollama')
-```
+> Be sure to check you are on the latest version from the [nuget gallery][07]. 
 
 ### Step 3: Implement the agent class
 
@@ -241,7 +211,7 @@ public async Task<bool> Chat(string input, IShell shell)
     // Get the shell host
     IHost host = shell.Host;
 
-    // get the cancelation token
+    // get the cancellation token
     CancellationToken token = shell.CancellationToken;
 
     try
@@ -261,36 +231,7 @@ public async Task<bool> Chat(string input, IShell shell)
 }
 ```
 
-### Step 5: Build your agent
-
-At this point its good to try building and testing the agent. See if you get `Hello World!` when you
-ask a question.
-
-Use the following command to build the agent:
-
-```powershell
-../../build.ps1
-```
-
-To test the agent, run the `aish` you just built. The build script puts the path to `aish` on the
-clipboard. Paste the path from the clipboard into your terminal application. Select your agent from
-the list of agents presented by `aish`.
-
-```
-AI Shell
-v0.1.0-alpha.11
-
-Please select an agent to use:
-
-    interpreter
-   >ollama
-    openai-gpt
-```
-
-After selecting the agent, enter a question in the chat window. You should see the response "Hello
-World!".
-
-### Step 6: Add ollama check
+### Step 5: Add ollama check
 
 Next, we want to add a check to make sure ollama is running.
 
@@ -315,7 +256,7 @@ public async Task<bool> Chat(string input, IShell shell)
 }
 ```
 
-### Step 7: Create data structures to exchange data with the Chat Service
+### Step 6: Create data structures to exchange data with the Chat Service
 
 Before we can use the ollama API, we need to create classes that handle input to and responses from
 the ollama API. To find more information about the API call we're going to make see, this The
@@ -365,7 +306,7 @@ internal class OllamaResponse
 }
 ```
 
-Now we have the pieces we need to construc a chat service that communicates using the ollama API. A
+Now we have the pieces we need to construct a chat service that communicates using the ollama API. A
 separate chat service class isn't required but can be helpful to abstract the calls to the API.
 
 Create a new file called `OllamaChatService.cs` in the same folder as the agent. For this example,
@@ -464,7 +405,7 @@ internal class OllamaChatService : IDisposable
 
 ```
 
-### Step 8: Call the chat service
+### Step 7: Call the chat service
 
 Now we can call the chat service in the main agent class.
 
@@ -501,9 +442,36 @@ public async Task<bool> Chat(string input, IShell shell)
 }
 ```
 
-Congratulations! The agent is now complete. You can build and test the agent to confirm it's
-working. Compare your code to the example code in the [`shell/agents/AIShell.Ollama.Agent`][04]
-folder to see if you missed a step.
+### Step 8: Build and test the agent
+
+Congratulations! The agent is now complete. Now lets build it and test it is working as expected.
+You can build the project with:
+
+```shell
+dotnet build
+```
+
+All necessary packages will be built to the `\bin\Debug\net8.0` folder of the project. In order to
+have `aish` load the agent, you need to copy the `.dll` files to a folder of the same name as the
+file in the `Agents` folder of wherever you have installed aish.exe. For example, if you have used
+the [install script][08] to install it then `%LOCALAPPDATA%\Programs\AIShell\Agents` is where you
+need to create the `OllamaAgent` folder and copy the `.dll` files to.
+
+Additionally you can add the folder to the `%userprofile%\.aish\Agents` and it will also be recognized by `aish`.
+
+Once you have created the folder and copied the `.dll` files to it, you can start `aish` and then
+you should see the agent in the list of available agents.
+
+```shell
+AI Shell
+v1.0.0-preview.1
+
+Please select an agent to use:
+
+    azure
+   >ollama
+    openai-gpt
+```
 
 ## How can I share my own agent?
 
@@ -519,3 +487,4 @@ in the `agents` folder of the base directory of `aish.exe`, the agent will be lo
 [04]: https://github.com/PowerShell/ProjectMercury/shell/agents/AIShell.Ollama.Agent
 [05]: https://github.com/PowerShell/ProjectMercury/shell/README.md
 [06]: https://github.com/PowerShell/ProjectMercury/shell/shell.common.props
+[07]: https://www.nuget.org/packages/AIShell.Abstraction/1.0.0-preview.1

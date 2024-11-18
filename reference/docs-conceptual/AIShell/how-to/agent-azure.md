@@ -1,6 +1,6 @@
 ---
-title: Azure agent README
-description: Learn how to use the Azure agent in AI Shell.
+title: Copilot in Azure Agent
+description: Learn how to use the Copilot in Azure agent in AI Shell.
 ms.date: 10/29/2024
 ---
 # Copilot in Azure Agent
@@ -18,7 +18,7 @@ command from Azure CLI.
 
 - Windows 11 21H2 or higher
 - Windows Terminal v1.19  or higher
-- [Azure CLI][01] installed and signed in to the allowed tenant
+- [Azure CLI][01] version >=2.30.0 installed and signed in to the allowed tenant
 
 ## Sample Questions
 
@@ -49,7 +49,8 @@ When you allow telemetry, the agent only collects the following information:
 - Any exceptions encountered during usage
 - The details provided using the `/like` or `/dislike` commands
 
-You can disable this telemetry by modifying the `telemetry` property in the configuration file.
+You can disable this telemetry by modifying the `telemetry` property in the configuration file
+outlined below.
 
 ## Agent Configuration
 

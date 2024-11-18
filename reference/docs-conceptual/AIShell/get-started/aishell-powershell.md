@@ -41,7 +41,7 @@ Azure OpenAI Agent
 - "What is the difference between a switch and a parameter in PowerShell?"
 - How do I get the top 10 most CPU intensive processes on my computer?
 
-Azure Agent
+Copilot in Azure Agent
 
 - "How do I create a new resource group with Azure CLI?"
 - "How can I list out the storage accounts I have in Azure PowerShell?"
@@ -101,6 +101,13 @@ custom key bindings will be supported in a future release.
 | <kbd>Ctrl</kbd>+<kbd>\<n\></kbd>                         | `/code copy <n>` | Copy the _n-th_ generated code snippet to clipboard                 |
 | <kbd>Ctrl</kbd>+<kbd>d</kbd><kbd>Ctrl</kbd>+<kbd>d</kbd> | `/code post`     | Post _all_ the generated code snippets to the connected application |
 | <kbd>Ctrl</kbd>+<kbd>d</kbd><kbd>\<n\></kbd>             | `/code post <n>` | Post the _n-th_ generated code snippet to the connected application |
+
+Additionally, you can switch between the panes easier using the following keyboard shortcuts.
+
+|             Key bindings             |                 Functionality                 |
+| ------------------------------------ | --------------------------------------------- |
+| <kbd>Alt</kbd>+<kbd>RightArrow</kbd> | Moves your cursor to the right AI Shell pane  |
+| <kbd>Alt</kbd>+<kbd>LeftArrow</kbd>  | Moves your cursor to the left PowerShell pane |
 
 ### Resolving Errors
 

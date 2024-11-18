@@ -1,7 +1,7 @@
 ---
-title: Azure agent README
-description: Learn how to use the Azure agent in AI Shell.
-ms.date: 10/29/2024
+title: Copilot in Azure Agent
+description: Learn how to use the Copilot in Azure agent in AI Shell.
+ms.date: 11/18/2024
 ---
 # Copilot in Azure Agent
 
@@ -17,8 +17,8 @@ command from Azure CLI.
 ## Prerequisites
 
 - Windows 11 21H2 or higher
-- Windows Terminal v1.19  or higher
-- [Azure CLI][01] installed and signed in to the allowed tenant
+- Windows Terminal v1.19 or higher
+- [Azure CLI][01] version 2.30.0 or higher installed and signed in to the allowed tenant
 
 ## Sample Questions
 
@@ -35,7 +35,7 @@ addressing:
 - The `Connect-AzAccount` command for authentication from Azure PowerShell isn't supported. You
   must use the `az login` command from Azure CLI to sign in.
 
-## Telemetry
+## Telemetry and configuration
 
 The **Copilot in Azure** agent captures a small set of telemetry data. The telemetry data captured
 contains no personal identifiable information. The agent only captures product usage data to help us
@@ -49,10 +49,7 @@ When you allow telemetry, the agent only collects the following information:
 - Any exceptions encountered during usage
 - The details provided using the `/like` or `/dislike` commands
 
-You can disable this telemetry by modifying the `telemetry` property in the configuration file.
-
-## Agent Configuration
-
+You can disable this telemetry by modifying the **telemetry** property in the configuration file.
 The Azure agent configuration is stored in a JSON file. You can view and edit the JSON config file
 by using the `/agent config` command in AI Shell. The available settings are:
 
@@ -64,8 +61,9 @@ by using the `/agent config` command in AI Shell. The available settings are:
 ```
 
 When logging is enabled, the agent writes logs in the `~/.aish/agent-config/azure` directory. To
-disable logging, set the **logging** property to `false`. To disable telemetry, set the
-**telemetry** property to `false`.
+disable logging, set the **logging** property to `false`.
+
+To disable telemetry, set the **telemetry** property to `false`.
 
 <!-- link references -->
 [01]: /cli/azure/install-azure-cli

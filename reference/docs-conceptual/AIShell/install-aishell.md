@@ -1,20 +1,18 @@
 ---
 title: Install AI Shell
 description: Learn how to install AI Shell on your system.
-ms.date: 10/29/2024
+ms.date: 11/18/2024
 ms.topic: install-set-up-deploy
 ---
 # Install AI Shell
 
-AI Shell is an interactive shell that provides a chat interface with language models. There are
-packages you need to install to have a complete AI Shell experience.
+AI Shell is an interactive shell that provides a chat interface for AI language models. For the best
+experience, install the following packages:
 
 - The command-line shell (`aish`) interface
-- The AI Shell module for PowerShell
+- The **AIShell** module for PowerShell
 
 This article explains how to install these packages on your system.
-
-<!-- TODO add details for an installer script for users to run and bypass most of the steps -->
 
 ## System requirements
 
@@ -24,14 +22,14 @@ AI Shell is supported on the following platforms:
 ### [Windows](#tab/windows)
 
 - Windows 10 or higher
-- PowerShell 7.4 or higher
+- PowerShell 7.4.6 or higher
 - Windows Terminal
 
 ### [macOS](#tab/macos)
 
 - macOS v13 Ventura or higher
-- PowerShell 7.4 or higher
-- iTerm2
+- PowerShell 7.4.6 or higher
+- iTerm2 (limited support)
 
 ### [Linux](#tab/linux)
 
@@ -48,11 +46,36 @@ AI Shell is supported on the following platforms:
 
 ## Install AI Shell
 
+For convenience, you can use `installaishell.ps1` script to install AI Shell.
+
+On Windows, this script:
+
+- Installs `aish.exe` to `$env:LOCALAPPDATA\Programs\AIShell` and adds it to your PATH
+- Installs the **AIShell** module to your module path location
+
+On macOS, this script:
+
+- Installs the `aish` executable to `/usr/local/AIShell`
+- Due to some limitations, the **AIShell** module is not installed
+
+> [!NOTE]
+> This script only works on Windows and Mac systems. Linux users need to follow the manual
+> installation instructions.
+
+```powershell
+$scriptURL = 'https://raw.githubusercontent.com/PowerShell/AIShell/tools/scipts/installaishell.ps1'
+Invoke-Expression ((New-Object System.Net.WebClient).DownloadString($scriptURL))
+```
+
+To manually install AI Shell, follow the instructions for your platform:
+
 <!-- markdownlint-disable MD023 MD024 MD051 -->
 ### [Windows](#tab/windows)
 
-1. Download the latest version from the
-   [GitHub releases page][03].
+1. Download the latest version from the [GitHub releases page][03]. Choose the file that matches
+   your system architecture. For example, `AIShell-1.0.0-preview.1-win-x64.zip`.
+1. Extract the contents of the ZIP file to a location on your system.
+1. Add the extracted folder to your **PATH** environment variable.
 1. Install the AI Shell module from the PowerShell Gallery.
 
    ```powershell
@@ -61,8 +84,10 @@ AI Shell is supported on the following platforms:
 
 ### [macOS](#tab/macos)
 
-1. Download the latest version from the
-   [GitHub releases page][03].
+1. Download the latest version from the [GitHub releases page][03]. Choose the file that matches
+   your system architecture. For example, `AIShell-1.0.0-preview.1-osx-x64.tar.gz`.
+1. Extract the contents of the TAR file to a location on your system.
+1. Add the extracted folder to your **PATH** environment variable.
 1. Install the AI Shell module from the PowerShell Gallery.
 
    ```powershell
@@ -71,8 +96,10 @@ AI Shell is supported on the following platforms:
 
 ### [Linux](#tab/linux)
 
-1. Download the latest version from the
-   [GitHub releases page][03].
+1. Download the latest version from the [GitHub releases page][03]. Choose the file that matches
+   your system architecture. For example, `AIShell-1.0.0-preview.1-linux-x64.tar.gz`.
+1. Extract the contents of the TAR file to a location on your system.
+1. Add the extracted folder to your **PATH** environment variable.
 
 <!-- markdownlint-enable MD023 MD024 MD051 -->
 

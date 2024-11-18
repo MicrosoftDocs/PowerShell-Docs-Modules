@@ -1,7 +1,7 @@
 ---
 title: What is AI Shell?
 description: Learn about AI Shell, an interactive shell that provides a chat interface with language models.
-ms.date: 11/11/2024
+ms.date: 11/18/2024
 ms.topic: overview
 ---
 
@@ -26,8 +26,8 @@ Each AI assistant is known as an agent. The initial release of AI Shell includes
 - **Copilot in Azure** agent that can assist with Microsoft Azure knowledge. Use the Azure agent for
   assistance with Azure CLI and Azure PowerShell commands.
 
-The AI Shell executable (`aish.exe`) can be run in a standalone experience or you can use the **AI
-Shell** PowerShell module with PowerShell 7 to create a split-screen experience with Windows
+You can run the AI Shell executable (`aish.exe`) in a standalone experience or you can use the
+**AIShell** PowerShell module with PowerShell 7 to create a split-screen experience with Windows
 Terminal. This is the recommended way to use AI Shell because you get deeper integration with the
 shell. These features include:
 

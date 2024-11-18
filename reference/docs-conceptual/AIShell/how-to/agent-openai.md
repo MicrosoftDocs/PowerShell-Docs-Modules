@@ -1,15 +1,14 @@
 ---
 title: OpenAI agent README
 description: Learn how to use the OpenAI agent in AI Shell.
-ms.date: 10/29/2024
+ms.date: 11/18/2024
 ms.topic: how-to
 ---
 # OpenAI Agent
 
-This agent is designed to provide a flexible and user-friendly platform for interacting with OpenAI
-services, either the public OpenAI service or a private deployment of the Azure OpenAI service,
-through one or more custom defined GPT instances. We encourage using an Azure OpenAI deployment for
-enhanced security and privacy. 
+This agent is designed to provide a user-friendly platform for interacting with OpenAI services. It
+can connect to a public OpenAI service or a private deployment of the Azure OpenAI service. We
+recommend using an Azure OpenAI deployment for enhanced security and privacy.
 
 ## Prerequisites
 
@@ -17,15 +16,16 @@ enhanced security and privacy.
   - [OpenAI API Key][03]
   - [OpenAI Model][04]
 
-- For Azure OpenAI Service, you need the **Endpoint**, **Deployment Name**, **Model Name**, and **API Key** to use the agent.
+- For Azure OpenAI Service, you need the **Endpoint**, **Deployment Name**, **Model Name**, and
+  **API Key** to use the agent.
   - [Access to Azure OpenAI][02]
   - [Create an Azure OpenAI deployment][01]
 
 ## Configuration
 
-Before getting started you will need to configure the agent with your Azure OpenAI's or OpenAIs
-details. To configure the agent, run `/agent config openai-gpt` to open up the setting file in your
-default editor, and then update the file based on the following example.
+Before getting started you need to configure the agent with the details of your OpenAI details. To
+configure the agent, run `/agent config openai-gpt` to open up the setting file in your default
+editor. Update the file based on the following example:
 
 ```jsonc
 {
@@ -69,13 +69,12 @@ default editor, and then update the file based on the following example.
 
 ## GPT
 
-GPTs are tailored versions of base OpenAI models. They can be used to provide a more focused
-responses based on the system prompt given to the model.GPTs are configured in the agent's settings
-file, which is in JSON format. Each GPT configuration includes the name, description, the targeted
-OpenAI model, and the system prompt for interaction. This allows for the creation of distinct GPTs,
-each tailored to a specific domain or scenario, whose system prompts can be customized to suit these
-individual scenarios. Furthermore, you have the flexibility to select different OpenAI models for
-each GPT as required.
+GPTs are tailored versions of base OpenAI models. You use a GPT to provide focused responses based on
+the system prompt you give the model. GPTs are configured in the agent's settings file. Each GPT
+configuration includes the name, description, targeted OpenAI model, and system prompt for
+interaction. The system prompts can be customized to support specific scenarios. Each configuration
+allows you to create distinct GPTs tailored to a specific domain or scenario. Furthermore, you can
+select different OpenAI models for each GPT as required.
 
 ## Command
 

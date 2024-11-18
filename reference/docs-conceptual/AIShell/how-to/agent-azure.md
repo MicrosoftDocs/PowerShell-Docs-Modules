@@ -18,7 +18,7 @@ command from Azure CLI.
 
 - Windows 11 21H2 or higher
 - Windows Terminal v1.19  or higher
-- [Azure CLI][01] installed and signed in to the allowed tenant
+- [Azure CLI][01] version >=2.30.0 installed and signed in to the allowed tenant
 
 ## Sample Questions
 

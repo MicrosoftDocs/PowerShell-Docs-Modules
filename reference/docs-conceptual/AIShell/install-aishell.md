@@ -63,8 +63,7 @@ On macOS, this script:
 > installation instructions.
 
 ```powershell
-$scriptURL = 'https://raw.githubusercontent.com/PowerShell/AIShell/main/tools/scripts/install-aishell.ps1'
-Invoke-Expression ((New-Object System.Net.WebClient).DownloadString($scriptURL))
+Invoke-Expression "& { $(Invoke-RestMethod 'https://aka.ms/install-aishell.ps1') }"
 ```
 
 To manually install AI Shell, follow the instructions for your platform:

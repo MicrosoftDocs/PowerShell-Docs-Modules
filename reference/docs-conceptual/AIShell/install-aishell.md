@@ -63,7 +63,7 @@ On macOS, this script:
 > installation instructions.
 
 ```powershell
-$scriptURL = 'https://raw.githubusercontent.com/PowerShell/AIShell/tools/scipts/installaishell.ps1'
+$scriptURL = 'https://raw.githubusercontent.com/PowerShell/AIShell/main/tools/scripts/install-aishell.ps1'
 Invoke-Expression ((New-Object System.Net.WebClient).DownloadString($scriptURL))
 ```
 

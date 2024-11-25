@@ -20,7 +20,7 @@ terminals are designed to work with a specific shell, while others can host mult
 may also include advanced features such as:
 
 - Ability to create multiple panes within a single window
-- Ability to create multiple tabs to host multiple shells shells
+- Ability to create multiple tabs to host multiple shells
 - Ability to change color schemes and fonts
 - Support for copy and paste operations
 
@@ -44,8 +44,8 @@ programming features. The following list contains some examples of general purpo
 
 - [PowerShell][05]
 - [Windows Command Shell][07]
-- [bash][16] - popluar on Linux
-- [zsh][13] - popluar on macOS
+- [bash][16] - popular on Linux
+- [zsh][13] - popular on macOS
 
 ## Utility command shells
 
@@ -76,7 +76,7 @@ programs.
 - [Windows Commands][09] - a collection of command-line tools that are built into Windows.
 
 In general, command-line tools don't provide a command shell (REPL) interface. The `netsh` command
-in Windows is an exception, as it's both a command-line tool and a an interactive command shell.
+in Windows is an exception, as it's both a command-line tool and an interactive command shell.
 
 <!-- link references -->
 [01]: ../overview.md

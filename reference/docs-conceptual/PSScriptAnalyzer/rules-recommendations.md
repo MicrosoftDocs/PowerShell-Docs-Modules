@@ -1,6 +1,6 @@
 ---
 description: This article lists best-practice recommendations and the rules associated with them.
-ms.date: 06/28/2023
+ms.date: 12/03/2024
 title: PSScriptAnalyzer rules and recommendations
 ---
 # PSScriptAnalyzer rules and recommendations
@@ -23,7 +23,7 @@ No rules defined.
 - Cmdlets names with unusable characters [AvoidReservedCharInCmdlet][30]
 - Parameter names that can't be used [AvoidReservedParams][31]
 - Support confirmation requests [UseShouldProcessForStateChangingFunctions][37] and
-  [UseShouldProcessForStateChangingFunctions][37]
+  [UseSupportsShouldProcess][39]
 - Must call **ShouldProcess** when the **ShouldProcess** attribute is present and vice versa
   [UseShouldProcess][32]
 - Nouns should be singular [UseSingularNouns][38]
@@ -222,6 +222,7 @@ No rules defined.
 [36]: Rules/UsePSCredentialType.md
 [37]: Rules/UseShouldProcessForStateChangingFunctions.md
 [38]: Rules/UseSingularNouns.md
+[39]: Rules/UseSupportsShouldProcess.md
 [116]: https://github.com/PowerShell/PSScriptAnalyzer/issues/116
 [130]: https://github.com/PowerShell/PSScriptAnalyzer/issues/130
 [131]: https://github.com/PowerShell/PSScriptAnalyzer/issues/131

@@ -68,6 +68,7 @@ The first command gets the contents of a file, and stores them in the `$Markdown
 The second command retrieves metadata from the string in $Metadata.
 
 ### Example 3: Get metadata from all files in a folder
+
 ```
 PS C:\> Get-MarkdownMetadata -Path ".\docs"
 

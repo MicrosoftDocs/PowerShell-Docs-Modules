@@ -159,7 +159,7 @@ The following example copies the all the code to a file.
 ### `/code post`
 
 Post the n-th (1-based) code snippet to the connected command-line shell. Post all the code
-when` <n>` isn't specified.
+when `<n>` isn't specified.
 
 Usage:
 

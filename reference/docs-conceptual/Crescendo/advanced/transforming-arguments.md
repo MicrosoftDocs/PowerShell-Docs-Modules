@@ -134,5 +134,5 @@ a username and password for the `net use` command.
 }
 ```
 
-The argument transformer converst the **PSCredential** object to `/USER:username password` for the
+The argument transformer converts the **PSCredential** object to `/USER:username password` for the
 `net use` command.

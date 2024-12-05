@@ -10,6 +10,7 @@ Locale: en-US
 # Microsoft.PowerShell.SecretStore Module
 
 ## Description
+
 Local secure store extension vault for Microsoft.PowerShell.SecretManagement module.
 
 > [!NOTE]
@@ -24,16 +25,21 @@ Local secure store extension vault for Microsoft.PowerShell.SecretManagement mod
 ## Microsoft.PowerShell.SecretStore Cmdlets
 
 ### [Get-SecretStoreConfiguration](Get-SecretStoreConfiguration.md)
+
 Returns SecretStore configuration information.
 
 ### [Reset-SecretStore](Reset-SecretStore.md)
+
 Resets the SecretStore by deleting all secret data and configuring the store with default options.
 
 ### [Set-SecretStoreConfiguration](Set-SecretStoreConfiguration.md)
+
 Configures the **SecretStore**.
 
 ### [Set-SecretStorePassword](Set-SecretStorePassword.md)
+
 Replaces the current SecretStore password with a new one.
 
 ### [Unlock-SecretStore](Unlock-SecretStore.md)
+
 Unlocks SecretStore with the provided password.

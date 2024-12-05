@@ -41,7 +41,7 @@ First step is to create a new classlib project.
 ### Step 2: Add the necessary packages
 
 Within the newly created project, you need to install the [AIShell.Abstraction][06] package from the
-Nuget gallery. Install the Nuget package using the following command:
+NuGet gallery. Install the NuGet package using the following command:
 
 ```shell
 dotnet add package AIShell.Abstraction --version 1.0.0-preview.1
@@ -66,7 +66,7 @@ following XML:
 ```
 
 > [!IMPORTANT]
-> Be sure to check you are on the latest version from the Nuget gallery.
+> Be sure to check you are on the latest version from the NuGet gallery.
 
 ### Step 3: Implement the agent class
 
@@ -205,7 +205,7 @@ public sealed class OllamaAgent : ILLMAgent
 ```
 
 For the initial implementation, the agent to returns "Hello World!" to prove that you created the
-correct interfaces. You will also add a `try-catch` block to catch and handle any expections when
+correct interfaces. You will also add a `try-catch` block to catch and handle any exceptions when
 the user tries to cancel the operation.
 
 Add the following code to your `Chat` method.

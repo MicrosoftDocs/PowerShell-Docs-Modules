@@ -40,7 +40,7 @@ An agent plugin is responsible for managing its own chat history.
 This is the implementation of AI Shell. It consists of the following components:
 
 - ReadLine
-- Renders (mardown render, stream render, paging render)
+- Renders (markdown render, stream render, paging render)
 - Plugin management
 - Host (a range of utility methods for writing output and interactive prompting)
 - Command runner and built-in commands

@@ -102,4 +102,3 @@ Updates an imported Markdown command file with the information from session cmdl
 ### [Update-MarkdownModuleFile](Update-MarkdownModuleFile.md)
 
 Updates the Markdown module file.
-

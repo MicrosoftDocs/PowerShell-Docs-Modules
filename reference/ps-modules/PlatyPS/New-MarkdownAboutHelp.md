@@ -21,7 +21,7 @@ New-MarkdownAboutHelp [-OutputFolder] <String> [[-AboutName] <String>] [<CommonP
 
 The `New-MarkdownAboutHelp` cmdlet generates a Markdown file that is prepopulated with the standard elements of an About Topic.
 The cmdlet copies the template MD, renames headers and file name according to the **AboutName** parameter,
-and deposits the file in the directory designated by the **OutputFoler** parameter.
+and deposits the file in the directory designated by the **OutputFolder** parameter.
 
 The About Topic can be converted to Txt format.
 About topics must be in txt format or the PowerShell Help engine will not be able to parse the document.

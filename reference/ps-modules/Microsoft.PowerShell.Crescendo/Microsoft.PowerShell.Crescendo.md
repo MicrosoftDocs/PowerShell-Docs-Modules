@@ -20,31 +20,41 @@ PowerShell cmdlets that are easier to use in automation and packaged to share wi
 ## Microsoft.PowerShell.Crescendo Cmdlets
 
 ### [Export-CrescendoCommand](Export-CrescendoCommand.md)
+
 Creates JSON configuration files for Crescendo **Command** objects.
 
 ### [Export-CrescendoModule](Export-CrescendoModule.md)
+
 Creates a module from PowerShell Crescendo JSON configuration files
 
 ### [Export-Schema](Export-Schema.md)
+
 Exports the JSON schema for command configuration as a PowerShell object.
 
 ### [Import-CommandConfiguration](Import-CommandConfiguration.md)
+
 Import a PowerShell Crescendo json file.
 
 ### [New-CrescendoCommand](New-CrescendoCommand.md)
+
 Creates a PowerShell command object.
 
 ### [New-ExampleInfo](New-ExampleInfo.md)
+
 Creates a PowerShell object representing an example used in a Crescendo command object.
 
 ### [New-OutputHandler](New-OutputHandler.md)
+
 Creates a PowerShell object representing a Crescendo output handler.
 
 ### [New-ParameterInfo](New-ParameterInfo.md)
+
 Creates a PowerShell object representing a Crescendo Parameter definition.
 
 ### [New-UsageInfo](New-UsageInfo.md)
+
 Creates a PowerShell object representing a Crescendo Usage definition.
 
 ### [Test-IsCrescendoCommand](Test-IsCrescendoCommand.md)
+
 Tests whether a cmdlet was created by Crescendo.

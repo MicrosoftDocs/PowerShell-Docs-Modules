@@ -1,6 +1,6 @@
 ---
 description: Use compatible commands
-ms.date: 10/10/2024
+ms.date: 12/12/2024
 ms.topic: reference
 title: UseCompatibleCommands
 ---
@@ -141,5 +141,5 @@ And also suppressed only for parameters:
 ```
 
 <!-- link references -->
-[01]: https://github.com/PowerShell/PSScriptAnalyzer/tree/development/PSCompatibilityCollector
-[02]: https://github.com/PowerShell/PSScriptAnalyzer/tree/development/PSCompatibilityCollector/optional_profiles
+[01]: https://github.com/PowerShell/PSScriptAnalyzer/tree/main/PSCompatibilityCollector
+[02]: https://github.com/PowerShell/PSScriptAnalyzer/tree/main/PSCompatibilityCollector/optional_profiles

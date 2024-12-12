@@ -1,6 +1,6 @@
 ---
 description: Using PlatyPS is the fast and efficient way to create XML-based help.
-ms.date: 05/21/2024
+ms.date: 12/12/2024
 title: Create XML-based help using PlatyPS
 ---
 # Create XML-based help using PlatyPS
@@ -306,6 +306,6 @@ the [PowerShell style guide][11] and [Editing reference articles][10].
 [14]: #creating-an-updateable-help-package
 [15]: https://commonmark.org
 [16]: https://github.com/PowerShell/platyps
-[17]: https://github.com/PowerShell/platyPS/blob/master/platyPS.schema.md
+[17]: https://github.com/PowerShell/platyPS/blob/master/docs/developer/platyPS/platyPS.schema.md
 [18]: https://pandoc.org
 [19]: https://www.powershellgallery.com/packages/platyPS/

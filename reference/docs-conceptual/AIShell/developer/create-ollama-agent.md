@@ -1,7 +1,7 @@
 ---
 title: How to create an agent for Ollama
 description: Learn how to create an agent for the Ollama language model in AI Shell.
-ms.date: 11/18/2024
+ms.date: 12/12/2024
 ms.topic: how-to
 ---
 
@@ -497,6 +497,6 @@ in the `agents` folder of the base directory of `aish.exe`, the agent will be lo
 [01]: https://github.com/ollama/ollama
 [02]: https://github.com/ollama/ollama/blob/main/docs/api.md#request-no-streaming
 [03]: https://github.com/PowerShell/ProjectMercury/discussions/categories/agent-sharing
-[04]: https://github.com/PowerShell/ProjectMercury/shell/agents/AIShell.Ollama.Agent
-[05]: https://github.com/PowerShell/ProjectMercury/shell/README.md
+[04]: https://github.com/PowerShell/AIShell/tree/main/shell/agents/AIShell.Ollama.Agent
+[05]: https://github.com/PowerShell/AIShell/blob/main/shell/README.md
 [06]: https://www.nuget.org/packages/AIShell.Abstraction/1.0.0-preview.1

@@ -1,7 +1,7 @@
 ---
 external help file: platyPS-help.xml
 Module Name: platyPS
-ms.date: 03/16/2021
+ms.date: 12/12/2024
 online version: https://learn.microsoft.com/powershell/module/platyps/new-externalhelp?view=ps-modules&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
@@ -24,8 +24,8 @@ The `New-ExternalHelp` cmdlet creates an external help file based on markdown he
 by PlatyPS. You can ship this with a module to provide help using the `Get-Help` cmdlet.
 
 If the markdown files that you specify don't follow the PlatyPS
-[Schema](https://github.com/PowerShell/platyPS/blob/master/platyPS.schema.md), this cmdlet returns
-error messages.
+[Schema](https://github.com/PowerShell/platyPS/blob/master/docs/developer/platyPS/platyPS.schema.md),
+this cmdlet returns error messages.
 
 ## EXAMPLES
 
@@ -42,8 +42,8 @@ Mode                LastWriteTime         Length Name
 -a----        5/19/2016  12:32 PM          46776 platyPS-help.xml
 ```
 
-This command creates an external help file in the specified location.
-This command uses the best practice that the folder name includes the locale.
+This command creates an external help file in the specified location. This command uses the best
+practice that the foldername includes the locale.
 
 ### Example 2: Create help that uses custom encoding
 
@@ -77,15 +77,15 @@ Mode                LastWriteTime         Length Name
 ```
 
 This command creates an external help file in the specified location. This command uses the best
-practice that the folder name includes the locale. This command writes the warnings and errors to
-the WarningsAndErrors.json file.
+practice that the foldername includes the locale. This command writes the warnings and errors to the
+`WarningsAndErrors.json` file.
 
 ## PARAMETERS
 
 ### -OutputPath
 
-Specifies the path of a folder where this cmdlet saves your external help file.
-The folder name should end with a locale folder, as in the following example: `.\out\PlatyPS\en-US\`.
+Specifies the path of a folder where this cmdlet saves your external help file. The folder name
+should end with a locale folder, as in the following example: `.\out\PlatyPS\en-US\`.
 
 ```yaml
 Type: String
@@ -192,9 +192,9 @@ Accept wildcard characters: False
 
 ### -ErrorLogFile
 
-The path where this cmdlet will save formatted results log file.
+The path where this cmdlet saves formatted results log file.
 
-The path must include the location and name of the folder and file name with the json extension. The
+The path must include the location and name of the folder and filename with the json extension. The
 JSON object contains three properties: **Message**, **FilePath**, and **Severity** (Warning or
 Error).
 
@@ -255,4 +255,4 @@ This cmdlet returns a `FileInfo[]` object for created files.
 
 [PowerShell V2 External MAML Help](https://devblogs.microsoft.com/powershell/powershell-v2-external-maml-help/)
 
-[Schema](https://github.com/PowerShell/platyPS/blob/master/platyPS.schema.md)
+[Schema](https://github.com/PowerShell/platyPS/blob/master/docs/developer/platyPS/platyPS.schema.md)

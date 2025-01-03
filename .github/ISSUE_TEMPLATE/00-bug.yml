@@ -43,6 +43,7 @@ body:
         Select the module or modules the problem affects.
       multiple: true
       options:
+        - AIShell
         - Crescendo
         - PlatyPS
         - PSScriptAnalyzer

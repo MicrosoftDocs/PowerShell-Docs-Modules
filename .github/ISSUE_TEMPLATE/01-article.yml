@@ -32,6 +32,7 @@ body:
         Select the module or modules this documentation is for.
       multiple: true
       options:
+        - AIShell
         - Crescendo
         - PlatyPS
         - PSScriptAnalyzer

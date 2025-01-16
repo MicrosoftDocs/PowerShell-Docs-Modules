@@ -1,6 +1,6 @@
 ---
 title: Deploy the Azure OpenAI Service using Bicep
-description: This article explains the architecture of AI Shell and API required to support agents.
+description: This article provides the step-by-step instructions to deploy and instance of the Azure OpenAI Service using Bicep.
 ms.date: 01/15/2025
 ms.topic: concept-article
 ---
@@ -8,8 +8,8 @@ ms.topic: concept-article
 
 The **openai-gpt** agent can be used with a public OpenAI instance or an Azure OpenAI deployment. We
 recommend using the Azure OpenAI Service because it has additional features and provide better
-manageability. This document provides the step-by-step instructions to deploy and instance of the
-Azure OpenAI Service using Bicep files.
+manageability. This article provides the step-by-step instructions to deploy and instance of the
+Azure OpenAI Service using Bicep.
 
 To use AIShell with the Azure OpenAI Service, you need the following Azure resources:
 

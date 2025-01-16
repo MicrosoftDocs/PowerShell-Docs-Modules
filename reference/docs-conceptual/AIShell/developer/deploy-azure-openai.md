@@ -22,7 +22,7 @@ To use AIShell with the Azure OpenAI Service, you need the following Azure resou
 Before you begin, ensure you have the following:
 
 - An active Azure subscription
-- [Azure CLI][04] or [Azure PowerShell][05] installed
+- [Azure CLI][04] or [Azure PowerShell][05] installed locally or access to Azure Cloud Shell
 - Proper permissions to create resources in your Azure subscription
 
 ## Steps to Deploy
@@ -93,7 +93,7 @@ You can run the commands locally or in Azure Cloud Shell. If you run them locall
 login to your Azure account using `az login` and set the subscription using
 `az account set --subscription <subscription name>`.
 
-```sh
+```azurecli-interactive
 az deployment group create \
     --resource-group '<resource group name>' \
     --template-file ./main.bicep
@@ -117,7 +117,7 @@ You can run the commands locally or in Azure Cloud Shell. If you run them locall
 login to your Azure account using `Connect-AzAccount` and set the subscription using
 `Set-AzContext -SubscriptionId <subscription id>`.
 
-```powershell
+```azurepowershell-interactive
 $AzResourceGroupDeploymentSplat = @{
     ResourceGroupName = '<resource group name>'
     TemplateFile = './main.bicep'

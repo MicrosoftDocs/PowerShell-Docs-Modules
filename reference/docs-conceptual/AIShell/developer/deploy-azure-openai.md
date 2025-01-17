@@ -19,7 +19,7 @@ To use AIShell with the Azure OpenAI Service, you need the following Azure resou
 
 ## Prerequisites
 
-Before you begin, ensure you have the following:
+Before you begin, ensure you have the following prerequisites:
 
 - An active Azure subscription
 - [Azure CLI][04] or [Azure PowerShell][05] installed locally or access to Azure Cloud Shell
@@ -37,7 +37,7 @@ These steps walk you through the following tasks:
 
 Download the [main.bicep][07] file from the AIShell repository.
 
-You must modify he parameters at the top of the `./main.bicep` file to include your own values.
+You must modify the parameters at the top of the `./main.bicep` file to include your own values.
 Replace the placeholders in angle brackets (`< >`) with your own values.
 
 ```bicep
@@ -74,13 +74,13 @@ For this deployment, the Bicep file uses the following defaults:
 - The AI model is `gpt-4` version `turbo-2024-04-09`
 
 You can change these settings for your particular needs. For more information on available models,
-see [Azure OpenAI Service models][01]. You may need to modify the capacity of the deployment based
+see [Azure OpenAI Service models][01]. You might need to modify the capacity of the deployment based
 the model you use. For more information about setting the capacity, see
 [Azure OpenAI Service quotas and limits][02].
 
 ### 2. Deploy the Azure OpenAI Service
 
-After you have modified the Bicep file parameters, you are ready to deploy your own Azure OpenAI
+After you modified the Bicep file parameters, you're ready to deploy your own Azure OpenAI
 instance. You can use Azure CLI or Azure PowerShell to deploy the Bicep files.
 
 #### Deploy using Azure CLI
@@ -89,8 +89,8 @@ Use the following Azure CLI commands to deploy the Azure OpenAI Service. The fol
 intended to be run in a Bash session. Replace the placeholders in angle brackets (`< >`) with your
 own values.
 
-You can run the commands locally or in Azure Cloud Shell. If you run them locally you must first
-login to your Azure account using `az login` and set the subscription using
+You can run the commands locally or in Azure Cloud Shell. If you run them locally, you must sign in
+to your Azure account using `az login` and set the subscription using
 `az account set --subscription <subscription name>`.
 
 ```azurecli-interactive
@@ -113,8 +113,8 @@ az cognitiveservices account keys list \
 Use the following Azure PowerShell commands to deploy the Azure OpenAI Service. Replace the
 placeholders in angle brackets (`< >`) with your own values.
 
-You can run the commands locally or in Azure Cloud Shell. If you run them locally you must first
-login to your Azure account using `Connect-AzAccount` and set the subscription using
+You can run the commands locally or in Azure Cloud Shell. If you run them locally, you must sign in
+to your Azure account using `Connect-AzAccount` and set the subscription using
 `Set-AzContext -SubscriptionId <subscription id>`.
 
 ```azurepowershell-interactive
@@ -144,8 +144,8 @@ agent. The configuration is stored in a JSON file.
 Use the following steps to edit the JSON configuration.
 
 1. Start AIShell and select the `openai-gpt` agent from the list of agents.
-1. At the AIShell command prompt, run the `/agent config` command. This opens the JSON configuration
-   file.
+1. At the AIShell command prompt, run the `/agent config` command. This command opens the JSON
+   configuration file.
 1. Replace the placeholder values in angle brackets (`< >`) in the JSON file with the endpoint and
    key values you obtained from the Azure OpenAI deployment. The following JSON shows an example of
    the configuration settings you want to update.
@@ -174,14 +174,14 @@ Use the following steps to edit the JSON configuration.
 
 ## Conclusion
 
-You have successfully deployed the Azure OpenAI Service and configured your `openai-gpt` agent to
+You successfully deployed the Azure OpenAI Service and configured your `openai-gpt` agent to
 communicate with your deployment. For more information about model training, filters, and settings
 for Azure OpenAI deployments, see [Azure OpenAI Service documentation][03].
 
 > [!NOTE]
 > We would like to thank Sebastian Jensen for his guidance on how to deploy the Azure OpenAI Service
-> using Bicep files. This article was inspired by his blog post on Medium and used with his
-> permission. Take a moment to read his original post:
+> using Bicep files. This article was inspired by his blog post on Medium and used with permission.
+> Take a moment to read his original post:
 > [Deploy an Azure OpenAI service with LLM deployments via Bicep][06].
 
 <!-- link references -->

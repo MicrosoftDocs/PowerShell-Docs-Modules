@@ -31,3 +31,5 @@ items:
         href: developer/create-ollama-agent.md
       - name: Ollama agent README
         href: developer/ollama-agent-readme.md
+      - name: Deploy the Azure OpenAI Service using Bicep
+        href: developer/deploy-azure-openai.md

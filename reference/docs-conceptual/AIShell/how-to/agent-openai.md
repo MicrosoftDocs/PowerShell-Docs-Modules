@@ -67,7 +67,9 @@ editor. Update the file based on the following example:
 }
 ```
 
-> [!Note]The endpoint for the Azure OpenAI configuration does not need a full endpoint including the deployment, for example https://<YourServiceName>.openai.azure.com
+> [!NOTE]
+> The endpoint for the Azure OpenAI configuration does not need a full endpoint including the deployment,
+> for example `https://<YourServiceName>.openai.azure.com`.
 
 ## GPT
 

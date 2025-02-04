@@ -67,6 +67,10 @@ editor. Update the file based on the following example:
 }
 ```
 
+> [!NOTE]
+> The endpoint for the Azure OpenAI configuration does not need a full endpoint including the deployment,
+> for example you can just use the following endpoint format, `https://<YourServiceName>.openai.azure.com`. 
+
 ## GPT
 
 GPTs are tailored versions of base OpenAI models. You use a GPT to provide focused responses based on

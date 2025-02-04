@@ -39,12 +39,12 @@
         "docs-conceptual/**/*.md": "conceptual"
       },
       "ms.topic": {
-        "ps-modules/**/*": "managed-reference",
+        "ps-modules/**/*": "reference",
         "docs-conceptual/**/**": "conceptual",
         "docs-conceptual/**/get-started/**": "get-started",
         "docs-conceptual/**/whats-new/**": "whats-new",
         "docs-conceptual/**/how-to/**": "how-to",
-        "docs-conceptual/PSScriptAnalyzer/Rules/**": "reference"
+        "docs-conceptual/PSScriptAnalyzer/Rules/**": "language-reference"
       }
     },
     "globalMetadata": {

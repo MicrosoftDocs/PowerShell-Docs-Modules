@@ -1,7 +1,7 @@
 ---
 title: Install AI Shell
 description: Learn how to install AI Shell on your system.
-ms.date: 11/18/2024
+ms.date: 03/03/2025
 ms.topic: install-set-up-deploy
 ---
 # Install AI Shell
@@ -29,13 +29,13 @@ AI Shell is supported on the following platforms:
 
 - macOS v13 Ventura or higher
 - PowerShell 7.4.6 or higher
-- iTerm2 (limited support)
+- iTerm2 preferred (no split-screen experience)
 
 ### [Linux](#tab/linux)
 
 - Ubuntu 20.04 or higher
 - PowerShell 7.4 or higher (recommended)
-- Any terminal emulator supported by the OS
+- Any terminal emulator supported by the OS (no split-screen experience)
 
   > [!NOTE]
   > The AI Shell module isn't supported on Linux.
@@ -72,7 +72,7 @@ To manually install AI Shell, follow the instructions for your platform:
 ### [Windows](#tab/windows)
 
 1. Download the latest version from the [GitHub releases page][03]. Choose the file that matches
-   your system architecture. For example, `AIShell-1.0.0-preview.1-win-x64.zip`.
+   your system architecture. For example, `AIShell-1.0.0-preview.2-win-x64.zip`.
 1. Extract the contents of the ZIP file to a location on your system.
 1. Add the extracted folder to your **PATH** environment variable.
 1. Install the AI Shell module from the PowerShell Gallery.
@@ -84,7 +84,7 @@ To manually install AI Shell, follow the instructions for your platform:
 ### [macOS](#tab/macos)
 
 1. Download the latest version from the [GitHub releases page][03]. Choose the file that matches
-   your system architecture. For example, `AIShell-1.0.0-preview.1-osx-x64.tar.gz`.
+   your system architecture. For example, `AIShell-1.0.0-preview.2-osx-x64.tar.gz`.
 1. Extract the contents of the TAR file to a location on your system.
 1. Add the extracted folder to your **PATH** environment variable.
 1. Install the AI Shell module from the PowerShell Gallery.
@@ -96,7 +96,7 @@ To manually install AI Shell, follow the instructions for your platform:
 ### [Linux](#tab/linux)
 
 1. Download the latest version from the [GitHub releases page][03]. Choose the file that matches
-   your system architecture. For example, `AIShell-1.0.0-preview.1-linux-x64.tar.gz`.
+   your system architecture. For example, `AIShell-1.0.0-preview.2-linux-x64.tar.gz`.
 1. Extract the contents of the TAR file to a location on your system.
 1. Add the extracted folder to your **PATH** environment variable.
 

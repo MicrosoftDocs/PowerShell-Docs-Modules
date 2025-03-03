@@ -1,7 +1,7 @@
 ---
 title: Copilot in Azure Agent
 description: Learn how to use the Copilot in Azure agent in AI Shell.
-ms.date: 11/18/2024
+ms.date: 03/03/2025
 ---
 # Copilot in Azure Agent
 
@@ -27,13 +27,14 @@ command from Azure CLI.
 - "What is Application Insights?"
 - "How to create a web app with Azure CLI?"
 
-## Known issues
+## Improvements in AI Shell v1.0.0-preview.2
 
-This preview release has some known issues with the Azure agent that we're actively working on
-addressing:
+The Preview 2 release includes the following enhancements:
 
-- The `Connect-AzAccount` command for authentication from Azure PowerShell isn't supported. You
-  must use the `az login` command from Azure CLI to sign in.
+- The Azure agent support authentication using either the `Connect-AzAccount` command from Azure
+  PowerShell or the `az login` command from Azure CLI.
+- The `/replace` command now supports Azure PowerShell. The agent walks you through replacement of
+  parameter values in generated Azure PowerShell responses.
 
 ## Telemetry and configuration
 

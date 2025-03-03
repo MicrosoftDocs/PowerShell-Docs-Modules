@@ -47,9 +47,8 @@ encourage you to share your experiences to help us improve AI Shell.
 This current release of AI Shell has some known issues that we're actively working on addressing:
 
 - The **AI Shell** module isn't supported on Linux.
-- The split-screen experience work best with Windows Terminal. There is limited support for the
-  split-screen experience on macOS with iTerm2. The `aish` executable can be run on Linux, but the
-  split-screen experience is not available.
+- The split-screen experience only works with Windows Terminal. The `aish` executable can be run on
+  macOS and Linux, but the split-screen experience isn't available.
 - If you have multiple versions of Windows Terminal installed, the `Start-AIShell` command opens a
   new terminal window running a different version of Windows Terminal.
 - If you started Window Terminal as an administrator, the `Start-AIShell` command opens a new

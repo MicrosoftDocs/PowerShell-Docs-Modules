@@ -19,9 +19,9 @@ items:
     items:
       - name: AI Shell command reference
         href: how-to/aishell-reference.md
-      - name: Azure agent README
+      - name: Azure agent
         href: how-to/agent-azure.md
-      - name: OpenAI agent README
+      - name: OpenAI agent
         href: how-to/agent-openai.md
   - name: Developer guide
     items:

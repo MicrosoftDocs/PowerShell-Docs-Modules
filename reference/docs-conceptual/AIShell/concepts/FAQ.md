@@ -1,7 +1,7 @@
 ---
 title: AI Shell FAQ
 description: Get answers to common questions about AI Shell.
-ms.date: 11/11/2024
+ms.date: 03/03/2025
 ms.topic: faq
 ---
 
@@ -61,7 +61,11 @@ Users interact with these agents using natural language in a conversational mann
 ## How do I create an agent?
 
 To create an agent, you need to implement the `IAgent` interface. For more information, see
-[Create an Ollama Agent][05] for the details of creating an agent.
+[Create an Ollama Agent][05] for the details of creating an agent. You can use this agent as a
+template to create your own agent.
+
+You can use the example code as written to interact with Ollama, or you can configure the OpenAI
+agent to interact with the Ollama using the OpenAI-compatible endpoint.
 
 ## How do I share my agent or find other community built agents?
 
@@ -74,4 +78,4 @@ recommend sharing it on the [discussions page][06] of the Project Mercury reposi
 [03]: ../how-to/agent-openai.md
 [04]: ../developer/agent-architecture.md
 [05]: ../developer/create-ollama-agent.md
-[06]: https://github.com/PowerShell/ProjectMercury/discussions/categories/agent-sharing
+[06]: https://github.com/PowerShell/AIShell/discussions/categories/agent-sharing

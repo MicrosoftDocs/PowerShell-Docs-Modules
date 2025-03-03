@@ -2,7 +2,7 @@
 external help file: AIShell.Integration.dll-Help.xml
 Module Name: AIShell
 online version:
-ms.date: 10/29/2024
+ms.date: 03/03/2025
 schema: 2.0.0
 ---
 
@@ -22,6 +22,9 @@ Resolve-Error [-Agent <String>] [-IncludeOutputFromClipboard] [<CommonParameters
 When an error occurs in the current session, this cmdlet sends the error to the AIShell agent for
 resolution. The command sends the full error object to the current AIShell agent session, which
 attempts to provide a resolution.
+
+Beginning with theAI Shell v1.0.0-preview.2 release, the `Resolve-Error` cmdlet also works with
+error messages output from native commands.
 
 ## EXAMPLES
 

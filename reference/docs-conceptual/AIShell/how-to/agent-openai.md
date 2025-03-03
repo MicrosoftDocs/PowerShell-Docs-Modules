@@ -1,10 +1,10 @@
 ---
 title: OpenAI agent README
 description: Learn how to use the OpenAI agent in AI Shell.
-ms.date: 11/18/2024
+ms.date: 03/03/2025
 ms.topic: how-to
 ---
-# OpenAI Agent
+# OpenAI agent
 
 This agent is designed to provide a user-friendly platform for interacting with OpenAI services. It
 can connect to a public OpenAI service or a private deployment of the Azure OpenAI service. We
@@ -13,12 +13,12 @@ recommend using an Azure OpenAI deployment for enhanced security and privacy.
 ## Prerequisites
 
 - For OpenAI, you need the **Model Name** and **API Key** to use the agent.
-  - [OpenAI API Key][03]
-  - [OpenAI Model][04]
+  - [OpenAI API Key][09]
+  - [OpenAI Model][10]
 
 - For Azure OpenAI Service, you need the **Endpoint**, **Deployment Name**, **Model Name**, and
   **API Key** to use the agent.
-  - [Access to Azure OpenAI][02]
+  - [Access to Azure OpenAI][03]
   - [Create an Azure OpenAI deployment][01]
 
 ## Configuration
@@ -68,19 +68,20 @@ editor. Update the file based on the following example:
 ```
 
 > [!NOTE]
-> The endpoint for the Azure OpenAI configuration does not need a full endpoint including the deployment,
-> for example you can just use the following endpoint format, `https://<YourServiceName>.openai.azure.com`. 
+> The endpoint for the Azure OpenAI configuration does not need a full endpoint including the
+> deployment, for example you can just use the following endpoint format,
+> `https://<YourServiceName>.openai.azure.com`.
 
 ## GPT
 
-GPTs are tailored versions of base OpenAI models. You use a GPT to provide focused responses based on
-the system prompt you give the model. GPTs are configured in the agent's settings file. Each GPT
+GPTs are tailored versions of base OpenAI models. You use a GPT to provide focused responses based
+on the system prompt you give the model. GPTs are configured in the agent's settings file. Each GPT
 configuration includes the name, description, targeted OpenAI model, and system prompt for
 interaction. The system prompts can be customized to support specific scenarios. Each configuration
 allows you to create distinct GPTs tailored to a specific domain or scenario. Furthermore, you can
 select different OpenAI models for each GPT as required.
 
-## Command
+### Command
 
 The command `/gpt` is provided to make it easy to manage the GPTs.
 
@@ -105,8 +106,33 @@ Commands:
   use <GPT>   Specify a GPT to use, or choose one from the available GPTs.
 ```
 
+## Support for other OpenAI-compatible models
+
+With the release of AI Shell v1.0.0-preview.2, the `openai-gpt` agent extends support to third party
+models that follow the OpenAI API specifications, allowing for a more flexible AI experience. Many
+of these models are open source tools for running SLMs and LLMs locally. The `openai-gpt` agent nows
+supports the following additional models:
+
+- [**Ollama**][08]
+- [**LM Studio**][06]
+- [**Deepseek**][04]
+- [**LocalAI**][07]
+- [**Google Gemini**][02]
+- [**Grok**][05]
+
+To use these models, you only need to configure the `endpoint`, `key` and `model name` in the agent
+config file. The following `openai.agents.config` file contains example configurations for two of
+the new AI providers. For more information about endpoints and model names, see to the documentation
+for the specific model.
+
 <!-- link references -->
 [01]: /azure/ai-services/openai/how-to/create-resource?pivots=web-portal
-[02]: https://aka.ms/oai/access?azure-portal=true
-[03]: https://platform.openai.com/api-keys
-[04]: https://platform.openai.com/docs/models
+[02]: https://ai.google.dev/gemini-api/docs/openai
+[03]: https://aka.ms/oai/access?azure-portal=true
+[04]: https://api-docs.deepseek.com/
+[05]: https://docs.x.ai/docs/overview#migrating-from-another-llm-provider
+[06]: https://lmstudio.ai/docs/api/openai-api
+[07]: https://localai.io/
+[08]: https://ollama.com/blog/openai-compatibility
+[09]: https://platform.openai.com/api-keys
+[10]: https://platform.openai.com/docs/models

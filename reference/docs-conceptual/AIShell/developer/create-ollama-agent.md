@@ -44,7 +44,7 @@ Within the newly created project, you need to install the [AIShell.Abstraction][
 NuGet gallery. Install the NuGet package using the following command:
 
 ```shell
-dotnet add package AIShell.Abstraction --version 1.0.0-preview.1
+dotnet add package AIShell.Abstraction --version 1.0.0-preview.2
 ```
 
 This command adds the package to your `.csproj` file. Your `.csproj` file should contain the
@@ -60,7 +60,7 @@ following XML:
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AIShell.Abstraction" Version="1.0.0-preview.1" />
+    <PackageReference Include="AIShell.Abstraction" Version="1.0.0-preview.2" />
   </ItemGroup>
 </Project>
 ```
@@ -477,7 +477,7 @@ Copy the `.dll` files to agent folder you created. You should see the agent when
 
 ```shell
 AI Shell
-v1.0.0-preview.1
+v1.0.0-preview.2
 
 Please select an agent to use:
 
@@ -499,4 +499,4 @@ in the `agents` folder of the base directory of `aish.exe`, the agent will be lo
 [03]: https://github.com/PowerShell/ProjectMercury/discussions/categories/agent-sharing
 [04]: https://github.com/PowerShell/AIShell/tree/main/shell/agents/AIShell.Ollama.Agent
 [05]: https://github.com/PowerShell/AIShell/blob/main/shell/README.md
-[06]: https://www.nuget.org/packages/AIShell.Abstraction/1.0.0-preview.1
+[06]: https://www.nuget.org/packages/AIShell.Abstraction/1.0.0-preview.2

@@ -66,7 +66,7 @@ On macOS, this script:
 Invoke-Expression "& { $(Invoke-RestMethod 'https://aka.ms/install-aishell.ps1') }"
 ```
 
-To uninstall AI Shell you can just add the `-Uninstall` parameter in the invoke expression statement like below.
+To uninstall AI Shell, invoke the same expression with the `-Uninstall` parameter.
 
 ```powershell
 Invoke-Expression "& { $(Invoke-RestMethod 'https://aka.ms/install-aishell.ps1') } -Uninstall"

@@ -66,6 +66,12 @@ On macOS, this script:
 Invoke-Expression "& { $(Invoke-RestMethod 'https://aka.ms/install-aishell.ps1') }"
 ```
 
+To uninstall AI Shell, invoke the same expression with the `-Uninstall` parameter.
+
+```powershell
+Invoke-Expression "& { $(Invoke-RestMethod 'https://aka.ms/install-aishell.ps1') } -Uninstall"
+```
+
 To manually install AI Shell, follow the instructions for your platform:
 
 <!-- markdownlint-disable MD023 MD024 MD051 -->

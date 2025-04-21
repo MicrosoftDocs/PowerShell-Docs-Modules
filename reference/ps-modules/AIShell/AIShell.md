@@ -1,5 +1,5 @@
 ---
-Download Help Link: ''
+Download Help Link: https://aka.ms/aishell-help
 Help Version: 0.1.0
 Locale: en-US
 Module Guid: ecb8bee0-59b9-4dae-9d7b-a990b480279a

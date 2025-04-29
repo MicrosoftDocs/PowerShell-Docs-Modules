@@ -37,7 +37,7 @@ items:
         href: PlatyPS/overview.md
       - name: Create help using PlatyPS
         href: PlatyPS/create-help-using-platyps.md
-  - name: PSScriptAnalyzer v1.23
+  - name: PSScriptAnalyzer v1.24
     items:
       - name: Overview
         href: PSScriptAnalyzer/overview.md

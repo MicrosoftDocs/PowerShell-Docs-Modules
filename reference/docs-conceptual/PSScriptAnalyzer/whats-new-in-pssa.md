@@ -1,6 +1,6 @@
 ---
 description: This article lists the updates to the PSScriptAnalyzer module.
-ms.date: 10/10/2024
+ms.date: 04/29/2025
 title: What's new in PSScriptAnalyzer
 ---
 # What's new in PSScriptAnalyzer
@@ -8,6 +8,29 @@ title: What's new in PSScriptAnalyzer
 PSScriptAnalyzer is a static code checker for PowerShell modules and scripts. This article outlines
 the important changes in PSScriptAnalyzer. For a full list of changes, see the PSScriptAnalyzer
 [CHANGELOG][01].
+
+## PSScriptAnalyzer 1.24.0 - 2025-03-18
+
+Breaking changes
+
+- Minimum required PowerShell version raised from 3 to 5.1
+
+New features and updates
+
+- Add new options (enabled by default) to formatting rule `UseCorrectCasing` to also correct
+  operators, keywords and commands
+- `PSAlignAssignmentStatement`: Ignore hashtables with a single key-value pair
+- Use `RequiredResource` hashtable to specify PowerShell module versions
+- `PSAvoidAssignmentToAutomaticVariable`: Ignore when a Parameter has an Attribute that contains a
+  Variable expression
+- Trim unnecessary trailing spaces from string resources in Strings.resx
+- Make Settings type detection more robust
+- Add foreach Assignment to `AvoidAssignmentToAutomaticVariable`
+- Do not print summary repeatedly for each logger
+- Set exit code of `Invoke-ScriptAnalyzer -EnableExit` to total number of diagnostics
+- `Invoke-ScriptAnalyzer`: Stream diagnostics instead of batching
+- `Invoke-ScriptAnalyzer`: Print summary only once per invocation
+- `Invoke-ScriptAnalyzer`: Include parse errors in reported error count
 
 ## PSScriptAnalyzer 1.23.0 - 2024-10-09
 

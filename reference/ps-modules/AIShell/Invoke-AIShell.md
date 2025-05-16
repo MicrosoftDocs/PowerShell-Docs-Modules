@@ -2,7 +2,8 @@
 external help file: AIShell.Integration.dll-Help.xml
 Module Name: AIShell
 online version:
-ms.date: 10/29/2024
+ms.date: 05/16/2025
+ms.custom: 1.0.0-preview.4
 schema: 2.0.0
 ---
 
@@ -16,13 +17,31 @@ Sends a query to the connected AIShell window. Results are shown in the AIShell 
 ### Default (Default)
 
 ```
-Invoke-AIShell [-Query] <String> [-Agent <String>] [[-Context] <PSObject>] [<CommonParameters>]
+Invoke-AIShell -Query <String[]> [-Agent <String>] [-Context <PSObject>] [<CommonParameters>]
 ```
 
 ### Clipboard
 
 ```
-Invoke-AIShell [-Query] <String> [-Agent <String>] [-ContextFromClipboard] [<CommonParameters>]
+Invoke-AIShell -Query <String[]> [-Agent <String>] [-ContextFromClipboard] [<CommonParameters>]
+```
+
+### PostCode
+
+```
+Invoke-AIShell [-PostCode] [<CommonParameters>]
+```
+
+### CopyCode
+
+```
+Invoke-AIShell [-CopyCode] [<CommonParameters>]
+```
+
+### Exit
+
+```
+Invoke-AIShell [-Exit] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -50,7 +69,7 @@ currently selected agent.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: Default, Clipboard
 Aliases:
 
 Required: False
@@ -70,7 +89,7 @@ Parameter Sets: Default
 Aliases:
 
 Required: False
-Position: 1
+Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
@@ -92,17 +111,68 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -CopyCode
+
+Invokes `/code copy` command in the AIShell sidecar session. This command copies the code in the
+AIShell sidecar session to the clipboard.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: CopyCode
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Exit
+
+Invokes `/exit` command in the AIShell sidecar session. This command closes the AIShell
+sidecar session.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: Exit
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PostCode
+
+Invokes `/code post` command in the AIShell sidecar session. This command posts the code in the
+AIShell sidecar session to your PowerShell session.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: PostCode
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Query
 
 The user input to send to the AIShell agent.
 
 ```yaml
-Type: System.String
-Parameter Sets: (All)
+Type: System.String[]
+Parameter Sets: Default, Clipboard
 Aliases:
 
 Required: True
-Position: 0
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

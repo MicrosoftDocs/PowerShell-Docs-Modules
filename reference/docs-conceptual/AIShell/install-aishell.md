@@ -24,17 +24,23 @@ AI Shell is supported on the following platforms:
 - Windows 10 or higher
 - PowerShell 7.4.6 or higher
 - Windows Terminal
+- PSReadLine v2.4.2-beta2 or higher
 
 ### [macOS](#tab/macos)
 
 - macOS v13 Ventura or higher
 - PowerShell 7.4.6 or higher
-- iTerm2 preferred (no split-screen experience)
+- Default macOS Terminal app for the standalone experience
+- iTerm2 required to use the split-screen experience
+  - Python 3.11 or higher required to support iTerm2
+  - Must enable **Python APIs** in the iTerm2 settings
+- PSReadLine v2.4.2-beta2 or higher
 
 ### [Linux](#tab/linux)
 
 - Ubuntu 20.04 or higher
-- PowerShell 7.4 or higher (recommended)
+- PowerShell 7.4.6 or higher
+- PSReadLine v2.4.2-beta2 or higher
 - Any terminal emulator supported by the OS (no split-screen experience)
 
   > [!NOTE]
@@ -55,8 +61,8 @@ On Windows, this script:
 
 On macOS, this script:
 
-- Installs the `aish` executable to `/usr/local/AIShell`
-- Due to some limitations, the **AIShell** module is not installed
+- Installs the `aish` executable to `/usr/local/AIShell` and creates a symbolic link to
+  `/usr/local/bin/aish`.
 
 > [!NOTE]
 > This script only works on Windows and Mac systems. Linux users need to follow the manual

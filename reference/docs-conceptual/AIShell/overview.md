@@ -1,7 +1,7 @@
 ---
 title: What is AI Shell?
 description: Learn about AI Shell, an interactive shell that provides a chat interface with language models.
-ms.date: 11/18/2024
+ms.date: 05/16/2025
 ms.topic: overview
 ---
 
@@ -13,10 +13,10 @@ interact with the agents in a conversational manner.
 
 The AI Shell project includes:
 
-- The command-line shell (`aish`) interface
+- A command-line shell interface (`aish`)
 - A framework for creating AI agents and other assistance providers
 - Integration with Windows Terminal and iTerm2 on macOS
-- A PowerShell module for tight integration with PowerShell. For more information, see the
+- A PowerShell module for integration with PowerShell. For more information, see the
   [AI Shell module][01].
 
 Each AI assistant is known as an agent. The initial release of AI Shell includes two agents:
@@ -37,41 +37,38 @@ shell. These features include:
 
 ## Project Status
 
-AI Shell is currently in **Public Preview**. This means that the tool is available for testing, but
-it's not feature-complete. Please note that some elements of the tool are still under development
-and are subject to change. Your feedback is important to us during this development phase. We
-encourage you to share your experiences to help us improve AI Shell.
+The current version of AI Shell is 1.0.0-preview.4. AI Shell is provided for testing, but it's not
+feature-complete. Some elements of the tool are still under development and are subject to change.
+Your feedback is important to us during this development phase. We encourage you to share your
+experiences to help us improve AI Shell.
 
 ## Known Issues
 
 This current release of AI Shell has some known issues that we're actively working on addressing:
 
-- The **AI Shell** module isn't supported on Linux.
-- The split-screen experience only works with Windows Terminal. The `aish` executable can be run on
-  macOS and Linux, but the split-screen experience isn't available.
+- The split-screen experience works with Windows Terminal and iTerm2 for macOS.
+- The **AI Shell** module isn't supported on Linux. You can run the `aish` executable on Linux,
+  but it isn't tested on any Linux distribution.
 - If you have multiple versions of Windows Terminal installed, the `Start-AIShell` command opens a
   new terminal window running a different version of Windows Terminal.
 - If you started Window Terminal as an administrator, the `Start-AIShell` command opens a new
   terminal window running Windows Terminal without elevation.
-- If you are using the default Mac Terminal, the colors may not render correctly and may be
+- If you're using the default Mac Terminal, the colors might not render correctly. It might be
   difficult to read the code generated.
 
-If you encounter any other issues, please report them to our [GitHub repository][03].
+You can report other issues in the [GitHub repository][03].
 
-## Providing Feedback
+## Providing feedback
 
 We welcome your feedback to help improve AI Shell! Here are ways you can get involved:
 
 - **File Issues:** If you encounter bugs, have suggestions for new features, or would like to report
-  inconsistencies, please open an issue on the [AI Shell GitHub repository][03].
-- **Join the discussions:** Join our community discussions on the on the
-  [GitHub discussions][02] tab. Share ideas, discuss potential improvements, and connect with other
-  users. This is also where we encourage you to share any agents you may create.
-- **Documentation:** If you notice any documentation gaps, please suggest changes or submit PRs to
+  inconsistencies, open an issue on the [AI Shell GitHub repository][03].
+- **Join the discussions:** Join our community discussions in the [GitHub discussions][02] tab.
+  Share ideas, discuss potential improvements, connect with other users, and share any agents you
+  create.
+- **Documentation:** If you notice any documentation gaps, you can suggest changes or submit PRs to
   improve our documentation.
-
-We aren't accepting pull requests for code changes at this time, but we value your feedback and
-documentation contributions.
 
 <!-- link references -->
 [01]: /powershell/module/aishell/

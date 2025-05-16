@@ -1,7 +1,7 @@
 ---
 title: How to create an agent for Ollama
 description: Learn how to create an agent for the Ollama language model in AI Shell.
-ms.date: 12/12/2024
+ms.date: 05/16/2025
 ms.topic: how-to
 ---
 
@@ -15,6 +15,11 @@ get the desired output or assistance. Agents are implemented as C# classes that 
 For details about the `AIShell.Abstraction` layer and `AIShell.Kernel`, see the
 [AI Shell architecture][05] documentation.
 
+This article is a step-by-step guide to creating an agent for the [Ollama][01] language model. The
+purpose of this article is to provide a simple example of how to create an agent. There's a more
+robust implementation of the Ollama agent in the [`AIShell.Ollama.Agent`][04] folder of the
+repository.
+
 ## Prerequisites
 
 - .NET 8 SDK or newer
@@ -22,14 +27,12 @@ For details about the `AIShell.Abstraction` layer and `AIShell.Kernel`, see the
 
 ## Steps to create an agent
 
-For this example we create an agent to communicate with the language model `phi3` by utilizing
-[Ollama][01], a CLI tool for managing and using locally built LLM/SLMs. The complete source code of
-the agent can be found in the [`shell/agents/AIShell.Ollama.Agent`][04] folder of the repository.
-the repository.
+For this example, we create an agent to communicate with the language model `phi3` using
+[Ollama][01]. Ollama is a CLI tool for managing and using locally built LLM/SLMs.
 
 ### Step 1: Create a new project
 
-First step is to create a new classlib project.
+First step is to create a new **classlib** project.
 
 1. Create a new folder named `OllamaAgent`
 1. Run the following command to create a new project:
@@ -94,8 +97,7 @@ public sealed class OllamaAgent : ILLMAgent
 
 Next, implement the necessary variables and methods of the agent class. The comments provide
 descriptions of the members of the **OllamaAgent** class. The `_chatService` member is an instance
-of the **OllamaChatService** class. You will implement the **OllamaChatService** class in a later
-step.
+of the **OllamaChatService** class, which you implement in a later step.
 
 ```csharp
 public sealed class OllamaAgent : ILLMAgent
@@ -204,8 +206,8 @@ public sealed class OllamaAgent : ILLMAgent
 }
 ```
 
-For the initial implementation, the agent to returns "Hello World!" to prove that you created the
-correct interfaces. You will also add a `try-catch` block to catch and handle any exceptions when
+For the initial implementation, the agent to returns "Hello World!", proving that you created the
+correct interfaces. You also need to add a `try-catch` block to catch and handle any exceptions when
 the user tries to cancel the operation.
 
 Add the following code to your `Chat` method.
@@ -267,7 +269,7 @@ Before you can use the Ollama API, you need to create classes that send input to
 responses from the Ollama API. The following [Ollama example][02] shows the format of the input and
 the response from the agent.
 
-For this example we call the Ollama API with streaming disabled. Ollama generates a single, fixed
+This example calls the Ollama API with streaming disabled. Ollama generates a single, fixed
 response. In the future, you could add streaming capabilities so that responses could be rendered in
 real time, as the agent receives them.
 
@@ -465,7 +467,7 @@ This command builds all necessary packages in the `\bin\Debug\net8.0` folder of 
 To have `aish` load the agent, you need to copy the `.dll` files to a folder in the `Agents` folder.
 The folder name should be the same as the agent name.
 
-There are two location where you can install agents:
+You can install agents in one of two locations:
 
 - In the `Agents` folder under the location where you installed `aish.exe`. The
   [install script][08] for AI Shell installs in `%LOCALAPPDATA%\Programs\AIShell`. Create the
@@ -488,10 +490,11 @@ Please select an agent to use:
 
 ## How can I share my own agent?
 
-Currently there is no way to share your agents in a centralized repository. We suggest forking this
-repository for development of your own agent. You can share a link your fork in the `Agent Sharing`
-section of the [Discussions][03] tab of this repository. To use an agent, if you put its `dll` files
-in the `agents` folder of the base directory of `aish.exe`, the agent will be loaded by `aish`.
+There's no way to share your agents in a centralized repository. We suggest forking this repository
+for development of your own agent. You can share a link your fork in the `Agent Sharing` section of
+the [Discussions][03] tab of this repository. To use an agent, put agent `dll` files in the `agents`
+folder of the base directory of `aish.exe`. AI Shell automatically loads the agents from that
+folder.
 
 <!-- link references -->
 [01]: https://github.com/ollama/ollama

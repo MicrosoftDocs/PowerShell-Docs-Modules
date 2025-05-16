@@ -1,10 +1,11 @@
 ---
 Download Help Link: https://aka.ms/aishell-help
-Help Version: 0.1.0
+Help Version: 1.0.0
 Locale: en-US
 Module Guid: ecb8bee0-59b9-4dae-9d7b-a990b480279a
 Module Name: AIShell
-ms.date: 10/29/2024
+ms.date: 05/16/2025
+ms.custom: 1.0.0-preview.4
 title: AIShell Module
 ---
 

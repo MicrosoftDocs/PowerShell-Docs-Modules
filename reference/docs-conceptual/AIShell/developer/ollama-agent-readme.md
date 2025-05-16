@@ -15,7 +15,7 @@ You can also use this example code as a template to create your own agent.
 
 - Install [Ollama][01]
 - Install a [Ollama model][02], we
-  suggest using the `phi3` model as it is set as the default model in the code
+  suggest using the `phi3` model as it's set as the default model in the code
 - [Start the Ollama API server][03]
 
 ## Configuration
@@ -35,8 +35,6 @@ There is an updated version of the Ollama agent available in the AI Shell reposi
   queries
 - Streaming is currently not supported if you change the stream value to `true` in the data to send
   to the API it will not work
-- Configuration is currently hard coded in the code and will be moved to a configuration file in the
-  future
 
 <!-- link references -->
 [01]: https://github.com/ollama/ollama

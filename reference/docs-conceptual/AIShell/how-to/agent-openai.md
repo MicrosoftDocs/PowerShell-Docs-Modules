@@ -1,7 +1,7 @@
 ---
 title: OpenAI agent README
 description: Learn how to use the OpenAI agent in AI Shell.
-ms.date: 03/03/2025
+ms.date: 05/16/2025
 ms.topic: how-to
 ---
 # OpenAI agent
@@ -23,9 +23,14 @@ recommend using an Azure OpenAI deployment for enhanced security and privacy.
 
 ## Configuration
 
-Before getting started you need to configure the agent with the details of your OpenAI details. To
-configure the agent, run `/agent config openai-gpt` to open up the setting file in your default
-editor. Update the file based on the following example:
+Before getting started, you need to configure the agent with the details of your OpenAI
+implementation. To configure the agent, use the `/agent config openai-gpt` command to open
+configuration file in your default editor.
+
+- Azure OpenAI requires the `endpoint`, `deployment` name, and the `model` name.
+- Public OpenAI only requires the `model` name. No endpoint, no deployment name.
+
+Update the file based on the following example:
 
 ```jsonc
 {
@@ -68,7 +73,7 @@ editor. Update the file based on the following example:
 ```
 
 > [!NOTE]
-> The endpoint for the Azure OpenAI configuration does not need a full endpoint including the
+> The endpoint for the Azure OpenAI configuration doesn't need a full endpoint including the
 > deployment, for example you can just use the following endpoint format,
 > `https://<YourServiceName>.openai.azure.com`.
 
@@ -85,8 +90,8 @@ select different OpenAI models for each GPT as required.
 
 The command `/gpt` is provided to make it easy to manage the GPTs.
 
-- Run `/gpt use <gpt-name>` to switch to another GPT instance, or run `/gpt use` to simply choose
-  from the available ones.
+- Run `/gpt use <gpt-name>` to switch to another GPT instance, or run `/gpt use` to choose from the
+  available ones.
 - Run `/gpt list <gpt-name>` to view the details of a GPT definition, or run `/gpt list` to list all
   available GPTs.
 
@@ -108,10 +113,10 @@ Commands:
 
 ## Support for other OpenAI-compatible models
 
-With the release of AI Shell v1.0.0-preview.2, the `openai-gpt` agent extends support to third party
+With the release of AI Shell v1.0.0-preview.2, the `openai-gpt` agent extends support to third-party
 models that follow the OpenAI API specifications, allowing for a more flexible AI experience. Many
-of these models are open source tools for running SLMs and LLMs locally. The `openai-gpt` agent nows
-supports the following additional models:
+of these models are open source tools for running SLMs and LLMs locally. The `openai-gpt` agent now
+supports the following models:
 
 - [**Ollama**][08]
 - [**LM Studio**][06]
@@ -120,10 +125,23 @@ supports the following additional models:
 - [**Google Gemini**][02]
 - [**Grok**][05]
 
-To use these models, you only need to configure the `endpoint`, `key` and `model name` in the agent
-config file. The following `openai.agents.config` file contains example configurations for two of
-the new AI providers. For more information about endpoints and model names, see to the documentation
-for the specific model.
+To use these models, you only need to configure the `endpoint`, `key`, and `model` name in the agent
+configuration file. The following `openai.agents.config` file contains example configurations for
+two of the new AI providers. For more information about endpoints and model names, see the
+documentation for the specific model.
+
+With the release of AI Shell v1.0.0-preview.4, the `openai-gpt` agent supports the following
+models names:
+
+- `o1`
+- `o3`
+- `o4-mini`
+- `gpt-4.1`
+- `gpt-4o`
+- `gpt-4`
+- `gpt-4-32k`
+- `gpt-4-turbo`
+- `gpt-3.5-turbo`
 
 <!-- link references -->
 [01]: /azure/ai-services/openai/how-to/create-resource?pivots=web-portal

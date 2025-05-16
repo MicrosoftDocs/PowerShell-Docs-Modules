@@ -2,7 +2,8 @@
 external help file: AIShell.Integration.dll-Help.xml
 Module Name: AIShell
 online version:
-ms.date: 03/03/2025
+ms.date: 05/16/2025
+ms.custom: 1.0.0-preview.4
 schema: 2.0.0
 ---
 

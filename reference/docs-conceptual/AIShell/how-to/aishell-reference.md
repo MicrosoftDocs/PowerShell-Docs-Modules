@@ -1,7 +1,7 @@
 ---
 title: AI Shell command reference
 description: Learn about the command-line options and commands available in AI Shell.
-ms.date: 10/29/2024
+ms.date: 05/16/2025
 ms.topic: reference
 ---
 # AI Shell command reference
@@ -33,21 +33,35 @@ By default, `aish` provides a base set of chat commands used to interact with th
 list of commands, use the `/help` command in the chat session.
 
 ```
-  Name       Description                                      Source
-──────────────────────────────────────────────────────────────────────
-  /agent     Command for agent management.                    Core
-  /cls       Clear the screen.                                Core
-  /code      Command to interact with the code generated.     Core
-  /dislike   Dislike the last response and send feedback.     Core
-  /exit      Exit the interactive session.                    Core
-  /help      Show all available commands.                     Core
-  /like      Like the last response and send feedback.        Core
-  /refresh   Refresh the chat session.                        Core
-  /render    Render a markdown file, for diagnosis purpose.   Core
-  /retry     Regenerate a new response for the last query.    Core
+  Name       Description                                                 Source
+─────────────────────────────────────────────────────────────────────────────────────
+  /agent     Command for agent management.                               Core
+  /clear     Clear the screen.                                           Core
+  /code      Command to interact with the code generated.                Core
+  /dislike   Dislike the last response and send feedback.                Core
+  /exit      Exit the interactive session.                               Core
+  /help      Show all available commands.                                Core
+  /like      Like the last response and send feedback.                   Core
+  /refresh   Start a new chat session.                                   Core
+  /retry     Regenerate a new response for the last query.               Core
 ```
 
-## `/agent` sub commands
+## `/agent`
+
+Command for agent management.
+
+```
+agent [command] [options]
+```
+
+Options: -h, --help  Show help and usage information
+
+Subcommands
+
+- `config <azure|openai-gpt>` - Open up the setting file for an agent. When no agent is specified,
+  target the active agent.
+- `list` - List all available agents.
+- `use <azure|openai-gpt>` - Specify an agent to use, or choose one from the available agents.
 
 ### `/agent config`
 
@@ -62,7 +76,6 @@ Arguments: `<azure|openai-gpt>` Name of an agent.
 Options:
 
 - `--editor <editor>` The editor to open the setting file in.
-- `-h`, `--help` Show help and usage information
 
 Example:
 
@@ -73,10 +86,6 @@ Example:
 ### `/agent list`
 
 List all available agents.
-
-Options:
-
-- `-h`, `--help`  Show help and usage information
 
 Example:
 
@@ -99,14 +108,41 @@ Example:
                    2. Define the GPT(s). See details at
                       https://aka.ms/aish/openai
                    3. Run '/refresh' to apply the new settings.
-  azure (active)   This AI assistant can generate Azure CLI and
-                   Azure PowerShell commands for managing
-                   Azure resources, answer questions, and provides
-                   information tailored to your specific Azure
-                   environment.
+  azure            This AI assistant connects you to the Copilot in
+                     Azure and can generate Azure CLI and Azure
+                     PowerShell commands for managing Azure resources
+                     and answer questions about Azure.
 ```
 
-## `/code` sub commands
+### `/agent use`
+
+Specify an agent to use, or choose one from the available agents.
+
+```
+agent use [<agent>] [options]
+```
+
+Arguments: `<azure|openai-gpt>` - Name of an agent.
+
+## `/clear`
+
+Clears the screen. You can also use the alias `/cls`.
+
+## `/code`
+
+Command to interact with the code generated.
+
+```
+code [command] [options]
+```
+
+Subcommands:
+
+- `copy <n>` Copy the n-th (1-based) code snippet to clipboard. Copy all the code when `<n>` isn't
+  specified. [default: -1]
+- `save <file>` - Save all the code to a file.
+- `post <n>` - Post the n-th (1-based) code snippet to the connected command-line shell. Post all
+  the code when `<n>` isn't specified. [default: -1]
 
 ### `/code copy`
 
@@ -121,11 +157,7 @@ code copy [<n>] [options]
 Arguments:
 
 - `<n>` Use the n-th (1-based) code snippet. Use all the code when no value is specified.
-[default: -1]
-
-Options:
-
-- `-h`, `--help`  Show help and usage information
+  [default: -1]
 
 Examples
 

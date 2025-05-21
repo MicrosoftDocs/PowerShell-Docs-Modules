@@ -1,7 +1,7 @@
 ---
 title: What is AI Shell?
 description: Learn about AI Shell, an interactive shell that provides a chat interface with language models.
-ms.date: 05/16/2025
+ms.date: 05/21/2025
 ms.topic: overview
 ---
 
@@ -37,16 +37,22 @@ shell. These features include:
 
 ## Project Status
 
-The current version of AI Shell is 1.0.0-preview.4. AI Shell is provided for testing, but it's not
-feature-complete. Some elements of the tool are still under development and are subject to change.
-Your feedback is important to us during this development phase. We encourage you to share your
-experiences to help us improve AI Shell.
+The current version of AI Shell is v1.0.0-preview.4. AI Some elements of the tool are still under
+development and are subject to change.
+
+AI Shell v1.0.0-preview.4 includes the following enhancements:
+
+- Improved macOS support including the side-car experience with iTerm2
+- Support for Microsoft Entra ID authentication in Azure OpenAI
+- New parameters for `Invoke-AIShell`
+- Experimental Phi Silica agent that uses the built-in AI model included with the latest Copilot+
+  PCs
 
 ## Known Issues
 
 This current release of AI Shell has some known issues that we're actively working on addressing:
 
-- The split-screen experience works with Windows Terminal and iTerm2 for macOS.
+- The split-screen experience only works with Windows Terminal and iTerm2 for macOS.
 - The **AI Shell** module isn't supported on Linux. You can run the `aish` executable on Linux,
   but it isn't tested on any Linux distribution.
 - If you have multiple versions of Windows Terminal installed, the `Start-AIShell` command opens a
@@ -60,7 +66,10 @@ You can report other issues in the [GitHub repository][03].
 
 ## Providing feedback
 
-We welcome your feedback to help improve AI Shell! Here are ways you can get involved:
+Your feedback is important to us during this development phase. We encourage you to share your
+experiences to help us improve AI Shell.
+
+Here are ways you can get involved:
 
 - **File Issues:** If you encounter bugs, have suggestions for new features, or would like to report
   inconsistencies, open an issue on the [AI Shell GitHub repository][03].

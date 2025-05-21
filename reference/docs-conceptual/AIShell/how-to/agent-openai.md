@@ -1,7 +1,7 @@
 ---
 title: OpenAI agent README
 description: Learn how to use the OpenAI agent in AI Shell.
-ms.date: 05/16/2025
+ms.date: 05/21/2025
 ms.topic: how-to
 ---
 # OpenAI agent
@@ -76,6 +76,48 @@ Update the file based on the following example:
 > The endpoint for the Azure OpenAI configuration doesn't need a full endpoint including the
 > deployment, for example you can just use the following endpoint format,
 > `https://<YourServiceName>.openai.azure.com`.
+
+### Support for Microsoft Entra ID authentication
+
+To keep password and keys secure, we’ve added support for Entra ID authentication to to Azure OpenAI
+instances. Now you can access your Azure OpenAI resource without storing keys in the configuration
+file. The following example shows how to configure Entra ID authentication:
+
+```json
+{
+  // Declare GPT instances.
+  "GPTs": [
+      // Declaration of an Azure OpenAI instance with EntraID authentication
+      {
+        "Name": "ps-az-entraId",
+        "Description": "A GPT instance with expertise in PowerShell scripting using Entra ID authentication.",
+        "Endpoint": "<Your Endpoint>",
+        "Deployment": "<Your Deployment Name>",
+        "ModelName": "<Your Model Name>",
+        "AuthType": "EntraID",
+        "SystemPrompt": "You are a helpful and friendly assistant with expertise in PowerShell scripting and command line."
+      }
+  ],
+
+  // Specify the default GPT instance to use for user query.
+  "Active": "ps-az-entraId"
+}
+```
+
+Azure OpenAI uses the following hierarchy of credentials for authentication:
+
+- `EnvironmentCredential`
+- `WorkloadIdentityCredential`
+- `ManagedIdentityCredential`
+- `SharedTokenCacheCredential`
+- `VisualStudioCredential`
+- `AzureCliCredential`
+- `AzurePowerShellCredential`
+- `AzureDeveloperCliCredential`
+- `InteractiveBrowserCredential`
+
+For more information about these credentials, see .NET documentation for
+[`DefaultAzureCredential`][11].
 
 ## GPT
 
@@ -154,3 +196,4 @@ models names:
 [08]: https://ollama.com/blog/openai-compatibility
 [09]: https://platform.openai.com/api-keys
 [10]: https://platform.openai.com/docs/models
+[11]: xref:Azure.Identity.DefaultAzureCredential

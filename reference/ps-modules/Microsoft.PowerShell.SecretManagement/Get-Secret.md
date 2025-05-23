@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.PowerShell.SecretManagement.dll-Help.xml
 Module Name: Microsoft.PowerShell.SecretManagement
-ms.date: 05/31/2022
+ms.date: 05/23/2025
 online version: https://learn.microsoft.com/powershell/module/microsoft.powershell.secretmanagement/get-secret?view=ps-modules&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
@@ -55,7 +55,8 @@ console as plain text.
 ### Example 2
 
 ```powershell
-Get-SecretInfo -Name Secret2 -Vault SecretStore | Get-Secret -AsPlainText
+Get-SecretInfo -Name Secret2 -Vault SecretStore |
+    Get-Secret -AsPlainText
 ```
 
 This example retrieves secret information for the secret named `Secret2` in the vault named
@@ -67,20 +68,20 @@ secret and returns it as plain text.
 ### -AsPlainText
 
 Specifies that a secret whose type is **String** or **SecureString** should be returned as a
-**String** (in plain text) instead of a **SecureString**. If the secret being retrieved is not a
+**String** (in plain text) instead of a **SecureString**. If the secret being retrieved isn't a
 **String** or **SecureString**, this parameter has no effect.
 
 > [!CAUTION]
 > To ensure security, you should avoid using plaintext strings whenever possible.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -92,7 +93,7 @@ Specifies a **SecretInformation** object representing a vault secret instead of 
 `Get-SecretInfo` cmdlet.
 
 ```yaml
-Type: SecretInformation
+Type: Microsoft.PowerShell.SecretManagement.SecretInformation
 Parameter Sets: InfoParameterSet
 Aliases:
 
@@ -105,10 +106,10 @@ Accept wildcard characters: False
 
 ### -Name
 
-Specifies the name of the secret to retrieve. Wildcard characters are not permitted.
+Specifies the name of the secret to retrieve. Wildcard characters aren't permitted.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: NameParameterSet
 Aliases:
 
@@ -123,11 +124,11 @@ Accept wildcard characters: False
 
 Specifies the name of the registered vault to retrieve the secret from. If no vault name is
 specified, then all registered vaults are searched. If the vault registry has a default vault and
-this parameter is not specified, then the default vault is searched before the other registered
+this parameter isn't specified, then the default vault is searched before the other registered
 vaults.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: NameParameterSet
 Aliases:
 

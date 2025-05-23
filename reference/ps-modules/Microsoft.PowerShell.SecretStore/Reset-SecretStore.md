@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.PowerShell.SecretStore.dll-Help.xml
 Module Name: Microsoft.PowerShell.SecretStore
-ms.date: 05/31/2022
+ms.date: 05/23/2025
 online version: https://learn.microsoft.com/powershell/module/microsoft.powershell.secretstore/reset-secretstore?view=ps-modules&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
@@ -14,17 +14,17 @@ Resets the SecretStore by deleting all secret data and configuring the store wit
 ## SYNTAX
 
 ```
-Reset-SecretStore [-Scope <SecureStoreScope>] [-Authentication <Authenticate>] [-Password <SecureString>]
- [-PasswordTimeout <Int32>] [-Interaction <Interaction>] [-PassThru] [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Reset-SecretStore [-Scope <SecureStoreScope>] [-Authentication <Authenticate>]
+ [-Password <SecureString>] [-PasswordTimeout <Int32>] [-Interaction <Interaction>] [-PassThru]
+ [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
 This cmdlet completely resets the **SecretStore** by deleting all secret data it may contain, and
-resetting configuration options to their default values. It is intended to be used only if a
-required password is lost, or data files become corrupted so that **SecretStore** no longer
-functions and secret data cannot be accessed.
+resetting configuration options to their default values. It's intended to be used only if a required
+password is lost, or data files become corrupted so that **SecretStore** no longer functions and
+secret data can't be accessed.
 
 The default configuration options can be overridden by specifying individual command configuration
 option parameters.
@@ -39,9 +39,11 @@ WARNING: !!This operation will completely remove all SecretStore module secrets 
 configuration settings to default values!!
 
 Reset SecretStore
-Are you sure you want to erase all secrets in SecretStore and reset configuration settings to default?
+Are you sure you want to erase all secrets in SecretStore and reset configuration
+settings to default?
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"): Y
-Creating a new Microsoft.PowerShell.SecretStore vault. A password is required by the current store configuration.
+Creating a new Microsoft.PowerShell.SecretStore vault. A password is required by
+the current store configuration.
 Enter password:
 ********
 Enter password again for verification:
@@ -67,10 +69,10 @@ default authentication is `Password`.
 
 > [!CAUTION]
 > Setting the **Authentication** to `None` is less secure than `Password`. Specifying `None` may be
-> useful for testing scenarios but should not be used with important secrets.
+> useful for testing scenarios but shouldn't be used with important secrets.
 
 ```yaml
-Type: Authenticate
+Type: Microsoft.PowerShell.SecretStore.Authenticate
 Parameter Sets: (All)
 Aliases:
 Accepted values: None, Password
@@ -88,7 +90,7 @@ Indicates that the cmdlet should reset the **SecretStore** without prompting. By
 warns about the impact of resetting the **SecretStore** and prompts the user for confirmation.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -103,12 +105,12 @@ Accept wildcard characters: False
 
 Specifies whether the **SecretStore** should prompt a user when they access it. If the value is
 `Prompt`, the user is prompted for their password in interactive sessions when required. If the
-value is `None`, the user is not prompted for a password. If the value is `None` and a password is
+value is `None`, the user isn't prompted for a password. If the value is `None` and a password is
 required, the cmdlet requiring the password throws a
 **Microsoft.PowerShell.SecretStore.PasswordRequiredException** error.
 
 ```yaml
-Type: Interaction
+Type: Microsoft.PowerShell.SecretStore.Interaction
 Parameter Sets: (All)
 Aliases:
 Accepted values: None, Prompt
@@ -126,7 +128,7 @@ Indicates that the cmdlet should return the **SecretStore** configuration after 
 default, the cmdlet returns no output.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -141,10 +143,10 @@ Accept wildcard characters: False
 
 Specifies the password the **SecretStore** should require for access. If **Authentication** is
 specified as `None`, the cmdlet returns an error. If **Authentication** is `Password` and this
-parameter is not specified, the cmdlet prompts the user to enter the password securely.
+parameter isn't specified, the cmdlet prompts the user to enter the password securely.
 
 ```yaml
-Type: SecureString
+Type: System.Security.SecureString
 Parameter Sets: (All)
 Aliases:
 
@@ -162,7 +164,7 @@ the timeout value is reached, the current password value is invalidated for the 
 the **SecretStore** after the timeout requires the password again.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases:
 
@@ -179,7 +181,7 @@ Specifies the context the **SecretStore** is configured for. Only `CurrentUser` 
 supported.
 
 ```yaml
-Type: SecureStoreScope
+Type: Microsoft.PowerShell.SecretStore.SecureStoreScope
 Parameter Sets: (All)
 Aliases:
 Accepted values: CurrentUser, AllUsers
@@ -196,7 +198,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -209,10 +211,10 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs. The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 

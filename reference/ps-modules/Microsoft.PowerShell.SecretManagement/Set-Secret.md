@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.PowerShell.SecretManagement.dll-Help.xml
 Module Name: Microsoft.PowerShell.SecretManagement
-ms.date: 01/29/2025
+ms.date: 05/23/2025
 online version: https://learn.microsoft.com/powershell/module/microsoft.powershell.secretmanagement/set-secret?view=ps-modules&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
@@ -41,7 +41,8 @@ added to the default vault. If a secret with that name exists, it's overwritten.
 can be included with the secret if supported by the extension vault.
 
 The default parameter set takes a **SecureString** object. If you run the command without specifying
-the secret value, the cmdlet prompts you to enter a **SecureString**. The text of the string isn't visible in the console.
+the secret value, the cmdlet prompts you to enter a **SecureString**. The text of the string isn't
+visible in the console.
 
 ## EXAMPLES
 
@@ -57,8 +58,8 @@ System.Security.SecureString
 ```
 
 This example adds a secret named `Secret1` with a plain text value of `SecretValue`. Since no vault
-name was specified, the secret is added to the current user's default vault. `Get-Secret` shows
-the secret was added.
+name was specified, the secret is added to the current user's default vault. `Get-Secret` shows the
+secret was added.
 
 ### Example 2
 
@@ -102,7 +103,7 @@ Set-Secret -Name PublishSecret -Secret $targetToken -Vault LocalStore2 -Metadata
 ```
 
 ```output
-Set-Secret: Cannot store secret PublishSecret. Vault LocalStore2 does not support secret metadata.
+Set-Secret: Can't store secret PublishSecret. Vault LocalStore2 doesn't support secret metadata.
 ```
 
 This example adds a secret named `PublishSecret` to the `LocalStore2` vault with extra metadata.
@@ -124,7 +125,7 @@ the following types:
 Metadata isn't stored securely in a vault. Metadata shouldn't contain sensitive information.
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: SecureStringParameterSet, ObjectParameterSet
 Aliases:
 
@@ -140,7 +141,7 @@ Accept wildcard characters: False
 Specifies the name of the secret to add or update. Wildcard characters (`*`) aren't permitted.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SecureStringParameterSet, ObjectParameterSet
 Aliases:
 
@@ -157,13 +158,13 @@ Causes the command to return an error if a secret with the same name already exi
 default, this cmdlet updates the secret with the new value if it already exists.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -179,7 +180,7 @@ Specifies the value of the secret. The object must be one of the supported types
 - **Hashtable**
 
 ```yaml
-Type: Object
+Type: System.Object
 Parameter Sets: ObjectParameterSet
 Aliases:
 
@@ -196,7 +197,7 @@ Specifies a **SecretInformation** object describing a stored secret returned by 
 This enables copying secrets from one extension vault to another.
 
 ```yaml
-Type: SecretInformation
+Type: Microsoft.PowerShell.SecretManagement.SecretInformation
 Parameter Sets: SecretInfoParameterSet
 Aliases:
 
@@ -212,7 +213,7 @@ Accept wildcard characters: False
 Specifies the value of the secret as a **SecretString** object.
 
 ```yaml
-Type: SecureString
+Type: System.Security.SecureString
 Parameter Sets: SecureStringParameterSet
 Aliases:
 
@@ -229,11 +230,11 @@ Specifies the name of the vault to add or update the secret in. Wildcard charact
 permitted. By default, the secret is added or updated in the current user's default vault.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SecureStringParameterSet, ObjectParameterSet
 Aliases:
 
-Required: False (SecureStringParameterSet, ObjectParameterSet), True (SecretInfoParameterSet)
+Required: False
 Position: 2
 Default value: None
 Accept pipeline input: False
@@ -245,13 +246,13 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -261,13 +262,13 @@ Accept wildcard characters: False
 Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.PowerShell.SecretStore.dll-Help.xml
 Module Name: Microsoft.PowerShell.SecretStore
-ms.date: 05/31/2022
+ms.date: 05/23/2025
 online version: https://learn.microsoft.com/powershell/module/microsoft.powershell.secretstore/set-secretstorepassword?view=ps-modules&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
@@ -19,8 +19,7 @@ Replaces the current SecretStore password with a new one.
 Set-SecretStorePassword [<CommonParameters>]
 ```
 
-### PARAMETERSet
-
+### ParameterSet
 ```
 Set-SecretStorePassword -NewPassword <SecureString> [-Password <SecureString>] [<CommonParameters>]
 ```
@@ -61,12 +60,12 @@ set.
 
 ### -NewPassword
 
-Specifies the new password for accessing the **SecretStore**. If this parameter is not specified and
+Specifies the new password for accessing the **SecretStore**. If this parameter isn't specified and
 the cmdlet is run in an interactive session, it prompts the user for the value. If this parameter is
 not specified and the cmdlet is run in a non-interactive session, it returns an error.
 
 ```yaml
-Type: SecureString
+Type: System.Security.SecureString
 Parameter Sets: ParameterSet
 Aliases:
 
@@ -82,16 +81,16 @@ Accept wildcard characters: False
 Existing password needed to unlock the store. This can be ignored if the store doesn't currently use
 a password.
 
-Specifies the existing password for accessing the **SecretStore**. If the **SecretStore** is not
+Specifies the existing password for accessing the **SecretStore**. If the **SecretStore** isn't
 configured to require a password, this parameter is ignored.
 
-If the **SecretStore** is configured to require a password, this parameter is not specified, and the
+If the **SecretStore** is configured to require a password, this parameter isn't specified, and the
 cmdlet is run in an interactive session, it prompts the user for the value. If the **SecretStore**
-is configured to require a password, this parameter is not specified and the cmdlet is run in a
+is configured to require a password, this parameter isn't specified and the cmdlet is run in a
 non-interactive session, it returns an error.
 
 ```yaml
-Type: SecureString
+Type: System.Security.SecureString
 Parameter Sets: ParameterSet
 Aliases:
 

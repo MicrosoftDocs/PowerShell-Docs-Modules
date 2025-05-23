@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.PowerShell.SecretManagement.dll-Help.xml
 Module Name: Microsoft.PowerShell.SecretManagement
-ms.date: 05/31/2022
+ms.date: 05/23/2025
 online version: https://learn.microsoft.com/powershell/module/microsoft.powershell.secretmanagement/test-secretvault?view=ps-modules&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
@@ -14,7 +14,7 @@ Runs an extension vault self test.
 ## SYNTAX
 
 ```
-Test-SecretVault [-Name <String[]>] [<CommonParameters>]
+Test-SecretVault [[-Name] <String[]>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -44,15 +44,15 @@ This example runs the self-tests on the `CredMan` extension vault. All tests suc
 Specifies the name of one or more vaults to test. Enter a name or name pattern. Wildcard characters
 (`*`) are permitted.
 
-If the **Name** parameter is not specified, this cmdlet runs the tests for all registered vaults.
+If the **Name** parameter isn't specified, this cmdlet runs the tests for all registered vaults.
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: Named
+Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: True

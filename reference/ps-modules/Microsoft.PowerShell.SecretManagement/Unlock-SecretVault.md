@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.PowerShell.SecretManagement.dll-Help.xml
 Module Name: Microsoft.PowerShell.SecretManagement
-ms.date: 08/26/2024
+ms.date: 05/23/2025
 online version: https://learn.microsoft.com/powershell/module/microsoft.powershell.secretmanagement/unlock-secretvault?view=ps-modules&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
@@ -50,7 +50,7 @@ Unlock-SecretVault -Name CredMan -Password $SecurePassword
 ```
 
 ```Output
-WARNING: Cannot unlock extension vault 'CredMan': The vault does not support the Unlock-SecretVault
+WARNING: Can't unlock extension vault 'CredMan': The vault doesn't support the Unlock-SecretVault
 function.
 ```
 

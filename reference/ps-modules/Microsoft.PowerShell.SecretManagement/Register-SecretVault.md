@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.PowerShell.SecretManagement.dll-Help.xml
 Module Name: Microsoft.PowerShell.SecretManagement
-ms.date: 05/31/2022
+ms.date: 05/23/2025
 online version: https://learn.microsoft.com/powershell/module/microsoft.powershell.secretmanagement/register-secretvault?view=ps-modules&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
@@ -24,11 +24,11 @@ Register-SecretVault [-ModuleName] <String> [[-Name] <String>] [-VaultParameters
 This cmdlet adds a **SecretManagement** extension vault to the current user's vault registry. An
 extension vault is a PowerShell module that conforms to the required extension vault format. This
 cmdlet verifies that the specified module meets conformance requirements before adding it to the
-extension vault registry. Extension vaults are registered to the current user and do not affect
+extension vault registry. Extension vaults are registered to the current user and don't affect
 other user vault registrations.
 
 The first vault registered with this cmdlet is automatically defined as the default vault even if
-the **DefaultVault** parameter is not specified.
+the **DefaultVault** parameter isn't specified.
 
 ## EXAMPLES
 
@@ -88,7 +88,7 @@ If specified, allows the cmdlet to overwrite an existing registered extension va
 name.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -104,13 +104,13 @@ Accept wildcard characters: False
 If specified, sets the new extension vault as the default vault for the current user.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -120,7 +120,7 @@ Accept wildcard characters: False
 Describes the vault. This value is included in the vault registry information.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -138,7 +138,7 @@ module or the path to the module. If you specify a name, PowerShell searches for
 module paths. If you specify a path, PowerShell searches that path for the module.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -155,7 +155,7 @@ Specifies the name of the extension vault. If no name is specified, the module n
 vault name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -169,10 +169,10 @@ Accept wildcard characters: False
 ### -PassThru
 
 Indicates that the cmdlet should return the **SecretVaultInfo** object for the successfully
-registered extension vault. By default this cmdlet does not return any output.
+registered extension vault. By default this cmdlet doesn't return any output.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -190,7 +190,7 @@ extension vault. These parameters are optional. Consult the documentation of the
 module to see what values are required.
 
 ```yaml
-Type: Hashtable
+Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases:
 
@@ -206,29 +206,29 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs. The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

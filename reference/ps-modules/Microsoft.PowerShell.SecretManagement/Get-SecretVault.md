@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.PowerShell.SecretManagement.dll-Help.xml
 Module Name: Microsoft.PowerShell.SecretManagement
-ms.date: 05/31/2022
+ms.date: 05/23/2025
 online version: https://learn.microsoft.com/powershell/module/microsoft.powershell.secretmanagement/get-secretvault?view=ps-modules&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
@@ -64,11 +64,11 @@ This example shows additional information about the `LocalStore` vault.
 Specifies the name of a vault. This cmdlet only gets information for vaults that have the specified
 name. Enter a name or name pattern. Wildcard characters are permitted.
 
-If the **Name** parameter is not specified, this cmdlet returns the information for all registered
+If the **Name** parameter isn't specified, this cmdlet returns the information for all registered
 vaults.
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: (All)
 Aliases:
 

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.PowerShell.SecretStore.dll-Help.xml
 Module Name: Microsoft.PowerShell.SecretStore
-ms.date: 05/31/2022
+ms.date: 05/23/2025
 online version: https://learn.microsoft.com/powershell/module/microsoft.powershell.secretstore/set-secretstoreconfiguration?view=ps-modules&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
@@ -13,12 +13,11 @@ Configures the **SecretStore**.
 
 ## SYNTAX
 
-### PARAMETERSet (Default)
-
+### ParameterSet (Default)
 ```
 Set-SecretStoreConfiguration [-Scope <SecureStoreScope>] [-Authentication <Authenticate>]
- [-PasswordTimeout <Int32>] [-Interaction <Interaction>] [-Password <SecureString>] [-PassThru] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-PasswordTimeout <Int32>] [-Interaction <Interaction>] [-Password <SecureString>] [-PassThru]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### DefaultParameterSet
@@ -61,10 +60,10 @@ default authentication is `Password`.
 
 > [!CAUTION]
 > Setting the **Authentication** to `None` is less secure than `Password`. Specifying `None` may be
-> useful for testing scenarios but should not be used with important secrets.
+> useful for testing scenarios but shouldn't be used with important secrets.
 
 ```yaml
-Type: Authenticate
+Type: Microsoft.PowerShell.SecretStore.Authenticate
 Parameter Sets: ParameterSet
 Aliases:
 
@@ -80,7 +79,7 @@ Accept wildcard characters: False
 Indicates that the **SecretStore** should be set to its default configuration.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: DefaultParameterSet
 Aliases:
 
@@ -95,12 +94,12 @@ Accept wildcard characters: False
 
 Specifies whether the **SecretStore** should prompt a user when they access it. If the value is
 `Prompt`, the user is prompted for their password in interactive sessions when required. If the
-value is `None`, the user is not prompted for a password. If the value is `None` and a password is
+value is `None`, the user isn't prompted for a password. If the value is `None` and a password is
 required, the cmdlet requiring the password throws a
 **Microsoft.PowerShell.SecretStore.PasswordRequiredException** error.
 
 ```yaml
-Type: Interaction
+Type: Microsoft.PowerShell.SecretStore.Interaction
 Parameter Sets: ParameterSet
 Aliases:
 
@@ -117,7 +116,7 @@ Indicates that the cmdlet should return the **SecretStore** configuration after 
 default, the cmdlet returns no output.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -130,7 +129,7 @@ Accept wildcard characters: False
 
 ### -Password
 
-Specifies the password needed to access the **SecretStore**. This parameter cannot be used to change
+Specifies the password needed to access the **SecretStore**. This parameter can't be used to change
 the existing password. To change the existing password, use `Set-SecretStorePassword`.
 
 When this parameter is used with the **Authenticate** parameter to change the configuration for
@@ -138,11 +137,11 @@ authentication from `None` to `Password`, this parameter's value is set as the n
 **SecretStore**.
 
 When this parameter is used with the **Authenticate** parameter to change the configuration for
-authentication from `Password` to `None`, this parameter's value must be the current password for the
-**SecretStore**. It is used to authorize the configuration change.
+authentication from `Password` to `None`, this parameter's value must be the current password for
+the **SecretStore**. It's used to authorize the configuration change.
 
 ```yaml
-Type: SecureString
+Type: System.Security.SecureString
 Parameter Sets: (All)
 Aliases:
 
@@ -160,7 +159,7 @@ password. After the timeout has elapsed, the current password value is invalidat
 Accessing the **SecretStore** after the timeout requires the password again.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: ParameterSet
 Aliases:
 
@@ -177,7 +176,7 @@ Specifies the context the **SecretStore** is configured for. Only `CurrentUser` 
 supported.
 
 ```yaml
-Type: SecureStoreScope
+Type: Microsoft.PowerShell.SecretStore.SecureStoreScope
 Parameter Sets: ParameterSet
 Aliases:
 Accepted values: CurrentUser, AllUsers
@@ -194,7 +193,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -207,10 +206,10 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs. The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 

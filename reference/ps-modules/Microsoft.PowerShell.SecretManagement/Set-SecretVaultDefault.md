@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.PowerShell.SecretManagement.dll-Help.xml
 Module Name: Microsoft.PowerShell.SecretManagement
-ms.date: 05/31/2022
+ms.date: 05/23/2025
 online version: https://learn.microsoft.com/powershell/module/microsoft.powershell.secretmanagement/set-secretvaultdefault?view=ps-modules&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
@@ -79,13 +79,13 @@ registered vault. The last command shows that there is no default vault.
 Sets the **IsDefault** property to `$false` for all registered vaults.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ClearParameterSet
 Aliases:
 
 Required: False
 Position: 0
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -96,7 +96,7 @@ Specifies the name of a registered vault to set as the default vault. Wildcard c
 not permitted.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: NameParameterSet
 Aliases:
 
@@ -113,7 +113,7 @@ Specifies a **SecretVaultInfo** object representing the registered vault to set 
 vault.
 
 ```yaml
-Type: SecretVaultInfo
+Type: Microsoft.PowerShell.SecretManagement.SecretVaultInfo
 Parameter Sets: SecretVaultParameterSet
 Aliases:
 
@@ -129,29 +129,29 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs. The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

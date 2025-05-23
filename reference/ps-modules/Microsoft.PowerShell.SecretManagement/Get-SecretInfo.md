@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.PowerShell.SecretManagement.dll-Help.xml
 Module Name: Microsoft.PowerShell.SecretManagement
-ms.date: 05/31/2022
+ms.date: 05/23/2025
 online version: https://learn.microsoft.com/powershell/module/microsoft.powershell.secretmanagement/get-secretinfo?view=ps-modules&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
@@ -81,10 +81,10 @@ hashtable show every valid type metadata values can be:
 Specifies the name of a secret. This cmdlet only gets metadata for secrets that have the specified
 name. Enter a name or name pattern. Wildcard characters are permitted.
 
-If the **Name** parameter is not specified, this cmdlet returns the metadata for all stored secrets.
+If the **Name** parameter isn't specified, this cmdlet returns the metadata for all stored secrets.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -97,13 +97,13 @@ Accept wildcard characters: True
 
 ### -Vault
 
-Specifies the name of a vault to search for secret metadata. Wildcard characters are not permitted.
+Specifies the name of a vault to search for secret metadata. Wildcard characters aren't permitted.
 
-If the **Vault** parameter is not specified, this cmdlet searches for metadata in all registered
+If the **Vault** parameter isn't specified, this cmdlet searches for metadata in all registered
 vaults.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 

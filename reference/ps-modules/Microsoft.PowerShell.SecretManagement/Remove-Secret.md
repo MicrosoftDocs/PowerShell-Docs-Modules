@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.PowerShell.SecretManagement.dll-Help.xml
 Module Name: Microsoft.PowerShell.SecretManagement
-ms.date: 05/31/2022
+ms.date: 05/23/2025
 online version: https://learn.microsoft.com/powershell/module/microsoft.powershell.secretmanagement/remove-secret?view=ps-modules&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
@@ -40,7 +40,7 @@ Get-Secret -Name secretTest -Vault CredMan
 ```
 
 ```output
-Get-Secret: The secret secretTest was not found.
+Get-Secret: The secret secretTest wasn't found.
 ```
 
 This example removes the `secretTest` secret from the `CredMan` vault. The `Get-Secret` command
@@ -54,7 +54,7 @@ Get-Secret -Name Secret2 -Vault CredMan
 ```
 
 ```output
-Get-Secret: The secret Secret2 was not found.
+Get-Secret: The secret Secret2 wasn't found.
 ```
 
 This example removes the `Secret2` secret from the `CredMan` vault. `Get-SecretInfo` retrieves the
@@ -68,7 +68,7 @@ information for the secret and sends the result through the pipeline to `Remove-
 Specifies a **SecretInformation** object that describes a vault secret.
 
 ```yaml
-Type: SecretInformation
+Type: Microsoft.PowerShell.SecretManagement.SecretInformation
 Parameter Sets: InfoParameterSet
 Aliases:
 
@@ -81,10 +81,10 @@ Accept wildcard characters: False
 
 ### -Name
 
-Specifies the name of the secret to remove. Wildcard characters (`*`) are not permitted.
+Specifies the name of the secret to remove. Wildcard characters (`*`) aren't permitted.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: NameParameterSet
 Aliases:
 
@@ -97,11 +97,11 @@ Accept wildcard characters: False
 
 ### -Vault
 
-Specifies the name of the vault to remove the secret from. Wildcard characters (`*`) are not
+Specifies the name of the vault to remove the secret from. Wildcard characters (`*`) aren't
 permitted.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: NameParameterSet
 Aliases:
 
@@ -117,29 +117,29 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs. The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.PowerShell.SecretStore.dll-Help.xml
 Module Name: Microsoft.PowerShell.SecretStore
-ms.date: 05/31/2022
+ms.date: 05/23/2025
 online version: https://learn.microsoft.com/powershell/module/microsoft.powershell.secretstore/get-secretstoreconfiguration?view=ps-modules&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
@@ -33,7 +33,7 @@ PS C:\> Get-SecretStoreConfiguration
 CurrentUser       Password             900      Prompt
 ```
 
-This example shows the current configuration for **SecretStore**. It is configured for the current
+This example shows the current configuration for **SecretStore**. It's configured for the current
 user. It requires a password for initial access in a session and prompts the user for it in an
 interactive session. After fifteen minutes, the password is required again for access.
 
@@ -56,6 +56,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
-The `AllUsers` **Scope** is not supported. The **Scope** is always `CurrentUser`.
+The `AllUsers` **Scope** isn't supported. The **Scope** is always `CurrentUser`.
 
 ## RELATED LINKS

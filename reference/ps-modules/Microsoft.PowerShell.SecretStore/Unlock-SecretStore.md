@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.PowerShell.SecretStore.dll-Help.xml
 Module Name: Microsoft.PowerShell.SecretStore
-ms.date: 05/31/2022
+ms.date: 05/23/2025
 online version: https://learn.microsoft.com/powershell/module/microsoft.powershell.secretstore/unlock-secretstore?view=ps-modules&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
@@ -31,7 +31,7 @@ configured password timeout elapses.
 ```powershell
 PS C:\> Get-Secret Secret1 -Vault LocalStore
 Get-Secret: A valid password is required to access the Microsoft.PowerShell.SecretStore vault.
-Get-Secret: The secret Secret1 was not found.
+Get-Secret: The secret Secret1 wasn't found.
 
 PS C:\> Unlock-SecretStore
 
@@ -45,7 +45,7 @@ System.Security.SecureString
 
 In this example, `Get-Secret` fails to retrieve `Secret1` because the **SecretStore** vault is
 locked. `Unlock-SecretStore` unlocks the vault. The cmdlet prompts for the password because the
-**Password** parameter was not specified. With the vault unlocked, `Get-Secret` returns `Secret1` as
+**Password** parameter wasn't specified. With the vault unlocked, `Get-Secret` returns `Secret1` as
 a **SecureString** object.
 
 ## PARAMETERS
@@ -55,7 +55,7 @@ a **SecureString** object.
 Specifies the password needed to access the **SecretStore**.
 
 ```yaml
-Type: SecureString
+Type: System.Security.SecureString
 Parameter Sets: (All)
 Aliases:
 
@@ -74,7 +74,7 @@ elapsed, the current password value is invalidated for the session. Accessing th
 after the timeout requires the password again.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases:
 

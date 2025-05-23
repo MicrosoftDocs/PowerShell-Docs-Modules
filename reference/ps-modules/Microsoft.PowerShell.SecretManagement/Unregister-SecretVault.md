@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.PowerShell.SecretManagement.dll-Help.xml
 Module Name: Microsoft.PowerShell.SecretManagement
-ms.date: 05/31/2022
+ms.date: 05/23/2025
 online version: https://learn.microsoft.com/powershell/module/microsoft.powershell.secretmanagement/unregister-secretvault?view=ps-modules&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
@@ -50,7 +50,7 @@ VaultName ModuleName                        IsDefaultVault
 CredMan   Microsoft.PowerShell.CredManStore False
 
 PS C:\> Get-Secret -Name Secret5
-Get-Secret: The secret Secret5 was not found.
+Get-Secret: The secret Secret5 wasn't found.
 
 PS C:\> Register-SecretVault -Name SecretStore -ModuleName Microsoft.PowerShell.SecretStore -DefaultVault
 PS C:\> Get-SecretVault
@@ -66,7 +66,7 @@ System.Security.SecureString
 
 The first command lists the registered vaults for the current user. The second command un-registers
 the `LocalStore` vault. The third command verifies that the vault no longer appears in the registry.
-The fourth command attempts to retrieve `Secret5`, but it is not found since its vault was
+The fourth command attempts to retrieve `Secret5`, but it's not found since its vault was
 un-registered. The fifth command re-registers the vault under a different name and sets it as the
 user's default vault. The sixth command verifies that the vault has been re-registered as
 `SecretStore` and is the default vault. Finally, the last command retrieves `Secret5` from the
@@ -95,7 +95,7 @@ Specifies the name of the vault to un-register. Enter a name or name pattern. Wi
 (`*`) are permitted.
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: NameParameterSet
 Aliases:
 
@@ -111,7 +111,7 @@ Accept wildcard characters: True
 Specifies a **SecretVaultInfo** object representing the vault to un-register.
 
 ```yaml
-Type: SecretVaultInfo
+Type: Microsoft.PowerShell.SecretManagement.SecretVaultInfo
 Parameter Sets: SecretVaultParameterSet
 Aliases:
 
@@ -127,29 +127,29 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs. The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

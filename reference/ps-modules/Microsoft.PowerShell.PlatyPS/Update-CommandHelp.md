@@ -88,7 +88,7 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByVale)
-Accept wildcard characters: False'
+Accept wildcard characters: False
 ```
 
 ### -Path

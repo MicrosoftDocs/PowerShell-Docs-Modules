@@ -20,9 +20,9 @@ Creates the Markdown module file for a PowerShell module.
 ### __AllParameterSets
 
 ```
-New-MarkdownModuleFile -OutputFolder <string> [-CommandHelp <CommandHelp[]>] [-Encoding <Encoding>]
- [-Force] [-HelpUri <string>] [-HelpInfoUri <string>] [-HelpVersion <version>] [-Locale <string>]
- [-Metadata <hashtable>] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-MarkdownModuleFile -OutputFolder <string> [-CommandHelp <CommandHelp[]>]
+ [-Encoding <Encoding>] [-Force] [-HelpInfoUri <string>] [-HelpVersion <version>]
+ [-Locale <string>] [-Metadata <hashtable>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## ALIASES
@@ -166,26 +166,6 @@ HelpMessage: ''
 
 This parameter allows you to specify the URI used for updateable help. By default, the cmdlet uses
 the HelpInfoUri specified in the module manifest.
-
-```yaml
-Type: System.String
-DefaultValue: None
-SupportsWildcards: false
-Aliases: []
-ParameterSets:
-- Name: (All)
-  Position: Named
-  IsRequired: false
-  ValueFromPipeline: false
-  ValueFromPipelineByPropertyName: false
-  ValueFromRemainingArguments: false
-DontShow: false
-AcceptedValues: []
-HelpMessage: ''
-```
-
-### -HelpUri
-
 
 ```yaml
 Type: System.String

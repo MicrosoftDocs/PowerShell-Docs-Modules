@@ -1,11 +1,11 @@
-﻿---
+---
+document type: cmdlet
 external help file: Microsoft.PowerShell.PlatyPS.dll-Help.xml
-online version: https://learn.microsoft.com/powershell/module/microsoft.powershell.platyps/compare-commandhelp?view=ps-modules&WT.mc_id=ps-gethelp
+HelpUri: https://learn.microsoft.com/powershell/module/microsoft.powershell.platyps/compare-commandhelp?view=ps-modules&WT.mc_id=ps-gethelp
 Locale: en-US
 Module Name: Microsoft.PowerShell.PlatyPS
-ms.custom: preview1
-ms.date: 10/25/2024
-schema: 2.0.0
+ms.date: 07/17/2025
+PlatyPS schema version: 2024-05-01
 title: Compare-CommandHelp
 ---
 
@@ -23,6 +23,8 @@ Compares two **CommandHelp** objects and produces a detailed report showing the 
 Compare-CommandHelp [-ReferenceCommandHelp] <CommandHelp> [-DifferenceCommandHelp] <CommandHelp>
  [-PropertyNamesToExclude <string[]>] [<CommonParameters>]
 ```
+
+## ALIASES
 
 ## DESCRIPTION
 
@@ -48,14 +50,19 @@ The CommandHelp object to compare against the reference object.
 
 ```yaml
 Type: Microsoft.PowerShell.PlatyPS.Model.CommandHelp
-Parameter Sets: (All)
-Aliases:
-Accepted values:
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
+DefaultValue: None
+SupportsWildcards: false
+Aliases: []
+ParameterSets:
+- Name: (All)
+  Position: 1
+  IsRequired: true
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: true
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### -PropertyNamesToExclude
@@ -64,14 +71,19 @@ A list of one or more property names to exclude from the comparison.
 
 ```yaml
 Type: System.String[]
-Parameter Sets: (All)
-Aliases:
-Accepted values:
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
+DefaultValue: None
+SupportsWildcards: false
+Aliases: []
+ParameterSets:
+- Name: (All)
+  Position: Named
+  IsRequired: false
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### -ReferenceCommandHelp
@@ -80,14 +92,19 @@ The base CommandHelp object to be compared to the difference object.
 
 ```yaml
 Type: Microsoft.PowerShell.PlatyPS.Model.CommandHelp
-Parameter Sets: (All)
-Aliases:
-Accepted values:
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
+DefaultValue: None
+SupportsWildcards: false
+Aliases: []
+ParameterSets:
+- Name: (All)
+  Position: 0
+  IsRequired: true
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: true
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### CommonParameters
@@ -109,6 +126,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Import-MarkdownCommandHelp](Import-MarkdownCommandHelp.md)
-
-[Import-YamlCommandHelp](Import-YamlCommandHelp.md)
+- [Import-MarkdownCommandHelp](Import-MarkdownCommandHelp.md)
+- [Import-YamlCommandHelp](Import-YamlCommandHelp.md)

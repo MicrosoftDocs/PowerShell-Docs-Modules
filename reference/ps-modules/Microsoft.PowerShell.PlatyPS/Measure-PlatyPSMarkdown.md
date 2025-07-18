@@ -1,11 +1,11 @@
-﻿---
+---
+document type: cmdlet
 external help file: Microsoft.PowerShell.PlatyPS.dll-Help.xml
-online version: https://learn.microsoft.com/powershell/module/microsoft.powershell.platyps/measure-platypsmarkdown?view=ps-modules&WT.mc_id=ps-gethelp
+HelpUri: https://learn.microsoft.com/powershell/module/microsoft.powershell.platyps/measure-platypsmarkdown?view=ps-modules&WT.mc_id=ps-gethelp
 Locale: en-US
 Module Name: Microsoft.PowerShell.PlatyPS
-ms.custom: preview1
-ms.date: 10/25/2024
-schema: 2.0.0
+ms.date: 07/17/2025
+PlatyPS schema version: 2024-05-01
 title: Measure-PlatyPSMarkdown
 ---
 
@@ -28,6 +28,8 @@ Measure-PlatyPSMarkdown [-Path] <string[]> [<CommonParameters>]
 ```
 Measure-PlatyPSMarkdown -LiteralPath <string[]> [<CommonParameters>]
 ```
+
+## ALIASES
 
 ## DESCRIPTION
 
@@ -83,14 +85,21 @@ For more information, see
 
 ```yaml
 Type: System.String[]
-Parameter Sets: LiteralPath
+DefaultValue: None
+SupportsWildcards: false
 Aliases:
-Accepted values:
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
+- PSPath
+- LP
+ParameterSets:
+- Name: LiteralPath
+  Position: Named
+  IsRequired: true
+  ValueFromPipeline: true
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### -Path
@@ -99,14 +108,19 @@ The path to one or more Markdown files. Specifies a path to one or more location
 
 ```yaml
 Type: System.String[]
-Parameter Sets: Path
-Aliases:
-Accepted values:
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: True
+DefaultValue: None
+SupportsWildcards: true
+Aliases: []
+ParameterSets:
+- Name: Path
+  Position: 0
+  IsRequired: true
+  ValueFromPipeline: true
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### CommonParameters
@@ -118,7 +132,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### System.String
+### System.String[]
 
 ## OUTPUTS
 
@@ -135,4 +149,4 @@ to validate the structure of the markdown file.
 
 ## RELATED LINKS
 
-[Test-MarkdownCommandHelp](Test-MarkdownCommandHelp.md)
+- [Test-MarkdownCommandHelp](Test-MarkdownCommandHelp.md)

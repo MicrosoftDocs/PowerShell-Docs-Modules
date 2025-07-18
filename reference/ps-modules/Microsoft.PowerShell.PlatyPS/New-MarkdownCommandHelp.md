@@ -1,11 +1,11 @@
-﻿---
+---
+document type: cmdlet
 external help file: Microsoft.PowerShell.PlatyPS.dll-Help.xml
-online version: https://learn.microsoft.com/powershell/module/microsoft.powershell.platyps/new-markdowncommandhelp?view=ps-modules&WT.mc_id=ps-gethelp
+HelpUri: https://learn.microsoft.com/powershell/module/microsoft.powershell.platyps/new-markdowncommandhelp?view=ps-modules&WT.mc_id=ps-gethelp
 Locale: en-US
 Module Name: Microsoft.PowerShell.PlatyPS
-ms.custom: preview1
-ms.date: 10/25/2024
-schema: 2.0.0
+ms.date: 07/17/2025
+PlatyPS schema version: 2024-05-01
 title: New-MarkdownCommandHelp
 ---
 
@@ -25,6 +25,8 @@ New-MarkdownCommandHelp -OutputFolder <string> [-CommandInfo <CommandInfo[]>] [-
  [-Metadata <hashtable>] [-ModuleInfo <psmoduleinfo[]>] [-WithModulePage]
  [-AbbreviateParameterTypename] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
+
+## ALIASES
 
 ## DESCRIPTION
 
@@ -65,14 +67,19 @@ types. When you use this parameter, the cmdlet outputs short type names.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Accepted values:
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
+DefaultValue: False
+SupportsWildcards: false
+Aliases: []
+ParameterSets:
+- Name: (All)
+  Position: Named
+  IsRequired: false
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### -CommandInfo
@@ -81,14 +88,19 @@ A list of one or more commands to create help for.
 
 ```yaml
 Type: System.Management.Automation.CommandInfo[]
-Parameter Sets: (All)
-Aliases:
-Accepted values:
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
+DefaultValue: None
+SupportsWildcards: false
+Aliases: []
+ParameterSets:
+- Name: (All)
+  Position: Named
+  IsRequired: false
+  ValueFromPipeline: true
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### -Confirm
@@ -97,14 +109,20 @@ Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-Accepted values:
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
+DefaultValue: False
+SupportsWildcards: false
+Aliases:
+- cf
+ParameterSets:
+- Name: (All)
+  Position: Named
+  IsRequired: false
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### -Encoding
@@ -114,14 +132,19 @@ by `$OutputEncoding`.
 
 ```yaml
 Type: System.Text.Encoding
-Parameter Sets: (All)
-Aliases:
-Accepted values:
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
+DefaultValue: None
+SupportsWildcards: false
+Aliases: []
+ParameterSets:
+- Name: (All)
+  Position: Named
+  IsRequired: false
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### -Force
@@ -131,14 +154,19 @@ overwrites existing files.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Accepted values:
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
+DefaultValue: False
+SupportsWildcards: false
+Aliases: []
+ParameterSets:
+- Name: (All)
+  Position: Named
+  IsRequired: false
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### -HelpInfoUri
@@ -148,14 +176,19 @@ the HelpInfoUri specified in the module manifest.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
-Aliases:
-Accepted values:
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
+DefaultValue: None
+SupportsWildcards: false
+Aliases: []
+ParameterSets:
+- Name: (All)
+  Position: Named
+  IsRequired: false
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### -HelpUri
@@ -165,14 +198,19 @@ URI defined in the `[CmdletBinding()]` attribute for the command.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
-Aliases:
-Accepted values:
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
+DefaultValue: None
+SupportsWildcards: false
+Aliases: []
+ParameterSets:
+- Name: (All)
+  Position: Named
+  IsRequired: false
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### -HelpVersion
@@ -182,14 +220,19 @@ version is written to the `HelpInfo.xml` file that is used for updateable help.
 
 ```yaml
 Type: System.Version
-Parameter Sets: (All)
-Aliases:
-Accepted values:
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
+DefaultValue: None
+SupportsWildcards: false
+Aliases: []
+ParameterSets:
+- Name: (All)
+  Position: Named
+  IsRequired: false
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### -Locale
@@ -200,14 +243,19 @@ on your system.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
-Aliases:
-Accepted values:
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
+DefaultValue: None
+SupportsWildcards: false
+Aliases: []
+ParameterSets:
+- Name: (All)
+  Position: Named
+  IsRequired: false
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### -Metadata
@@ -220,14 +268,19 @@ the cmdlet ignores the values and outputs a warning.
 
 ```yaml
 Type: System.Collections.Hashtable
-Parameter Sets: (All)
-Aliases:
-Accepted values:
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
+DefaultValue: None
+SupportsWildcards: false
+Aliases: []
+ParameterSets:
+- Name: (All)
+  Position: Named
+  IsRequired: false
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### -ModuleInfo
@@ -238,14 +291,19 @@ location. All Markdown files are written to the module folder.
 
 ```yaml
 Type: System.Management.Automation.PSModuleInfo[]
-Parameter Sets: (All)
-Aliases:
-Accepted values:
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
+DefaultValue: None
+SupportsWildcards: false
+Aliases: []
+ParameterSets:
+- Name: (All)
+  Position: Named
+  IsRequired: false
+  ValueFromPipeline: true
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### -OutputFolder
@@ -256,30 +314,41 @@ creates a the Markdown file in the root of the output folder.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
-Aliases:
-Accepted values:
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
+DefaultValue: None
+SupportsWildcards: false
+Aliases: []
+ParameterSets:
+- Name: (All)
+  Position: Named
+  IsRequired: true
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs. The cmdlet isn't run.
+Runs the command in a mode that only reports what would happen without performing the actions.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Accepted values:
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
+DefaultValue: False
+SupportsWildcards: false
+Aliases:
+- wi
+ParameterSets:
+- Name: (All)
+  Position: Named
+  IsRequired: false
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### -WithModulePage
@@ -290,14 +359,19 @@ the module and metadata used to create the HelpInfo.xml file.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Accepted values:
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
+DefaultValue: False
+SupportsWildcards: false
+Aliases: []
+ParameterSets:
+- Name: (All)
+  Position: Named
+  IsRequired: false
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### CommonParameters
@@ -309,9 +383,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### System.Management.Automation.CommandInfo
+### System.Management.Automation.CommandInfo[]
 
-### System.Management.Automation.PSModuleInfo
+### System.Management.Automation.PSModuleInfo[]
 
 ## OUTPUTS
 
@@ -321,4 +395,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Export-MarkdownCommandHelp](Export-MarkdownCommandHelp.md)
+- [Export-MarkdownCommandHelp](Export-MarkdownCommandHelp.md)

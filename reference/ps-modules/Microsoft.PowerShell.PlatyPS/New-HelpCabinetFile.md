@@ -1,11 +1,11 @@
-﻿---
+---
+document type: cmdlet
 external help file: Microsoft.PowerShell.PlatyPS-Help.xml
-online version: https://learn.microsoft.com/powershell/module/microsoft.powershell.platyps/new-helpcabinetfile?view=ps-modules&WT.mc_id=ps-gethelp
+HelpUri: https://learn.microsoft.com/powershell/module/microsoft.powershell.platyps/new-helpcabinetfile?view=ps-modules&WT.mc_id=ps-gethelp
 Locale: en-US
 Module Name: Microsoft.PowerShell.PlatyPS
-ms.custom: preview1
-ms.date: 10/25/2024
-schema: 2.0.0
+ms.date: 07/17/2025
+PlatyPS schema version: 2024-05-01
 title: New-HelpCabinetFile
 ---
 
@@ -23,6 +23,8 @@ Creates a help cabinet file for a module that can be published as updateable hel
 New-HelpCabinetFile [-CabinetFilesFolder] <string> [-MarkdownModuleFile] <string>
  [-OutputFolder] <string> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
+
+## ALIASES
 
 ## DESCRIPTION
 
@@ -59,14 +61,19 @@ The path to the folder containing the MAML file to be packaged.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
-Aliases:
-Accepted values:
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
+DefaultValue: None
+SupportsWildcards: false
+Aliases: []
+ParameterSets:
+- Name: (All)
+  Position: 0
+  IsRequired: true
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### -Confirm
@@ -75,14 +82,20 @@ Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-Accepted values:
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
+DefaultValue: False
+SupportsWildcards: false
+Aliases:
+- cf
+ParameterSets:
+- Name: (All)
+  Position: Named
+  IsRequired: false
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### -MarkdownModuleFile
@@ -91,14 +104,19 @@ Specifies the full path of the module Markdown file.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
-Aliases:
-Accepted values:
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
+DefaultValue: None
+SupportsWildcards: false
+Aliases: []
+ParameterSets:
+- Name: (All)
+  Position: 1
+  IsRequired: true
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### -OutputFolder
@@ -107,30 +125,41 @@ The location where you want to write the `.cab`, `.zip`, and `HelpInfo.xml` file
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
-Aliases:
-Accepted values:
-Required: True
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
+DefaultValue: None
+SupportsWildcards: false
+Aliases: []
+ParameterSets:
+- Name: (All)
+  Position: 2
+  IsRequired: true
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs. The cmdlet isn't run.
+Runs the command in a mode that only reports what would happen without performing the actions.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Accepted values:
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
+DefaultValue: False
+SupportsWildcards: false
+Aliases:
+- wi
+ParameterSets:
+- Name: (All)
+  Position: Named
+  IsRequired: false
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### CommonParameters

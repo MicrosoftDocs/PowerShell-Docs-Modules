@@ -1,11 +1,11 @@
-﻿---
+---
+document type: cmdlet
 external help file: Microsoft.PowerShell.PlatyPS-Help.xml
-online version: https://learn.microsoft.com/powershell/module/microsoft.powershell.platyps/show-helppreview?view=ps-modules&WT.mc_id=ps-gethelp
+HelpUri: https://learn.microsoft.com/powershell/module/microsoft.powershell.platyps/show-helppreview?view=ps-modules&WT.mc_id=ps-gethelp
 Locale: en-US
 Module Name: Microsoft.PowerShell.PlatyPS
-ms.custom: preview1
-ms.date: 10/25/2024
-schema: 2.0.0
+ms.date: 07/17/2025
+PlatyPS schema version: 2024-05-01
 title: Show-HelpPreview
 ---
 
@@ -30,6 +30,8 @@ Show-HelpPreview [-Path] <string[]> [-ConvertNotesToList] [-ConvertDoubleDashLis
 Show-HelpPreview [-LiteralPath] <string[]> [-ConvertNotesToList] [-ConvertDoubleDashLists]
  [<CommonParameters>]
 ```
+
+## ALIASES
 
 ## DESCRIPTION
 
@@ -57,14 +59,19 @@ for lists.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Accepted values:
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
+DefaultValue: False
+SupportsWildcards: false
+Aliases: []
+ParameterSets:
+- Name: (All)
+  Position: Named
+  IsRequired: false
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### -ConvertNotesToList
@@ -74,14 +81,19 @@ items.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Accepted values:
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
+DefaultValue: False
+SupportsWildcards: false
+Aliases: []
+ParameterSets:
+- Name: (All)
+  Position: Named
+  IsRequired: false
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### -LiteralPath
@@ -90,14 +102,21 @@ Specifies one or more paths to MAML help files. Wildcards aren't supported.
 
 ```yaml
 Type: System.String[]
-Parameter Sets: LiteralPath
-Aliases: LP, PSPath
-Accepted values:
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
+DefaultValue: None
+SupportsWildcards: false
+Aliases:
+- PSPath
+- LP
+ParameterSets:
+- Name: LiteralPath
+  Position: 1
+  IsRequired: true
+  ValueFromPipeline: true
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### -Path
@@ -106,14 +125,19 @@ Specifies one or more paths to MAML help files. Wildcards are supported.
 
 ```yaml
 Type: System.String[]
-Parameter Sets: Path
-Aliases:
-Accepted values:
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: True
+DefaultValue: None
+SupportsWildcards: true
+Aliases: []
+ParameterSets:
+- Name: Path
+  Position: 1
+  IsRequired: true
+  ValueFromPipeline: true
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### CommonParameters
@@ -125,9 +149,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### System.String
-
-You can pipe path strings to this command.
+### System.String[]
 
 ## OUTPUTS
 
@@ -140,4 +162,4 @@ This cmdlet returns a `MamlCommandHelpInfo` objects. This is the same object tha
 
 ## RELATED LINKS
 
-[Get-Help](xref:Microsoft.PowerShell.Core.Get-Help)
+- [Get-Help](xref:Microsoft.PowerShell.Core.Get-Help)

@@ -1,11 +1,11 @@
-﻿---
+---
+document type: cmdlet
 external help file: Microsoft.PowerShell.PlatyPS.dll-Help.xml
-online version: https://learn.microsoft.com/powershell/module/microsoft.powershell.platyps/import-yamlmodulefile?view=ps-modules&WT.mc_id=ps-gethelp
+HelpUri: https://learn.microsoft.com/powershell/module/microsoft.powershell.platyps/import-yamlmodulefile?view=ps-modules&WT.mc_id=ps-gethelp
 Locale: en-US
 Module Name: Microsoft.PowerShell.PlatyPS
-ms.custom: preview1
-ms.date: 10/25/2024
-schema: 2.0.0
+ms.date: 07/17/2025
+PlatyPS schema version: 2024-05-01
 title: Import-YamlModuleFile
 ---
 
@@ -28,6 +28,8 @@ Import-YamlModuleFile [-Path] <string[]> [-AsDictionary] [<CommonParameters>]
 ```
 Import-YamlModuleFile -LiteralPath <string[]> [-AsDictionary] [<CommonParameters>]
 ```
+
+## ALIASES
 
 ## DESCRIPTION
 
@@ -64,14 +66,19 @@ returns the **ModuleHelp** data a dictionary object.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Accepted values:
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
+DefaultValue: False
+SupportsWildcards: false
+Aliases: []
+ParameterSets:
+- Name: (All)
+  Position: Named
+  IsRequired: false
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### -LiteralPath
@@ -86,14 +93,21 @@ For more information, see
 
 ```yaml
 Type: System.String[]
-Parameter Sets: LiteralPath
+DefaultValue: None
+SupportsWildcards: false
 Aliases:
-Accepted values:
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
+- PSPath
+- LP
+ParameterSets:
+- Name: LiteralPath
+  Position: Named
+  IsRequired: true
+  ValueFromPipeline: true
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### -Path
@@ -102,14 +116,19 @@ Specifies a path to one or more locations containing Yaml module files.
 
 ```yaml
 Type: System.String[]
-Parameter Sets: Path
-Aliases:
-Accepted values:
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: True
+DefaultValue: None
+SupportsWildcards: true
+Aliases: []
+ParameterSets:
+- Name: Path
+  Position: 0
+  IsRequired: true
+  ValueFromPipeline: true
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### CommonParameters
@@ -121,7 +140,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### System.String
+### System.String[]
 
 ## OUTPUTS
 
@@ -131,4 +150,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Import-MarkdownModuleFile](Import-MarkdownModuleFile.md)
+- [Import-MarkdownModuleFile](Import-MarkdownModuleFile.md)

@@ -1,11 +1,11 @@
-﻿---
+---
+document type: cmdlet
 external help file: Microsoft.PowerShell.PlatyPS.dll-Help.xml
-online version: https://learn.microsoft.com/powershell/module/microsoft.powershell.platyps/test-markdowncommandhelp?view=ps-modules&WT.mc_id=ps-gethelp
+HelpUri: https://learn.microsoft.com/powershell/module/microsoft.powershell.platyps/test-markdowncommandhelp?view=ps-modules&WT.mc_id=ps-gethelp
 Locale: en-US
 Module Name: Microsoft.PowerShell.PlatyPS
-ms.custom: preview1
-ms.date: 10/25/2024
-schema: 2.0.0
+ms.date: 07/17/2025
+PlatyPS schema version: 2024-05-01
 title: Test-MarkdownCommandHelp
 ---
 
@@ -28,6 +28,8 @@ Test-MarkdownCommandHelp [-Path] <string[]> [-DetailView] [<CommonParameters>]
 ```
 Test-MarkdownCommandHelp -LiteralPath <string[]> [-DetailView] [<CommonParameters>]
 ```
+
+## ALIASES
 
 ## DESCRIPTION
 
@@ -74,14 +76,19 @@ Instructs the command to output detailed validation information.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Accepted values:
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
+DefaultValue: False
+SupportsWildcards: false
+Aliases: []
+ParameterSets:
+- Name: (All)
+  Position: Named
+  IsRequired: false
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### -LiteralPath
@@ -96,15 +103,21 @@ For more information, see
 
 ```yaml
 Type: System.String[]
-Parameter Sets: LiteralPath
-Aliases: PSPath, LP
-Accepted values:
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-
+DefaultValue: None
+SupportsWildcards: false
+Aliases:
+- PSPath
+- LP
+ParameterSets:
+- Name: Literal
+  Position: Named
+  IsRequired: true
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: true
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### -Path
@@ -113,14 +126,19 @@ The path to the Markdown help file to test.
 
 ```yaml
 Type: System.String[]
-Parameter Sets: Path
-Aliases:
-Accepted values:
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: True
+DefaultValue: None
+SupportsWildcards: true
+Aliases: []
+ParameterSets:
+- Name: Item
+  Position: 0
+  IsRequired: true
+  ValueFromPipeline: true
+  ValueFromPipelineByPropertyName: true
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### CommonParameters
@@ -132,7 +150,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### System.String
+### System.String[]
 
 ## OUTPUTS
 
@@ -144,6 +162,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Export-MarkdownCommandHelp](Export-MarkdownCommandHelp.md)
-
-[New-MarkdownCommandHelp](New-MarkdownCommandHelp.md)
+- [Export-MarkdownCommandHelp](Export-MarkdownCommandHelp.md)
+- [New-MarkdownCommandHelp](New-MarkdownCommandHelp.md)

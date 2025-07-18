@@ -1,11 +1,11 @@
-﻿---
+---
+document type: cmdlet
 external help file: Microsoft.PowerShell.PlatyPS.dll-Help.xml
-online version: https://learn.microsoft.com/powershell/module/microsoft.powershell.platyps/new-commandhelp?view=ps-modules&WT.mc_id=ps-gethelp
+HelpUri: https://learn.microsoft.com/powershell/module/microsoft.powershell.platyps/new-commandhelp?view=ps-modules&WT.mc_id=ps-gethelp
 Locale: en-US
 Module Name: Microsoft.PowerShell.PlatyPS
-ms.custom: preview1
-ms.date: 10/25/2024
-schema: 2.0.0
+ms.date: 07/17/2025
+PlatyPS schema version: 2024-05-01
 title: New-CommandHelp
 ---
 
@@ -22,6 +22,8 @@ Creates **CommandHelp** objects for a PowerShell command that's loaded in the se
 ```
 New-CommandHelp [-CommandInfo] <CommandInfo[]> [<CommonParameters>]
 ```
+
+## ALIASES
 
 ## DESCRIPTION
 
@@ -82,14 +84,19 @@ A list of one or more PowerShell commands (cmdlets, functions, scripts). The cmd
 
 ```yaml
 Type: System.Management.Automation.CommandInfo[]
-Parameter Sets: (All)
-Aliases:
-Accepted values:
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
+DefaultValue: None
+SupportsWildcards: false
+Aliases: []
+ParameterSets:
+- Name: (All)
+  Position: 0
+  IsRequired: true
+  ValueFromPipeline: true
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### CommonParameters
@@ -101,7 +108,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### System.Management.Automation.CommandInfo
+### System.Management.Automation.CommandInfo[]
 
 ## OUTPUTS
 
@@ -111,6 +118,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Export-MarkdownCommandHelp](Export-MarkdownCommandHelp.md)
-
-[Export-YamlCommandHelp](Export-YamlCommandHelp.md)
+- [Export-MarkdownCommandHelp](Export-MarkdownCommandHelp.md)
+- [Export-YamlCommandHelp](Export-YamlCommandHelp.md)

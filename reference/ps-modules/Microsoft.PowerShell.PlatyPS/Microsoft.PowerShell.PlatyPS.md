@@ -1,12 +1,12 @@
 ---
-Download Help Link: https://aka.ms/ps-modules-help
+document type: module
 Help Version: 1.0.0
+HelpInfoUri: https://aka.ms/ps-modules-help
 Locale: en-US
 Module Guid: 0bdcabef-a4b7-4a6d-bf7e-d879817ebbff
 Module Name: Microsoft.PowerShell.PlatyPS
-ms.custom: preview1
-ms.date: 10/26/2024
-schema: 2.0.0
+ms.date: 07/18/2025
+PlatyPS schema version: 2024-05-01
 title: Microsoft.PowerShell.PlatyPS Module
 ---
 

@@ -29,6 +29,9 @@
       "monikerPath": [
         "mapping/monikerMapping.json"
       ],
+      "cabgenConfigPath": [
+          "mapping/cabgenConfig.json"
+      ],
       "version": 0
     }
   ],

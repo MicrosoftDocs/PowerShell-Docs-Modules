@@ -4,6 +4,9 @@
       "docset_name": "PowerShell-Docs-Modules",
       "build_source_folder": "reference",
       "build_output_subfolder": "reference",
+      "cabgenConfigPath": [
+             "mapping/cabgenConfig.json"
+         ],
       "locale": "en-us",
       "monikers": [],
       "moniker_ranges": [],

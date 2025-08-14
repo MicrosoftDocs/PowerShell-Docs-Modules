@@ -142,10 +142,10 @@ libcrypt1   1:4.4.10-10ubuntu4 amd64        {installed, local}
 
 PS> Get-InstalledPackage | Group-Object Architecture
 
-Count Name  Group
------ ----  -----
-   10 all   {@{Name=adduser; Version=3.118ubuntu2; Architecture=all; State=System.String[]}, @{Name=debconf; V…
-   82 amd64 {@{Name=apt; Version=2.0.2ubuntu0.1; Architecture=amd64; State=System.String[]}, @{Name=base-files…
+Count Name  
+----- ----  
+   10 all   
+   82 amd64 
 ```
 
 ## See also

@@ -102,7 +102,7 @@ includes two agents by default:
 
 <!-- link references -->
 [01]: https://devblogs.microsoft.com/powershell/ai-shell-preview-2/
-[02]: https://devblogs.microsoft.com/powershell/ai-shell-preview-6/
+[02]: https://devblogs.microsoft.com/powershell/preview-6-ai-shell/
 [03]: https://devblogs.microsoft.com/powershell/announcing-the-public-preview-of-ai-shell/
 [04]: https://devblogs.microsoft.com/powershell/preview-4-ai-shell/
 [06]: https://github.com/PowerShell/AIShell/releases

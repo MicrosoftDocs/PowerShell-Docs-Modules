@@ -1,7 +1,7 @@
 ---
 title: AI Shell command reference
 description: Learn about the command-line options and commands available in AI Shell.
-ms.date: 05/16/2025
+ms.date: 08/25/2025
 ms.topic: reference
 ---
 # AI Shell command reference
@@ -29,8 +29,12 @@ Options:
 
 ## Chat commands
 
-By default, `aish` provides a base set of chat commands used to interact with the AI model. To get a
-list of commands, use the `/help` command in the chat session.
+To query the selected AI model, enter your prompt at the AI Shell prompt. AI Shell send the prompt
+request to the connected AI model. AI Shell also provides a base set of shell commands used to
+interact with the AI model.
+
+To get a list of commands, use the `/help` command in the chat session. The following list contain
+the AI Shell commands available to all agents.
 
 ```
   Name       Description                                                 Source
@@ -42,11 +46,23 @@ list of commands, use the `/help` command in the chat session.
   /exit      Exit the interactive session.                               Core
   /help      Show all available commands.                                Core
   /like      Like the last response and send feedback.                   Core
+  /mcp       Command for managing MCP servers and tools.                 Core
   /refresh   Start a new chat session.                                   Core
   /retry     Regenerate a new response for the last query.               Core
 ```
 
-## `/agent`
+AI Shell also provides commands specific to the selected agent.
+
+```
+  Name       Description                                                                   Source
+---------------------------------------------------------------------------------------------------
+  /gpt       Command for GPT management within the 'openai-gpt' agent.                     openai-gpt
+  /replace   Replace argument placeholders in the generated scripts with the real value.   azure
+```
+
+## General chat commands
+
+### `/agent`
 
 Command for agent management.
 
@@ -63,19 +79,20 @@ Subcommands
 - `list` - List all available agents.
 - `use <azure|openai-gpt>` - Specify an agent to use, or choose one from the available agents.
 
-### `/agent config`
+#### `/agent config`
 
 Open up the setting file for an agent. When no agent is specified, target the active agent.
 
 ```
-/agent config [<agent>] [options]
+agent config [<agent>] [options]
 ```
 
 Arguments: `<azure|openai-gpt>` Name of an agent.
 
 Options:
 
-- `--editor <editor>` The editor to open the setting file in.
+- `--editor <editor>` - The editor to open the setting file in.
+- `-h`, `--help` - Show help and usage information
 
 Example:
 
@@ -83,7 +100,7 @@ Example:
 /agent config openai-gpt
 ```
 
-### `/agent list`
+#### `/agent list`
 
 List all available agents.
 
@@ -93,28 +110,16 @@ Example:
 > /agent list
 
   Name             Description
-───────────────────────────────────────────---------------------──
-  openai-gpt       This agent is designed to provide a flexible
-                   platform for interacting with OpenAI services
-                   (Azure OpenAI or the public OpenAI) through
-                   one or more customly defined GPT instances.
+───────────────────────────────────────────────────────────────────────────────────────────────────
 
-                   The agent is currently not ready to serve
-                   queries, because there is no GPT defined.
-                   Please follow the steps below to configure the
-                   setting file properly before using this agent:
-
-                   1. Run '/agent config' to open the setting file.
-                   2. Define the GPT(s). See details at
-                      https://aka.ms/aish/openai
-                   3. Run '/refresh' to apply the new settings.
-  azure            This AI assistant connects you to the Copilot in
-                     Azure and can generate Azure CLI and Azure
-                     PowerShell commands for managing Azure resources
-                     and answer questions about Azure.
+  openai-gpt       Active GPT: <gpt-name>. A GPT instance with expertise in PowerShell scripting
+                   using Entra ID authentication.
+  azure (active)   This AI assistant connects you to the Copilot in Azure and can generate Azure
+                   CLI and Azure PowerShell commands for managing Azure resources and answer
+                   questions about Azure.
 ```
 
-### `/agent use`
+#### `/agent use`
 
 Specify an agent to use, or choose one from the available agents.
 
@@ -122,13 +127,18 @@ Specify an agent to use, or choose one from the available agents.
 agent use [<agent>] [options]
 ```
 
-Arguments: `<azure|openai-gpt>` - Name of an agent.
+Arguments: `<azure|openai-gpt>` - Name of an agent (optional). If you don't provide an agent name,
+AI Shell prompts you to choose one from the available agents.
 
-## `/clear`
+Options:
+
+- `-h`, `--help` - Show help and usage information
+
+### `/clear`
 
 Clears the screen. You can also use the alias `/cls`.
 
-## `/code`
+### `/code`
 
 Command to interact with the code generated.
 
@@ -144,7 +154,11 @@ Subcommands:
 - `post <n>` - Post the n-th (1-based) code snippet to the connected command-line shell. Post all
   the code when `<n>` isn't specified. [default: -1]
 
-### `/code copy`
+Options:
+
+- `-h`, `--help` - Show help and usage information
+
+#### `/code copy`
 
 Copy the n-th (1-based) code snippet to clipboard. Copy all the code when `<n>` isn't specified.
 
@@ -159,11 +173,15 @@ Arguments:
 - `<n>` Use the n-th (1-based) code snippet. Use all the code when no value is specified.
   [default: -1]
 
+Options:
+
+- `-h`, `--help` - Show help and usage information
+
 Examples
 
 ![An animation showing how to copy the specific code snippets to the clipboard.][01]
 
-### `/code save`
+#### `/code save`
 
 Save all the code to a file.
 
@@ -188,7 +206,7 @@ The following example copies the all the code to a file.
 
 ![A screenshot showing how to save the code to a file.][03]
 
-### `/code post`
+#### `/code post`
 
 Post the n-th (1-based) code snippet to the connected command-line shell. Post all the code
 when `<n>` isn't specified.
@@ -211,10 +229,170 @@ Examples:
 
 ![An animation showing how to post the specific code snippets to the connected command-line shell.][02]
 
-<!-- TO DO
-- Add subcommands and switches for each command.
-- Add examples for each subcommand.
--->
+### `/dislike`
+
+Dislike the last response and send feedback.
+
+Usage:
+
+```
+/dislike [options]
+```
+
+Options:
+
+- `-h, --help` Show help and usage information
+
+### `/exit`
+
+Exit the interactive session.
+
+Usage:
+
+```
+/exit [options]
+```
+
+Options:
+
+- `-h, --help` Show help and usage information
+
+### `/like`
+
+Like the last response and send feedback.
+
+Usage:
+
+```
+/like [options]
+```
+
+Options:
+
+- `-h, --help` Show help and usage information
+
+### `/mcp`
+
+Command for managing MCP servers and tools.
+
+Usage:
+
+```
+/mcp [options]
+```
+
+Options:
+
+- `-h, --help` Show help and usage information
+
+### `/refresh`
+
+Start a new chat session.
+
+Usage:
+
+```
+/refresh [options]
+```
+
+Options:
+
+- `-h, --help` Show help and usage information
+
+### `/retry`
+
+Regenerate a new response for the last query.
+
+Usage:
+
+```
+/retry [options]
+```
+
+Options:
+
+- `-h, --help` Show help and usage information
+
+## Agent-specific chat commands
+
+### `/gpt`
+
+Command for GPT management within the 'openai-gpt' agent.
+
+Usage:
+
+```
+/gpt [command] [options]
+```
+
+Options:
+
+- `-h, --help` Show help and usage information
+
+Subcommands:
+
+- `list` - List a specific GPT, or all available GPTs.
+- `use` - Specify a GPT to use, or choose one from the available GPTs.
+
+#### `/gpt list`
+
+List a specific GPT, or all available GPTs.
+
+Usage:
+
+```
+/gpt list [<GPT>] [options]
+```
+
+Arguments: `<GPT>` - The name of a GPT
+
+Options:
+
+- `-h`, `--help` - Show help and usage information
+
+Example
+
+```
+/gpt list
+
+  Name                    Active   Description
+───────────────────────────────────────────────────────────────────────────────────────────────────
+  az-entraId-gpt-4o                A GPT instance with expertise in PowerShell scripting using
+                                   Entra ID authentication.
+  az-aikey-gpt-4o         true     A GPT instance with expertise in PowerShell scripting using
+                                   Entra ID authentication.
+```
+
+#### `/gpt use`
+
+Specify a GPT to use, or choose one from the available GPTs.
+
+Usage:
+
+```
+/gpt use [<GPT>] [options]
+```
+
+Arguments: `<GPT>` - The name of a GPT
+
+Options:
+
+- `-h`, `--help` - Show help and usage information
+
+### `/replace`
+
+Replace argument placeholders in the generated scripts with the real value. This command is only
+available for the Azure agent.
+
+Usage:
+
+```
+/replace [options]
+```
+
+Options:
+
+- `-h`, `--help` - Show help and usage information
 
 <!-- link references -->
 [01]: media/aishell-reference/code-copy-command.gif

@@ -124,4 +124,4 @@ To manually install AI Shell, follow the instructions for your platform:
 <!-- link references -->
 [01]: get-started/aishell-powershell.md
 [02]: get-started/aishell-standalone.md
-[03]: https://github.com/PowerShell/ProjectMercury/releases/latest
+[03]: https://github.com/PowerShell/AIShell/releases/latest

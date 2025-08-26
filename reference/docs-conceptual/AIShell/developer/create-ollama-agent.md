@@ -499,7 +499,7 @@ folder.
 <!-- link references -->
 [01]: https://github.com/ollama/ollama
 [02]: https://github.com/ollama/ollama/blob/main/docs/api.md#request-no-streaming
-[03]: https://github.com/PowerShell/ProjectMercury/discussions/categories/agent-sharing
+[03]: https://github.com/PowerShell/AIShell/discussions/categories/agent-sharing
 [04]: https://github.com/PowerShell/AIShell/tree/main/shell/agents/AIShell.Ollama.Agent
 [05]: https://github.com/PowerShell/AIShell/blob/main/shell/README.md
-[06]: https://www.nuget.org/packages/AIShell.Abstraction/1.0.0-preview.2
+[06]: https://www.nuget.org/packages/AIShell.Abstraction

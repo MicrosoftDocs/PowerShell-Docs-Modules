@@ -80,7 +80,7 @@ Before you can use an MCP server (Local or remote) you must add it to the `mcp.j
 file. In some cases, you might not need to install the local MCP before using it. However, the MCP
 server will be installed the first time you start AI Shell. This can take several minutes. For the
 best experience, preinstall the MCP server. Consult the documentation for your specific MCP server
-for installation instructions. Remote MCP servers don't need to be install. You just need to add
+for installation instructions. Remote MCP servers don't need to be installed. You just need to add
 them to the `mcp.json` file.
 
 ### Install a local MCP server

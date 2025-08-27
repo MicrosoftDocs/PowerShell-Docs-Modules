@@ -10,10 +10,6 @@ your command line. It provides assistance for Azure CLI commands, Azure PowerShe
 general Azure knowledge. To use this agent, you need to sign in to Azure using the `az login`
 command from Azure CLI.
 
-> [!IMPORTANT]
-> You must use sign in to Azure using the Azure CLI command. We're working on supporting the
-> `Connect-AzAccount` command from Azure PowerShell.
-
 ## Prerequisites
 
 - Windows 11 21H2 or higher

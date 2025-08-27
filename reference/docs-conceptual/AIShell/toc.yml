@@ -13,8 +13,6 @@ items:
         href: get-started/aishell-powershell.md
       - name: Get started with AI Shell (standalone)
         href: get-started/aishell-standalone.md
-  - name: How to use AI Shell
-    items:
       - name: AI Shell command reference
         href: how-to/aishell-reference.md
   - name: AI Shell agents

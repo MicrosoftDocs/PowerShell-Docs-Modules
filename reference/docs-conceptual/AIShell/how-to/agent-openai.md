@@ -1,34 +1,47 @@
 ---
-title: OpenAI agent README
-description: Learn how to use the OpenAI agent in AI Shell.
-ms.date: 05/21/2025
+title: OpenAI agent
+description: Learn how to configure the OpenAI agent.
+ms.date: 08/25/2025
 ms.topic: how-to
 ---
 # OpenAI agent
 
-This agent is designed to provide a user-friendly platform for interacting with OpenAI services. It
-can connect to a public OpenAI service or a private deployment of the Azure OpenAI service. We
-recommend using an Azure OpenAI deployment for enhanced security and privacy.
+This agent provides a user-friendly platform for interacting with OpenAI services. The OpenAI agent
+can connect to a public OpenAI service, a private deployment of the Azure OpenAI service, or any
+other OpenAI-compatible service. We recommend using an Azure OpenAI deployment for enhanced security
+and privacy.
 
 ## Prerequisites
 
-- For OpenAI, you need the **Model Name** and **API Key** to use the agent.
-  - [OpenAI API Key][09]
-  - [OpenAI Model][10]
+Before you can use the agent, you must configure at least one GPT instance in the agent
+configuration file. Collect the following information about your OpenAI implementation:
 
-- For Azure OpenAI Service, you need the **Endpoint**, **Deployment Name**, **Model Name**, and
-  **API Key** to use the agent.
-  - [Access to Azure OpenAI][03]
-  - [Create an Azure OpenAI deployment][01]
+- `ModelName` - the name of the AI model to use
+- `Key` - the API key used to authenticate requests to the OpenAI service
+- `Endpoint` - required for Azure OpenAI and other 3rd-party services
+- `Deployment` - the name of your Azure OpenAI deployment
+
+You also need to give your GPT instance a `Name`, a `Description`, and a `SystemPrompt`.
+
+- `Name` - identifies the GPT instance in the agent configuration
+- `Description` - provides additional context about its purpose and capabilities
+- `SystemPrompt` - defines the behavior and personality of the GPT instance
+
+These values are can be customized to fit your needs.
 
 ## Configuration
 
-Before getting started, you need to configure the agent with the details of your OpenAI
-implementation. To configure the agent, use the `/agent config openai-gpt` command to open
-configuration file in your default editor.
+GPTs are tailored versions of base OpenAI models. You use a GPT to provide focused responses based
+on the system prompt you give the model. By changing the system prompt and model, you can create
+multiple GPTs for the same endpoint that are tailored for specific domains or scenarios.
 
-- Azure OpenAI requires the `endpoint`, `deployment` name, and the `model` name.
-- Public OpenAI only requires the `model` name. No endpoint, no deployment name.
+- Azure OpenAI requires the `Endpoint`, `Deployment`,`ModelName` and `Key` or `AuthType`.
+- Public OpenAI only requires the `ModelName` and `Key`. The endpoint is fixed by OpenAI. There is
+  no deployment name.
+- Other OpenAI-compatible services typically require the `Endpoint`, `ModelName`, and `Key`.
+
+GPTs are configured in the agent's settings file. To open the configuration file using your default
+editor, use the `/agent config openai-gpt` command.
 
 Update the file based on the following example:
 
@@ -38,11 +51,11 @@ Update the file based on the following example:
   "GPTs": [
     // To use the Azure OpenAI service:
     // - Set `Endpoint` to the endpoint of your Azure OpenAI service,
-    //     or the endpoint to the Azure API Management service if you are using it as a gateway.
+    //   or the endpoint to the Azure API Management service if you are using it as a gateway.
     // - Set `Deployment` to the deployment name of your Azure OpenAI service.
     // - Set `ModelName` to the name of the model used for your deployment, e.g. "gpt-4-0613".
     // - Set `Key` to the access key of your Azure OpenAI service,
-    //     or the key of the Azure API Management service if you are using it as a gateway.
+    //   or the key of the Azure API Management service if you are using it as a gateway.
     {
       "Name": "ps-az-gpt4",
       "Description": "A GPT instance with expertise in PowerShell scripting and command line utilities. Use gpt-4 running in Azure.",
@@ -72,16 +85,20 @@ Update the file based on the following example:
 }
 ```
 
-> [!NOTE]
-> The endpoint for the Azure OpenAI configuration doesn't need a full endpoint including the
-> deployment, for example you can just use the following endpoint format,
-> `https://<YourServiceName>.openai.azure.com`.
+## `/gpt` Command
 
-### Support for Microsoft Entra ID authentication
+Use the `/gpt` command to list and select the GPT you want to use.
 
-To keep password and keys secure, we’ve added support for Entra ID authentication to to Azure OpenAI
-instances. Now you can access your Azure OpenAI resource without storing keys in the configuration
-file. The following example shows how to configure Entra ID authentication:
+- Run `/gpt use <gpt-name>` to switch to another GPT instance, or run `/gpt use` to choose from the
+  available ones.
+- Run `/gpt list <gpt-name>` to view the details of a GPT definition, or run `/gpt list` to list all
+  available GPTs.
+
+## Support for Microsoft Entra ID authentication
+
+The OpenAI agent support Entra ID authentication for Azure OpenAI instances. Instead of providing a
+key, set the `AuthType` property to `EntraID`. This way, the agent can access your Azure OpenAI
+resource without storing keys in the configuration file.
 
 ```json
 {
@@ -117,63 +134,25 @@ Azure OpenAI uses the following hierarchy of credentials for authentication:
 - `InteractiveBrowserCredential`
 
 For more information about these credentials, see .NET documentation for
-[`DefaultAzureCredential`][11].
-
-## GPT
-
-GPTs are tailored versions of base OpenAI models. You use a GPT to provide focused responses based
-on the system prompt you give the model. GPTs are configured in the agent's settings file. Each GPT
-configuration includes the name, description, targeted OpenAI model, and system prompt for
-interaction. The system prompts can be customized to support specific scenarios. Each configuration
-allows you to create distinct GPTs tailored to a specific domain or scenario. Furthermore, you can
-select different OpenAI models for each GPT as required.
-
-### Command
-
-The command `/gpt` is provided to make it easy to manage the GPTs.
-
-- Run `/gpt use <gpt-name>` to switch to another GPT instance, or run `/gpt use` to choose from the
-  available ones.
-- Run `/gpt list <gpt-name>` to view the details of a GPT definition, or run `/gpt list` to list all
-  available GPTs.
-
-```shell
-aish:1> /gpt --help
-Description:
-  Command for GPT management within the 'openai-gpt' agent.
-
-Usage:
-  gpt [command] [options]
-
-Options:
-  -h, --help  Show help and usage information
-
-Commands:
-  list <GPT>  List a specific GPT, or all available GPTs.
-  use <GPT>   Specify a GPT to use, or choose one from the available GPTs.
-```
+[`DefaultAzureCredential`][07].
 
 ## Support for other OpenAI-compatible models
 
-With the release of AI Shell v1.0.0-preview.2, the `openai-gpt` agent extends support to third-party
-models that follow the OpenAI API specifications, allowing for a more flexible AI experience. Many
-of these models are open source tools for running SLMs and LLMs locally. The `openai-gpt` agent now
-supports the following models:
+The OpenAI agent supports third-party AI services that implement the OpenAI API specifications. Some
+of these models are open source tools for running SLMs and LLMs locally. The OpenAI agent supports
+the following 3rd-party models:
 
-- [**Ollama**][08]
-- [**LM Studio**][06]
-- [**Deepseek**][04]
-- [**LocalAI**][07]
-- [**Google Gemini**][02]
-- [**Grok**][05]
+- [**Ollama**][06]
+- [**LM Studio**][04]
+- [**Deepseek**][02]
+- [**LocalAI**][05]
+- [**Google Gemini**][01]
+- [**Grok**][03]
 
-To use these models, you only need to configure the `endpoint`, `key`, and `model` name in the agent
-configuration file. The following `openai.agents.config` file contains example configurations for
-two of the new AI providers. For more information about endpoints and model names, see the
-documentation for the specific model.
+For more information about endpoints and model names, see the 3rd-party documentation for the AI
+service you want to use.
 
-With the release of AI Shell v1.0.0-preview.4, the `openai-gpt` agent supports the following
-models names:
+The OpenAI agent supports the following model names:
 
 - `o1`
 - `o3`
@@ -184,16 +163,13 @@ models names:
 - `gpt-4-32k`
 - `gpt-4-turbo`
 - `gpt-3.5-turbo`
+- `gpt-35-turbo` - Azure OpenAI name of the model
 
 <!-- link references -->
-[01]: /azure/ai-services/openai/how-to/create-resource?pivots=web-portal
-[02]: https://ai.google.dev/gemini-api/docs/openai
-[03]: https://aka.ms/oai/access?azure-portal=true
-[04]: https://api-docs.deepseek.com/
-[05]: https://docs.x.ai/docs/overview#migrating-from-another-llm-provider
-[06]: https://lmstudio.ai/docs/api/openai-api
-[07]: https://localai.io/
-[08]: https://ollama.com/blog/openai-compatibility
-[09]: https://platform.openai.com/api-keys
-[10]: https://platform.openai.com/docs/models
-[11]: xref:Azure.Identity.DefaultAzureCredential
+[01]: https://ai.google.dev/gemini-api/docs/openai
+[02]: https://api-docs.deepseek.com/
+[03]: https://docs.x.ai/docs/overview#migrating-from-another-llm-provider
+[04]: https://lmstudio.ai/docs/api/openai-api
+[05]: https://localai.io/
+[06]: https://ollama.com/blog/openai-compatibility
+[07]: xref:Azure.Identity.DefaultAzureCredential

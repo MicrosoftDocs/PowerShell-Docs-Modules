@@ -27,42 +27,35 @@ Each AI assistant is known as an agent. The initial release of AI Shell includes
   assistance with Azure CLI and Azure PowerShell commands.
 
 You can run the AI Shell executable (`aish.exe`) in a standalone experience or you can use the
-**AIShell** PowerShell module with PowerShell 7 to create a split-screen experience with Windows
-Terminal. This is the recommended way to use AI Shell because you get deeper integration with the
-shell. These features include:
+**AIShell** PowerShell module with PowerShell 7 to create a split-pane (sidecar) experience with
+Windows Terminal. The sidecar experience is the recommended way to use AI Shell because you get
+deeper integration with the shell. These features include:
 
 - The ability to insert code from the AI Shell response directly into the connect command shell
 - Multi-step commands are added to the Predictive IntelliSense buffer for quick acceptance
 - Simple, single-command error recovery
+- MCP integration
 
-## Project Status
+## Project status
 
-The current version of AI Shell is v1.0.0-preview.4. AI Some elements of the tool are still under
-development and are subject to change.
+AI Shell is currently a preview release. Some features of the tool are still being developed and are
+subject to change. For more information about the current version and a complete list of changes,
+see the [Release notes][03].
 
-AI Shell v1.0.0-preview.4 includes the following enhancements:
-
-- Improved macOS support including the side-car experience with iTerm2
-- Support for Microsoft Entra ID authentication in Azure OpenAI
-- New parameters for `Invoke-AIShell`
-- Experimental Phi Silica agent that uses the built-in AI model included with the latest Copilot+
-  PCs
-
-## Known Issues
+## Known issues
 
 This current release of AI Shell has some known issues that we're actively working on addressing:
 
-- The split-screen experience only works with Windows Terminal and iTerm2 for macOS.
-- The **AI Shell** module isn't supported on Linux. You can run the `aish` executable on Linux,
-  but it isn't tested on any Linux distribution.
-- If you have multiple versions of Windows Terminal installed, the `Start-AIShell` command opens a
-  new terminal window running a different version of Windows Terminal.
+- The sidecar experience only works with Windows Terminal and iTerm2 for macOS.
+- AI Shell isn't supported on Linux. You might get it to work but it doesn't support the split
+  terminal integration that you get with Windows Terminal and iTerm2. AI Shell isn't tested on any
+  Linux distribution.
+- If you have preview (developer) and stable versions of Windows Terminal installed, the
+  `Start-AIShell` command opens a new terminal running the stable version of Windows Terminal.
 - If you started Window Terminal as an administrator, the `Start-AIShell` command opens a new
   terminal window running Windows Terminal without elevation.
-- If you're using the default Mac Terminal, the colors might not render correctly. It might be
-  difficult to read the code generated.
-
-You can report other issues in the [GitHub repository][03].
+- If you're using the default terminal app in macOS, you don't get the sidecar experience and the
+  colors might not render correctly. It might be difficult to read the generated code.
 
 ## Providing feedback
 
@@ -72,7 +65,7 @@ experiences to help us improve AI Shell.
 Here are ways you can get involved:
 
 - **File Issues:** If you encounter bugs, have suggestions for new features, or would like to report
-  inconsistencies, open an issue on the [AI Shell GitHub repository][03].
+  inconsistencies, open an issue on the [AI Shell GitHub repository][04].
 - **Join the discussions:** Join our community discussions in the [GitHub discussions][02] tab.
   Share ideas, discuss potential improvements, connect with other users, and share any agents you
   create.
@@ -81,5 +74,6 @@ Here are ways you can get involved:
 
 <!-- link references -->
 [01]: /powershell/module/aishell/
-[02]: https://github.com/PowerShell/ProjectMercury/discussions
-[03]: https://github.com/PowerShell/ProjectMercury/issues
+[02]: https://github.com/PowerShell/AIShell/discussions
+[03]: release-notes.md
+[04]: https://github.com/PowerShell/AIShell/issues

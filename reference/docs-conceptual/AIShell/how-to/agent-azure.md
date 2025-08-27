@@ -1,7 +1,7 @@
 ---
 title: Copilot in Azure Agent
 description: Learn how to use the Copilot in Azure agent in AI Shell.
-ms.date: 03/03/2025
+ms.date: 08/25/2025
 ---
 # Copilot in Azure Agent
 
@@ -10,15 +10,13 @@ your command line. It provides assistance for Azure CLI commands, Azure PowerShe
 general Azure knowledge. To use this agent, you need to sign in to Azure using the `az login`
 command from Azure CLI.
 
-> [!IMPORTANT]
-> You must use sign in to Azure using the Azure CLI command. We're working on supporting the
-> `Connect-AzAccount` command from Azure PowerShell.
-
 ## Prerequisites
 
 - Windows 11 21H2 or higher
 - Windows Terminal v1.19 or higher
-- [Azure CLI][01] version 2.30.0 or higher installed and signed in to the allowed tenant
+- [Azure CLI][01] version 2.30.0 or higher installed
+- [Azure PowerShell][01] version 14.0.0 or higher installed
+- A valid access token for your Azure tenant created by `az login` or `Connect-AzAccount`
 
 ## Sample Questions
 
@@ -27,13 +25,14 @@ command from Azure CLI.
 - "What is Application Insights?"
 - "How to create a web app with Azure CLI?"
 
-## Improvements in AI Shell v1.0.0-preview.2
+## Agent features
 
-The Preview 2 release includes the following enhancements:
+This agent includes the following features:
 
-- The Azure agent support authentication using either the `Connect-AzAccount` command from Azure
-  PowerShell or the `az login` command from Azure CLI.
-- The `/replace` command now supports Azure PowerShell. The agent walks you through replacement of
+- Supports authentication using either the `Connect-AzAccount` command from Azure PowerShell or the
+  `az login` command from Azure CLI. Run these commands before starting AI Shell to ensure the token
+  cache has a valid access token.
+- The `/replace` command supports Azure PowerShell. The agent walks you through replacement of
   parameter values in generated Azure PowerShell responses.
 
 ## Telemetry and configuration

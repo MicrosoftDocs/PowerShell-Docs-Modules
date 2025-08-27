@@ -4,8 +4,8 @@ Help Version: 1.0.0
 Locale: en-US
 Module Guid: ecb8bee0-59b9-4dae-9d7b-a990b480279a
 Module Name: AIShell
-ms.date: 05/16/2025
-ms.custom: 1.0.0-preview.4
+ms.date: 08/27/2025
+ms.custom: 1.0.0-preview.6
 title: AIShell Module
 ---
 
@@ -17,6 +17,10 @@ The AIShell module integrates PowerShell with AIShell. This integration enables 
 errors, and results between PowerShell and AIShell.
 
 ## AIShell Cmdlets
+
+### [Invoke-AICommand](Invoke-AICommand.md)
+
+Used by an MCP in AI Shell to invoke a command in the connected PowerShell session.
 
 ### [Invoke-AIShell](Invoke-AIShell.md)
 

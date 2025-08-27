@@ -31,7 +31,7 @@ AI Shell is supported on the following platforms:
 - macOS v13 Ventura or higher
 - PowerShell 7.4.6 or higher
 - Default macOS Terminal app for the standalone experience
-- iTerm2 required to use the split-screen experience
+- iTerm2 required to use the sidecar experience
   - Python 3.11 or higher required to support iTerm2
   - Must enable **Python APIs** in the iTerm2 settings
 - PSReadLine v2.4.2-beta2 or higher
@@ -41,7 +41,7 @@ AI Shell is supported on the following platforms:
 - Ubuntu 20.04 or higher
 - PowerShell 7.4.6 or higher
 - PSReadLine v2.4.2-beta2 or higher
-- Any terminal emulator supported by the OS (no split-screen experience)
+- Any terminal emulator supported by the OS (no sidecar experience)
 
   > [!NOTE]
   > The AI Shell module isn't supported on Linux.
@@ -124,4 +124,4 @@ To manually install AI Shell, follow the instructions for your platform:
 <!-- link references -->
 [01]: get-started/aishell-powershell.md
 [02]: get-started/aishell-standalone.md
-[03]: https://github.com/PowerShell/ProjectMercury/releases/latest
+[03]: https://github.com/PowerShell/AIShell/releases/latest

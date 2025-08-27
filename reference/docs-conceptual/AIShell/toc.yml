@@ -3,26 +3,26 @@ items:
     href: overview.md
   - name: Install AI Shell
     href: install-aishell.md
+  - name: Release notes
+    href: release-notes.md
+  - name: What is a command shell?
+    href: concepts/what-is-a-command-shell.md
   - name: Get started
     items:
       - name: Get started with AI Shell in PowerShell
         href: get-started/aishell-powershell.md
       - name: Get started with AI Shell (standalone)
         href: get-started/aishell-standalone.md
-  - name: Concepts
-    items:
-      - name: What is a command shell?
-        href: concepts/what-is-a-command-shell.md
-      - name: AI Shell FAQ
-        href: concepts/FAQ.md
-  - name: How to use AI Shell
-    items:
       - name: AI Shell command reference
         href: how-to/aishell-reference.md
+  - name: AI Shell agents
+    items:
       - name: Azure agent
         href: how-to/agent-azure.md
       - name: OpenAI agent
         href: how-to/agent-openai.md
+      - name: MCP support
+        href: how-to/mcp-support.md
   - name: Developer guide
     items:
       - name: Architecture of AI Shell

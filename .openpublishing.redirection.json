@@ -6,9 +6,14 @@
             "source_path": "reference/docs-conceptual/index.md"
         },
         {
-            "redirect_document_id": true,
+            "redirect_document_id": false,
             "redirect_url": "/powershell/utility-modules/aishell/overview",
             "source_path": "reference/docs-conceptual/AIShell/aishell-overview.md"
+        },
+        {
+            "redirect_document_id": true,
+            "redirect_url": "/powershell/utility-modules/aishell/overview",
+            "source_path": "reference/docs-conceptual/AIShell/concepts/FAQ.md"
         }
     ]
 }

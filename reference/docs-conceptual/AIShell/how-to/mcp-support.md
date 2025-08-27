@@ -55,6 +55,8 @@ The following list contains the built-in tools and their usage:
 > The built-in tools rely on the side-car experience with a connected PowerShell session and provide
 > enhanced context awareness and automation capabilities.
 
+## Demos
+
 Here is a simple demo showing how you can have AI Shell run commands on your behalf using the
 `run_command_in_terminal` tool:
 

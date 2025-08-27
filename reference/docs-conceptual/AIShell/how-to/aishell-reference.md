@@ -66,22 +66,26 @@ AI Shell also provides commands specific to the selected agent.
 
 Command for agent management.
 
+Usage:
+
 ```
-agent [command] [options]
+/agent [command] [options]
 ```
 
-Options: -h, --help  Show help and usage information
+Options: `-h`, `--help` - Show help and usage information
 
 Subcommands
 
-- `config <azure|openai-gpt>` - Open up the setting file for an agent. When no agent is specified,
+- `config <agent>` - Open up the setting file for an agent. When no agent is specified,
   target the active agent.
 - `list` - List all available agents.
-- `use <azure|openai-gpt>` - Specify an agent to use, or choose one from the available agents.
+- `use <agent>` - Specify an agent to use, or choose one from the available agents.
 
 #### `/agent config`
 
 Open up the setting file for an agent. When no agent is specified, target the active agent.
+
+Usage:
 
 ```
 /agent config [<agent>] [options]
@@ -104,6 +108,16 @@ Example:
 
 List all available agents.
 
+Usage:
+
+```
+/agent list [options]
+```
+
+Options:
+
+- `-h`, `--help`  Show help and usage information
+
 Example:
 
 ```
@@ -123,11 +137,13 @@ Example:
 
 Specify an agent to use, or choose one from the available agents.
 
+Usage:
+
 ```
-agent use [<agent>] [options]
+/agent use [<agent>] [options]
 ```
 
-Arguments: `<azure|openai-gpt>` - Name of an agent (optional). If you don't provide an agent name,
+Arguments: `<agent>` - Name of an agent (optional). If you don't provide an agent name,
 AI Shell prompts you to choose one from the available agents.
 
 Options:
@@ -142,8 +158,10 @@ Clears the screen. You can also use the alias `/cls`.
 
 Command to interact with the code generated.
 
+Usage:
+
 ```
-code [command] [options]
+/code [command] [options]
 ```
 
 Subcommands:
@@ -165,13 +183,13 @@ Copy the n-th (1-based) code snippet to clipboard. Copy all the code when `<n>` 
 Usage:
 
 ```
-code copy [<n>] [options]
+/code copy [<n>] [options]
 ```
 
 Arguments:
 
-- `<n>` Use the n-th (1-based) code snippet. Use all the code when no value is specified.
-  [default: -1]
+- `<n>` Use the n-th (1-based) code snippet. Specify the argument as `-1` to use all the code. When
+  you don't specify the argument, the default value is `-1`.
 
 Options:
 

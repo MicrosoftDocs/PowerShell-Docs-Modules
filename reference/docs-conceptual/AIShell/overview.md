@@ -27,9 +27,9 @@ Each AI assistant is known as an agent. The initial release of AI Shell includes
   assistance with Azure CLI and Azure PowerShell commands.
 
 You can run the AI Shell executable (`aish.exe`) in a standalone experience or you can use the
-**AIShell** PowerShell module with PowerShell 7 to create a split-screen experience with Windows
-Terminal. The split-screen experience is the recommended way to use AI Shell because you get deeper
-integration with the shell. These features include:
+**AIShell** PowerShell module with PowerShell 7 to create a split-pane (sidecar) experience with
+Windows Terminal. The sidecar experience is the recommended way to use AI Shell because you get
+deeper integration with the shell. These features include:
 
 - The ability to insert code from the AI Shell response directly into the connect command shell
 - Multi-step commands are added to the Predictive IntelliSense buffer for quick acceptance
@@ -46,7 +46,7 @@ see the [Release notes][03].
 
 This current release of AI Shell has some known issues that we're actively working on addressing:
 
-- The split-screen experience only works with Windows Terminal and iTerm2 for macOS.
+- The sidecar experience only works with Windows Terminal and iTerm2 for macOS.
 - AI Shell isn't supported on Linux. You might get it to work but it doesn't support the split
   terminal integration that you get with Windows Terminal and iTerm2. AI Shell isn't tested on any
   Linux distribution.
@@ -54,7 +54,7 @@ This current release of AI Shell has some known issues that we're actively worki
   `Start-AIShell` command opens a new terminal running the stable version of Windows Terminal.
 - If you started Window Terminal as an administrator, the `Start-AIShell` command opens a new
   terminal window running Windows Terminal without elevation.
-- If you're using the default terminal app in macOS, you don't get the split pane experience and the
+- If you're using the default terminal app in macOS, you don't get the sidecar experience and the
   colors might not render correctly. It might be difficult to read the generated code.
 
 ## Providing feedback

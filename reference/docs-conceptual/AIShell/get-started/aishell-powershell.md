@@ -12,7 +12,7 @@ examples to get started with AI Shell.
 
 ## Starting AI Shell
 
-Use the `Start-AIShell` command in the **AI Shell** module to open a split pane experience in Windows
+Use the `Start-AIShell` command in the **AI Shell** module to open the sidecar experience in Windows
 Terminal. When AI Shell starts, it prompts you to choose an agent.
 
 ![An animation showing Getting Started with AI Shell.][05]

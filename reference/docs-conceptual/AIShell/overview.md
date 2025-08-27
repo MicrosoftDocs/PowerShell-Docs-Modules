@@ -48,14 +48,14 @@ This current release of AI Shell has some known issues that we're actively worki
 
 - The split-screen experience only works with Windows Terminal and iTerm2 for macOS.
 - AI Shell isn't supported on Linux. You might get it to work but it doesn't support the split
-  terminal integration that you get with Windows Terminal and iTerm2. but it isn't tested on any
+  terminal integration that you get with Windows Terminal and iTerm2. AI Shell isn't tested on any
   Linux distribution.
 - If you have preview (developer) and stable versions of Windows Terminal installed, the
   `Start-AIShell` command opens a new terminal running the stable version of Windows Terminal.
 - If you started Window Terminal as an administrator, the `Start-AIShell` command opens a new
   terminal window running Windows Terminal without elevation.
 - If you're using the default terminal app in macOS, you don't get the split pane experience and the
-  colors might not render correctly. It might be difficult to read the code generated.
+  colors might not render correctly. It might be difficult to read the generated code.
 
 ## Providing feedback
 

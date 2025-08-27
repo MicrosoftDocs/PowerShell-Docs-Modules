@@ -29,7 +29,7 @@ Options:
 
 ## Chat commands
 
-To query the selected AI model, enter your prompt at the AI Shell prompt. AI Shell send the prompt
+To query the selected AI model, enter your prompt at the AI Shell prompt. AI Shell sends the prompt
 request to the connected AI model. AI Shell also provides a base set of shell commands used to
 interact with the AI model.
 
@@ -84,7 +84,7 @@ Subcommands
 Open up the setting file for an agent. When no agent is specified, target the active agent.
 
 ```
-agent config [<agent>] [options]
+/agent config [<agent>] [options]
 ```
 
 Arguments: `<azure|openai-gpt>` Name of an agent.

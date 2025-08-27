@@ -21,8 +21,8 @@ Invoke-AICommand [-Command] <ScriptBlock> [<CommonParameters>]
 
 ## DESCRIPTION
 
-This cmdlet is used by an MCP in AI Shell to invoke a command in the connected PowerShell session.
-This command is not intended to be used directly by users. When AI model creates a result containing
+MCPs in AI Shell use this cmdlet to invoke a command in the connected PowerShell session. This
+command is not intended for users to directly invoke. When an AI model creates a result containing
 commands, the MCP can use this cmdlet to execute the commands in the connected PowerShell session.
 
 ## EXAMPLES

@@ -19,18 +19,18 @@ For more information about MCP, see the [Architecture Overview][06] in the offic
 Protocol documentation.
 
 MCP tools enable AI agents to access external tools and services to enhance their capabilities and
-provide more accurate responses. MCPs can be used to integrate with various APIs, databases, and
-other resources, allowing agents to retrieve real-time information and perform complex tasks.
+provide more accurate responses. MCPs can integrate with various APIs, databases, and other
+resources, allowing agents to retrieve real-time information and perform complex tasks.
 
 ## Built-in tools for AI Shell
 
 AI Shell comes with a set of MCP-like built-in tools that are available to all agents. These
 commands are similar to MCP Server tools, but are exclusive to the AI Shell experience. The tools
 enhance the AI Shell experience by providing context-aware capabilities and automation features.
-They can be used in conjunction with other MCP servers to create a powerful AI-driven shell
+You can use them in conjunction with other MCP servers to create a powerful AI-driven shell
 environment.
 
-Built-in tools
+The following list contains the built-in tools and their usage:
 
 - `get_working_directory` - Get the current working directory of the connected PowerShell session,
   including the provider name (e.g., `FileSystem`, `Certificate`) and the path (e.g., `C:\\`,
@@ -86,8 +86,8 @@ them to the `mcp.json` file.
 ### Install a local MCP server
 
 The following example installs the `@modelcontextprotocol/server-everything` and
-`@modelcontextprotocol/server-filesystem` MCP servers. These servers are Node.js. You must have
-`Node.js` installed to use these MCP servers.
+`@modelcontextprotocol/server-filesystem` MCP servers. These servers are published as node
+packages. You must have `Node.js` installed to use these MCP servers.
 
 To install the MCP servers, you can use the following commands:
 

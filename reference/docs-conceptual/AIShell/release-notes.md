@@ -13,6 +13,8 @@ complete list of changes, refer to the [Releases page][06] on GitHub.
 
 ## [1.0.0-preview.6][02] - 2025-07-24
 
+<a id="1.0.0-preview.6"></a>
+
 This release includes the following changes:
 
 - Update AppInsights connection string to use the new prod environment (#390)

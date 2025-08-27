@@ -1,9 +1,9 @@
 ---
 external help file: AIShell.Integration.dll-Help.xml
 Module Name: AIShell
-online version:
+online version: https://learn.microsoft.com/en-us/powershell/module/aishell/start-aishell?view=ps-modules&wt.mc_id=ps-gethelp
 ms.date: 05/16/2025
-ms.custom: 1.0.0-preview.4
+ms.custom: 1.0.0-preview.6
 schema: 2.0.0
 ---
 
@@ -25,9 +25,9 @@ Starts an AIShell session in a split pane window of Windows Terminal and iTerm2.
 is started in the right pane of the terminal window. The left pane is the current shell session. You
 must use these windows to interact with the AIShell session.
 
-When you run this cmdlet on macOS, it checks for the presence of iTerm2. If iTerm2 is not
-installed, it attempts to install iTerm2 using the pip3 package manager. If iTerm2 is
-installed, it starts an iTerm2 session in a split pane window.
+When you run this cmdlet on macOS, it checks for the presence of iTerm2. If iTerm2 is not installed,
+it attempts to install iTerm2 using the pip3 package manager. If iTerm2 is installed, it starts an
+iTerm2 session in a split pane window.
 
 ## EXAMPLES
 
@@ -48,7 +48,8 @@ Start-AIShell -PATH C:\Users\aish.exe
 ### -Path
 
 By default, the cmdlet looks for the `aish` executable in the locations listed in the `$env:PATH`
-environment variable. Use this parameter to specify an alternate location for the `aish` executable.
+environment variable. Use this parameter to specify an alternate location for the `aish`
+executable.
 
 ```yaml
 Type: System.String

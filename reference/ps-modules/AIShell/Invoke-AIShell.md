@@ -1,9 +1,9 @@
 ---
 external help file: AIShell.Integration.dll-Help.xml
 Module Name: AIShell
-online version:
+online version: https://learn.microsoft.com/en-us/powershell/module/aishell/invoke-aishell?view=ps-modules&wt.mc_id=ps-gethelp
 ms.date: 05/16/2025
-ms.custom: 1.0.0-preview.4
+ms.custom: 1.0.0-preview.6
 schema: 2.0.0
 ---
 
@@ -171,7 +171,7 @@ Type: System.String[]
 Parameter Sets: Default, Clipboard
 Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

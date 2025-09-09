@@ -1,7 +1,7 @@
 ---
 title: OpenAI agent
 description: Learn how to configure the OpenAI agent.
-ms.date: 08/25/2025
+ms.date: 09/09/2025
 ms.topic: how-to
 ---
 # OpenAI agent
@@ -27,7 +27,7 @@ You also need to give your GPT instance a `Name`, a `Description`, and a `System
 - `Description` - provides additional context about its purpose and capabilities
 - `SystemPrompt` - defines the behavior and personality of the GPT instance
 
-These values are can be customized to fit your needs.
+You can customize these values to fit your needs.
 
 ## Configuration
 
@@ -134,7 +134,7 @@ Azure OpenAI uses the following hierarchy of credentials for authentication:
 - `InteractiveBrowserCredential`
 
 For more information about these credentials, see .NET documentation for
-[`DefaultAzureCredential`][07].
+[`DefaultAzureCredential`][09].
 
 ## Support for other OpenAI-compatible models
 
@@ -142,21 +142,25 @@ The OpenAI agent supports third-party AI services that implement the OpenAI API 
 of these models are open source tools for running SLMs and LLMs locally. The OpenAI agent supports
 the following 3rd-party models:
 
-- [**Ollama**][06]
-- [**LM Studio**][04]
-- [**Deepseek**][02]
-- [**LocalAI**][05]
-- [**Google Gemini**][01]
-- [**Grok**][03]
+- [**Ollama**][08]
+- [**LM Studio**][06]
+- [**Deepseek**][04]
+- [**LocalAI**][07]
+- [**Google Gemini**][03]
+- [**Grok**][05]
+- [**Foundry Local**][02]
 
-For more information about endpoints and model names, see the 3rd-party documentation for the AI
-service you want to use.
+Foundry Local is an on-device AI inference solution from Microsoft, currently in public preview. AI
+Shell interfaces with it using the OpenAI agent. You must install and configure Foundry Local on
+your machine before you can use it with AI Shell. For more information, see
+[Get started with Foundry Local][01].
 
 The OpenAI agent supports the following model names:
 
 - `o1`
 - `o3`
 - `o4-mini`
+- `gpt-5`
 - `gpt-4.1`
 - `gpt-4o`
 - `gpt-4`
@@ -164,12 +168,64 @@ The OpenAI agent supports the following model names:
 - `gpt-4-turbo`
 - `gpt-3.5-turbo`
 - `gpt-35-turbo` - Azure OpenAI name of the model
+- Any of the model IDs supported by Foundry Local
+
+For more information about endpoints and model names, see the 3rd-party documentation for the AI
+service you want to use.
+
+### Configure a Foundry Local endpoint
+
+After you have Foundry Local installed, run the following commands to get the information you need
+to configure the OpenAI agent:
+
+```powershell
+PS> foundry service start
+🟢 Service is already running on http://127.0.0.1:56952/.
+
+PS> foundry model load phi-3.5-mini
+🕔 Loading model...
+🟢 Model phi-3.5-mini loaded successfully
+
+PS> foundry service ps
+Models running in service:
+    Alias                          Model ID
+🟢  phi-3.5-mini                   Phi-3.5-mini-instruct-generic-cpu
+```
+
+This example starts the Foundry Local service, loads the `phi-3.5-mini` model, and lists the models
+in the running in the service.
+
+Next, add a new GPT to your `openai.agent.json` file.
+
+- The `foundry service start` shows the URI for the service. The `Endpoint` for the OpenAI agent is
+  the URI plus `/v1`.
+- The `foundry service ps` command shows `ModelName` as the **Model ID**. Make sure you use the
+  exact casing as shown in **Model ID**. Foundry Local is case-sensitive.
+- The API key is hardcoded to `OPENAI_API_KEY`.
+
+```json
+{
+  "GPTs": [
+    {
+      "Name": "foundry-local",
+      "Description": "A GPT instance using Foundry Local.",
+      "Endpoint": "http://127.0.0.1:56952/v1",
+      "ModelName": "Phi-3.5-mini-instruct-generic-cpu",
+      "Key": "OPENAI_API_KEY"
+    }
+  ]
+
+  "Active": "foundry-local"
+}
+```
 
 <!-- link references -->
-[01]: https://ai.google.dev/gemini-api/docs/openai
-[02]: https://api-docs.deepseek.com/
-[03]: https://docs.x.ai/docs/overview#migrating-from-another-llm-provider
-[04]: https://lmstudio.ai/docs/api/openai-api
-[05]: https://localai.io/
-[06]: https://ollama.com/blog/openai-compatibility
-[07]: xref:Azure.Identity.DefaultAzureCredential
+[01]: /azure/ai-foundry/foundry-local/get-started
+[02]: /azure/ai-foundry/foundry-local/what-is-foundry-local
+[03]: https://ai.google.dev/gemini-api/docs/openai
+[04]: https://api-docs.deepseek.com/
+[05]: https://docs.x.ai/docs/overview#migrating-from-another-llm-provider
+[06]: https://lmstudio.ai/docs/api/openai-api
+[07]: https://localai.io/
+[08]: https://ollama.com/blog/openai-compatibility
+[09]: xref:Azure.Identity.DefaultAzureCredential

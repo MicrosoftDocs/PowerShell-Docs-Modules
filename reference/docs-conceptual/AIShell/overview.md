@@ -1,7 +1,7 @@
 ---
 title: What is AI Shell?
 description: Learn about AI Shell, an interactive shell that provides a chat interface with language models.
-ms.date: 05/21/2025
+ms.date: 09/09/2025
 ms.topic: overview
 ---
 
@@ -17,7 +17,9 @@ The AI Shell project includes:
 - A framework for creating AI agents and other assistance providers
 - Integration with Windows Terminal and iTerm2 on macOS
 - A PowerShell module for integration with PowerShell. For more information, see the
-  [AI Shell module][01].
+  [AI Shell module][02].
+- Support for MCP servers and tools
+- Support for [Foundry Local][01] deployments
 
 Each AI assistant is known as an agent. The initial release of AI Shell includes two agents:
 
@@ -40,7 +42,7 @@ deeper integration with the shell. These features include:
 
 AI Shell is currently a preview release. Some features of the tool are still being developed and are
 subject to change. For more information about the current version and a complete list of changes,
-see the [Release notes][03].
+see the [Release notes][05].
 
 ## Known issues
 
@@ -66,14 +68,15 @@ Here are ways you can get involved:
 
 - **File Issues:** If you encounter bugs, have suggestions for new features, or would like to report
   inconsistencies, open an issue on the [AI Shell GitHub repository][04].
-- **Join the discussions:** Join our community discussions in the [GitHub discussions][02] tab.
+- **Join the discussions:** Join our community discussions in the [GitHub discussions][03] tab.
   Share ideas, discuss potential improvements, connect with other users, and share any agents you
   create.
 - **Documentation:** If you notice any documentation gaps, you can suggest changes or submit PRs to
   improve our documentation.
 
 <!-- link references -->
-[01]: /powershell/module/aishell/
-[02]: https://github.com/PowerShell/AIShell/discussions
-[03]: release-notes.md
+[01]: /azure/ai-foundry/foundry-local/what-is-foundry-local
+[02]: /powershell/module/aishell/
+[03]: https://github.com/PowerShell/AIShell/discussions
 [04]: https://github.com/PowerShell/AIShell/issues
+[05]: release-notes.md

@@ -1,7 +1,7 @@
 ---
 title: AI Shell command reference
 description: Learn about the command-line options and commands available in AI Shell.
-ms.date: 08/25/2025
+ms.date: 09/09/2025
 ms.topic: reference
 ---
 # AI Shell command reference
@@ -411,6 +411,17 @@ Usage:
 Options:
 
 - `-h`, `--help` - Show help and usage information
+
+## AI Shell command history
+
+AI Shell includes a modified version of PSReadLine. Like the PSReadLine module for PowerShell, AI
+Shell lets you use the arrow keys to navigate through your command history. AI Shell saves the
+history in a file named `AIShell_history.txt`, in the same location as the other PSReadLine history
+files:
+
+- On Windows systems: `$Env:APPDATA\Microsoft\Windows\PowerShell\PSReadLine`.
+- On non-Windows systems: `$Env:XDG_DATA_HOME/powershell/PSReadLine` or
+  `$Env:HOME/.local/share/powershell/PSReadLine`.
 
 <!-- link references -->
 [01]: media/aishell-reference/code-copy-command.gif

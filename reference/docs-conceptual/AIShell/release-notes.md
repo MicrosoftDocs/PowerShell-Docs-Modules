@@ -3,13 +3,25 @@ title: AI Shell release notes
 description: >
   Find out what's new in the latest release of AI Shell, an interactive shell that provides a chat
   interface with language models.
-ms.date: 08/25/2025
+ms.date: 09/09/2025
 ms.topic: overview
 ---
 # AI Shell Release Notes
 
 This document outlines the changes and improvements made in each release of AI Shell. For a more
 complete list of changes, refer to the [Releases page][06] on GitHub.
+
+## 1.0.0-preview.7 - 2025-09-05
+
+This release includes the following changes:
+
+- Move to Azure.Identity v1.14.2 and refactor the telemetry library (#404)
+- Use login shell on macOS to start `aish` in sidecar pane to inherit proper PATH (#403)
+- Properly escape tool description to avoid malformed Markup object (#408)
+- Add gpt-5 models to the supported model list (#409)
+- Update the history file name and exclude the environment and managed-identity credentials from
+  Azure authentication flow (#412)
+- Keep the original casing of model name for custom endpoint to enable Foundry Local (#413)
 
 ## [1.0.0-preview.6][02] - 2025-07-24
 

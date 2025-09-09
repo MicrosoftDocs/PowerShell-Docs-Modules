@@ -20,7 +20,7 @@ This documentation set contains cmdlet reference for the following modules.
 - [PSScriptAnalyzer][06]
 
 <!-- link references -->
-[01]: /powershell/module/aishell
+[01]: ./AIShell/overview.md
 [02]: /powershell/module/microsoft.powershell.crescendo/
 [03]: /powershell/module/microsoft.powershell.secretmanagement/
 [04]: /powershell/module/microsoft.powershell.secretstore/

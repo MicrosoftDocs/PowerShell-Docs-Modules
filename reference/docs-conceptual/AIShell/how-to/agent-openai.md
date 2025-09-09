@@ -27,7 +27,7 @@ You also need to give your GPT instance a `Name`, a `Description`, and a `System
 - `Description` - provides additional context about its purpose and capabilities
 - `SystemPrompt` - defines the behavior and personality of the GPT instance
 
-These values are can be customized to fit your needs.
+You can customize these values to fit your needs.
 
 ## Configuration
 

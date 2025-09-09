@@ -1,7 +1,7 @@
 ---
 title: Install AI Shell
 description: Learn how to install AI Shell on your system.
-ms.date: 03/03/2025
+ms.date: 09/09/2025
 ms.topic: install-set-up-deploy
 ---
 # Install AI Shell
@@ -90,7 +90,7 @@ To manually install AI Shell, follow the instructions for your platform:
 1. Install the AI Shell module from the PowerShell Gallery.
 
    ```powershell
-   Install-PSResource -Name AIShell
+   Install-PSResource -Name AIShell -Preview
    ```
 
 ### [macOS](#tab/macos)
@@ -102,7 +102,7 @@ To manually install AI Shell, follow the instructions for your platform:
 1. Install the AI Shell module from the PowerShell Gallery.
 
    ```powershell
-   Install-PSResource -Name AIShell
+   Install-PSResource -Name AIShell -Preview
    ```
 
 ### [Linux](#tab/linux)

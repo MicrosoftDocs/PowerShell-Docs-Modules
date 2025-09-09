@@ -16,7 +16,7 @@ The AI Shell project includes:
 - A command-line shell interface (`aish`)
 - A framework for creating AI agents and other assistance providers
 - Integration with Windows Terminal and iTerm2 on macOS
-- A PowerShell module for integration with PowerShell. For more information, see the Copilot+ PCs
+- A PowerShell module for integration with PowerShell. For more information, see the
   [AI Shell module][02].
 - Support for MCP servers and tools
 - Support for [Foundry Local][01] deployments

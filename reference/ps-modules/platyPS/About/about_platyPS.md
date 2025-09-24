@@ -1,4 +1,4 @@
-﻿---
+---
 description: Write PowerShell External Help in Markdown.
 Locale: en-US
 ms.date: 03/16/2021
@@ -8,11 +8,11 @@ title: about_platyPS
 ---
 # about_platyPS
 
-## Short description
+## SHORT DESCRIPTION
 
 Write PowerShell External Help in Markdown.
 
-## Long description
+## LONG DESCRIPTION
 
 PlatyPS provides a way to:
 

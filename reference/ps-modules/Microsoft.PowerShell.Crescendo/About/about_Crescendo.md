@@ -9,14 +9,14 @@ title: about_Microsoft.PowerShell.Crescendo
 ---
 # Microsoft.PowerShell.Crescendo
 
-## about_Microsoft.PowerShell.Crescendo
+## ABOUT_MICROSOFT.POWERSHELL.CRESCENDO
 
-## Short description
+## SHORT DESCRIPTION
 
 The PowerShell Crescendo module provides a novel way to create proxy functions
 for native commands via `JSON` configuration files.
 
-## Long description
+## LONG DESCRIPTION
 
 PowerShell is capable of invoking native applications like any shell. However,
 it would improve the experience if the native command could participate in the
@@ -27,7 +27,7 @@ The PowerShell Crescendo module provides a way to take advantage of the
 PowerShell pipeline by invoking the native executable, facilitating parameter
 handling, and converting text output into objects.
 
-## JSON Configuration
+## JSON CONFIGURATION
 
 The PowerShell Crescendo module provides a way to create a small bit of JSON
 that's used to create a function that calls the native command.
@@ -35,12 +35,12 @@ that's used to create a function that calls the native command.
 An annotated schema is provided as part of the module that can improve the
 authoring process.
 
-## Parameter handling
+## PARAMETER HANDLING
 
 The PowerShell Crescendo module allows you to interact with parameters of
 native commands in the same way you do with cmdlets.
 
-## Output Handling
+## OUTPUT HANDLING
 
 It's also possible to create a script block that can be used to convert the
 output from the native command into objects. If the native command emits JSON
@@ -55,7 +55,7 @@ or XML it can be as simple as:
 
 However, script blocks of arbitrary complexity may also be used.
 
-## Examples
+## EXAMPLES
 
 Several samples are provided as part of the module. You can find these in the
 `Samples` directory of the module base directory.
@@ -148,7 +148,7 @@ Count Name  Group
    82 amd64 {@{Name=apt; Version=2.0.2ubuntu0.1; Architecture=amd64; State=System.String[]}, @{Name=base-files…
 ```
 
-## See also
+## SEE ALSO
 
 The PowerShell Crescendo module is still in the development process, so we
 expect changes to be made.

@@ -8,11 +8,11 @@ title: about_platyPS
 ---
 # about_platyPS
 
-## SHORT DESCRIPTION
+## Short description
 
 Write PowerShell External Help in Markdown.
 
-## LONG DESCRIPTION
+## Long description
 
 PlatyPS provides a way to:
 

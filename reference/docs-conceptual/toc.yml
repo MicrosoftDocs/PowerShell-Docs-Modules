@@ -35,8 +35,18 @@ items:
     items:
       - name: Overview
         href: PlatyPS/overview.md
-      - name: Create help using PlatyPS
-        href: PlatyPS/create-help-using-platyps.md
+      - name: Types of help in PowerShell
+        href: PlatyPS/types-of-help.md
+      - name: Create new command help Markdown using PlatyPS
+        href: PlatyPS/step-1-create-new-markdown-help.md
+      - name: Update Markdown help files using Microsoft.PowerShell.PlatyPS
+        href: PlatyPS/step-1-update-markdown-help.md
+      - name: Edit Markdown help files
+        href: PlatyPS/step-2-edit-markdown-help.md
+      - name: Test Markdown help files
+        href: PlatyPS/step-3-test-markdown-help.md
+      - name: Convert and publish the help files
+        href: PlatyPS/step-4-convert-publish-help.md
   - name: PSScriptAnalyzer v1.24
     items:
       - name: Overview

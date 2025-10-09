@@ -31,18 +31,18 @@ There are two publishing options:
 ### Option 1: Include the help files in the module
 
 The `Get-Help` cmdlet looks for module Help topic files in language-specific subdirectories of the
-module directory. Copy the MAML help files and any about_*.help.txt files to an language-specific
-folder in the module directory. The foldername must use the culture code format, such as `en-US`.
+module directory. Copy the MAML help files and any `about_*.help.txt` files to a language-specific
+folder in the module directory. The folder name must use the culture code format, such as `en-US`.
 For example, the following directory structure diagram shows the location of the Help topics for the
 WidgetModule module.
 
 ```
-<PSModulePath>\
-  WidgetModule\
-    en-US\
-      about_WidgetModule.help.txt
-      WidgetModule-Help.xml
-      NestedWidgetModule.dll-Help.xml
+<PSModulePath>/
+└── WidgetModule/
+    └── en-US/
+        ├── about_WidgetModule.help.txt
+        ├── WidgetModule-Help.xml
+        └── NestedWidgetModule.dll-Help.xml
 ```
 
 > [!NOTE]
@@ -61,7 +61,7 @@ content, the version of help, and the languages available.
 You also need to host the help content on a web server that supports HTTPS. The module must have a
 module manifest. The **HelpInfoUri** property in the manifest must contain the URL to the folder
 location on the web server where the `HelpInfo.xml` file is located. This URL should be the folder
-location, not the full path to the `HelpInfo.xml` file and it must end with a forward slash (`/`)
+location, not the full path to the `HelpInfo.xml` file, and it must end with a forward slash (`/`)
 character.
 
 For more information, see [Updatable Help Authoring][02].

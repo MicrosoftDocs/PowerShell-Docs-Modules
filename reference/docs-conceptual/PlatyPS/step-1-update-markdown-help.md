@@ -5,7 +5,7 @@ title: Update Markdown help files using Microsoft.PowerShell.PlatyPS
 ---
 # Update Markdown help files using Microsoft.PowerShell.PlatyPS
 
-During the lifecycle of a PowerShell module, you might add new commands and parameter or change
+During the lifecycle of a PowerShell module, you might add new commands and parameters or change
 existing parameters. When you release a new version of the module, you should update the Markdown
 help files for the module to ensure that the help content is accurate and complete.
 
@@ -14,7 +14,7 @@ to reflect changes in the module. To update the content you must first import th
 into the current session. The update commands import the existing Markdown files and update the
 content based on the module loaded in the current session. The commands create backups of existing
 content before making changes. You can compare the updated files to the backup files to see what
-changed
+changed.
 
 You can use the update commands to convert older Markdown files to the PlatyPS format. The commands
 can import Markdown files created by the previous version of PlatyPS (platyPS v0.14.2). However, the
@@ -49,7 +49,7 @@ Measure-PlatyPSMarkdown -Path ./docs/YourModuleName/*.md |
     Update-MarkdownModuleFile -Path ./docs/YourModuleName/YourModuleName.md
 ```
 
-Be sure to inspect the update module file to ensure that the content is correct and complete.
+Be sure to inspect the updated module file to ensure that the content is correct and complete.
 
 ## Comparing the changes with the backup files
 

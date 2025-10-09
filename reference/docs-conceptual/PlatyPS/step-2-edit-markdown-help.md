@@ -137,22 +137,22 @@ Example:
 
 This cmdlet has the following aliases:
 
-- gwi
+- `gwi`
 ```
 
 ### H2 DESCRIPTION
 
 The DESCRIPTION section contains a detailed description of the cmdlet. The description can be
 multiple paragraphs long and should provide enough information for the user to understand the
-purpose of the command. Avoid providing to much detail. More detail can be provided in the EXAMPLES,
-PARAMETERS, and NOTES sections.
+purpose of the command. Avoid providing too much detail. You can provide more detail in the
+EXAMPLES, PARAMETERS, and NOTES sections.
 
 ### H2 EXAMPLES
 
 The EXAMPLES section contains one or more examples that demonstrate how to use the cmdlet. There
 should be at least one example. Each example is contained in an H3 section. The title of the H3
 section should briefly describe the context of the example. Unlike the previous version of PlatyPS,
-there are no restrictions on the content in this section. You can mixed multiple code blocks and
+there are no restrictions on the content in this section. You can mix multiple code blocks and
 text. This allows you to provide more detailed explanations of the examples and outputs, including
 examples that require multiple code blocks with separate explanations.
 
@@ -174,7 +174,7 @@ is documented in its own H3 section. The title of the H3 section is the name of 
 
 Example:
 
-~~~markdown
+``````markdown
 ### -Color
 
 Filter the results by the color of the widget.
@@ -195,7 +195,7 @@ DontShow: false
 AcceptedValues: []
 HelpMessage: ''
 ```
-~~~
+``````
 
 PlatyPS automatically generates a YAML code block that contains metadata about the parameter. You
 must provide a description of the parameter. Except for a few specific fields, you shouldn't change
@@ -225,13 +225,13 @@ H2 header is required.
 
 Example:
 
-~~~markdown
+```markdown
 ## INPUTS
 
 ### System.String
 
 This cmdlet accepts pipeline input for the name of the widget.
-~~~
+```
 
 ### H2 OUTPUTS
 
@@ -242,13 +242,13 @@ doesn't return any objects, the section can be empty, but the H2 header is requi
 
 Example:
 
-~~~markdown
+```markdown
 ## OUTPUTS
 
 ### Widget
 
 Outputs Widget objects representing the retrieved widgets.
-~~~
+```
 
 > [!IMPORTANT]
 > When you use the `Update-MarkdownCommandHelp` command to update the Markdown files, PlatyPS
@@ -260,7 +260,7 @@ Outputs Widget objects representing the retrieved widgets.
 ### H2 NOTES
 
 The NOTES section contains additional information about the cmdlet. The section can be empty, but
-the H2 header is required. You can use this section to provide information special considerations,
+the H2 header is required. You can use this section to document special considerations,
 limitations, version differences, and information that doesn't fit in other sections.
 
 ### H2 RELATED LINKS
@@ -269,11 +269,11 @@ The RELATED LINKS section contains links to related topics. The section can be e
 header is required. The links should be formatted as a bulleted list of Markdown links. This section
 should not contain any other content.
 
-~~~markdown
+```markdown
 ## RELATED LINKS
 
 - [All about widgets](https://docs.tailspintoys.com/widgets)
-~~~
+```
 
 ## Next steps
 

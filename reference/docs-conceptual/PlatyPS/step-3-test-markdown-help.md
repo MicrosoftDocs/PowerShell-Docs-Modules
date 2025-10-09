@@ -96,7 +96,7 @@ Links       Information {Links found}                                     1 link
 ```
 
 For more information about the expected structure of the Markdown files, see
-[step-2-edit-markdown-help.md](step-2-edit-markdown-help.md).
+[Edit Markdown help files](step-2-edit-markdown-help.md).
 
 You can test the module Markdown files in a similar way using the `Import-MarkdownModuleFile`
 command. For example:

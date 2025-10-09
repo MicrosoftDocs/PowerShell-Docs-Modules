@@ -12,7 +12,7 @@ The PowerShell help system supports two kinds of help.
 
 The PlatyPS module helps you create and package PowerShell help files for your modules.
 
-## Conceptual ("About") help text files
+## Conceptual ("about") help text files
 
 Conceptual ("about") Help articles describe the module, its members (such as commands and
 variables), and explains how the members can be used together to perform tasks. The **About** help
@@ -33,7 +33,7 @@ can be implemented in two ways:
 ### Comment-based command help
 
 For PowerShell scripts and functions, you can write comment-based help directly in the source file
-of the script or function. Comment-based help uses special comment keywords that the PowerShell
+of the script or function. Comment-based help uses special comment keywords that PowerShell
 recognizes. PowerShell extracts the comment-based help from the script or function for presentation
 by the `Get-Help` cmdlet. For more information about writing comment-based help articles, see the
 following articles:

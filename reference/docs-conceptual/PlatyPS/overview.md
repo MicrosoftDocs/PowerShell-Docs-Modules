@@ -6,7 +6,7 @@ title: PlatyPS overview
 # PlatyPS overview
 
 **PlatyPS** is the primary tool for creating the PowerShell help displayed using `Get-Help`.
-PowerShell help files are writting in [Microsoft Assistance Markup Language][04] (MAML) format.
+PowerShell help files are written in [Microsoft Assistance Markup Language][04] (MAML) format.
 MAML defines an XML schema for the structure of help files.
 
 There are two major versions of PlatyPS.

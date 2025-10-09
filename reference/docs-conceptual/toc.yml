@@ -39,7 +39,7 @@ items:
         href: PlatyPS/types-of-help.md
       - name: Create new command help Markdown using PlatyPS
         href: PlatyPS/step-1-create-new-markdown-help.md
-      - name: Update Markdown help files using Microsoft.PowerShell.PlatyPS
+      - name: Update Markdown help files using PlatyPS
         href: PlatyPS/step-1-update-markdown-help.md
       - name: Edit Markdown help files
         href: PlatyPS/step-2-edit-markdown-help.md

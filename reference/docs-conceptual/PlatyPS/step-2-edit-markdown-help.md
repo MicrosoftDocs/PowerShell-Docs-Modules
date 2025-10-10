@@ -110,20 +110,21 @@ title of the H3 section is the name of the parameter set.
 
 Example:
 
-~~~markdown
+``````markdown
 ## SYNTAX
 
 ### DefaultParameterSet
 
 ```
 Get-Widget [-Name] <string> [-Color <ConsoleColor>] [-Size <int>] [<CommonParameters>]
+```
 
 ## DetailedParameterSet
 
 ```
 Get-Widget [-Name] <string> [-Color <ConsoleColor>] [-Size <int>] [-Detailed] [<CommonParameters>]
 ```
-~~~
+``````
 
 ### H2 ALIASES
 
@@ -132,7 +133,7 @@ can remove this section. This is the only optional section in the file.
 
 Example:
 
-```
+```markdown
 ## ALIASES
 
 This cmdlet has the following aliases:
@@ -158,13 +159,13 @@ examples that require multiple code blocks with separate explanations.
 
 Example:
 
-~~~markdown
+``````markdown
 ### Example 1 - Get a widget by name
 
 ```powershell
 Get-Widget -Name "Widget1"
 ```
-~~~
+``````
 
 ### H2 PARAMETERS
 

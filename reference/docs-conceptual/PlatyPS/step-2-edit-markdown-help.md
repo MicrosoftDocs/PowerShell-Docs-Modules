@@ -84,7 +84,7 @@ publishing system you use to create a website might require additional metadata.
 
 The H1 title must match the cmdlet name exactly. Example:
 
-```markdown
+```Markdown
 # Get-Widget
 ```
 
@@ -95,7 +95,7 @@ sentence, preferably on a single line.
 
 Example:
 
-```markdown
+```Markdown
 ## SYNOPSIS
 
 Gets one or more widgets based on specified criteria.
@@ -110,20 +110,21 @@ title of the H3 section is the name of the parameter set.
 
 Example:
 
-~~~markdown
+``````Markdown
 ## SYNTAX
 
 ### DefaultParameterSet
 
 ```
 Get-Widget [-Name] <string> [-Color <ConsoleColor>] [-Size <int>] [<CommonParameters>]
+```
 
 ## DetailedParameterSet
 
 ```
 Get-Widget [-Name] <string> [-Color <ConsoleColor>] [-Size <int>] [-Detailed] [<CommonParameters>]
 ```
-~~~
+``````
 
 ### H2 ALIASES
 
@@ -132,7 +133,7 @@ can remove this section. This is the only optional section in the file.
 
 Example:
 
-```
+```Markdown
 ## ALIASES
 
 This cmdlet has the following aliases:
@@ -158,13 +159,15 @@ examples that require multiple code blocks with separate explanations.
 
 Example:
 
-~~~markdown
+``````Markdown
+## EXAMPLES
+
 ### Example 1 - Get a widget by name
 
 ```powershell
 Get-Widget -Name "Widget1"
 ```
-~~~
+``````
 
 ### H2 PARAMETERS
 
@@ -174,7 +177,7 @@ is documented in its own H3 section. The title of the H3 section is the name of 
 
 Example:
 
-``````markdown
+``````Markdown
 ### -Color
 
 Filter the results by the color of the widget.
@@ -225,7 +228,7 @@ H2 header is required.
 
 Example:
 
-```markdown
+```Markdown
 ## INPUTS
 
 ### System.String
@@ -242,7 +245,7 @@ doesn't return any objects, the section can be empty, but the H2 header is requi
 
 Example:
 
-```markdown
+```Markdown
 ## OUTPUTS
 
 ### Widget
@@ -269,7 +272,7 @@ The RELATED LINKS section contains links to related topics. The section can be e
 header is required. The links should be formatted as a bulleted list of Markdown links. This section
 should not contain any other content.
 
-```markdown
+```Markdown
 ## RELATED LINKS
 
 - [All about widgets](https://docs.tailspintoys.com/widgets)

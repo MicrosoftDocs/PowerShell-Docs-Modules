@@ -45,6 +45,15 @@
         "docs-conceptual/**/whats-new/**": "whats-new",
         "docs-conceptual/**/how-to/**": "how-to",
         "docs-conceptual/PSScriptAnalyzer/Rules/**": "language-reference"
+      },
+      "ms.update-cycle": {
+        "docs-conceptual/Crescendo/**": "1825-days",
+        "docs-conceptual/SecretManagement/**": "1825-days",
+        "docs-conceptual/SecretStore/**": "1825-days",
+        "ps-modules/Microsoft.PowerShell.Crescendo/**": "1825-days",
+        "ps-modules/Microsoft.PowerShell.SecretManagement/**": "1825-days",
+        "ps-modules/Microsoft.PowerShell.SecretStore/**": "1825-days",
+        "ps-modules/PlatyPS/**": "1825-days"
       }
     },
     "globalMetadata": {

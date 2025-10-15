@@ -40,7 +40,7 @@
       },
       "ms.topic": {
         "ps-modules/**/*": "reference",
-        "docs-conceptual/**/**": "conceptual-article",
+        "docs-conceptual/**/**": "concept-article",
         "docs-conceptual/**/get-started/**": "get-started",
         "docs-conceptual/**/whats-new/**": "whats-new",
         "docs-conceptual/**/how-to/**": "how-to",

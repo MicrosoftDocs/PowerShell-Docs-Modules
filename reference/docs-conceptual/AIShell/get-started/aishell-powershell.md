@@ -27,9 +27,9 @@ to your specific use cases, the default included is for a PowerShell expert. Add
 wish you use OpenAI you can configure the agent with just your API key from OpenAI in the commented
 out example in the JSON file.
 
-The Azure agent is designed to bring the Copilot in Azure experience directly to your command line.
-It provides assistance for Azure CLI and Azure PowerShell commands. To use this agent, you need to
-sign into Azure using the `az login` command from Azure CLI.
+The Azure agent is designed to bring the Azure Copilot experience directly to your command line. It
+provides assistance for Azure CLI and Azure PowerShell commands. To use this agent, you need to sign
+into Azure using the `az login` command from Azure CLI.
 
 ## Use AI Shell to interact with the agents
 
@@ -41,7 +41,7 @@ Azure OpenAI Agent
 - "What is the difference between a switch and a parameter in PowerShell?"
 - How do I get the top 10 most CPU intensive processes on my computer?
 
-Copilot in Azure Agent
+Azure Copilot Agent
 
 - "How do I create a new resource group with Azure CLI?"
 - "How can I list out the storage accounts I have in Azure PowerShell?"

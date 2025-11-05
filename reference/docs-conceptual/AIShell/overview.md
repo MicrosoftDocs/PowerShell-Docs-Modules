@@ -25,7 +25,7 @@ Each AI assistant is known as an agent. The initial release of AI Shell includes
 
 - **Azure OpenAI** agent that connects to an instance of **gpt-4o**. Use this agent for general
   AI tasks.
-- **Copilot in Azure** agent that can assist with Microsoft Azure knowledge. Use the Azure agent for
+- **Azure Copilot** agent that can assist with Microsoft Azure knowledge. Use the Azure agent for
   assistance with Azure CLI and Azure PowerShell commands.
 
 You can run the AI Shell executable (`aish.exe`) in a standalone experience or you can use the

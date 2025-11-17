@@ -27,9 +27,9 @@ OpenAI in the commented out example in the JSON file.
 
 ![An animation showing Getting Started with AI Shell.][02]
 
-The Azure agent is designed to bring the Copilot in Azure experience directly to your command line.
-It provides assistance for Azure CLI and Azure PowerShell commands. To use this agent, you need to
-sign into Azure using the `az login` command from Azure CLI.
+The Azure agent is designed to bring the Azure Copilot experience directly to your command line. It
+provides assistance for Azure CLI and Azure PowerShell commands. To use this agent, you need to sign
+into Azure using the `az login` command from Azure CLI.
 
 ## Use AI Shell to interact with the agents
 

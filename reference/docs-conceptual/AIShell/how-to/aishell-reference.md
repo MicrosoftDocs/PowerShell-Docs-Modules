@@ -128,7 +128,7 @@ Example:
 
   openai-gpt       Active GPT: <gpt-name>. A GPT instance with expertise in PowerShell scripting
                    using Entra ID authentication.
-  azure (active)   This AI assistant connects you to the Copilot in Azure and can generate Azure
+  azure (active)   This AI assistant connects you to the Azure Copilot and can generate Azure
                    CLI and Azure PowerShell commands for managing Azure resources and answer
                    questions about Azure.
 ```

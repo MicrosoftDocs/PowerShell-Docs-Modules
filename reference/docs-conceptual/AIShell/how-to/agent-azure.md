@@ -1,14 +1,14 @@
 ---
-title: Copilot in Azure Agent
-description: Learn how to use the Copilot in Azure agent in AI Shell.
+title: Azure Copilot Agent
+description: Learn how to use the Azure Copilot agent in AI Shell.
 ms.date: 08/25/2025
 ---
-# Copilot in Azure Agent
+# Azure Copilot Agent
 
-This agent is designed to connect you to the [**Copilot in Azure**][02] experience directly from
-your command line. It provides assistance for Azure CLI commands, Azure PowerShell commands, and
-general Azure knowledge. To use this agent, you need to sign in to Azure using the `az login`
-command from Azure CLI.
+This agent is designed to connect you to the [**Azure Copilot**][02] experience directly from your
+command line. It provides assistance for Azure CLI commands, Azure PowerShell commands, and general
+Azure knowledge. To use this agent, you need to sign in to Azure using the `az login` command from
+Azure CLI.
 
 ## Prerequisites
 
@@ -37,7 +37,7 @@ This agent includes the following features:
 
 ## Telemetry and configuration
 
-The **Copilot in Azure** agent captures a small set of telemetry data. The telemetry data captured
+The **Azure Copilot** agent captures a small set of telemetry data. The telemetry data captured
 contains no personal identifiable information. The agent only captures product usage data to help us
 improve the product experience.
 

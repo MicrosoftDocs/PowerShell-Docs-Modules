@@ -105,7 +105,7 @@ AI Shell is a new CLI tool that creates an interactive shell to connect you with
 artificial intelligence assistants. We refer to these different AI assistants as AI agents; AI Shell
 includes two agents by default:
 
-- Copilot in Azure
+- Azure Copilot
 - Azure OpenAI
 
 ### Key features

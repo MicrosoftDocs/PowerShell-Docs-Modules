@@ -2,7 +2,7 @@
 description: Write PowerShell External Help in Markdown.
 Locale: en-US
 ms.date: 03/16/2021
-ms.topic: conceptual
+ms.topic: concept-article
 schema: 2.0.0
 title: about_platyPS
 ---

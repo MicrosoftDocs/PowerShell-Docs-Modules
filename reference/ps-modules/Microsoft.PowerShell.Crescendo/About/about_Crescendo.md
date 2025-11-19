@@ -2,7 +2,7 @@
 description: Describes the purpose of the Crescendo module.
 Locale: en-US
 ms.date: 12/13/2022
-ms.topic: conceptual
+ms.topic: concept-article
 online version: https://learn.microsoft.com/powershell/module/microsoft.powershell.crescendo/about/about_Microsoft.PowerShell.Crescendo?view=ps-modules.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Microsoft.PowerShell.Crescendo

@@ -42,6 +42,6 @@ Install using PSResourceGet 1.x:
 Install-PSResource -Name PSScriptAnalyzer -Reinstall
 ```
 
-The **Force** or **Reinstall** parameters are only necessary when you have an older version of
+The `-Force` or `-Reinstall` parameters are only necessary when you have an older version of
 PSScriptAnalyzer installed. These parameters also work even when you don't have a previous version
 installed.

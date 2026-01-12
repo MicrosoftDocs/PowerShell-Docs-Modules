@@ -1,10 +1,10 @@
 ---
 title: AI Shell release notes
 description: >
-  Find out what's new in the latest release of AI Shell, an interactive shell that provides a chat
-  interface with language models.
-ms.date: 09/09/2025
+  Find out what's new in the latest release of AI Shell, an interactive shell that provides a chat interface with language models.
+ms.date: 01/12/2026
 ms.topic: overview
+ms.collection: ce-skilling-ai-copilot
 ---
 # AI Shell Release Notes
 
@@ -123,3 +123,4 @@ includes two agents by default:
 [07]: https://github.com/PowerShell/AIShell/releases/tag/v1.0.0-preview.3
 [08]: https://github.com/PowerShell/AIShell/releases/tag/v1.0.0-preview.5
 [362]: https://github.com/dotnet/announcements/issues/362
+

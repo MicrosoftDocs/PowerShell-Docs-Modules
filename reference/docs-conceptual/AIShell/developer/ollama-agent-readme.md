@@ -1,7 +1,8 @@
 ---
 title: Ollama agent README
 description: Learn how to use the Ollama agent in AI Shell.
-ms.date: 03/03/2025
+ms.date: 01/12/2026
+ms.collection: ce-skilling-ai-copilot
 ---
 # Ollama Plugin
 

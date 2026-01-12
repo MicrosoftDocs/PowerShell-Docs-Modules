@@ -4,11 +4,11 @@ Help Version: 1.0.0
 Locale: en-US
 Module Guid: ecb8bee0-59b9-4dae-9d7b-a990b480279a
 Module Name: AIShell
-ms.date: 08/27/2025
+ms.date: 01/12/2026
 ms.custom: 1.0.0-preview.6
 title: AIShell Module
+ms.collection: ce-skilling-ai-copilot
 ---
-
 # AIShell Module
 
 ## Description
@@ -34,3 +34,4 @@ Sends the last error in the current session  for resolution in the connected AIS
 
 Starts an AIShell session in a split pane window of Windows Terminal and iTerm2 and connects a
 communication channel to the PowerShell session that started it.
+

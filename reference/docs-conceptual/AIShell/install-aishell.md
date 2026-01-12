@@ -1,8 +1,9 @@
 ---
 title: Install AI Shell
 description: Learn how to install AI Shell on your system.
-ms.date: 09/09/2025
+ms.date: 01/12/2026
 ms.topic: install-set-up-deploy
+ms.collection: ce-skilling-ai-copilot
 ---
 # Install AI Shell
 
@@ -125,3 +126,4 @@ To manually install AI Shell, follow the instructions for your platform:
 [01]: get-started/aishell-powershell.md
 [02]: get-started/aishell-standalone.md
 [03]: https://github.com/PowerShell/AIShell/releases/latest
+

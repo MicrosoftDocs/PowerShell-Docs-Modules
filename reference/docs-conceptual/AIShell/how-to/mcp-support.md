@@ -1,8 +1,9 @@
 ---
 title: MCP support
 description: Learn how to enable and use MCPs in AIShell.
-ms.date: 08/25/2025
+ms.date: 01/12/2026
 ms.topic: how-to
+ms.collection: ce-skilling-ai-copilot
 ---
 # MCP support
 
@@ -159,3 +160,4 @@ For more information about the remote MCP server from Microsoft, see:
 [07]: media/mcp-support/openai-agent-context.gif
 [08]: media/mcp-support/openai-agent-get.gif
 [09]: media/mcp-support/openai-agent-run.gif
+

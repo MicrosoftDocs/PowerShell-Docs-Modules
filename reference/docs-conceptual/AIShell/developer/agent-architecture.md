@@ -1,10 +1,10 @@
 ---
 title: Architecture of AI Shell
 description: This article explains the architecture of AI Shell and API required to support agents.
-ms.date: 11/11/2024
+ms.date: 01/12/2026
 ms.topic: concept-article
+ms.collection: ce-skilling-ai-copilot
 ---
-
 # AI Shell architecture
 
 ![AI Shell architecture diagram.][01]
@@ -58,3 +58,4 @@ easily merge `AIShell.App` into `AIShell.Kernel` if this idea no longer make sen
 
 <!-- link references -->
 [01]: media/agent-architecture/aishell-agent-architecture.png
+

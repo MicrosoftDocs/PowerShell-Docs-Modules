@@ -1,12 +1,12 @@
-﻿---
+---
 external help file: AIShell.Integration.dll-Help.xml
 Module Name: AIShell
 ms.custom: 1.0.0-preview.6
-ms.date: 08/25/2025
+ms.date: 01/12/2026
 online version: https://learn.microsoft.com/en-us/powershell/module/aishell/invoke-aicommand?view=ps-modules&wt.mc_id=ps-gethelp
 schema: 2.0.0
+ms.collection: ce-skilling-ai-copilot
 ---
-
 # Invoke-AICommand
 
 ## SYNOPSIS
@@ -63,3 +63,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+

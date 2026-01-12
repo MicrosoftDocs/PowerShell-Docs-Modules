@@ -1,8 +1,9 @@
 ---
 title: AI Shell command reference
 description: Learn about the command-line options and commands available in AI Shell.
-ms.date: 09/09/2025
+ms.date: 01/12/2026
 ms.topic: reference
+ms.collection: ce-skilling-ai-copilot
 ---
 # AI Shell command reference
 
@@ -427,3 +428,4 @@ files:
 [01]: media/aishell-reference/code-copy-command.gif
 [02]: media/aishell-reference/code-post-command.gif
 [03]: media/aishell-reference/code-save-command.png
+

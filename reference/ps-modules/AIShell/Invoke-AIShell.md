@@ -2,11 +2,11 @@
 external help file: AIShell.Integration.dll-Help.xml
 Module Name: AIShell
 online version: https://learn.microsoft.com/en-us/powershell/module/aishell/invoke-aishell?view=ps-modules&wt.mc_id=ps-gethelp
-ms.date: 05/16/2025
+ms.date: 01/12/2026
 ms.custom: 1.0.0-preview.6
 schema: 2.0.0
+ms.collection: ce-skilling-ai-copilot
 ---
-
 # Invoke-AIShell
 
 ## SYNOPSIS
@@ -205,3 +205,4 @@ PowerShell includes the following alias for this cmdlet:
 [Start-AIShell](Start-AIShell.md)
 
 [Resolve-Error](Resolve-Error.md)
+

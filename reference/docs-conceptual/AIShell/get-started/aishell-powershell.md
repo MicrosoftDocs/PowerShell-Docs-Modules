@@ -1,8 +1,9 @@
 ---
 description: This article explains how to install and configure AI Shell, and get started chatting with an AI assistant in PowerShell.
-ms.date: 11/11/2024
+ms.date: 01/12/2026
 title: Get started with AI Shell in PowerShell
 ms.topic: get-started
+ms.collection: ce-skilling-ai-copilot
 ---
 # Get started with AI Shell in PowerShell
 
@@ -131,3 +132,4 @@ This command allows you to interact with the AI model from your working terminal
 [04]: media/aishell-powershell/resolve-error.gif
 [05]: media/aishell-powershell/start-aishell.gif
 [06]: media/aishell-powershell/switch-agents.gif
+

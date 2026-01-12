@@ -1,7 +1,8 @@
 ---
 title: What is a command shell?
-ms.date: 11/11/2024
+ms.date: 01/12/2026
 description: Learn what a command shell is and how it works.
+ms.collection: ce-skilling-ai-copilot
 ---
 # What is a command shell?
 
@@ -95,3 +96,4 @@ in Windows is an exception, as it's both a command-line tool and an interactive 
 [14]: https://support.apple.com/guide/terminal/welcome/mac
 [15]: https://wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop
 [16]: https://www.gnu.org/software/bash/
+

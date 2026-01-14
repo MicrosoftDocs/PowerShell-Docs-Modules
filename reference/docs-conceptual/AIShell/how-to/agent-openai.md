@@ -1,8 +1,9 @@
 ---
 title: OpenAI agent
 description: Learn how to configure the OpenAI agent.
-ms.date: 09/09/2025
+ms.date: 01/12/2026
 ms.topic: how-to
+ms.collection: ce-skilling-ai-copilot
 ---
 # OpenAI agent
 
@@ -229,3 +230,4 @@ Next, add a new GPT to your `openai.agent.json` file.
 [07]: https://localai.io/
 [08]: https://ollama.com/blog/openai-compatibility
 [09]: xref:Azure.Identity.DefaultAzureCredential
+

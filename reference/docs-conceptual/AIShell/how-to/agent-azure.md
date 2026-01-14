@@ -1,7 +1,8 @@
 ---
 title: Azure Copilot Agent
 description: Learn how to use the Azure Copilot agent in AI Shell.
-ms.date: 08/25/2025
+ms.date: 01/12/2026
+ms.collection: ce-skilling-ai-copilot
 ---
 # Azure Copilot Agent
 
@@ -68,3 +69,4 @@ To disable telemetry, set the **telemetry** property to `false`.
 <!-- link references -->
 [01]: /cli/azure/install-azure-cli
 [02]: https://azure.microsoft.com/products/copilot
+

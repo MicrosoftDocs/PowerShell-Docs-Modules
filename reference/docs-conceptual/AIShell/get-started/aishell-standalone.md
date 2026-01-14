@@ -1,8 +1,9 @@
 ---
 description: This article explains how to install and configure AI Shell, and get started chatting with an AI assistant.
-ms.date: 10/29/2024
+ms.date: 01/12/2026
 title: Get started with AI Shell
 ms.topic: get-started
+ms.collection: ce-skilling-ai-copilot
 ---
 # Get started with AI Shell
 
@@ -94,3 +95,4 @@ custom key bindings will be supported in a future release.
 <!-- link references -->
 [01]: aishell-powershell.md
 [02]: media/aishell-standalone/standalone-startup.gif
+

@@ -1,10 +1,10 @@
 ---
 title: How to create an agent for Ollama
 description: Learn how to create an agent for the Ollama language model in AI Shell.
-ms.date: 05/16/2025
+ms.date: 01/12/2026
 ms.topic: how-to
+ms.collection: ce-skilling-ai-copilot
 ---
-
 # Creating an Agent
 
 An agent is a code library that interfaces with the AI Shell to talk to a specific large
@@ -503,3 +503,4 @@ folder.
 [04]: https://github.com/PowerShell/AIShell/tree/main/shell/agents/AIShell.Ollama.Agent
 [05]: https://github.com/PowerShell/AIShell/blob/main/shell/README.md
 [06]: https://www.nuget.org/packages/AIShell.Abstraction
+

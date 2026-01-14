@@ -1,10 +1,10 @@
 ---
 title: What is AI Shell?
 description: Learn about AI Shell, an interactive shell that provides a chat interface with language models.
-ms.date: 09/09/2025
+ms.date: 01/12/2026
 ms.topic: overview
+ms.collection: ce-skilling-ai-copilot
 ---
-
 # What is AI Shell?
 
 AI Shell is an interactive shell that provides a chat interface with language models. The shell
@@ -80,3 +80,4 @@ Here are ways you can get involved:
 [03]: https://github.com/PowerShell/AIShell/discussions
 [04]: https://github.com/PowerShell/AIShell/issues
 [05]: release-notes.md
+

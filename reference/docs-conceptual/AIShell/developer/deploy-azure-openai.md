@@ -1,8 +1,9 @@
 ---
 title: Deploy the Azure OpenAI Service using Bicep
 description: This article provides the step-by-step instructions to deploy and instance of the Azure OpenAI Service using Bicep.
-ms.date: 01/15/2025
+ms.date: 01/12/2026
 ms.topic: concept-article
+ms.collection: ce-skilling-ai-copilot
 ---
 # Deploy the Azure OpenAI Service using Bicep
 
@@ -192,3 +193,4 @@ for Azure OpenAI deployments, see [Azure OpenAI Service documentation][03].
 [05]: /powershell/azure/install-azure-powershell
 [06]: https://medium.com/medialesson/deploy-an-azure-openai-service-with-llm-deployments-via-bicep-244411472d40
 [07]: https://raw.githubusercontent.com/PowerShell/AIShell/refs/heads/main/docs/development/AzureOAIDeployment/main.bicep
+

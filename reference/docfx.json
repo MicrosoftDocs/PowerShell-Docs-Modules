@@ -47,6 +47,7 @@
         "docs-conceptual/PSScriptAnalyzer/Rules/**": "language-reference"
       },
       "ms.update-cycle": {
+        "docs-conceptual/AIShell/**": "1825-days",
         "docs-conceptual/Crescendo/**": "1825-days",
         "docs-conceptual/SecretManagement/**": "1825-days",
         "docs-conceptual/SecretStore/**": "1825-days",
@@ -76,6 +77,7 @@
       "ms.devlang": "powershell",
       "ms.service": "powershell",
       "ms.tgt_pltfr": "windows, macos, linux",
+      "ms.update-cycle": "365-days",
       "products": [ "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3" ],
       "social_image_url": "https://learn.microsoft.com/media/logos/logo-powershell-social.png",
       "titleSuffix": "PowerShell",

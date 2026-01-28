@@ -1,6 +1,6 @@
 ---
 description: This article explains the purpose of the PSScriptAnalyzer module.
-ms.date: 10/10/2024
+ms.date: 01/28/2026
 title: PSScriptAnalyzer module
 ---
 # PSScriptAnalyzer module
@@ -20,8 +20,8 @@ PowerShell code such as:
 - And many more
 
 You can choose the rules to include or exclude for your modules and scripts. PSScriptAnalyzer can
-also fix the formatting of your code. This helps you produce code that conforms to a standard style,
-is easier to read, and is more maintainable.
+also fix the formatting of your code. Formatting helps you produce code that conforms to a standard
+style that is more maintainable and easier to read.
 
 ## Installing PSScriptAnalyzer
 

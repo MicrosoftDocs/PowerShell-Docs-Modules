@@ -1,15 +1,15 @@
 ---
 description: This article lists best-practice recommendations and the rules associated with them.
-ms.date: 12/03/2024
+ms.date: 01/28/2026
 title: PSScriptAnalyzer rules and recommendations
 ---
 # PSScriptAnalyzer rules and recommendations
 
 The following guidelines come from a combined effort from both the PowerShell team and the
-community. The guidelines are organized by type. Within each type there is a list of rules. The
+community. The guidelines are organized by type. Within each type, there's a list of rules. The
 rules are grouped by the **Severity** defined in the implementation of the **PSScriptAnalyzer**
-rule. The severity level labeled as 'TBD' means "To be determined". These are recommendations that
-don't currently have rules defined.
+rule. The severity level labeled `TBD` means "To be determined." Items labeled as TBD are
+recommendations that don't currently have rules defined.
 
 ## Cmdlet Design Rules
 
@@ -42,8 +42,8 @@ No rules defined.
 
 - Support **Force** parameter for interactive sessions. If your cmdlet is used interactively, always
   provide a **Force** parameter to override the interactive actions, such as prompts or reading
-  lines of input. This is important because it allows your cmdlet to be used in non-interactive
-  scripts and hosts. The following methods can be implemented by an interactive host.
+  lines of input. The **Force** parameter is important because it allows your cmdlet to be used in
+  non-interactive scripts and hosts.
 - Document output objects
 - Module must be loadable
 - No syntax errors
@@ -85,7 +85,7 @@ No rules defined.
 - Avoid using UNC file paths
 - Error Handling
   - Use `-ErrorAction Stop` when calling cmdlets
-  - Use `$ErrorActionPreference = 'Stop'/'Continue'` when calling non-cmdlets
+  - Use `$ErrorActionPreference` set to  `Stop` or `Continue` when calling noncmdlets
   - Avoid using flags to handle errors
   - Avoid using `$?`
   - Avoid testing for a null variable as an error condition
@@ -142,7 +142,7 @@ No rules defined.
 
 ### Severity: TBD
 
-- Avoid initializing APIKey and Credentials variables (information disclosure)
+- Avoid initializing API key and credential variables (information disclosure)
 
 ## DSC Related Rules
 
@@ -168,13 +168,14 @@ No rules defined.
 
 ### Severity: TBD
 
-- For Windows PowerShell v4, resource modules should have a `.psd1` file and `schema.mof` for every
+- For Windows PowerShell v4, resource modules should have a `.psd1` and  `schema.mof` file for every
   resource
-- MOFs should have a description for each element - see [Issue #131][131]
 - Resource modules should have a `.psd1` file (always) and `schema.mof` (for non-class resource) see
   [Issue #116][116]
+- Resource module should have a DscResources folder that contains the resources - see
+  [Issue #130][130]
+- MOFs should have a description for each element - see [Issue #131][131]
 - Use **ShouldProcess** for a **Set** DSC method
-- Resource module contains DscResources folder which contains the resources - see [Issue #130][130]
 
 ### References
 

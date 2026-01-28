@@ -1,6 +1,6 @@
 ---
 description: This article lists the updates to the PSScriptAnalyzer module.
-ms.date: 04/29/2025
+ms.date: 01/28/2026
 title: What's new in PSScriptAnalyzer
 ---
 # What's new in PSScriptAnalyzer
@@ -18,7 +18,7 @@ Breaking changes
 New features and updates
 
 - Add new options (enabled by default) to formatting rule `UseCorrectCasing` to also correct
-  operators, keywords and commands
+  operators, keywords, and commands
 - `PSAlignAssignmentStatement`: Ignore hashtables with a single key-value pair
 - Use `RequiredResource` hashtable to specify PowerShell module versions
 - `PSAvoidAssignmentToAutomaticVariable`: Ignore when a Parameter has an Attribute that contains a
@@ -26,7 +26,7 @@ New features and updates
 - Trim unnecessary trailing spaces from string resources in Strings.resx
 - Make Settings type detection more robust
 - Add foreach Assignment to `AvoidAssignmentToAutomaticVariable`
-- Do not print summary repeatedly for each logger
+- Don't print summary repeatedly for each logger
 - Set exit code of `Invoke-ScriptAnalyzer -EnableExit` to total number of diagnostics
 - `Invoke-ScriptAnalyzer`: Stream diagnostics instead of batching
 - `Invoke-ScriptAnalyzer`: Print summary only once per invocation
@@ -52,8 +52,8 @@ when using PowerShell 7 is now `7.2.11`.
 ### Enhancements
 
 - Enable suppression of `PSAvoidAssignmentToAutomaticVariable` for specific variable or parameter
-- Upgrade to use .NET 6 since PowerShell 7.0 is now out out of support
-- Convert `PSUseSingularNouns` to configurable rule and add `Windows` to allowlist
+- Upgrade to use .NET 6 since PowerShell 7.0 is now out of support
+- Convert `PSUseSingularNouns` to configurable rule and add `Windows` to the allow list
 - Allow suppression of `PSUseSingularNouns` for specific function
 - Add `ErrorView` to `SpecialVars.cs`
 - Adding `ToString()` methods to `[CorrectionExtent]` and `[DiagnosticRecord]` types
@@ -77,7 +77,7 @@ when using PowerShell 7 is now `7.2.11`.
 - Make messages of `UseCorrectCasing` more detailed
 - Exclude automatic variable `$FormatEnumerationLimit` from analysis by `PSAvoidGlobalVars` and
   `PSUseDeclaredVarsMoreThanAssignments`
-- `PSAvoidUsingPositionalParameters` - Do not warn on AZ CLI
+- `PSAvoidUsingPositionalParameters` - Don't warn on AzCLI
 
 ## PSScriptAnalyzer 1.20.0 - 2021-08-20
 
@@ -90,29 +90,29 @@ when using PowerShell 7 is now `7.2.11`.
 
 - Replace unhelpful warning about `process` aliasing `Get-Process` with warning about misused syntax
 - Fix `FunctionInfo` fallback AST attribute analysis for `UseShouldProcessCorrectly`
-- Do not increase indentation after a left parenthesis if the previous token is a newline and the
-  next token is not a newline
+- Don't increase indentation after a left parenthesis if the previous token is a newline and the
+  next token isn't a newline
 - `UseConsistentWhitespace` - **CheckOpenBrace** setting to not warn when being preceded by open
   parenthesis
 - Implement `-IncludeSuppressions` parameter
-- Combine multiple suppressions applied to the same diagnostic
+- Combine multiple suppressions that apply to the same diagnostic
 
 ## PSScriptAnalyzer 1.19.1 - 2020-07-28
 
 ### New rules
 
-- Add `AvoidUsingDoubleQuotesForConstantString` (disabled by default) to warn about the use of
+- Add `AvoidUsingDoubleQuotesForConstantString` (disabled by default) - Warns about the use of
   double quotes for constant strings
 
 ### Fixes
 
-- `UseCorrectCasing` - Do not use **CommandInfoCache** when **CommandInfoParameters** property
-  throws due to runspace affinity problem of PowerShell engine
-- `ReviewUnusedParameter` - Do not trigger when `$MyInvocation.BoundParameters` or
+- `UseCorrectCasing` - Don't use **CommandInfoCache** when the **CommandInfoParameters** property
+  throws. Fixes runspace affinity problem in the PowerShell engine
+- `ReviewUnusedParameter` - Don't trigger when `$MyInvocation.BoundParameters` or
   `$PSCmdlet.MyInvocation.BoundParameters` is used
 - `PipelineIndentationStyle.None` - Fix bug that caused incorrect formatting in hashtables
 - `UseUsingScopeModifierInNewRunspaces` - Fix `ArgumentException` when the same variable name is
-  used in 2 different sessions.
+  used in two different sessions.
 - `UseConsistentWhitespace`
   - Check previous token only if it starts on the same line
   - Fix **CheckParameter** bug when using interpolated string

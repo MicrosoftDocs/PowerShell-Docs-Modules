@@ -1,6 +1,6 @@
 ---
 description: This article describes various features of PSScriptAnalyzer and how to use them.
-ms.date: 04/26/2024
+ms.date: 01/28/2026
 title: Using PSScriptAnalyzer
 ---
 # Using PSScriptAnalyzer
@@ -104,7 +104,7 @@ function InternalFunction
 }
 ```
 
-You can further restrict suppression based on a function, parameter, class, variable or object's
+You can further restrict suppression based on a function, parameter, class, variable, or object's
 name by setting the **Target** property of **SuppressMessageAttribute** to a regular expression or
 a wildcard pattern.
 
@@ -155,8 +155,8 @@ Param()
 
 You can create settings that describe the ScriptAnalyzer rules to include or exclude based on
 **Severity**. Use the **Settings** parameter of `Invoke-ScriptAnalyzer` to specify configuration.
-This enables you to create a custom configuration for a specific environment. We support the
-following modes for specifying the settings file:
+The **Settings** parameter allows you to create a custom configuration for a specific environment.
+ScriptAnalyzer support the following modes for specifying the settings file:
 
 ### Built-in Presets
 
@@ -214,8 +214,8 @@ If you place a settings file named `PSScriptAnalyzerSettings.psd1` in your proje
 Invoke-ScriptAnalyzer -Path "C:\path\to\project" -Recurse
 ```
 
-Note that providing settings explicitly takes higher precedence over this implicit mode. Sample
-settings files are provided in the `Settings` folder of the **PSScriptAnalyzer** module.
+Providing settings explicitly takes higher precedence over this implicit mode. You can find sample
+settings files in the `Settings` folder of the **PSScriptAnalyzer** module.
 
 ## Check PowerShell version compatibility
 
@@ -227,8 +227,8 @@ issues:
   PowerShell environments
 - [PSUseCompatibleCommands][04] checks whether commands used in a script are available in other
   PowerShell environments
-- [PSUseCompatibleSyntax][05] checks whether a syntax used in a script will work in other PowerShell
-  versions
+- [PSUseCompatibleSyntax][05] checks whether a syntax used in a script is compatible in other
+  versions of PowerShell
 - [PSUseCompatibleTypes][06] checks whether .NET types and static methods or properties are
   available in other PowerShell environments
 
@@ -242,8 +242,8 @@ these paths point either to a module's folder, which implicitly uses the module 
 module's script file (`.psm1`). The module must export the custom rule functions using
 `Export-ModuleMember` for them to be available to **PSScriptAnalyzer**.
 
-In this example the property **CustomRulePath** points to two different modules. Both modules export
-the rule functions with the verb **Measure** so `Measure-*` is used for the property
+In this example, the **CustomRulePath** property points to two different modules. Both modules
+export the rule functions with the verb **Measure** so `Measure-*` is used for the property
 **IncludeRules**.
 
 ```powershell
@@ -283,10 +283,10 @@ otherwise the default rules are used.
 }
 ```
 
-### Using custom rules in Visual Studio Code
+### Using custom rules in Visual Studio Code (VS Code)
 
-It's also possible to use the custom rules that are provided in the settings file in Visual Studio
-Code. This is done by adding a Visual Studio Code workspace settings file (`.vscode/settings.json`).
+You can also use the custom rules that are provided in the settings file in VS Code. Add a VS Code
+workspace settings file (`.vscode/settings.json`) with the following contents.
 
 ```json
 {
@@ -322,16 +322,16 @@ public System.Collections.Generic.IEnumerable<IRule> GetRule(string[] moduleName
 
 ## Violation Correction
 
-You can use the **Fix** switch to to automatically replace violation-causing content with a
-suggested alternative. Additionally, because `Invoke-ScriptAnalyzer` implements
-**SupportsShouldProcess**, you can use **WhatIf** or **Confirm** to find out which corrections would
-be applied. You should use source control when applying corrections as some changes, such as the one
-for **AvoidUsingPlainTextForPassword**, might require additional script modifications that can't be
-made automatically. Because initial encoding can't always be preserved when you automatically apply
-suggestions, you should check your file's encoding if your scripts depend on a particular encoding.
+You can use the **Fix** switch to automatically replace violation-causing content with a suggested
+alternative. Additionally, because `Invoke-ScriptAnalyzer` implements **SupportsShouldProcess**, you
+can use **WhatIf** or **Confirm** to find out which corrections would be applied. You should use
+source control when applying corrections as some changes, such as the one for
+**AvoidUsingPlainTextForPassword**, might require other script modifications that can't be made
+automatically. Initial encoding can't always be preserved when you automatically apply suggestions.
+You should check file encoding if your scripts depend on a particular encoding.
 
 The **SuggestedCorrections** property of the error record enables quick-fix scenarios in editors
-like VSCode. We provide valid **SuggestedCorrection** for the following rules:
+like VS Code. We provide valid **SuggestedCorrection** for the following rules:
 
 - **AvoidAlias**
 - **AvoidUsingPlainTextForPassword**

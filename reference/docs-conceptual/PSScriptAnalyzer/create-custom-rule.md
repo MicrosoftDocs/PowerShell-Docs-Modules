@@ -1,6 +1,6 @@
 ---
 description: This article provides a basic guide for creating your own customized rules.
-ms.date: 06/28/2023
+ms.date: 01/28/2026
 title: Creating custom rules
 ---
 # Creating custom rules
@@ -8,8 +8,8 @@ title: Creating custom rules
 PSScriptAnalyzer uses the [Managed Extensibility Framework (MEF)][01] to import all rules defined in
 the assembly. It can also consume rules written in PowerShell scripts.
 
-When calling `Invoke-ScriptAnalyzer`, users can specify custom rules using the
-**CustomizedRulePath** parameter.
+Users can specify custom rules using the **CustomizedRulePath** parameter of the
+`Invoke-ScriptAnalyzer` cmdlet.
 
 This article provides a basic guide for creating your own customized rules.
 
@@ -17,7 +17,7 @@ This article provides a basic guide for creating your own customized rules.
 
 ### Functions should have comment-based help
 
-Include the `.DESCRIPTION` field. This becomes the description for the customized rule.
+Include the `.DESCRIPTION` field. This field becomes the description for the customized rule.
 
 ```powershell
 <#
@@ -114,7 +114,9 @@ $suggestedCorrections.add($correctionExtent) | Out-Null
 }
 ```
 
-### Make sure you export the function(s)
+### Make sure you export the function
+
+You must export the functions you create so that PSScriptAnalyzer can find them.
 
 ```powershell
 Export-ModuleMember -Function (FunctionName)

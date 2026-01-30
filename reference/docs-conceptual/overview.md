@@ -1,6 +1,6 @@
 ---
 description: This documentation set contains reference for modules published and maintained by the PowerShell team, but aren't part of the PowerShell package.
-ms.date: 06/28/2023
+ms.date: 01/30/2026
 title: PowerShell utility modules
 ---
 # PowerShell utility modules
@@ -12,12 +12,12 @@ level of support for each module varies. For more details, see the landing page 
 
 This documentation set contains cmdlet reference for the following modules.
 
-- [AIShell][01]
 - [Microsoft.PowerShell.Crescendo][02]
 - [Microsoft.PowerShell.SecretManagement][03]
 - [Microsoft.PowerShell.SecretStore][04]
 - [PlatyPS][05]
 - [PSScriptAnalyzer][06]
+- [AIShell][01] - **Deprecated as of January 2026**
 
 <!-- link references -->
 [01]: ./AIShell/overview.md

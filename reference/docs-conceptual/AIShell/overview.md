@@ -7,6 +7,8 @@ ms.collection: ce-skilling-ai-copilot
 ---
 # What is AI Shell?
 
+[!INCLUDE[aishell-deprecated](../../includes/aishell-deprecated.md)]
+
 AI Shell is an interactive shell that provides a chat interface with language models. The shell
 provides agents that connect to different AI models and other assistance providers. Users can
 interact with the agents in a conversational manner.

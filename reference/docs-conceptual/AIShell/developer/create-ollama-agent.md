@@ -7,6 +7,8 @@ ms.collection: ce-skilling-ai-copilot
 ---
 # Creating an Agent
 
+[!INCLUDE[aishell-deprecated](../../../includes/aishell-deprecated.md)]
+
 An agent is a code library that interfaces with the AI Shell to talk to a specific large
 language model or other assistance provider. Users chat with the agents using natural language to
 get the desired output or assistance. Agents are implemented as C# classes that implement the

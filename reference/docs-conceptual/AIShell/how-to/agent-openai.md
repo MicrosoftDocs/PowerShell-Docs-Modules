@@ -7,6 +7,8 @@ ms.collection: ce-skilling-ai-copilot
 ---
 # OpenAI agent
 
+[!INCLUDE[aishell-deprecated](../../../includes/aishell-deprecated.md)]
+
 This agent provides a user-friendly platform for interacting with OpenAI services. The OpenAI agent
 can connect to a public OpenAI service, a private deployment of the Azure OpenAI service, or any
 other OpenAI-compatible service. We recommend using an Azure OpenAI deployment for enhanced security

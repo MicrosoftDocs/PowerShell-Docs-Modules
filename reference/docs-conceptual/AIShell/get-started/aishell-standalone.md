@@ -7,6 +7,8 @@ ms.collection: ce-skilling-ai-copilot
 ---
 # Get started with AI Shell
 
+[!INCLUDE[aishell-deprecated](../../../includes/aishell-deprecated.md)]
+
 AI Shell was created to help command line users find the right commands to use, recover from errors,
 and better understand the commands and the output they produce. Follow along and walk through some
 examples to get started with AI Shell.

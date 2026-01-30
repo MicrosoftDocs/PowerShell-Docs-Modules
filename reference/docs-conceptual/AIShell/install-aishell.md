@@ -7,6 +7,8 @@ ms.collection: ce-skilling-ai-copilot
 ---
 # Install AI Shell
 
+[!INCLUDE[aishell-deprecated](../../includes/aishell-deprecated.md)]
+
 AI Shell is an interactive shell that provides a chat interface for AI language models. For the best
 experience, install the following packages:
 

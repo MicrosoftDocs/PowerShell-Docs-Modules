@@ -20,6 +20,8 @@ Resolve-Error [-Agent <String>] [-IncludeOutputFromClipboard] [<CommonParameters
 
 ## DESCRIPTION
 
+[!INCLUDE[aishell-deprecated](../../includes/aishell-deprecated.md)]
+
 When an error occurs in the current session, this cmdlet sends the error to the AIShell agent for
 resolution. The command sends the full error object to the current AIShell agent session, which
 attempts to provide a resolution.

@@ -7,6 +7,8 @@ ms.collection: ce-skilling-ai-copilot
 ---
 # MCP support
 
+[!INCLUDE[aishell-deprecated](../../../includes/aishell-deprecated.md)]
+
 Model Context Protocol (MCP) is an open protocol that standardizes how applications provide context
 to large language models (LLMs). Starting in AI Shell 1.0.0-preview.6, AI Shell can act as an MCP
 Host and client to MCP servers. The key participants in the MCP architecture are:

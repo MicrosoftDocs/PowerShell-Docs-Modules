@@ -6,6 +6,8 @@ ms.collection: ce-skilling-ai-copilot
 ---
 # Ollama Plugin
 
+[!INCLUDE[aishell-deprecated](../../../includes/aishell-deprecated.md)]
+
 This agent is used to interact with a language model running locally by utilizing the Ollama API.
 Before using this agent you need to have Ollama installed and running. To create an agent, you need
 to implement the `IAgent` interface.

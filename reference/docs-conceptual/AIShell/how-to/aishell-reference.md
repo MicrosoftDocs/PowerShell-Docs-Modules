@@ -7,6 +7,8 @@ ms.collection: ce-skilling-ai-copilot
 ---
 # AI Shell command reference
 
+[!INCLUDE[aishell-deprecated](../../../includes/aishell-deprecated.md)]
+
 ## Command-line options
 
 ```

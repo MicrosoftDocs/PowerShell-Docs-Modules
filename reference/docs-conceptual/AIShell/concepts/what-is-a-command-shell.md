@@ -6,6 +6,8 @@ ms.collection: ce-skilling-ai-copilot
 ---
 # What is a command shell?
 
+[!INCLUDE[aishell-deprecated](../../../includes/aishell-deprecated.md)]
+
 A command shell is a text-based interface for interacting with a computer, also known as a
 Read-Eval-Print Loop ([REPL][15]).
 
@@ -96,4 +98,3 @@ in Windows is an exception, as it's both a command-line tool and an interactive 
 [14]: https://support.apple.com/guide/terminal/welcome/mac
 [15]: https://wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop
 [16]: https://www.gnu.org/software/bash/
-

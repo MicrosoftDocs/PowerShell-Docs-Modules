@@ -6,6 +6,8 @@ ms.collection: ce-skilling-ai-copilot
 ---
 # Azure Copilot Agent
 
+[!INCLUDE[aishell-deprecated](../../../includes/aishell-deprecated.md)]
+
 This agent is designed to connect you to the [**Azure Copilot**][02] experience directly from your
 command line. It provides assistance for Azure CLI commands, Azure PowerShell commands, and general
 Azure knowledge. To use this agent, you need to sign in to Azure using the `az login` command from

@@ -1,11 +1,13 @@
 ---
 title: What is AI Shell?
 description: Learn about AI Shell, an interactive shell that provides a chat interface with language models.
-ms.date: 01/12/2026
+ms.date: 01/30/2026
 ms.topic: overview
 ms.collection: ce-skilling-ai-copilot
 ---
 # What is AI Shell?
+
+[!INCLUDE[aishell-deprecated](../../includes/aishell-deprecated.md)]
 
 AI Shell is an interactive shell that provides a chat interface with language models. The shell
 provides agents that connect to different AI models and other assistance providers. Users can
@@ -38,12 +40,6 @@ deeper integration with the shell. These features include:
 - Simple, single-command error recovery
 - MCP integration
 
-## Project status
-
-AI Shell is currently a preview release. Some features of the tool are still being developed and are
-subject to change. For more information about the current version and a complete list of changes,
-see the [Release notes][05].
-
 ## Known issues
 
 This current release of AI Shell has some known issues that we're actively working on addressing:
@@ -59,25 +55,6 @@ This current release of AI Shell has some known issues that we're actively worki
 - If you're using the default terminal app in macOS, you don't get the sidecar experience and the
   colors might not render correctly. It might be difficult to read the generated code.
 
-## Providing feedback
-
-Your feedback is important to us during this development phase. We encourage you to share your
-experiences to help us improve AI Shell.
-
-Here are ways you can get involved:
-
-- **File Issues:** If you encounter bugs, have suggestions for new features, or would like to report
-  inconsistencies, open an issue on the [AI Shell GitHub repository][04].
-- **Join the discussions:** Join our community discussions in the [GitHub discussions][03] tab.
-  Share ideas, discuss potential improvements, connect with other users, and share any agents you
-  create.
-- **Documentation:** If you notice any documentation gaps, you can suggest changes or submit PRs to
-  improve our documentation.
-
 <!-- link references -->
 [01]: /azure/ai-foundry/foundry-local/what-is-foundry-local
 [02]: /powershell/module/aishell/
-[03]: https://github.com/PowerShell/AIShell/discussions
-[04]: https://github.com/PowerShell/AIShell/issues
-[05]: release-notes.md
-

@@ -46,6 +46,8 @@ Invoke-AIShell [-Exit] [<CommonParameters>]
 
 ## DESCRIPTION
 
+[!INCLUDE[aishell-deprecated](../../includes/aishell-deprecated.md)]
+
 This cmdlet sends a query to the open AIShell agent and results are shown in the AIShell window.
 
 ## EXAMPLES

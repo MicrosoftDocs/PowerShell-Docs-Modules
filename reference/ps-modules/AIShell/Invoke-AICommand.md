@@ -21,6 +21,8 @@ Invoke-AICommand [-Command] <ScriptBlock> [<CommonParameters>]
 
 ## DESCRIPTION
 
+[!INCLUDE[aishell-deprecated](../../includes/aishell-deprecated.md)]
+
 MCPs in AI Shell use this cmdlet to invoke a command in the connected PowerShell session. This
 command is not intended for users to directly invoke. When an AI model creates a result containing
 commands, the MCP can use this cmdlet to execute the commands in the connected PowerShell session.

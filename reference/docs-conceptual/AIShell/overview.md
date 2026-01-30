@@ -1,7 +1,7 @@
 ---
 title: What is AI Shell?
 description: Learn about AI Shell, an interactive shell that provides a chat interface with language models.
-ms.date: 01/12/2026
+ms.date: 01/30/2026
 ms.topic: overview
 ms.collection: ce-skilling-ai-copilot
 ---
@@ -39,12 +39,6 @@ deeper integration with the shell. These features include:
 - Multi-step commands are added to the Predictive IntelliSense buffer for quick acceptance
 - Simple, single-command error recovery
 - MCP integration
-
-## Project status
-
-AI Shell is currently a preview release. Some features of the tool are still being developed and are
-subject to change. For more information about the current version and a complete list of changes,
-see the [Release notes][05].
 
 ## Known issues
 

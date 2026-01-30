@@ -7,6 +7,8 @@ ms.collection: ce-skilling-ai-copilot
 ---
 # AI Shell architecture
 
+[!INCLUDE[aishell-deprecated](../../../includes/aishell-deprecated.md)]
+
 ![AI Shell architecture diagram.][01]
 
 ## AIShell.Abstraction

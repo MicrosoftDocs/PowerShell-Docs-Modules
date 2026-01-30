@@ -21,6 +21,8 @@ Start-AIShell [-Path <String>] [<CommonParameters>]
 
 ## DESCRIPTION
 
+[!INCLUDE[aishell-deprecated](../../includes/aishell-deprecated.md)]
+
 Starts an AIShell session in a split pane window of Windows Terminal and iTerm2. The AIShell session
 is started in the right pane of the terminal window. The left pane is the current shell session. You
 must use these windows to interact with the AIShell session.

@@ -7,6 +7,8 @@ ms.collection: ce-skilling-ai-copilot
 ---
 # Deploy the Azure OpenAI Service using Bicep
 
+[!INCLUDE[aishell-deprecated](../../../includes/aishell-deprecated.md)]
+
 In AIShell, the **openai-gpt** agent can be used with a public OpenAI instance or an Azure OpenAI
 deployment. We recommend using the Azure OpenAI Service because it has additional features and
 provides better manageability. This article provides the step-by-step instructions to deploy and

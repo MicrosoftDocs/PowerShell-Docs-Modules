@@ -13,6 +13,8 @@ ms.collection: ce-skilling-ai-copilot
 
 ## Description
 
+[!INCLUDE[aishell-deprecated](../../includes/aishell-deprecated.md)]
+
 The AIShell module integrates PowerShell with AIShell. This integration enables the sharing queries,
 errors, and results between PowerShell and AIShell.
 

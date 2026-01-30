@@ -8,6 +8,8 @@ ms.collection: ce-skilling-ai-copilot
 ---
 # AI Shell Release Notes
 
+[!INCLUDE[aishell-deprecated](../../includes/aishell-deprecated.md)]
+
 This document outlines the changes and improvements made in each release of AI Shell. For a more
 complete list of changes, refer to the [Releases page][06] on GitHub.
 

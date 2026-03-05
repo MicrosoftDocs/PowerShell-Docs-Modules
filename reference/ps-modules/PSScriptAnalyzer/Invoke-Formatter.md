@@ -14,7 +14,7 @@ Formats a script text based on the input settings or default settings.
 
 ## SYNTAX
 
-```powershell
+```
 Invoke-Formatter [-ScriptDefinition] <string> [[-Settings] <Object>] [[-Range] <int[]>]
  [<CommonParameters>]
 ```

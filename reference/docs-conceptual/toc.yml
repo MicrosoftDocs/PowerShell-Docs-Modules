@@ -175,8 +175,14 @@ items:
             href: PSScriptAnalyzer/Rules/UseCompatibleTypes.md
           - name: UseConsistentIndentation
             href: PSScriptAnalyzer/Rules/UseConsistentIndentation.md
+          - name: UseConsistentParameterSetName
+            href: PSScriptAnalyzer/Rules/UseConsistentParameterSetName.md
+          - name: UseConsistentParametersKind
+            href: PSScriptAnalyzer/Rules/UseConsistentParametersKind.md
           - name: UseConsistentWhitespace
             href: PSScriptAnalyzer/Rules/UseConsistentWhitespace.md
+          - name: UseConstrainedLanguageMode
+            href: PSScriptAnalyzer/Rules/UseConstrainedLanguageMode.md
           - name: UseCorrectCasing
             href: PSScriptAnalyzer/Rules/UseCorrectCasing.md
           - name: UseDeclaredVarsMoreThanAssignments
@@ -191,6 +197,8 @@ items:
             href: PSScriptAnalyzer/Rules/UsePSCredentialType.md
           - name: UseShouldProcessForStateChangingFunctions
             href: PSScriptAnalyzer/Rules/UseShouldProcessForStateChangingFunctions.md
+          - name: UseSingleValueFromPipelineParameter
+            href: PSScriptAnalyzer/Rules/UseSingleValueFromPipelineParameter.md
           - name: UseSingularNouns
             href: PSScriptAnalyzer/Rules/UseSingularNouns.md
           - name: UseSupportsShouldProcess

@@ -47,7 +47,7 @@ items:
         href: PlatyPS/step-3-test-markdown-help.md
       - name: Convert and publish the help files
         href: PlatyPS/step-4-convert-publish-help.md
-  - name: PSScriptAnalyzer v1.24
+  - name: PSScriptAnalyzer v1.25
     items:
       - name: Overview
         href: PSScriptAnalyzer/overview.md

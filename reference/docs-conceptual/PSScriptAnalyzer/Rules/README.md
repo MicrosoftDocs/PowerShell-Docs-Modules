@@ -1,6 +1,6 @@
 ---
 description: List of PSScriptAnalyzer rules
-ms.date: 03/27/2024
+ms.date: 03/20/2026
 ms.topic: reference
 title: List of PSScriptAnalyzer rules
 ---
@@ -68,7 +68,10 @@ The PSScriptAnalyzer contains the following rule definitions.
 | [UseCompatibleSyntax](./UseCompatibleSyntax.md)                                                   | Warning     |         No         |       Yes       |
 | [UseCompatibleTypes](./UseCompatibleTypes.md)                                                     | Warning     |         No         |       Yes       |
 | [UseConsistentIndentation](./UseConsistentIndentation.md)                                         | Warning     |         No         |       Yes       |
+| [UseConsistentParameterSetName](./UseConsistentParameterSetName.md)                               | Warning     |         No         |                 |
+| [UseConsistentParametersKind](./UseConsistentParametersKind.md)                                   | Warning     |         No         |       Yes       |
 | [UseConsistentWhitespace](./UseConsistentWhitespace.md)                                           | Warning     |         No         |       Yes       |
+| [UseConstrainedLanguageMode](./UseConstrainedLanguageMode.md)                                     | Warning     |         No         |       Yes       |
 | [UseCorrectCasing](./UseCorrectCasing.md)                                                         | Information |         No         |       Yes       |
 | [UseDeclaredVarsMoreThanAssignments](./UseDeclaredVarsMoreThanAssignments.md)                     | Warning     |        Yes         |                 |
 | [UseLiteralInitializerForHashtable](./UseLiteralInitializerForHashtable.md)                       | Warning     |        Yes         |                 |
@@ -76,6 +79,7 @@ The PSScriptAnalyzer contains the following rule definitions.
 | [UseProcessBlockForPipelineCommand](./UseProcessBlockForPipelineCommand.md)                       | Warning     |        Yes         |                 |
 | [UsePSCredentialType](./UsePSCredentialType.md)                                                   | Warning     |        Yes         |                 |
 | [UseShouldProcessForStateChangingFunctions](./UseShouldProcessForStateChangingFunctions.md)       | Warning     |        Yes         |                 |
+| [UseSingleValueFromPipelineParameter](./UseSingleValueFromPipelineParameter.md)                   | Warning     |         No         |                 |
 | [UseSingularNouns](./UseSingularNouns.md)                                                         | Warning     |        Yes         |       Yes       |
 | [UseSupportsShouldProcess](./UseSupportsShouldProcess.md)                                         | Warning     |        Yes         |                 |
 | [UseToExportFieldsInManifest](./UseToExportFieldsInManifest.md)                                   | Warning     |        Yes         |                 |

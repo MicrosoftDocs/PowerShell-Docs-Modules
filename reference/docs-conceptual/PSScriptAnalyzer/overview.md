@@ -1,6 +1,6 @@
 ---
 description: This article explains the purpose of the PSScriptAnalyzer module.
-ms.date: 01/28/2026
+ms.date: 03/20/2026
 title: PSScriptAnalyzer module
 ---
 # PSScriptAnalyzer module
@@ -30,16 +30,16 @@ Supported PowerShell Versions and Platforms
 - Windows PowerShell 5.1 or greater
 - PowerShell 7.2.11 or greater on Windows/Linux/macOS
 
-Install using PowerShellGet 2.x:
-
-```powershell
-Install-Module -Name PSScriptAnalyzer -Force
-```
-
 Install using PSResourceGet 1.x:
 
 ```powershell
 Install-PSResource -Name PSScriptAnalyzer -Reinstall
+```
+
+Install using PowerShellGet 2.x:
+
+```powershell
+Install-Module -Name PSScriptAnalyzer -Force
 ```
 
 The `-Force` or `-Reinstall` parameters are only necessary when you have an older version of

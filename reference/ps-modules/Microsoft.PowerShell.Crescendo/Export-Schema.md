@@ -19,6 +19,8 @@ Export-Schema
 
 ## DESCRIPTION
 
+[!INCLUDE[crescendo-deprecated](../../includes/crescendo-deprecated.md)]
+
 Exports the JSON schema for command configuration as a PowerShell object.
 
 ## EXAMPLES

@@ -20,6 +20,8 @@ New-CrescendoCommand [-Verb] <String> [-Noun] <String> [[-OriginalName] <String>
 
 ## DESCRIPTION
 
+[!INCLUDE[crescendo-deprecated](../../includes/crescendo-deprecated.md)]
+
 Creates a PowerShell command object. You can use this object to set the properties of the command
 you are defining. The resulting object can be converted to JSON to be added to a configuration file.
 

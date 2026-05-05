@@ -5,7 +5,7 @@ title: Installing Crescendo
 ---
 # Install the Crescendo module
 
-[!INCLUDE[crescendo-deprecated](../../includes/crescendo-deprecated.md)]
+[!INCLUDE[crescendo-deprecated](../../../includes/crescendo-deprecated.md)]
 
 Requirements:
 

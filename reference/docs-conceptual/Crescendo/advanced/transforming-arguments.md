@@ -5,7 +5,7 @@ title: Transforming arguments in Crescendo
 ---
 # Transforming arguments in Crescendo
 
-[!INCLUDE[crescendo-deprecated](../../includes/crescendo-deprecated.md)]
+[!INCLUDE[crescendo-deprecated](../../../includes/crescendo-deprecated.md)]
 
 There are many scenarios where the input values handed to a Crescendo wrapped command must be
 translated to a different format for the underlying native command. Crescendo 1.1 added two new

@@ -5,7 +5,7 @@ title: Choosing a command-line tool to amplify
 ---
 # Choosing the command-line tool for Crescendo
 
-[!INCLUDE[crescendo-deprecated](../../includes/crescendo-deprecated.md)]
+[!INCLUDE[crescendo-deprecated](../../../includes/crescendo-deprecated.md)]
 
 Using Crescendo is a rapid, reliable way to _amplify_ a command-line tool to produce a cmdlet-like
 experience. Many times, the tool you need to work with is directly tied to the technology you are

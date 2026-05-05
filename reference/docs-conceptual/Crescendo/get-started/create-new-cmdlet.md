@@ -5,7 +5,7 @@ title: Create a Crescendo cmdlet
 ---
 # Create a Crescendo cmdlet
 
-[!INCLUDE[crescendo-deprecated](../../includes/crescendo-deprecated.md)]
+[!INCLUDE[crescendo-deprecated](../../../includes/crescendo-deprecated.md)]
 
 Modern command-line tools provide commands for effective management of domain-specific technologies.
 Administrative users can confidently execute these commands inside of PowerShell and get the

@@ -9,7 +9,7 @@ title: about_Microsoft.PowerShell.Crescendo
 ---
 # about_Microsoft.PowerShell.Crescendo
 
-[!INCLUDE[crescendo-deprecated](../../includes/crescendo-deprecated.md)]
+[!INCLUDE[crescendo-deprecated](../../../includes/crescendo-deprecated.md)]
 
 ## Short description
 

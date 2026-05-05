@@ -5,7 +5,7 @@ title: Generate and test a Crescendo module
 ---
 # Generate and test a Crescendo module
 
-[!INCLUDE[crescendo-deprecated](../../includes/crescendo-deprecated.md)]
+[!INCLUDE[crescendo-deprecated](../../../includes/crescendo-deprecated.md)]
 
 In the [previous article][01] we created configurations for two new cmdlets. Using this
 configuration, Crescendo can generate a new PowerShell script module.

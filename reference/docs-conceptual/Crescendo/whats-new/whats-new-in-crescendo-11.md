@@ -5,6 +5,8 @@ title: What's new in Crescendo 1.1
 ---
 # What's new in Crescendo 1.1
 
+[!INCLUDE[crescendo-deprecated](../../includes/crescendo-deprecated.md)]
+
 This preview includes a new cmdlet, a new schema, support for argument value transformation, the
 ability to bypass the output handler, and improved error handling.
 

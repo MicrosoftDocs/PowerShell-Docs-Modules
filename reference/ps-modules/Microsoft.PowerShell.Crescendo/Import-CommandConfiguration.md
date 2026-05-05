@@ -19,6 +19,8 @@ Import-CommandConfiguration [-file] <String> [<CommonParameters>]
 
 ## DESCRIPTION
 
+[!INCLUDE[crescendo-deprecated](../../includes/crescendo-deprecated.md)]
+
 This cmdlet exports an object that can be converted into a function that acts as a proxy for the
 platform specific command. The resultant object may then be used to call a native command that can
 participate in the PowerShell pipeline. The `ToString` method of the output object returns a string

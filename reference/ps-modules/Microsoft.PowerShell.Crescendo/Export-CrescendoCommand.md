@@ -28,6 +28,8 @@ Export-CrescendoCommand [-command] <Command[]> -fileName <String> [-Force] [-Wha
 
 ## DESCRIPTION
 
+[!INCLUDE[crescendo-deprecated](../../includes/crescendo-deprecated.md)]
+
 This cmdlet creates JSON configuration files for Crescendo **Command** objects. It can create one
 JSON file per **Command** object or create one JSON file containing all objects passed to it.
 

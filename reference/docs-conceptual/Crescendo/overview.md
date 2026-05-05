@@ -5,6 +5,8 @@ title: Crescendo overview
 ---
 # Microsoft.PowerShell.Crescendo overview
 
+[!INCLUDE[crescendo-deprecated](../../includes/crescendo-deprecated.md)]
+
 PowerShell, like other shells, is capable of invoking command-line tools. However, it
 would improve the experience if the command-line tool could participate in the PowerShell pipeline
 and take advantage of the parameter behaviors that are part of PowerShell.

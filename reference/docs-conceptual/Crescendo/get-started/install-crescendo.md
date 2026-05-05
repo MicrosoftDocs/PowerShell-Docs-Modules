@@ -5,6 +5,8 @@ title: Installing Crescendo
 ---
 # Install the Crescendo module
 
+[!INCLUDE[crescendo-deprecated](../../includes/crescendo-deprecated.md)]
+
 Requirements:
 
 **Microsoft.PowerShell.Crescendo** requires PowerShell 7.0 or higher.

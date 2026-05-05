@@ -20,6 +20,8 @@ New-ExampleInfo [-command] <String> [-description] <String> [[-originalCommand] 
 
 ## DESCRIPTION
 
+[!INCLUDE[crescendo-deprecated](../../includes/crescendo-deprecated.md)]
+
 Creates a PowerShell object representing an example used in a Crescendo command object. The
 resulting object can be converted to JSON to be inserted into a configuration file or added to a
 command object conversion to JSON later.

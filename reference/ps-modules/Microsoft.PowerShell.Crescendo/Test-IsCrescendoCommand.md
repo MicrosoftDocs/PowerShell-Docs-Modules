@@ -18,6 +18,9 @@ Test-IsCrescendoCommand [-Command] <Object[]> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
+[!INCLUDE[crescendo-deprecated](../../includes/crescendo-deprecated.md)]
+
 Tests a cmdlet to see if it was created by Crescendo.
 
 ## EXAMPLES

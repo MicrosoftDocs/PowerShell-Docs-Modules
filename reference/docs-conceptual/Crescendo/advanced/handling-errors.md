@@ -5,6 +5,8 @@ title: Handling errors in Crescendo
 ---
 # Handling errors in Crescendo
 
+[!INCLUDE[crescendo-deprecated](../../../includes/crescendo-deprecated.md)]
+
 Prior to Crescendo 1.1, native command errors were streamed directly to the user, not captured by
 Crescendo. This prevented you from creating enhanced error handling. Now, Crescendo can capture
 error output (stderr) from the native command.

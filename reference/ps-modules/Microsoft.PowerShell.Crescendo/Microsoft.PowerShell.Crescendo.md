@@ -11,6 +11,8 @@ ms.date: 12/13/2022
 
 ## Description
 
+[!INCLUDE[crescendo-deprecated](../../includes/crescendo-deprecated.md)]
+
 Crescendo is a development accelerator enabling you to rapidly build PowerShell cmdlets that
 leverage existing command-line tools. Crescendo amplifies the command-line experience of the
 original tool to include object output for the PowerShell pipeline, privilege elevation, and

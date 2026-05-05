@@ -19,6 +19,8 @@ New-UsageInfo [-usage] <String> [<CommonParameters>]
 
 ## DESCRIPTION
 
+[!INCLUDE[crescendo-deprecated](../../includes/crescendo-deprecated.md)]
+
 Creates a PowerShell object representing a Crescendo Usage definition. You can assign values to the
 properties of the object. The resulting object can be added to the **Usage** property of a command
 object or it can be converted to JSON to be inserted in the configuration file. The **Synopsis** of

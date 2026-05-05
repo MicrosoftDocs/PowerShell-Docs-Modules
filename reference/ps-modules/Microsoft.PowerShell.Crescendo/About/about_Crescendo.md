@@ -9,6 +9,8 @@ title: about_Microsoft.PowerShell.Crescendo
 ---
 # about_Microsoft.PowerShell.Crescendo
 
+[!INCLUDE[crescendo-deprecated](../../../includes/crescendo-deprecated.md)]
+
 ## Short description
 
 The PowerShell Crescendo module provides a novel way to create proxy functions

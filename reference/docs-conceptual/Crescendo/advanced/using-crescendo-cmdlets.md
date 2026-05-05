@@ -5,6 +5,8 @@ title: Create a Crescendo configuration using the Crescendo cmdlets
 ---
 # Create a Crescendo configuration using the Crescendo cmdlets
 
+[!INCLUDE[crescendo-deprecated](../../../includes/crescendo-deprecated.md)]
+
 The Crescendo module includes a set of cmdlets that create various Crescendo object types. You can
 use these cmdlets to create a Crescendo configuration without the need to manually edit a JSON file.
 

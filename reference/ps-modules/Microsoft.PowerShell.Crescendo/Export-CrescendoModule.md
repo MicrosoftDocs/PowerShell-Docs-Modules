@@ -20,6 +20,8 @@ Export-CrescendoModule [-ConfigurationFile] <String[]> [-ModuleName] <String> [-
 
 ## DESCRIPTION
 
+[!INCLUDE[crescendo-deprecated](../../includes/crescendo-deprecated.md)]
+
 This cmdlet exports an object that can be converted into a function that acts as a proxy for a
 platform specific command. The resultant module file should be executable down to version 5.1 of
 PowerShell.

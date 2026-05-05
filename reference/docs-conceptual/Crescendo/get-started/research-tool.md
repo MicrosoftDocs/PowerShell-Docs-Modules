@@ -5,6 +5,8 @@ title: Research the command-line tool's syntax and output
 ---
 # Research the command-line tool's syntax and output
 
+[!INCLUDE[crescendo-deprecated](../../../includes/crescendo-deprecated.md)]
+
 The [previous article][03] provided criteria for selecting the command-line tool you want to amplify
 with Crescendo. In this article we describe ways to collect information about the tool that helps
 you design cmdlets using Crescendo.

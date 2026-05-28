@@ -27,7 +27,7 @@ desired.
 $MyVar = !$true
 ```
 
-### Preferred
+### Compliant
 
 ```powershell
 $MyVar = -not $true

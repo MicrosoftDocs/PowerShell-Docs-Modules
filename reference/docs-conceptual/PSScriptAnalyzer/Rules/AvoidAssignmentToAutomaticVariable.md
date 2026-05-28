@@ -17,11 +17,9 @@ value to them. Assign other automatic variables only in advanced, intentional sc
 This rule helps you avoid conflicts with automatic variable names, which reduces hard-to-diagnose
 bugs and keeps function behavior predictable.
 
+Use variable names in functions or their parameters that don't conflict with automatic variables.
+
 To learn more about automatic variables, see `Get-Help about_Automatic_Variables`.
-
-## How
-
-Use variable names in functions or their parameters that do not conflict with automatic variables.
 
 ## Example
 

@@ -13,7 +13,7 @@ title: AlignAssignmentStatement
 Consecutive assignment statements are easier to scan when their `=` signs line up vertically.
 
 This rule looks at the key-value pairs in hashtables. Use this rule to align assignment operators in
-multiline hashtables, Desired State Configuration (DSC), and enum definitions.
+multiline hashtables and enum definitions.
 
 Consider the following example with a hashtable and enum that isn't aligned.
 

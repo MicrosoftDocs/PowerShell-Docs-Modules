@@ -76,7 +76,7 @@ configuration are parsed as key-value pairs of a hashtable.
 #### AlignHashtableKvpWithInterveningComment: bool (Default value is `$true`)
 
 Include key-value pairs in the alignment that have an intervening comment, such as a comment between
-the key name and the `=` sign.
+the key name and the equals (`=`) sign.
 
 Consider this example:
 
@@ -88,7 +88,7 @@ $hashtable = @{
 }
 ```
 
-With this setting **disabled**, the line with the comment is *ignored*, and the block is aligned
+With this setting **disabled**, the line with the comment is ignored, and the block is aligned
 like so:
 
 ```powershell
@@ -99,7 +99,7 @@ $hashtable = @{
 }
 ```
 
-With it **enabled**, the line with the comment is *included*, and the block is aligned like so:
+With it **enabled**, the line with the comment is included, and the block is aligned like so:
 
 ```powershell
 $hashtable = @{
@@ -116,7 +116,7 @@ Enforce alignment of assignment statements of an Enum definition.
 #### AlignEnumMemberWithInterveningComment: bool (Default value is `$true`)
 
 Include enum members in the alignment that have an intervening comment, such as a comment between
-the member name and the `=` sign.
+the member name and the equals (`=`) sign.
 
 Consider this example:
 
@@ -128,7 +128,7 @@ enum Enum {
 }
 ```
 
-With this setting **disabled**, the line with the comment is *ignored*, and the block is aligned
+With this setting **disabled**, the line with the comment is ignored, and the block is aligned
 like so:
 
 ```powershell
@@ -139,7 +139,7 @@ enum Enum {
 }
 ```
 
-With it **enabled**, the line with the comment is *included*, and the block is aligned like so:
+With it **enabled**, the line with the comment is included, and the block is aligned like so:
 
 ```powershell
 enum Enum {
@@ -164,7 +164,7 @@ enum Enum {
 }
 ```
 
-With this setting **disabled**, the third line, which has no value, *isn't* considered when choosing
+With this setting **disabled**, the third line that has no value isn't considered when choosing
 where to align assignments. It would be aligned like so:
 
 ```powershell
@@ -175,7 +175,7 @@ enum Enum {
 }
 ```
 
-With it **enabled**, the valueless member is *included* in alignment as if it had a value:
+With it **enabled**, the valueless member is included in alignment as if it had a value:
 
 ```powershell
 enum Enum {

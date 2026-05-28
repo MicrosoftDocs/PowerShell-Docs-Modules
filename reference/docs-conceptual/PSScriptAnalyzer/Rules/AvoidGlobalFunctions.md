@@ -10,25 +10,27 @@ title: AvoidGlobalFunctions
 
 ## Description
 
-Globally scoped functions override existing functions within the sessions with matching names. This
-name collision can cause difficult to debug issues for consumers of modules.
+Global functions can unintentionally override existing functions in the session, leading to
+unexpected behavior and name collisions. Name collisions makes it difficult for module consumers to
+diagnose issues and maintain code reliability.
 
-To understand more about scoping, see `Get-Help about_Scopes`.
-
-## How
-
-Use other scope modifiers for functions.
+To avoid this issue, define functions without the global scope modifier, or use other appropriate
+scope modifiers. To learn more, see [about_Scopes][01].
 
 ## Example
 
-### Wrong
+### Noncompliant
 
 ```powershell
 function global:functionName {}
 ```
 
-### Correct
+### Compliant
 
 ```powershell
 function functionName {}
 ```
+
+<!-- link references -->
+
+[01]: /powershell/module/microsoft.powershell.core/about/about_scopes

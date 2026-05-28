@@ -1,6 +1,6 @@
 ---
 description: No Global Variables
-ms.date: 06/28/2023
+ms.date: 05/28/2026
 ms.topic: reference
 title: AvoidGlobalVars
 ---
@@ -20,15 +20,12 @@ Globally scoped variables include:
 - Preference variables
 - Variables, aliases, and functions that are in your PowerShell profiles
 
-To understand more about scoping, see `Get-Help about_Scopes`.
-
-## How
-
-Use other scope modifiers for variables.
+Use local or script scope for variables instead of global scope. To learn more, see
+[about_Scopes][01].
 
 ## Example
 
-### Wrong
+### Noncompliant
 
 ```powershell
 $Global:var1 = $null
@@ -38,7 +35,7 @@ function Test-NotGlobal ($var)
 }
 ```
 
-### Correct
+### Compliant
 
 ```powershell
 $var1 = $null
@@ -47,3 +44,7 @@ function Test-NotGlobal ($var1, $var2)
     $a = $var1 + $var2
 }
 ```
+
+<!-- link references -->
+
+[01]: /powershell/module/microsoft.powershell.core/about/about_scopes

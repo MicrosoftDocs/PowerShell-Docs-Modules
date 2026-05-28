@@ -1,6 +1,6 @@
 ---
 description: Changing automatic variables might have undesired side effects
-ms.date: 06/28/2023
+ms.date: 05/28/2026
 ms.topic: reference
 title: AvoidAssignmentToAutomaticVariable
 ---
@@ -10,16 +10,14 @@ title: AvoidAssignmentToAutomaticVariable
 
 ## Description
 
-PowerShell has built-in variables known as automatic variables. Many of them are read-only and
-PowerShell throws an error when trying to assign an value on those. Other automatic variables should
-only be assigned in certain special cases to achieve a certain effect as a special technique.
+PowerShell automatic variables are built-in variables that store runtime and execution state.
+Several automatic variables are read-only, and PowerShell throws an error if you try to assign a
+value to them. Assign other automatic variables only in advanced, intentional scenarios.
 
-To understand more about automatic variables, see `Get-Help about_Automatic_Variables`.
+This rule helps you avoid conflicts with automatic variable names, which reduces hard-to-diagnose
+bugs and keeps function behavior predictable.
 
-<!-- TODO
-Ability to suppress was added in https://github.com/PowerShell/PSScriptAnalyzer/pull/1896
-Need documentation for how to configure suppression of this rule.
--->
+To learn more about automatic variables, see `Get-Help about_Automatic_Variables`.
 
 ## How
 
@@ -27,9 +25,9 @@ Use variable names in functions or their parameters that do not conflict with au
 
 ## Example
 
-### Wrong
+### Noncompliant
 
-The variable `$Error` is an automatic variables that exists in the global scope and should therefore
+The variable `$Error` is an automatic variable that exists in the global scope and should therefore
 never be used as a variable or parameter name.
 
 ```powershell
@@ -40,7 +38,7 @@ function foo($Error){ }
 function Get-CustomErrorMessage($ErrorMessage){ $Error = "Error occurred: $ErrorMessage" }
 ```
 
-### Correct
+### Preferred
 
 ```powershell
 function Get-CustomErrorMessage($ErrorMessage){ $FinalErrorMessage = "Error occurred: $ErrorMessage" }

@@ -19,6 +19,8 @@ Don't define a switch parameter with a default value of `$true` because a switch
 already `$false` when it isn't specified. Leave the switch parameter without a default value so it
 behaves like an ordinary on/off flag.
 
+To learn more, see [Strongly Encouraged Development Guidelines][01].
+
 ## Example
 
 ### Noncompliant

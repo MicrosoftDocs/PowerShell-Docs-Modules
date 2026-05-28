@@ -10,11 +10,10 @@ title: AlignAssignmentStatement
 
 ## Description
 
-Consecutive assignment statements are more readable when they're aligned. Assignments are considered
-aligned when their `equals` signs line up vertically.
+Consecutive assignment statements are easier to scan when their `=` signs line up vertically.
 
-This rule looks at the key-value pairs in hashtables (including DSC configurations) as well as enum
-definitions.
+This rule looks at the key-value pairs in hashtables. Use this rule to align assignment operators in
+multiline hashtables and enum definitions.
 
 Consider the following example with a hashtable and enum that isn't aligned.
 
@@ -44,8 +43,8 @@ enum Enum {
 }
 ```
 
-The rule ignores any assignments within hashtables and enums which are on the same line as others.
-For example, the rule ignores `$h = @{a = 1; b = 2}`.
+The rule ignores assignments within hashtables and enums that appear on the same line as other
+assignments. For example, the rule ignores `$h = @{ a = 1; b = 2 }`.
 
 ## Configuration
 
@@ -70,16 +69,16 @@ Enable or disable the rule during ScriptAnalyzer invocation.
 
 #### CheckHashtable: bool (Default value is `$true`)
 
-Enforce alignment of assignment statements in a hashtable and in a DSC Configuration. There is only
+Enforce alignment of assignment statements in a hashtable and in a DSC Configuration. There's only
 one setting for hashtable and DSC configuration because the property value pairs in a DSC
 configuration are parsed as key-value pairs of a hashtable.
 
 #### AlignHashtableKvpWithInterveningComment: bool (Default value is `$true`)
 
-Include key-value pairs in the alignment that have an intervening comment - that is to say a comment
-between the key name and the equals sign.
+Include key-value pairs in the alignment that have an intervening comment, such as a comment between
+the key name and the equals (`=`) sign.
 
-Consider the following:
+Consider this example:
 
 ```powershell
 $hashtable = @{
@@ -89,7 +88,8 @@ $hashtable = @{
 }
 ```
 
-With this setting disabled, the line with the comment is ignored, and it would be aligned like so:
+With this setting **disabled**, the line with the comment is ignored, and the block is aligned
+like so:
 
 ```powershell
 $hashtable = @{
@@ -99,7 +99,7 @@ $hashtable = @{
 }
 ```
 
-With it enabled, the comment line is included in alignment:
+With it **enabled**, the line with the comment is included, and the block is aligned like so:
 
 ```powershell
 $hashtable = @{
@@ -115,10 +115,10 @@ Enforce alignment of assignment statements of an Enum definition.
 
 #### AlignEnumMemberWithInterveningComment: bool (Default value is `$true`)
 
-Include enum members in the alignment that have an intervening comment - that is to say a comment
-between the member name and the equals sign.
+Include enum members in the alignment that have an intervening comment, such as a comment between
+the member name and the equals (`=`) sign.
 
-Consider the following:
+Consider this example:
 
 ```powershell
 enum Enum {
@@ -128,7 +128,8 @@ enum Enum {
 }
 ```
 
-With this setting disabled, the line with the comment is ignored, and it would be aligned like so:
+With this setting **disabled**, the line with the comment is ignored, and the block is aligned
+like so:
 
 ```powershell
 enum Enum {
@@ -138,7 +139,7 @@ enum Enum {
 }
 ```
 
-With it enabled, the comment line is included in alignment:
+With it **enabled**, the line with the comment is included, and the block is aligned like so:
 
 ```powershell
 enum Enum {
@@ -150,10 +151,10 @@ enum Enum {
 
 #### IncludeValuelessEnumMembers: bool (Default value is `$true`)
 
-Include enum members in the alignment that don't have an explicitly assigned value. Enum's don't
-need to be given a value when they're defined.
+Include enum members in the alignment that don't have an explicitly assigned value. Enums don't need
+to be given a value when they're defined.
 
-Consider the following:
+Consider this example:
 
 ```powershell
 enum Enum {
@@ -163,8 +164,8 @@ enum Enum {
 }
 ```
 
-With this setting disabled, the third line, which has no value, isn't considered when choosing where
-to align assignments. It would be aligned like so:
+With this setting **disabled**, the third line that has no value isn't considered when choosing
+where to align assignments. It would be aligned like so:
 
 ```powershell
 enum Enum {
@@ -174,7 +175,7 @@ enum Enum {
 }
 ```
 
-With it enabled, the valueless member is included in alignment as if it had a value:
+With it **enabled**, the valueless member is included in alignment as if it had a value:
 
 ```powershell
 enum Enum {

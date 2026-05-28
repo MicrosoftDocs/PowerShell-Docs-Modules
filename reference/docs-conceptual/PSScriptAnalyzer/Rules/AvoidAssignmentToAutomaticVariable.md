@@ -10,14 +10,14 @@ title: AvoidAssignmentToAutomaticVariable
 
 ## Description
 
-PowerShell defines a set of automatic variables that store state information for and are created and
-maintained by PowerShell. Even though you _can_ override many automatic variables, doing so can have
-unexpected effects for users. Assign automatic variables only in advanced, intentional scenarios.
+PowerShell automatically defines variables that store internal state information and manages them on
+its own. Even though you _can_ override many automatic variables, doing so can have unexpected
+effects for users. Assign automatic variables only in advanced, intentional scenarios.
 
-This rule helps you avoid conflicts with automatic variable names, which reduces hard-to-diagnose
-bugs and keeps function behavior predictable.
+This rule helps you avoid assignments to automatic variables, which reduces hard-to-diagnose bugs
+and keeps function behavior predictable.
 
-Use variable names in functions or their parameters that don't conflict with automatic variables.
+Also use variable names in functions or parameters that don't conflict with automatic variables.
 
 To learn more about automatic variables, see [about_Automatic_Variables][01].
 

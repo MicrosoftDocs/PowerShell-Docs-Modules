@@ -65,8 +65,9 @@ The `PowerShellVersion` parameter accepts one or more command allow list names t
 PSScriptAnalyzer. Set this value to the PowerShell version and platform you want to validate
 against.
 
-> [!NOTE] The default value for `PowerShellVersion` is `core-6.1.0-windows` if PowerShell 6 or later
-> is installed, and `desktop-5.1.14393.206-windows` if it's not.
+> [!NOTE]
+> The default value for `PowerShellVersion` is `core-6.1.0-windows` if PowerShell 6 or later is
+installed, and `desktop-5.1.14393.206-windows` if it's not.
 
 Patched PowerShell releases usually share the same cmdlet metadata, so the built-in allow lists are
 provided by major and minor version. You can also generate a custom allow list with

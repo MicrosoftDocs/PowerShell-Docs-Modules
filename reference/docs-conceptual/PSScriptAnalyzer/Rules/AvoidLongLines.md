@@ -1,6 +1,6 @@
 ---
 description: Avoid long lines
-ms.date: 03/20/2026
+ms.date: 06/01/2026
 ms.topic: reference
 title: AvoidLongLines
 ---
@@ -10,13 +10,25 @@ title: AvoidLongLines
 
 ## Description
 
-The length of lines, including leading spaces (indentation), should be less than the configured
-number of characters. The default length is 120 characters.
+This rule flags lines that exceed the configured maximum length, including leading spaces
+(indentation). The default maximum line length is 120 characters. This rule is **disabled** by
+default and must be explicitly enabled through rule configuration settings.
 
-> [!NOTE]
-> This rule isn't enabled by default. The user needs to enable it through settings.
+## Example 1
 
-## Configuration
+```
+In this example of sample text, the maximum line length is using the default setting of not exceeding more than 120
+characters.
+```
+
+## Example 2
+
+```
+In this example of sample text, the maximum line length is set to not exceed
+more than 80 characters.
+```
+
+## Configure rule
 
 ```powershell
 Rules = @{
@@ -29,10 +41,15 @@ Rules = @{
 
 ## Parameters
 
-### `Enable`: bool (Default value is `$false`)
+### Enable
 
-Enable or disable the rule during ScriptAnalyzer invocation.
+Enables (`$true`) the rule during ScriptAnalyzer invocation.
 
-### `MaximumLineLength`: int (Default value is 120)
+### Disable
 
-Optional parameter to override the default maximum line length.
+Disables (`$false`) the rule during ScriptAnalyzer invocation. Default value is `$false`.
+
+### MaximumLineLength
+
+This parameter is optional and is used to override the default maximum line length. This parameter
+accepts an integer value. Default value is `120`.

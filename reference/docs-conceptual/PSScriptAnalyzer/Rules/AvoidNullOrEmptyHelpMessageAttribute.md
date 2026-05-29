@@ -1,6 +1,6 @@
 ---
 description: Avoid using null or empty HelpMessage parameter attribute.
-ms.date: 06/28/2023
+ms.date: 06/01/2026
 ms.topic: reference
 title: AvoidNullOrEmptyHelpMessageAttribute
 ---
@@ -10,16 +10,15 @@ title: AvoidNullOrEmptyHelpMessageAttribute
 
 ## Description
 
-The value of the `HelpMessage` attribute should not be an empty string or a null value as this
-causes PowerShell's interpreter to throw an error when executing the function or cmdlet.
+The `HelpMessage` attribute must contain a meaningful, non-empty string value. Using an empty
+string, null value, or omitting the value altogether causes PowerShell to raise an error at runtime.
 
-## How
-
-Specify a value for the `HelpMessage` attribute.
+Always provide a descriptive help message that explains the parameter's purpose and expected input
+to users.
 
 ## Example
 
-### Wrong
+### Noncompliant
 
 ```powershell
 Function BadFuncEmptyHelpMessageEmpty
@@ -56,7 +55,7 @@ Function BadFuncEmptyHelpMessageNoAssignment
 }
 ```
 
-### Correct
+### Compliant
 
 ```powershell
 Function GoodFuncHelpMessage

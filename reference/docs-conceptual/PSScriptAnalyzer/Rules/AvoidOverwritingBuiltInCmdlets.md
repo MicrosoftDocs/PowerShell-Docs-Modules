@@ -44,7 +44,7 @@ function Get-CustomChildItem {
 }
 ```
 
-## Configuration
+## Configure rule
 
 To enable the rule to check if your script is compatible on PowerShell Core on Windows, add the
 following lines in your settings file.

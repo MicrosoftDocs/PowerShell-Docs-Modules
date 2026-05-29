@@ -17,7 +17,7 @@ parameters.
 
 Don't define a switch parameter with a default value of `$true` because a switch parameter is
 already `$false` when it isn't specified. Leave the switch parameter without a default value so it
-behaves like an ordinary on/off flag.
+behaves as designed.
 
 ## How
 

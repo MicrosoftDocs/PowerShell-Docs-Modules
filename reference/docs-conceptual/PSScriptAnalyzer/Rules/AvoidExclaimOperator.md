@@ -33,7 +33,7 @@ $MyVar = !$true
 $MyVar = -not $true
 ```
 
-## Configuration
+## Configure rule
 
 To enable this rule, run the following command:
 
@@ -44,3 +44,13 @@ Rules = @{
     }
 }
 ```
+
+## Parameters
+
+### Enable
+
+Enables (`$true`) the rule during ScriptAnalyzer invocation.
+
+### Disable
+
+Disables (`$false`) the rule during ScriptAnalyzer invocation. Default value is `$false`.

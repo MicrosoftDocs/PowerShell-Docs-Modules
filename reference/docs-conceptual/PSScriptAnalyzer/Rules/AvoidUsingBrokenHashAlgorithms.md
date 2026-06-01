@@ -1,6 +1,6 @@
 ---
 description: Avoid using broken hash algorithms
-ms.date: 06/28/2023
+ms.date: 06/01/2026
 ms.topic: reference
 title: AvoidUsingBrokenHashAlgorithms
 ---
@@ -10,23 +10,21 @@ title: AvoidUsingBrokenHashAlgorithms
 
 ## Description
 
-Avoid using the broken algorithms MD5 or SHA-1.
+Avoid using the cryptographically broken hash algorithms `MD5` and `SHA-1`. These algorithms are
+vulnerable to collision attacks and are no longer considered secure for cryptographic purposes.
 
-## How
-
-Replace broken algorithms with secure alternatives. MD5 and SHA-1 should be replaced with SHA256,
-SHA384, SHA512, or other safer algorithms when possible, with MD5 and SHA-1 only being utilized by
-necessity for backwards compatibility.
+Replace `MD5` and `SHA-1` with secure alternatives such as `SHA256`, `SHA384`, or `SHA512`. Use
+broken algorithms only when absolutely necessary for backwards compatibility with legacy systems.
 
 ## Example 1
 
-### Wrong
+### Noncompliant
 
 ```powershell
 Get-FileHash foo.txt -Algorithm MD5
 ```
 
-### Correct
+### Compliant
 
 ```powershell
 Get-FileHash foo.txt -Algorithm SHA256
@@ -34,13 +32,13 @@ Get-FileHash foo.txt -Algorithm SHA256
 
 ## Example 2
 
-### Wrong
+### Noncompliant
 
 ```powershell
 Get-FileHash foo.txt -Algorithm SHA1
 ```
 
-### Correct
+### Compliant
 
 ```powershell
 Get-FileHash foo.txt

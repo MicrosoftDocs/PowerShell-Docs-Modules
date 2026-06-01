@@ -1,6 +1,6 @@
 ---
 description: Avoid semicolons as line terminators
-ms.date: 06/28/2023
+ms.date: 06/01/2026
 ms.topic: reference
 title: AvoidSemicolonsAsLineTerminators
 ---
@@ -10,14 +10,14 @@ title: AvoidSemicolonsAsLineTerminators
 
 ## Description
 
-Lines should not end with a semicolon.
-
-> [!NOTE]
-> This rule is not enabled by default. The user needs to enable it through settings.
+Avoid using semicolons at the end of lines. In PowerShell, line-ending semicolons are redundant and
+detract from code readability. Although semicolons serve as statement separators on a single line,
+using them as line terminators is discouraged. This rule promotes cleaner, more maintainable code by
+removing unnecessary semicolons. This rule isn't enabled by default.
 
 ## Example
 
-### Wrong
+### Noncompliant
 
 ```powershell
 Install-Module -Name PSScriptAnalyzer; $a = 1 + $b;
@@ -28,7 +28,7 @@ Install-Module -Name PSScriptAnalyzer;
 $a = 1 + $b
 ```
 
-### Correct
+### Compliant
 
 ```powershell
 Install-Module -Name PSScriptAnalyzer; $a = 1 + $b
@@ -43,14 +43,18 @@ $a = 1 + $b
 
 ```powershell
 Rules = @{
-    PSAvoidSemicolonsAsLineTerminators  = @{
-        Enable     = $true
+    PSAvoidSemicolonsAsLineTerminators = @{
+        Enable = $true
     }
 }
 ```
 
-### Parameters
+## Parameters
 
-#### Enable: bool (Default value is `$false`)
+### Enable
 
-Enable or disable the rule during ScriptAnalyzer invocation.
+Enables (`$true`) the rule during ScriptAnalyzer invocation.
+
+### Disable
+
+Disables (`$false`) the rule during ScriptAnalyzer invocation. Default value is `$false`.

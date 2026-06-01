@@ -1,6 +1,6 @@
 ---
 description: Avoid using double quotes if the string is constant.
-ms.date: 06/28/2023
+ms.date: 06/01/2026
 ms.topic: reference
 title: AvoidUsingDoubleQuotesForConstantString
 ---
@@ -12,24 +12,24 @@ title: AvoidUsingDoubleQuotesForConstantString
 
 Single quotes should be used when the value of a string is constant. A constant string doesn't
 contain variables or expressions intended to insert values into the string, such as
-`"$PID-$(hostname)"`).
+`"$PID-$(hostname)"`.
 
-This makes the intent clearer that the string is a constant and makes it easier to use some special
-characters such as `$` within that string expression without needing to escape them.
+Using single quotes makes the intent clearer that the string is constant and allows you to use
+special characters such as `$` without needing to escape them.
 
-There are exceptions to that when double quoted strings are more readable. For example, when the
-string value itself must contain a single quote or other special characters, such as newline
-(`` "`n" ``), are already being escaped. The rule does not warn in these cases.
+However, there are exceptions. Double-quoted strings are preferred when the string contains single
+quotes, embedded escape sequences like newline (``"`n"``), or other special characters that require
+escaping. The rule doesn't warn in these cases.
 
 ## Example
 
-### Wrong
+### Noncompliant
 
 ```powershell
 $constantValue = "I Love PowerShell"
 ```
 
-### Correct
+### Compliant
 
 ```powershell
 $constantValue = 'I Love PowerShell'

@@ -40,4 +40,4 @@ $SecureUserInput = Read-Host 'Please enter your secure code' -AsSecureString
 
 <!-- link references -->
 
-[01]: /dotnet/api/system.security.securestring?view=net-10.0
+[01]: /dotnet/api/system.security.securestring

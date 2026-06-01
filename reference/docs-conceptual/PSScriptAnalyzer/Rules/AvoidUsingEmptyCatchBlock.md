@@ -10,8 +10,9 @@ title: AvoidUsingEmptyCatchBlock
 
 ## Description
 
-Empty catch blocks aren't a good design choice because they can't handle errors that occur in a `try` block.
-Add `Write-Error` or `throw` statements within the catch block to properly handle exceptions.
+Empty catch blocks aren't a good design choice because they can't handle errors that occur in a
+`try` block. Add `Write-Error` or `throw` statements within the catch block to properly handle
+exceptions.
 
 ## Example
 

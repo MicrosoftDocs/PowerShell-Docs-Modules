@@ -10,8 +10,9 @@ title: AvoidNullOrEmptyHelpMessageAttribute
 
 ## Description
 
-The `HelpMessage` attribute must contain a meaningful, non-empty string value. Using an empty
-string, null value, or omitting the value altogether causes PowerShell to raise an error at runtime.
+The `HelpMessage` attribute must contain a meaningful, non-empty string value. Omitting the value
+altogether causes a parse-time syntax error. Using an empty string or null value causes PowerShell
+to raise an error at runtime.
 
 Always provide a descriptive help message that explains the parameter's purpose and expected input
 to users.

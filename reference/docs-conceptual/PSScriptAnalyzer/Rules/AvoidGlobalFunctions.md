@@ -11,7 +11,7 @@ title: AvoidGlobalFunctions
 ## Description
 
 Global functions can unintentionally override existing functions in the session, leading to
-unexpected behavior and name collisions. Name collisions makes it difficult for module consumers to
+unexpected behavior and name collisions. Name collisions make it difficult for module consumers to
 diagnose issues and maintain code reliability.
 
 To avoid this issue, define functions without the global scope modifier, or use other appropriate

@@ -10,8 +10,8 @@ title: AvoidExclaimOperator
 
 ## Description
 
-This rule detects the use of the negation operator (`!`) and recommends using the `-not`
-operator instead for improved readability and consistency with PowerShell conventions.
+This rule detects the use of the negation operator exclamation mark (`!`) and recommends using the
+`-not` operator instead for improved readability and consistency with PowerShell conventions.
 
 The `-not` operator is more explicit and aligns with PowerShell's verbose style, making code
 easier to understand at a glance.

@@ -1,6 +1,6 @@
 ---
 description: Avoid Using Username and Password Parameters
-ms.date: 06/28/2023
+ms.date: 06/01/2026
 ms.topic: reference
 title: AvoidUsingUsernameAndPasswordParams
 ---
@@ -11,15 +11,12 @@ title: AvoidUsingUsernameAndPasswordParams
 ## Description
 
 To standardize command parameters, credentials should be accepted as objects of type
-**PSCredential**. Functions should not make use of username or password parameters.
-
-## How
-
-Change the parameter to type **PSCredential**.
+**PSCredential**. Functions shouldn't use separate username or password parameters. Instead, change
+the parameters to accept a single **PSCredential** object.
 
 ## Example
 
-### Wrong
+### Noncompliant
 
 ```powershell
 function Test-Script
@@ -36,7 +33,7 @@ function Test-Script
 }
 ```
 
-### Correct
+### Compliant
 
 ```powershell
 function Test-Script

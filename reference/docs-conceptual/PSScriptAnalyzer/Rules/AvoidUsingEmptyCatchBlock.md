@@ -1,6 +1,6 @@
 ---
 description: Avoid Using Empty Catch Block
-ms.date: 06/28/2023
+ms.date: 06/01/2026
 ms.topic: reference
 title: AvoidUsingEmptyCatchBlock
 ---
@@ -10,16 +10,12 @@ title: AvoidUsingEmptyCatchBlock
 
 ## Description
 
-Empty catch blocks are considered a poor design choice because any errors occurring in a
-`try` block cannot be handled.
-
-## How
-
-Use `Write-Error` or `throw` statements within the catch block.
+Empty catch blocks aren't a good design choice because they can't handle errors that occur in a `try` block.
+Add `Write-Error` or `throw` statements within the catch block to properly handle exceptions.
 
 ## Example
 
-### Wrong
+### Noncompliant
 
 ```powershell
 try
@@ -31,7 +27,7 @@ catch [DivideByZeroException]
 }
 ```
 
-### Correct
+### Compliant
 
 ```powershell
 try

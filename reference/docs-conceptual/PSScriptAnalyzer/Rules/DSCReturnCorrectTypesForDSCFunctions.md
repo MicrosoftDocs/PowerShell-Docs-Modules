@@ -1,6 +1,6 @@
 ---
-description: Return Correct Types For DSC Functions
-ms.date: 06/28/2023
+description: Return correct types for DSC functions
+ms.date: 06/03/2026
 ms.topic: reference
 title: DSCReturnCorrectTypesForDSCFunctions
 ---
@@ -10,27 +10,24 @@ title: DSCReturnCorrectTypesForDSCFunctions
 
 ## Description
 
-The functions in DSC resources have specific return objects.
+Functions in Desired State Configuration (DSC) resources have specific return objects. You'll need
+to ensure that each function returns the correct type.
 
 For non-class based resources:
 
+- `Get-TargetResource` must return a hash table.
 - `Set-TargetResource` must not return any value.
 - `Test-TargetResource` must return a boolean.
-- `Get-TargetResource` must return a hash table.
 
 For class based resources:
 
+- `Get` must return an instance of the DSC class.
 - `Set` must not return any value.
 - `Test` must return a boolean.
-- `Get` must return an instance of the DSC class.
 
-## How
+## Example
 
-Ensure that each function returns the correct type.
-
-## Example 1
-
-### Wrong
+### Noncompliant
 
 ```powershell
 function Get-TargetResource
@@ -67,7 +64,7 @@ function Test-TargetResource
 }
 ```
 
-### Correct
+### Compliant
 
 ```powershell
 function Get-TargetResource
@@ -103,59 +100,5 @@ function Test-TargetResource
         $Name
     )
     ...
-}
-```
-
-## Example 2
-
-### Wrong
-
-```powershell
-[DscResource()]
-class MyDSCResource
-{
-    [DscProperty(Key)]
-    [string] $Name
-
-    [String] Get()
-    {
-        ...
-    }
-
-    [String] Set()
-    {
-        ...
-    }
-
-    [bool] Test()
-    {
-        ...
-    }
-}
-```
-
-### Correct
-
-```powershell
-[DscResource()]
-class MyDSCResource
-{
-    [DscProperty(Key)]
-    [string] $Name
-
-    [MyDSCResource] Get()
-    {
-        ...
-    }
-
-    [void] Set()
-    {
-        ...
-    }
-
-    [bool] Test()
-    {
-        ...
-    }
 }
 ```

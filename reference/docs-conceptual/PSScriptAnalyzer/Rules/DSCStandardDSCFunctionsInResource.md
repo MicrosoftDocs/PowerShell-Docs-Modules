@@ -1,6 +1,6 @@
 ---
-description: Use Standard Get/Set/Test TargetResource functions in DSC Resource
-ms.date: 06/28/2023
+description: Use standard DSC Get, Set, and Test TargetResource functions in a resource
+ms.date: 06/03/2026
 ms.topic: reference
 title: DSCStandardDSCFunctionsInResource
 ---
@@ -10,27 +10,24 @@ title: DSCStandardDSCFunctionsInResource
 
 ## Description
 
-All DSC resources are required to implement the correct functions.
+All Desired State Configuration (DSC) resources must implement the correct functions. Add the
+missing functions to the resource.
 
 For non-class based resources:
 
+- `Get-TargetResource`
 - `Set-TargetResource`
 - `Test-TargetResource`
-- `Get-TargetResource`
 
 For class based resources:
 
+- `Get`
 - `Set`
 - `Test`
-- `Get`
 
-## How
+## Example
 
-Add the missing functions to the resource.
-
-## Example 1
-
-### Wrong
+### Noncompliant
 
 ```powershell
 function Get-TargetResource
@@ -45,8 +42,9 @@ function Get-TargetResource
     ...
 }
 
-function Set-TargetResource
+function Test-TargetResource
 {
+    [OutputType([System.Boolean])]
     param
     (
         [parameter(Mandatory = $true)]
@@ -57,7 +55,7 @@ function Set-TargetResource
 }
 ```
 
-### Correct
+### Compliant
 
 ```powershell
 function Get-TargetResource
@@ -93,53 +91,5 @@ function Test-TargetResource
         $Name
     )
     ...
-}
-```
-
-## Example 2
-
-### Wrong
-
-```powershell
-[DscResource()]
-class MyDSCResource
-{
-    [DscProperty(Key)]
-    [string] $Name
-
-    [void] Set()
-    {
-        ...
-    }
-
-    [bool] Test()
-    {
-        ...
-    }
-}
-
-### Correct
-
-```powershell
-[DscResource()]
-class MyDSCResource
-{
-    [DscProperty(Key)]
-    [string] $Name
-
-    [MyDSCResource] Get()
-    {
-        ...
-    }
-
-    [void] Set()
-    {
-        ...
-    }
-
-    [bool] Test()
-    {
-        ...
-    }
 }
 ```

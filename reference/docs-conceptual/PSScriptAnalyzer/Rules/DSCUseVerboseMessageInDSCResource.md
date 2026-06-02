@@ -1,6 +1,6 @@
 ---
-description: Use verbose message in DSC resource
-ms.date: 06/28/2023
+description: Use verbose message in DSC resources
+ms.date: 06/03/2026
 ms.topic: reference
 title: DSCUseVerboseMessageInDSCResource
 ---
@@ -10,16 +10,13 @@ title: DSCUseVerboseMessageInDSCResource
 
 ## Description
 
-Best practice recommends that additional user information is provided within commands, functions and
-scripts using `Write-Verbose`.
-
-## How
-
-Make use of the `Write-Verbose` command.
+It's a best practice to provide additional user information within commands, functions, and scripts
+using [Write-Verbose][01]. This helps users understand what's happening during execution. You should
+include `Write-Verbose` messages to make your code more informative and easier to debug.
 
 ## Example
 
-### Wrong
+### Noncompliant
 
 ```powershell
 Function Test-Function
@@ -30,7 +27,7 @@ Function Test-Function
 }
 ```
 
-### Correct
+### Compliant
 
 ```powershell
 Function Test-Function
@@ -41,3 +38,7 @@ Function Test-Function
     ...
 }
 ```
+
+<!-- links reference -->
+
+[01]: /powershell/module/microsoft.powershell.utility/write-verbose

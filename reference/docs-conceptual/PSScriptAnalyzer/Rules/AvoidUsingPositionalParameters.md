@@ -20,17 +20,6 @@ simple example where the risk of using positional parameters is negligible, is `
 
 Use full parameter names when calling commands.
 
-## Configure rule
-
-```powershell
-Rules = @{
-    PSAvoidUsingPositionalParameters = @{
-        CommandAllowList = 'Join-Path', 'MyCmdletOrScript'
-        Enable = $true
-    }
-}
-```
-
 ## Example
 
 ### Noncompliant
@@ -45,16 +34,25 @@ Get-Command ChildItem Microsoft.PowerShell.Management
 Get-Command -Noun ChildItem -Module Microsoft.PowerShell.Management
 ```
 
+## Configure rule
+
+```powershell
+Rules = @{
+    PSAvoidUsingPositionalParameters = @{
+        CommandAllowList = 'Join-Path', 'MyCmdletOrScript'
+        Enable = $true
+    }
+}
+```
+
 ## Parameters
 
-### CommandAllowList: string[] (Default value is @()')
+### CommandAllowList
 
-Commands or scripts to be excluded from this rule as a string. Default value is `@()`.
+This parameter specifies commands or scripts to be excluded from this rule. It accepts a string
+array. The default value is `@()`.
 
 ### Enable
 
-Enables (`$true`) the rule during ScriptAnalyzer invocation. Default value is `$true`.
-
-### Disable
-
-Disables (`$false`) the rule during ScriptAnalyzer invocation.
+This parameter controls whether ScriptAnalyzer checks the code against this rule. It accepts a
+boolean value. To enable this rule, set this parameter to `$true`. The default value is `$false`.

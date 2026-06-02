@@ -14,14 +14,16 @@ This rule flags lines that exceed the configured maximum length, including leadi
 (indentation). The default maximum line length is 120 characters. This rule is **disabled** by
 default and must be explicitly enabled through rule configuration settings.
 
-## Example 1
+## Example
+
+### Noncompliant
 
 ```
 In this example of sample text, the maximum line length is using the default setting of not exceeding more than 120
 characters.
 ```
 
-## Example 2
+### Compliant
 
 ```
 In this example of sample text, the maximum line length is set to not exceed
@@ -32,8 +34,8 @@ more than 80 characters.
 
 ```powershell
 Rules = @{
-    PSAvoidLongLines  = @{
-        Enable     = $true
+    PSAvoidLongLines = @{
+        Enable = $true
         MaximumLineLength = 120
     }
 }
@@ -43,13 +45,10 @@ Rules = @{
 
 ### Enable
 
-Enables (`$true`) the rule during ScriptAnalyzer invocation.
-
-### Disable
-
-Disables (`$false`) the rule during ScriptAnalyzer invocation. Default value is `$false`.
+This parameter controls whether ScriptAnalyzer checks the code against this rule. It accepts a
+boolean value. To enable this rule, set this parameter to `$true`. The default value is `$false`.
 
 ### MaximumLineLength
 
-This parameter is optional and is used to override the default maximum line length. This parameter
-accepts an integer value. Default value is `120`.
+This parameter is optional and defines the maximum length for a line before it violates the rule. It
+accepts an integer value. The default value is `120`.

@@ -17,6 +17,8 @@ to raise an error at runtime.
 Always provide a descriptive help message that explains the parameter's purpose and expected input
 to users.
 
+To learn more, see [HelpMessage][01].
+
 ## Example
 
 ### Noncompliant
@@ -70,3 +72,7 @@ Function GoodFuncHelpMessage
     $Param
 }
 ```
+
+<!-- link references -->
+
+[01]: /powershell/module/microsoft.powershell.core/about/about_functions_advanced_parameters#helpmessage-argument

@@ -42,6 +42,6 @@ Invoke-WmiMethod -Class Win32_Process -Name 'Create' -ArgumentList @{ CommandLin
 ### Compliant
 
 ```powershell
-Get-CimInstance -Query 'Select * from Win32_Process where name LIKE "myprocess%"' | Remove-CIMInstance
+Get-CimInstance -Query 'Select * from Win32_Process where name LIKE "myprocess%"' | Remove-CimInstance
 Invoke-CimMethod -ClassName Win32_Process -MethodName 'Create' -Arguments @{ CommandLine = 'notepad.exe' }
 ```

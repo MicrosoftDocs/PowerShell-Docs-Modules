@@ -16,7 +16,7 @@ rely on parameter position.
 
 For simple cmdlets with only a few positional parameters, the risk is much smaller. To prevent this
 rule from being too noisy, it's only triggered when there are 3 or more parameters supplied. A
-simple example where the risk of using positional parameters is negligible, is `Test-Path $Path`.
+simple example where the risk of using positional parameters is negligible is `Test-Path $Path`.
 
 Use full parameter names when calling commands.
 
@@ -55,4 +55,4 @@ array. The default value is `@()`.
 ### Enable
 
 This parameter controls whether ScriptAnalyzer checks the code against this rule. It accepts a
-boolean value. To enable this rule, set this parameter to `$true`. The default value is `$false`.
+boolean value. To disable this rule, set this parameter to `$false`. The default value is `$true`.

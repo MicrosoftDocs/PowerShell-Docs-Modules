@@ -10,9 +10,9 @@ title: AvoidUsingPlainTextForPassword
 
 ## Description
 
-Password parameters that accept plaintext instead of `-AsSecureString` expose passwords and can
-compromise your system's security. You should store passwords in the [SecureString][01] type
-instead.
+Password parameters that accept plaintext expose passwords and can compromise your system's
+security. You shouldn't accept passwords as plain text. Instead, use the [SecureString][01] type to
+store passwords securely.
 
 The following parameters are considered password parameters and aren't case sensitive:
 

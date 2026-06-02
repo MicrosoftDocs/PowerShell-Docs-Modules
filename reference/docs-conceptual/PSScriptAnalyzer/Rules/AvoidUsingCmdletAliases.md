@@ -25,13 +25,6 @@ Using full cmdlet names improves code clarity, makes scripts easier to maintain,
 syntax highlighting in code editors and platforms like GitHub and Visual Studio Code. Always use the
 full cmdlet name instead of aliases.
 
-## Configure rule
-
-To prevent `PSScriptAnalyzer` from flagging your preferred aliases, create an allow list of the
-aliases in your settings file and point `PSScriptAnalyzer` to use the settings file. For example, to
-disable `PSScriptAnalyzer` from flagging `cd`, which is an alias of `Set-Location`, set the settings
-file content to the following.
-
 ```powershell
 @{
     'Rules' = @{
@@ -55,3 +48,10 @@ gps | Where-Object {$_.WorkingSet -gt 20000000}
 ```powershell
 Get-Process | Where-Object {$_.WorkingSet -gt 20000000}
 ```
+
+## Configure rule
+
+To prevent `PSScriptAnalyzer` from flagging your preferred aliases, create an allow list of the
+aliases in your settings file and point `PSScriptAnalyzer` to use the settings file. For example, to
+disable `PSScriptAnalyzer` from flagging `cd`, which is an alias of `Set-Location`, set the settings
+file content to the following.

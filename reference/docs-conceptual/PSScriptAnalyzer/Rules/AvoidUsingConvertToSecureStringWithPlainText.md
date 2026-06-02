@@ -20,8 +20,8 @@ Instead, retrieve secure credentials through encrypted channels or use secure in
 ## Recommendations
 
 If you need to retrieve passwords programmatically without user interaction, consider using the
-[SecretStore](https://www.powershellgallery.com/packages/Microsoft.PowerShell.SecretStore)
-module from the PowerShell Gallery, which provides encrypted credential storage and retrieval.
+[SecretStore][02] module from the PowerShell Gallery, which provides encrypted credential storage
+and retrieval.
 
 ## Example
 
@@ -38,6 +38,7 @@ $EncryptedInput = ConvertTo-SecureString -String $UserInput -AsPlainText -Force
 $SecureUserInput = Read-Host 'Please enter your secure code' -AsSecureString
 ```
 
-<!-- link references -->
+<!-- links reference -->
 
 [01]: /dotnet/api/system.security.securestring
+[02]: https://www.powershellgallery.com/packages/Microsoft.PowerShell.SecretStore

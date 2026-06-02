@@ -15,7 +15,7 @@ Hard-coded computer names can expose sensitive information and reduce script por
 are flexible and secure. Use parameters, environment variables, or dynamic values instead of
 hard-coded computer names.
 
-## Example 1
+## Example
 
 ### Noncompliant
 
@@ -32,25 +32,5 @@ Function Invoke-MyRemoteCommand ()
 Function Invoke-MyCommand ($ComputerName)
 {
     Invoke-Command -Port 343 -ComputerName $ComputerName
-}
-```
-
-## Example 2
-
-### Noncompliant
-
-```powershell
-Function Invoke-MyLocalCommand ()
-{
-    Invoke-Command -Port 343 -ComputerName HardcodedLocalHostname
-}
-```
-
-### Compliant
-
-```powershell
-Function Invoke-MyLocalCommand ()
-{
-    Invoke-Command -Port 343 -ComputerName $env:COMPUTERNAME
 }
 ```

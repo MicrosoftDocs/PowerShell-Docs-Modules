@@ -10,14 +10,15 @@ title: AvoidGlobalAliases
 
 ## Description
 
-Global aliases can override existing aliases in the current session. This override
-creates naming conflicts that lead to hard to diagnose problems for module and script consumers.
+Global aliases can unintentionally override existing aliases in the session, leading to unexpected
+behavior and name collisions. Name collisions make it difficult for module consumers to diagnose
+issues and maintain code reliability.
 
 This rule is not available in PowerShell version 3 or 4 because it uses the
 `StaticParameterBinder.BindCommand` API.
 
-Instead of using the Global scope, use other scope modifiers such as `Local` or `Process` when
-creating new aliases. To learn more, see [about_Scopes][01].
+To avoid this issue, define aliases without the **Scope** parameter, or use other appropriate scope
+modifiers. To learn more, see [about_Scopes][01].
 
 ## Example
 

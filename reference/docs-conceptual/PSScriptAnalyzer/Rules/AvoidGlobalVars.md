@@ -20,7 +20,7 @@ Globally scoped variables include:
 - Preference variables
 - Variables, aliases, and functions that are in your PowerShell profiles
 
-Use local or script scope for variables instead of global scope. To learn more, see
+Use local or script scope for variables instead of the global scope. To learn more, see
 [about_Scopes][01].
 
 ## Example

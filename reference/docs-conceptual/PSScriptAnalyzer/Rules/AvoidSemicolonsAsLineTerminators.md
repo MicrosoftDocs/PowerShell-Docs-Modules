@@ -53,8 +53,5 @@ Rules = @{
 
 ### Enable
 
-Enables (`$true`) the rule during ScriptAnalyzer invocation.
-
-### Disable
-
-Disables (`$false`) the rule during ScriptAnalyzer invocation. Default value is `$false`.
+This parameter controls whether ScriptAnalyzer checks the code against this rule. It accepts a
+boolean value. To enable this rule, set this parameter to `$true`. The default value is `$false`.

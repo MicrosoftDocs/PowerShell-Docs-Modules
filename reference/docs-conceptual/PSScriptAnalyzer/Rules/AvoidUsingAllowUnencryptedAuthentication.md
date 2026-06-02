@@ -15,7 +15,7 @@ permits credentials and secrets to be transmitted over unencrypted connections, 
 risk. Avoid using this parameter unless you must maintain compatibility with legacy systems that
 require unencrypted authentication.
 
-To learn more, see [Invoke-RestMethod](xref:Microsoft.PowerShell.Utility.Invoke-RestMethod).
+To learn more, see [Invoke-WebRequest][01] and [Invoke-RestMethod][02].
 
 ## Example
 
@@ -30,3 +30,8 @@ Invoke-WebRequest foo -AllowUnencryptedAuthentication
 ```powershell
 Invoke-WebRequest foo
 ```
+
+<!-- links reference -->
+
+[01]: /powershell/module/microsoft.powershell.utility/invoke-webrequest
+[02]: /powershell/module/microsoft.powershell.utility/invoke-restmethod

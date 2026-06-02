@@ -16,7 +16,7 @@ vulnerable to collision attacks and are no longer considered secure for cryptogr
 Replace `MD5` and `SHA-1` with secure alternatives such as `SHA256`, `SHA384`, or `SHA512`. Use
 broken algorithms only when absolutely necessary for backwards compatibility with legacy systems.
 
-## Example 1
+## Example
 
 ### Noncompliant
 
@@ -28,18 +28,4 @@ Get-FileHash foo.txt -Algorithm MD5
 
 ```powershell
 Get-FileHash foo.txt -Algorithm SHA256
-```
-
-## Example 2
-
-### Noncompliant
-
-```powershell
-Get-FileHash foo.txt -Algorithm SHA1
-```
-
-### Compliant
-
-```powershell
-Get-FileHash foo.txt
 ```

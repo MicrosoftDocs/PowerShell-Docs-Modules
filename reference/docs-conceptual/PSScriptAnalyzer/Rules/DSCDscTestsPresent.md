@@ -14,7 +14,8 @@ This rule checks that Desired State Configuration (DSC) tests for a given resour
 
 To fix a violation of this rule, you must ensure that the `Tests` directory is present:
 
-- For non-class based resources, it should exist at the same folder level as `DSCResources` folder.
+- For non-class based resources, it should exist at the same folder level as the `DSCResources`
+  folder.
 - For class based resources, it should be at the same folder level as the resource's `.psm1` file.
 
 The `Tests` folder must contain a test script for the given resource. The filename should include

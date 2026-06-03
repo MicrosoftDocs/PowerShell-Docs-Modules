@@ -10,9 +10,9 @@ title: AvoidUsingConvertToSecureStringWithPlainText
 
 ## Description
 
-The use of the `AsPlainText` parameter with the `ConvertTo-SecureString` command bypasses encryption
-and exposes sensitive information in memory as plain text, defeating the purpose of
-[SecureString][01].
+This rule detects the use of the `AsPlainText` parameter with the `ConvertTo-SecureString` command,
+which bypasses encryption and exposes sensitive information in memory as plain text, defeating the
+purpose of [SecureString][01].
 
 Instead, retrieve secure credentials through encrypted channels or use secure input methods like
 `Read-Host -AsSecureString` to ensure sensitive data remains encrypted throughout its lifecycle.

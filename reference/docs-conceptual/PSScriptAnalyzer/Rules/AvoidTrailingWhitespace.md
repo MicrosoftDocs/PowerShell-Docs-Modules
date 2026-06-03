@@ -10,9 +10,10 @@ title: AvoidTrailingWhitespace
 
 ## Description
 
-Lines shouldn't end with trailing whitespace characters. Trailing whitespace makes diffs harder to
-review and can introduce subtle problems when line continuation uses a backtick (`), because the
-backtick must be the last character on the line.
+This rule detects lines that end with trailing whitespace characters. Lines shouldn't end with
+trailing whitespace characters. Trailing whitespace makes diffs harder to review and can introduce
+subtle problems when line continuation uses a backtick (`), because the backtick must be the last
+character on the line.
 
 Keeping lines free of trailing whitespace improves readability and helps keep source control history
 clean.

@@ -10,10 +10,12 @@ title: AvoidUsingAllowUnencryptedAuthentication
 
 ## Description
 
-The **AllowUnencryptedAuthentication** parameter of `Invoke-WebRequest` and `Invoke-RestMethod`
-permits credentials and secrets to be transmitted over unencrypted connections, creating a security
-risk. Avoid using this parameter unless you must maintain compatibility with legacy systems that
-require unencrypted authentication.
+This rule detects the **AllowUnencryptedAuthentication** parameter used with `Invoke-WebRequest` and
+`Invoke-RestMethod` cmdlets. When **AllowUnencryptedAuthentication** is used, it permits credentials
+and secrets to be transmitted over unencrypted connections, creating a security risk.
+
+Avoid using this parameter unless you must maintain compatibility with legacy systems that require
+unencrypted authentication.
 
 To learn more, see [Invoke-WebRequest][01] and [Invoke-RestMethod][02].
 

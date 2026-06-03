@@ -10,11 +10,12 @@ title: AvoidUsingBrokenHashAlgorithms
 
 ## Description
 
-Avoid using the cryptographically broken hash algorithms `MD5` and `SHA-1`. These algorithms are
-vulnerable to collision attacks and are no longer considered secure for cryptographic purposes.
+This rule detects the use of cryptographically broken hash algorithms `MD5` and `SHA-1`. Avoid using
+hash algorithms `MD5` and `SHA-1`. These algorithms are vulnerable to collision attacks and are no
+longer considered secure for cryptographic purposes.
 
 Replace `MD5` and `SHA-1` with secure alternatives such as `SHA256`, `SHA384`, or `SHA512`. Use
-broken algorithms only when absolutely necessary for backwards compatibility with legacy systems.
+broken algorithms only when strictly necessary for backwards compatibility with legacy systems.
 
 ## Example
 

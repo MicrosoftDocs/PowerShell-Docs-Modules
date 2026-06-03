@@ -1,5 +1,5 @@
 ---
-description: Avoid Using ShouldContinue Without Boolean Force Parameter
+description: Avoid using ShouldContinue without boolean Force parameter
 ms.date: 06/01/2026
 ms.topic: reference
 title: AvoidShouldContinueWithoutForce
@@ -10,8 +10,11 @@ title: AvoidShouldContinueWithoutForce
 
 ## Description
 
-Functions that use `ShouldContinue` should have a boolean `Force` parameter to allow users to bypass
-the confirmation prompt. When using `ShouldContinue` in advanced functions, call it after the
+This rule detects functions that use `ShouldContinue` without a boolean `Force` parameter. Functions
+that use `ShouldContinue` should have a boolean `Force` parameter to allow users to bypass the
+confirmation prompt.
+
+When using `ShouldContinue` in advanced functions, call it after the
 `ShouldProcess` method returns `$true`.
 
 To learn more, see [about_Functions_CmdletBindingAttribute][01] and

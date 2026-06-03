@@ -10,8 +10,9 @@ title: AvoidReservedWordsAsFunctionNames
 
 ## Description
 
-Using reserved words as function names causes errors or unexpected behavior in PowerShell scripts.
-Choose function names that don't conflict with any PowerShell reserved words.
+This rule detects function names that use PowerShell reserved words. Using reserved words as
+function names causes errors or unexpected behavior in PowerShell scripts. Choose function names
+that don't conflict with any PowerShell reserved words.
 
 See [about_Reserved_Words][01] for a list of reserved words in PowerShell.
 

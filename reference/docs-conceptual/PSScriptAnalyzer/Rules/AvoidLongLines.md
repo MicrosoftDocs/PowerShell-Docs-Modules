@@ -10,9 +10,10 @@ title: AvoidLongLines
 
 ## Description
 
-This rule flags lines that exceed the configured maximum length, including leading spaces
-(indentation). The default maximum line length is 120 characters. This rule is **disabled** by
-default and must be explicitly enabled through rule configuration settings.
+This rule detects the maximum length of characters allowed before breaking to a new line. This rule
+flags lines that exceed the configured maximum length, including leading spaces (indentation). The
+default maximum line length is 120 characters. This rule is **disabled** by default and must be
+explicitly enabled through rule configuration settings.
 
 ## Example
 

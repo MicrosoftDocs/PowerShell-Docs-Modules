@@ -1,5 +1,5 @@
 ---
-description: Avoid overwriting built in cmdlets
+description: Avoid overwriting built-in cmdlets
 ms.date: 06/01/2026
 ms.topic: reference
 title: AvoidOverwritingBuiltInCmdlets
@@ -10,9 +10,10 @@ title: AvoidOverwritingBuiltInCmdlets
 
 ## Description
 
-This rule warns when a script defines a function that uses the name of a built-in cmdlet available
-for a target PowerShell version and operating system. Overwriting built-in cmdlet names can cause
-confusing behavior because callers might run your function when they expected the platform cmdlet.
+This rule detects and warns when a script defines a function that uses the name of a built-in cmdlet
+available for a target PowerShell version and operating system. Overwriting built-in cmdlet names
+can cause confusing behavior because callers might run your function when they expected the platform
+cmdlet.
 
 The rule compares function declarations in your script against command allow lists that ship with
 PSScriptAnalyzer. The allow lists are also used by other compatibility rules. To learn more, see

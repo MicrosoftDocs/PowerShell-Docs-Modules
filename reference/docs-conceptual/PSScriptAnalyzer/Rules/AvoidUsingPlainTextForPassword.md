@@ -1,5 +1,5 @@
 ---
-description: Avoid Using Plain Text For Password Parameter
+description: Avoid using plain text for Password parameter
 ms.date: 06/01/2026
 ms.topic: reference
 title: AvoidUsingPlainTextForPassword
@@ -10,9 +10,10 @@ title: AvoidUsingPlainTextForPassword
 
 ## Description
 
-Password parameters that accept plaintext expose passwords and can compromise your system's
-security. You shouldn't accept passwords as plain text. Instead, use the [SecureString][01] type to
-store passwords securely.
+This rule detects function or script parameters with password-related names that are declared with a
+`string` type instead of the `SecureString` type. Password parameters that accept plaintext expose
+passwords and can compromise your system's security. You shouldn't accept passwords as plain text.
+Instead, use the [SecureString][01] type to store passwords securely.
 
 The following parameters are considered password parameters and aren't case sensitive:
 

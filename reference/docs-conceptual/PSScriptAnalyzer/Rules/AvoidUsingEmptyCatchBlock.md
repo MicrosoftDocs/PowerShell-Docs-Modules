@@ -1,5 +1,5 @@
 ---
-description: Avoid Using Empty Catch Block
+description: Avoid using empty catch block
 ms.date: 06/01/2026
 ms.topic: reference
 title: AvoidUsingEmptyCatchBlock
@@ -10,9 +10,10 @@ title: AvoidUsingEmptyCatchBlock
 
 ## Description
 
-Empty catch blocks aren't a good design choice because they can't handle errors that occur in a
-`try` block. Add `Write-Error` or `throw` statements within the catch block to properly handle
-exceptions.
+This rule detects empty `catch` blocks. Empty catch blocks are problematic because they silently
+suppress exceptions without any error handling, logging, or recovery action. This can mask bugs and
+make troubleshooting difficult. Always handle exceptions explicitly by using `Write-Error` to log
+the error, `throw` to propagate it, or provide appropriate recovery logic within the catch block.
 
 ## Example
 

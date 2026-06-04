@@ -1,5 +1,5 @@
 ---
-description: Avoid Using Positional Parameters
+description: Avoid using positional parameters
 ms.date: 06/01/2026
 ms.topic: reference
 title: AvoidUsingPositionalParameters
@@ -10,13 +10,14 @@ title: AvoidUsingPositionalParameters
 
 ## Description
 
-Using positional parameters reduces code readability and can introduce errors. It's possible
-that a future version of the cmdlet could change in a way that'll break existing scripts if they
-rely on parameter position.
+This rule detects when commands are called with three or more positional parameters instead of using
+named parameters. Using positional parameters reduces code readability and can introduce errors.
+It's possible that a future version of the cmdlet could change in a way that'll break existing
+scripts if they rely on parameter position.
 
 For simple cmdlets with only a few positional parameters, the risk is much smaller. To prevent this
-rule from being too noisy, it's only triggered when there are 3 or more parameters supplied. A
-simple example where the risk of using positional parameters is negligible is `Test-Path $Path`.
+rule from being too noisy, don't supply three or more parameters. A simple example where the risk of
+using positional parameters is negligible is `Test-Path $Path`.
 
 Use full parameter names when calling commands.
 

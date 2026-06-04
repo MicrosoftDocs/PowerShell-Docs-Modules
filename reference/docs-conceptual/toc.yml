@@ -43,6 +43,8 @@ items:
             href: PSScriptAnalyzer/Rules/AvoidDefaultValueForMandatoryParameter.md
           - name: AvoidDefaultValueSwitchParameter
             href: PSScriptAnalyzer/Rules/AvoidDefaultValueSwitchParameter.md
+          - name: AvoidExclaimOperator
+            href: PSScriptAnalyzer/Rules/AvoidExclaimOperator.md
           - name: AvoidGlobalAliases
             href: PSScriptAnalyzer/Rules/AvoidGlobalAliases.md
           - name: AvoidGlobalFunctions

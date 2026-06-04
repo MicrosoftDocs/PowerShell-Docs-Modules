@@ -1,6 +1,6 @@
 ---
-description: Misleading Backtick
-ms.date: 06/28/2023
+description: Misleading backtick
+ms.date: 06/04/2026
 ms.topic: reference
 title: MisleadingBacktick
 ---
@@ -10,4 +10,26 @@ title: MisleadingBacktick
 
 ## Description
 
-Checks that lines don't end with a backtick followed by whitespace.
+This rule detects if lines that end with a backtick are followed by one or more whitespace
+characters.
+
+A trailing backtick is used for line continuation only when it's the last character on the line. If
+whitespace appears after the backtick, the continuation doesn't work as intended, which can make the
+code look valid but behave unexpectedly.
+
+## Example
+
+### Noncompliant
+
+```powershell
+# The line in this example ends with a backtick and trailing whitespace
+Get-Process `
+| Where-Object CPU -gt 100
+```
+
+### Compliant
+
+```powershell
+Get-Process `
+| Where-Object CPU -gt 100
+```

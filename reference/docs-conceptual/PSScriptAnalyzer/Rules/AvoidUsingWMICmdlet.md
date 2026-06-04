@@ -1,5 +1,5 @@
 ---
-description: Avoid Using Get-WMIObject, Remove-WMIObject, Invoke-WmiMethod, Register-WmiEvent, Set-WmiInstance
+description: Avoid using WMI cmdlets
 ms.date: 06/02/2026
 ms.topic: reference
 title: AvoidUsingWMICmdlet
@@ -10,9 +10,10 @@ title: AvoidUsingWMICmdlet
 
 ## Description
 
-Since PowerShell 3.0, you should use Common Information Model (CIM) cmdlets instead of Windows
-Management Instrumentation (WMI) cmdlets. CIM cmdlets comply with WS-Management (WSMan) standards
-and the CIM standard, which enables management of Windows and non-Windows operating systems.
+This rule detects the use of Windows Management Instrumentation (WMI) cmdlets. Since PowerShell 3.0,
+you should use Common Information Model (CIM) cmdlets instead of WMI cmdlets. CIM cmdlets comply
+with WS-Management (WSMan) standards and the CIM standard, which enables management of Windows and
+non-Windows operating systems.
 
 Don't use these WMI cmdlets:
 

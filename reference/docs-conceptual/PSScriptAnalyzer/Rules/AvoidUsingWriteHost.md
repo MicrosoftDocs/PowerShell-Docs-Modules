@@ -1,5 +1,5 @@
 ---
-description: Avoid Using Write-Host
+description: Avoid using Write-Host cmdlet
 ms.date: 06/02/2026
 ms.topic: reference
 title: AvoidUsingWriteHost
@@ -10,10 +10,13 @@ title: AvoidUsingWriteHost
 
 ## Description
 
-`Write-Host` is designed to produce display-only output in the host, like printing colored text or
-prompting users for input with `Read-Host`. It uses the `ToString()` method to write output, with
-results depending on the PowerShell host program. Since `Write-Host` doesn't send output to the
-pipeline, you'll need `Write-Output` or implicit output to pass data down the pipeline.
+This rule detects usage of `Write-Host` in functions that don't use the `Show` verb. `Write-Host` is
+designed to produce display-only output in the host, like printing colored text or prompting users
+for input with `Read-Host`. It uses the `ToString()` method to write output, with results depending
+on the PowerShell host program.
+
+Since `Write-Host` doesn't send output to the pipeline, you'll need `Write-Output` or implicit
+output to pass data down the pipeline.
 
 Avoid using `Write-Host` in functions unless they use the `Show` verb, which explicitly means
 _display information to the user_. This rule doesn't apply to functions with the `Show` verb.

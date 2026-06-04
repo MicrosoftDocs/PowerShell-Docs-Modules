@@ -10,13 +10,13 @@ title: DSCDscTestsPresent
 
 ## Description
 
-This rule checks that Desired State Configuration (DSC) tests for a given resource are present.
+This rule detects if Desired State Configuration (DSC) tests for a given resource are present.
 
-To fix a violation of this rule, you must ensure that the `Tests` directory is present:
+To fix a violation of this rule, you must ensure that the `Tests` directory is present for:
 
-- For non-class based resources, it should exist at the same folder level as the `DSCResources`
+- Non-class based resources, it should exist at the same folder level as the `DSCResources`
   folder.
-- For class based resources, it should be at the same folder level as the resource's `.psm1` file.
+- Class based resources, it should be at the same folder level as the resource's `.psm1` file.
 
 The `Tests` folder must contain a test script for the given resource. The filename should include
 the resource's name.

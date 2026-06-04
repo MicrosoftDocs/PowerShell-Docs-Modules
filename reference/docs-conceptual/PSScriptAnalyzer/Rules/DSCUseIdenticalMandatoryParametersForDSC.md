@@ -10,9 +10,10 @@ title: DSCUseIdenticalMandatoryParametersForDSC
 
 ## Description
 
-For script-based Desired State Configuration (DSC) resources, if a property is declared with the
-`Key` or `Required` attributes in a `mof` file, it must be present as a mandatory parameter in the
-corresponding `Get-TargetResource`, `Set-TargetResource`, and `Test-TargetResource` functions.
+This rule detects if script-based Desired State Configuration (DSC) resources have properties
+declared with `Key` or `Required` attributes in a `mof` file that aren't present as mandatory
+parameters in the corresponding functions. These properties must be declared as mandatory
+parameters in the `Get-TargetResource`, `Set-TargetResource`, and `Test-TargetResource` functions.
 
 All properties with `Key` and `Required` attributes should have matching mandatory
 parameters in the **Get**, **Set**, and **Test** functions.

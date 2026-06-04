@@ -10,8 +10,8 @@ title: DSCStandardDSCFunctionsInResource
 
 ## Description
 
-All Desired State Configuration (DSC) resources must implement the correct functions. Add the
-missing functions to the resource.
+This rule detects if all Desired State Configuration (DSC) resources must implement the correct
+functions. Add the missing functions to the resource.
 
 For non-class based resources:
 

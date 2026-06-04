@@ -10,8 +10,8 @@ title: DSCReturnCorrectTypesForDSCFunctions
 
 ## Description
 
-Functions in Desired State Configuration (DSC) resources have specific return objects. You'll need
-to ensure that each function returns the correct type.
+This rule detects if functions in Desired State Configuration (DSC) resources have specific return
+objects. You'll need to ensure that each function returns the correct type.
 
 For non-class based resources:
 

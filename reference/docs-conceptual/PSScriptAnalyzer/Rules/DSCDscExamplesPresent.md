@@ -10,12 +10,12 @@ title: DSCDscExamplesPresent
 
 ## Description
 
-This rule checks that Desired State Configuration (DSC) examples for a given resource are present.
+This rule detects if Desired State Configuration (DSC) examples for a given resource are present.
 
-To fix a violation of this rule, you must ensure that the `Examples` directory exists:
+To fix a violation of this rule, you must ensure that the `Examples` directory exists for:
 
-- For non-class based resources, it should be at the same folder level as the `DSCResources` folder.
-- For class based resources, it should be at the same folder level as the resource's `.psm1` file.
+- Non-class based resources, it should be at the same folder level as the `DSCResources` folder.
+- Class based resources, it should be at the same folder level as the resource's `.psm1` file.
 
 The `Examples` folder must contain a sample configuration for the resource. The filename should
 include the resource's name.

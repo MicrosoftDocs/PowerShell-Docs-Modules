@@ -1,5 +1,5 @@
 ---
-description: Use identical parameters for DSC Test and Set functions
+description: Use identical parameters for DSC Get, Set, and Test TargetResource functions in a resource
 ms.date: 06/03/2026
 ms.topic: reference
 title: DSCUseIdenticalParametersForDSC
@@ -10,9 +10,10 @@ title: DSCUseIdenticalParametersForDSC
 
 ## Description
 
-The `Get-TargetResource`, `Test-TargetResource`, and `Set-TargetResource` functions in a Desired
-State Configuration (DSC) resource must all have identical parameters. If they don't match, you'll
-need to update the function parameters to be consistent across all three functions.
+This rule detects if the `Get-TargetResource`, `Set-TargetResource`, and `Test-TargetResource`
+functions in a Desired State Configuration (DSC) resource must all have identical parameters. If
+they don't match, you'll need to update the function parameters to be consistent across all three
+functions.
 
 ## Example
 

@@ -110,8 +110,8 @@ starts with `#`. The default value is `$true`.
 
 ### VSCodeSnippetCorrection
 
-This parameter controls whether comment help is returned in VS Code snippet format. It accepts
-a boolean value. The default value is `$false`.
+This parameter controls whether comment help is returned in Visual Studio Code snippet format. It
+accepts a boolean value. The default value is `$false`.
 
 ### Placement
 

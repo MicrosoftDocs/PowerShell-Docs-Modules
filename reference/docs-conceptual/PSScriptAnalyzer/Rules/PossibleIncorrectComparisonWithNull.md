@@ -14,7 +14,7 @@ This rule detects comparisons where `$null` isn't on the left side of the compar
 ensure that PowerShell performs comparisons correctly, the `$null` element should be on the left
 side of the operator.
 
-There are multiple reasons why this matters:
+There are multiple reasons why this placement matters:
 
 - `$null` is a scalar value. When the value on the left side of an operator is a scalar, comparison
   operators return a **Boolean** value. When the value's a collection, the comparison operators
@@ -27,18 +27,17 @@ operator so that a scalar comparison is performed.
 
 ### Comparison operator behavior
 
-This is how the comparison operator works by-design.
+The comparison operator works by design in the following way.
 
 ```powershell
-# This example returns 'false' because the comparison does not return any objects from the array
+# This example returns 'false' because the comparison doesn't return any objects from the array
 if (@() -eq $null) { 'true' } else { 'false' }
 
 # This example returns 'true' because the array is empty
 if ($null -ne @()) { 'true' } else { 'false' }
 ```
 
-This behavior can produce unexpected results, especially when you intend to perform a simple null
-check.
+This behavior can produce unexpected results, especially when you intend to perform a null check.
 
 The following example demonstrates how comparison operators behave when the left-hand side is a
 collection. The operator compares each element in the collection to the right-hand side value and

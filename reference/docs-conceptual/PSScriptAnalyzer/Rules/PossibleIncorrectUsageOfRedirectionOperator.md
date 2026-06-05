@@ -10,11 +10,11 @@ title: PossibleIncorrectUsageOfRedirectionOperator
 
 ## Description
 
-This rule detects the use of redirection operators `>` and `>=` in conditional statements where
-comparison operators are intended. This rule catches instances where `>` or `>=` appears inside
-`if`, `elseif`, `while`, and `do-while` statements, which are almost always unintentional.
+This rule detects the use of the sequences `>` and `>=` in conditional statements where comparison
+operators are intended. This rule catches instances where `>` or `>=` appears inside `if`, `elseif`,
+`while`, and `do-while` statements, which are almost always unintentional.
 
-In many programming languages, `>` is the comparison operator for "greater than", but PowerShell
+In many programming languages, `>` is the comparison operator for _greater than_, but PowerShell
 uses `-gt` (greater than) and `-ge` (greater or equal) instead. It's easy to accidentally use the
 wrong operator, especially if you're familiar with other languages.
 

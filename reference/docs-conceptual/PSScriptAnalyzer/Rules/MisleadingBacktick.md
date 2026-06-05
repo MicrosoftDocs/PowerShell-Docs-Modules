@@ -10,9 +10,7 @@ title: MisleadingBacktick
 
 ## Description
 
-This rule detects if lines that end with a backtick are followed by one or more whitespace
-characters.
-
+This rule detects lines where a trailing backtick is followed by one or more whitespace characters.
 A trailing backtick is used for line continuation only when it's the last character on the line. If
 whitespace appears after the backtick, the continuation doesn't work as intended, which can make the
 code look valid but behave unexpectedly.

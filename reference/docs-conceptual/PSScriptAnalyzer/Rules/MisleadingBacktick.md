@@ -12,8 +12,8 @@ title: MisleadingBacktick
 
 This rule detects lines where a trailing backtick is followed by one or more whitespace characters.
 A trailing backtick is used for line continuation only when it's the last character on the line. If
-whitespace appears after the backtick, the continuation doesn't work as intended, which can make the
-code look valid but behave unexpectedly.
+whitespace follows the backtick on the same line the continuation doesn't work as intended, which
+can make the code look valid but behave unexpectedly.
 
 ## Example
 

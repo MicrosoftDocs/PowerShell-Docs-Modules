@@ -18,7 +18,8 @@ A module manifest must contain the following key (and a corresponding value) to 
 
 - `ModuleVersion`
 
-All other keys are optional and the order you place them doesn't matter.
+All other keys are optional and the order you place them doesn't matter. To learn more, see
+[about_Module_Manifests][01].
 
 ## Example
 
@@ -46,3 +47,7 @@ All other keys are optional and the order you place them doesn't matter.
     VariablesToExport   = '*'
 }
 ```
+
+<!-- link references -->
+
+[01]: /powershell/module/microsoft.powershell.core/about/about_module_manifests

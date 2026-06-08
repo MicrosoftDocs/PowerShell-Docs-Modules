@@ -10,9 +10,9 @@ title: PlaceCloseBrace
 
 ## Description
 
-This rule detects close braces when code doesn't place them on a new line by themselves or leaves
-empty lines after them. Use consistent close-brace placement: put each close brace on its own line
-and don't add an empty line after it. This rule is **disabled** by default.
+This rule detects closing braces (`}`) that aren't placed on a new line by themselves or that are
+followed by empty lines. Close brace placement should follow a consistent style. It should be on a
+new line by itself and shouldn't be followed by an empty line. This rule is **disabled** by default.
 
 ## Example
 
@@ -67,6 +67,6 @@ this rule. It accepts a boolean value. To disable skipping one-line blocks, set 
 
 ### NewLineAfter
 
-This parameter controls whether ScriptAnalyzer checks that a new line follows a close brace. It
+This parameter controls whether ScriptAnalyzer checks that a new line follows a closing brace. It
 accepts a boolean value. To disable this check, set this parameter to `$false`. The default value is
 `$true`.

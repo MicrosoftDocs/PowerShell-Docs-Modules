@@ -1,5 +1,5 @@
 ---
-description: Use the equality operator -eq instead of = or == in conditional statements
+description: Use equality operator (==) instead of an equal sign (=) as an assignment operator
 ms.date: 06/05/2026
 ms.topic: reference
 title: PossibleIncorrectUsageOfAssignmentOperator
@@ -10,14 +10,20 @@ title: PossibleIncorrectUsageOfAssignmentOperator
 
 ## Description
 
-This rule detects when the assignment operator `=` or equality operator `==` is used instead of the
-PowerShell equality operator `-eq` in conditional statements. The rule looks for usages of `==` and
-`=` operators inside `if`, `elseif`, `while`, and `do-while` statements but it doesn't warn if any
-kind of command or expression is used at the right hand side as that's probably by design.
+This rule detects when conditional statements use `=` or `==` instead of the PowerShell equality
+operator (`-eq`). The rule looks for usages of `==` and `=` operators inside `if`, `elseif`,
+`while`, and `do-while` statements. In PowerShell, `=` represents the [assignment operator][01] and
+`-eq` represents the [equality comparison operator][02].
 
-In many programming languages, the equality operator is denoted as `==` or `=`, but PowerShell uses
-`-eq`. Therefore, it's easy for the wrong operator to be used unintentionally. This rule catches a
-few special cases where that's likely.
+In many programming languages, `==` represents the equality comparison operator. When you define
+`==` in a PowerShell expression, including conditional statements, PowerShell raises an error
+because `==` isn't valid PowerShell syntax. This rule _always_ flags uses of `==` in conditional
+statements. However, it doesn't flag uses of `=` when the right hand side of the conditional uses
+any commands or expressions.
+
+In these cases, it's likely that the use of the assignment operator is intentional. This
+construction is often used to concisely assign a value to the variable or property on the left hand
+side _and_ check whether the assigned value evaluates as true.
 
 ### Implicit suppression using Clang style
 
@@ -66,3 +72,8 @@ if ($a = Get-Something) # Only execute action if command returns something and a
     Do-SomethingWith $a
 }
 ```
+
+<!-- link references -->
+
+[01]: /powershell/module/microsoft.powershell.core/about/about_assignment_operators
+[02]: /powershell/module/microsoft.powershell.core/about/about_comparison_operators#-eq-and--ne

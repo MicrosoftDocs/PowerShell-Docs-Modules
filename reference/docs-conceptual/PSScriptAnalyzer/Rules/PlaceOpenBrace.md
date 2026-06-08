@@ -10,9 +10,9 @@ title: PlaceOpenBrace
 
 ## Description
 
-This rule detects open braces that don't follow a consistent style. Open braces can be required on
-the same line as the preceding keyword or on the next line, based on configuration. You can also
-require a new line after the open brace. This rule is **disabled** by default.
+This rule detects opening braces (`{`) that don't follow a consistent style. Opening braces can be
+required on the same line as the preceding keyword or on the next line, based on configuration. You
+can also require a new line after the opening brace. This rule is **disabled** by default.
 
 ## Example
 
@@ -61,7 +61,7 @@ preceding keyword. It accepts a boolean value. To disable this check, set this p
 
 ### NewLineAfter
 
-This parameter controls whether ScriptAnalyzer checks that a new line follows an open brace. It
+This parameter controls whether ScriptAnalyzer checks that a new line follows an opening brace. It
 accepts a boolean value. To disable this check, set this parameter to `$false`. The default value is
 `$true`.
 

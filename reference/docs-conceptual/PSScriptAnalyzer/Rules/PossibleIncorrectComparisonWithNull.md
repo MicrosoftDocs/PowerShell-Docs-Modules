@@ -17,7 +17,7 @@ side of the operator.
 There are multiple reasons why this placement matters:
 
 - `$null` is a scalar value. When the value on the left side of an operator is a scalar, comparison
-  operators return a **Boolean** value. When the value's a collection, the comparison operators
+  operators return a **Boolean** value. When the value is a collection, the comparison operators
   return any matching values or an empty array if there aren't any matches in the collection.
 - PowerShell performs type casting on the right-hand operand, resulting in incorrect comparisons
   when `$null` is cast to other scalar types.

@@ -44,7 +44,7 @@ The **Compatibility** parameter accepts a list of one or more target identifiers
 
 - desktop-2.0-windows
 - desktop-3.0-windows
-- desktop-4.0-windows (taken from Windows Server 2012R2)
+- desktop-4.0-windows (taken from Windows Server 2012 R2)
 - desktop-5.1.14393.206-windows
 - core-6.1.0-windows (taken from Windows 10, version 1803)
 - core-6.1.0-linux (taken from Ubuntu 18.04)

@@ -53,4 +53,4 @@ Set-Content -Path .\script.ps1 -Value "Write-Output 'café'" -Encoding utf8BOM
 
 - [about_Character_Encoding](/powershell/module/microsoft.powershell.core/about/about_character_encoding)
 - [Set-Content](/powershell/module/microsoft.powershell.management/set-content)
-- [Understanding file encoding in VS Code and PowerShell](/powershell/scripting/dev-cross-plat/vscode/understanding-file-encoding)
+- [Understanding file encoding in Visual Studio Code and PowerShell](/powershell/scripting/dev-cross-plat/vscode/understanding-file-encoding)

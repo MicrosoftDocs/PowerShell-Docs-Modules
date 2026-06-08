@@ -10,9 +10,9 @@ title: UseCmdletCorrectly
 
 ## Description
 
-This rule detects commands that are invoked without their required mandatory parameters. When
-calling a command, you should ensure it's invoked with the correct syntax and all mandatory
-parameters specified. Missing required parameters can cause commands to fail or behave unexpectedly.
+This rule detects commands that are invoked without their required mandatory parameters. When you
+call a command, it must be invoked with the correct syntax and all mandatory parameters specified.
+Missing required parameters can cause commands to fail or behave unexpectedly.
 
 ## Example
 

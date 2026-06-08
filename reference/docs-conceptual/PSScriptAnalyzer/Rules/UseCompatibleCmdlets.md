@@ -11,8 +11,8 @@ title: UseCompatibleCmdlets
 ## Description
 
 This rule detects cmdlets that aren't available for the PowerShell edition, version, and operating
-system you target. The rule compares each cmdlet in your script against compatibility allowlists
-that ship with PSScriptAnalyzer. You'll find these files under
+system you target. The rule compares each cmdlet in your script against a compatibility allow list
+that ships with PSScriptAnalyzer. These files are in the following location:
 `/path/to/PSScriptAnalyzerModule/Settings`.
 
 Each file uses this naming format:
@@ -56,7 +56,7 @@ minor version profiles.
 
 You can also create a custom profile with [New-CommandDataFile.ps1][01]. Place the generated JSON
 file in the `Settings` folder of the `PSScriptAnalyzer` module. Then you can reference that file by
-name in `compatibility`.
+name under `Compatibility`.
 
 The `core-6.0.2-*` files were removed in PSScriptAnalyzer 1.18 because PowerShell 6.0 reached its
 end of life.

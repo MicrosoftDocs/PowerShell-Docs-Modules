@@ -51,9 +51,9 @@ function Test-Parameter
 
 ## Configure rule
 
-By default, this rule doesn't consider child scopes other than scriptblocks provided to
-`Where-Object` or `ForEach-Object`. The `CommandsToTraverse` setting is an string array allows you
-to add additional commands that accept scriptblocks that this rule should examine.
+By default, this rule doesn't consider child scopes other than scriptblocks provided to either
+`Where-Object` or `ForEach-Object`. The `CommandsToTraverse` setting is a string array allows you to
+add extra commands that accept script blocks that this rule should examine.
 
 ```powershell
 @{

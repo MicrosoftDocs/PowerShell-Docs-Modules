@@ -30,13 +30,13 @@ Reserved characters include:
 | `&` | Call operator |
 | `?` | Alias for Where-Object in some contexts |
 | `*` | Wildcard |
-| `< >` | Redirection operators / comparison operators |
+| `< >` | Redirection operators |
 | `@` | Array or hash table literal |
 | `:` | Scope modifier / drive separator |
 | `#` | Comment |
 | `=` | Assignment operator |
 | `+` | String concatenation operator |
-| `~` | Bitwise NOT operator |
+| `~` | Expands to the value of the $HOME variable |
 | `\|` | Pipe operator |
 
 ## Example

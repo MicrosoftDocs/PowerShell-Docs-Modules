@@ -10,8 +10,7 @@ title: ReviewUnusedParameter
 
 ## Description
 
-This rule detects parameters that are declared but not used within their scope. This rule identifies
-parameters declared in a script, scriptblock, or function scope that aren't being used in that
+This rule detects parameters that are declared but not used a script, scriptblock, or function
 scope. You should consider removing unused parameters to improve code clarity and reduce confusion
 about your function's dependencies.
 
@@ -52,8 +51,8 @@ function Test-Parameter
 ## Configure rule
 
 By default, this rule doesn't consider child scopes other than scriptblocks provided to either
-`Where-Object` or `ForEach-Object`. The `CommandsToTraverse` setting is a string array allows you to
-add extra commands that accept script blocks that this rule should examine.
+`Where-Object` or `ForEach-Object`. The `CommandsToTraverse` setting is a string array that allows
+you to add extra commands that accept scriptblocks that this rule should examine.
 
 ```powershell
 @{

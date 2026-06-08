@@ -1,6 +1,6 @@
 ---
-description: Should Process
-ms.date: 06/28/2023
+description: Pair ShouldProcess with SupportsShouldProcess
+ms.date: 06/08/2026
 ms.topic: reference
 title: ShouldProcess
 ---
@@ -10,26 +10,27 @@ title: ShouldProcess
 
 ## Description
 
-If a cmdlet declares the `SupportsShouldProcess` attribute, then it should also call
-`ShouldProcess`. A violation is any function which either declares `SupportsShouldProcess` attribute
-but makes no calls to `ShouldProcess` or it calls `ShouldProcess` but does not declare
-`SupportsShouldProcess`.
+This rule detects mismatches between `SupportsShouldProcess` declarations and `ShouldProcess` calls.
+When a cmdlet declares the `SupportsShouldProcess` attribute, it should also call the
+`ShouldProcess` method.
 
-For more information, see the following articles:
+Violations occur when:
+
+- A function declares `SupportsShouldProcess` but doesn't call `ShouldProcess`
+- A function calls `ShouldProcess` but doesn't declare `SupportsShouldProcess`
+
+To fix this violation, ensure that `ShouldProcess` calls are paired with the `SupportsShouldProcess`
+attribute declaration.
+
+To learn more, see the following articles:
 
 - [about_Functions_Advanced_Methods][01]
 - [about_Functions_CmdletBindingAttribute][02]
 - [Everything you wanted to know about ShouldProcess][03]
 
-## How
-
-To fix a violation of this rule, please call `ShouldProcess` method when a cmdlet declares
-`SupportsShouldProcess` attribute. Or please add `SupportsShouldProcess` attribute argument when
-calling `ShouldProcess`.
-
 ## Example
 
-### Wrong
+### Noncompliant
 
 ```powershell
 function Set-File
@@ -45,7 +46,7 @@ function Set-File
 }
 ```
 
-### Correct
+### Compliant
 
 ```powershell
 function Set-File
@@ -72,7 +73,9 @@ function Set-File
     }
 }
 ```
+
 <!-- link references -->
+
 [01]: /powershell/module/microsoft.powershell.core/about/about_functions_advanced_methods
 [02]: /powershell/module/microsoft.powershell.core/about/about_Functions_CmdletBindingAttribute
 [03]: /powershell/scripting/learn/deep-dives/everything-about-shouldprocess

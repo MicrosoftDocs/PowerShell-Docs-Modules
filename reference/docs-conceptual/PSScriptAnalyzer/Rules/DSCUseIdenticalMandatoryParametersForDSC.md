@@ -10,8 +10,8 @@ title: DSCUseIdenticalMandatoryParametersForDSC
 
 ## Description
 
-This rule detects if script-based Desired State Configuration (DSC) resources have properties
-declared with `Key` or `Required` attributes in a `mof` file that aren't present as mandatory
+This rule detects if MOF-based Desired State Configuration (DSC) resources have properties
+declared with `Key` or `Required` attributes in a `.mof` file that aren't present as mandatory
 parameters in the corresponding functions. These properties must be declared as mandatory
 parameters in the `Get-TargetResource`, `Set-TargetResource`, and `Test-TargetResource` functions.
 
@@ -20,7 +20,7 @@ parameters in the **Get**, **Set**, and **Test** functions.
 
 ## Example
 
-Consider the following `mof` file.
+Consider the following MOF schema file.
 
 ```mof
 class WaitForAny : OMI_BaseResource

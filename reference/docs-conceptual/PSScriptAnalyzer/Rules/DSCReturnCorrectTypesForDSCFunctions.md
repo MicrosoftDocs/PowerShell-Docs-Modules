@@ -27,7 +27,7 @@ For class based resources:
 
 ## Example
 
-### Noncompliant
+### Noncompliant MOF-based resource
 
 ```powershell
 function Get-TargetResource
@@ -64,7 +64,7 @@ function Test-TargetResource
 }
 ```
 
-### Compliant
+### Compliant MOF-based resource
 
 ```powershell
 function Get-TargetResource
@@ -100,5 +100,52 @@ function Test-TargetResource
         $Name
     )
     ...
+}
+```
+
+### Noncompliant class-based resource
+
+```powershell
+[DscResource()]
+class MyDSCResource
+{
+    [DscProperty(Key)]
+    [string] $Name
+
+    [void] Set()
+    {
+        ...
+    }
+
+    [bool] Test()
+    {
+        ...
+    }
+}
+```
+
+### Compliant class-based resource
+
+```powershell
+[DscResource()]
+class MyDSCResource
+{
+    [DscProperty(Key)]
+    [string] $Name
+
+    [MyDSCResource] Get()
+    {
+        ...
+    }
+
+    [void] Set()
+    {
+        ...
+    }
+
+    [bool] Test()
+    {
+        ...
+    }
 }
 ```

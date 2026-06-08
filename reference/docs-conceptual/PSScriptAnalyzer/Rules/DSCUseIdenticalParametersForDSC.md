@@ -11,8 +11,8 @@ title: DSCUseIdenticalParametersForDSC
 ## Description
 
 This rule detects if the `Get-TargetResource`, `Set-TargetResource`, and `Test-TargetResource`
-functions in a Desired State Configuration (DSC) resource must all have identical parameters. If
-they don't match, you'll need to update the function parameters to be consistent across all three
+functions in a Desired State Configuration (DSC) resource all have identical parameters. If they
+don't match, you'll need to update the function parameters to be consistent across all three
 functions.
 
 ## Example

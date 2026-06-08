@@ -10,7 +10,7 @@ title: DSCStandardDSCFunctionsInResource
 
 ## Description
 
-This rule detects if all Desired State Configuration (DSC) resources must implement the correct
+This rule detects if all Desired State Configuration (DSC) resources implement the correct
 functions. Add the missing functions to the resource.
 
 For non-class based resources:
@@ -27,7 +27,7 @@ For class based resources:
 
 ## Example
 
-### Noncompliant
+### Noncompliant MOF-based resource
 
 ```powershell
 function Get-TargetResource
@@ -55,7 +55,7 @@ function Test-TargetResource
 }
 ```
 
-### Compliant
+### Compliant MOF-based resource
 
 ```powershell
 function Get-TargetResource
@@ -91,5 +91,52 @@ function Test-TargetResource
         $Name
     )
     ...
+}
+```
+
+### Noncompliant class-based resource
+
+```powershell
+[DscResource()]
+class MyDSCResource
+{
+    [DscProperty(Key)]
+    [string] $Name
+
+    [void] Set()
+    {
+        ...
+    }
+
+    [bool] Test()
+    {
+        ...
+    }
+}
+```
+
+### Compliant class-based resource
+
+```powershell
+[DscResource()]
+class MyDSCResource
+{
+    [DscProperty(Key)]
+    [string] $Name
+
+    [MyDSCResource] Get()
+    {
+        ...
+    }
+
+    [void] Set()
+    {
+        ...
+    }
+
+    [bool] Test()
+    {
+        ...
+    }
 }
 ```

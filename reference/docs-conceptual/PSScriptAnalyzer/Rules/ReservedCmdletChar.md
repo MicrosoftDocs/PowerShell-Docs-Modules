@@ -16,28 +16,28 @@ reserved characters from your names.
 
 Reserved characters include:
 
-| Character | Meaning |
-| --- | --- |
-| `` ` `` | Escape character (backtick) |
-| `$` | Variable expansion |
-| `"` | String delimiter (allows variable expansion) |
-| `'` | String delimiter (literal string) |
-| `( )` | Grouping expressions / method calls |
-| `{ }` | Script blocks / hash tables |
-| `[ ]` | Type literals / array indexing |
-| `,` | Array element separator |
-| `;` | Statement separator |
-| `&` | Call operator |
-| `?` | Alias for Where-Object in some contexts |
-| `*` | Wildcard |
-| `< >` | Redirection operators |
-| `@` | Array or hash table literal |
-| `:` | Scope modifier / drive separator |
-| `#` | Comment |
-| `=` | Assignment operator |
-| `+` | String concatenation operator |
-| `~` | Expands to the value of the $HOME variable |
-| `\|` | Pipe operator |
+| Character | Meaning                                      |
+|:---------:|:---------------------------------------------|
+|  `` ` ``  | Escape character (backtick)                  |
+|    `$`    | Variable expansion                           |
+|    `"`    | String delimiter (allows variable expansion) |
+|    `'`    | String delimiter (literal string)            |
+|   `( )`   | Grouping expressions / method calls          |
+|   `{ }`   | Script blocks / hash tables                  |
+|   `[ ]`   | Type literals / array indexing               |
+|    `,`    | Array element separator                      |
+|    `;`    | Statement separator                          |
+|    `&`    | Call operator                                |
+|    `?`    | Alias for Where-Object in some contexts      |
+|    `*`    | Wildcard                                     |
+|   `< >`   | Redirection operators                        |
+|    `@`    | Array or hash table literal                  |
+|    `:`    | Scope modifier / drive separator             |
+|    `#`    | Comment                                      |
+|    `=`    | Assignment operator                          |
+|    `+`    | String concatenation operator                |
+|    `~`    | Expands to the value of the $HOME variable   |
+|    `\|`   | Pipe operator                                |
 
 ## Example
 

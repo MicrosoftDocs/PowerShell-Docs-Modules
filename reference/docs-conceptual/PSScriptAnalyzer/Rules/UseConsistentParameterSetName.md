@@ -13,8 +13,7 @@ title: UseConsistentParameterSetName
 
 This rule detects inconsistent parameter set naming and configuration issues that can cause runtime
 errors. Parameter set names in PowerShell are case-sensitive, unlike most other PowerShell elements.
-With this rule enabled, it makes it easier to debug your functions. This rule is **disabled** by
-default.
+With this rule enabled, it's easier to debug your functions. This rule is **disabled** by default.
 
 This rule performs five different checks:
 

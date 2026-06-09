@@ -1,6 +1,6 @@
 ---
 description: Use compatible syntax
-ms.date: 06/28/2023
+ms.date: 06/09/2026
 ms.topic: reference
 title: UseCompatibleSyntax
 ---
@@ -10,10 +10,41 @@ title: UseCompatibleSyntax
 
 ## Description
 
-This rule identifies syntax elements that are incompatible with targeted PowerShell versions.
+This rule detects syntax elements that aren't compatible with your specified PowerShell target
+versions. When you run this rule from PowerShell 3 or 4, it can't detect syntax that's incompatible
+with those versions because those versions can't parse newer syntax constructs.
 
-It cannot identify syntax elements incompatible with PowerShell 3 or 4 when run from those
-PowerShell versions because they aren't able to parse the incompatible syntaxes.
+## Example
+
+### Noncompliant
+
+The following example uses PowerShell 7 syntax. If `TargetVersions` includes `5.1` or earlier, this
+rule flags these statements.
+
+```powershell
+$message = $IsReady ? 'Ready' : 'Not ready'
+$displayName = $name ?? 'Unknown'
+```
+
+### Compliant
+
+```powershell
+if ($IsReady) {
+    $message = 'Ready'
+}
+else {
+    $message = 'Not ready'
+}
+
+if ($name -ne $null) {
+    $displayName = $name
+}
+else {
+    $displayName = 'Unknown'
+}
+```
+
+## Configure rule
 
 ```powershell
 @{

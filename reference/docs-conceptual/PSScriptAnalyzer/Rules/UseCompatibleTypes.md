@@ -85,14 +85,31 @@ If a type isn't in the union profile, the rule assumes it's local to your enviro
 it. If a type is in the union profile but missing from a target profile, the rule flags it as
 incompatible with that target.
 
-## Configuration settings
+## Example
 
-| Configuration key |                                     Meaning                                      |                                     Accepted values                                     |                                   Mandatory                                    |                                                            Example                                                            |
-| ----------------- | -------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------- |
-| `Enable`          | Activates the rule                                                               | bool (`$true`/`$false`)                                                                 | No (default: `$false`)                                                         | `$true`                                                                                                                       |
-| `TargetProfiles`  | The list of PowerShell profiles to target                                        | string[]: absolute paths to profile files or names of profiles in the profile directory | No (default: `@()`)                                                            | `@('ubuntu_x64_18.04_6.1.3_x64_4.0.30319.42000_core', 'win-48_x64_10.0.17763.0_5.1.17763.316_x64_4.0.30319.42000_framework')` |
-| `ProfileDirPath`  | The location to search for profiles by name and use for union profile generation | string: absolute path to new profile dir                                                | No (defaults to `compatibility_profiles` directory in PSScriptAnalyzer module) | `C:\Users\me\Documents\pssaCompatProfiles`                                                                                    |
-| `IgnoreTypes`     | Full names of types or type accelerators to ignore compatibility of in scripts   | string[]: names of types to ignore                                                      | No (default: `@()`)                                                            | `@('System.Collections.ArrayList','string')`                                                                                  |
+The following examples assume `TargetProfiles` includes
+`win-48_x64_10.0.17763.0_5.1.17763.316_x64_4.0.30319.42000_framework` (Windows 10 Pro,
+PowerShell 5.1).
+
+### Noncompliant
+
+`System.Management.Automation.SemanticVersion` isn't available by default in Windows PowerShell
+5.1, so the rule flags this type usage for that target profile.
+
+```powershell
+$version = [System.Management.Automation.SemanticVersion]'1.2.3'
+```
+
+### Compliant
+
+`System.Version` is available in Windows PowerShell 5.1 and PowerShell 7, so it passes
+compatibility checks across those targets.
+
+```powershell
+$version = [System.Version]'1.2.3.0'
+```
+
+## Configure rule
 
 An example configuration might look like:
 
@@ -159,6 +176,30 @@ You can also suppress it for specific type members:
 [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSUseCompatibleTypes',
     'System.Management.Automation.LanguagePrimitives/ConvertTypeNameToPSTypeName')]
 ```
+
+## Parameters
+
+### Enable
+
+This parameter controls whether ScriptAnalyzer checks the code against this rule. It accepts a
+boolean value. To enable this rule, set this parameter to `$true`. The default value is `$false`.
+
+### TargetProfiles
+
+This parameter specifies the list of platform profiles to check compatibility against. It accepts an
+array of strings. Each value can be a platform name, a filename, or an absolute path to a profile
+file. The default value is `@()`.
+
+### ProfileDirPath
+
+This parameter controls the directory that ScriptAnalyzer searches for profiles by name and uses to
+generate the union profile. It accepts a string containing an absolute path. The default location is
+the `compatibility_profiles` directory in the PSScriptAnalyzer module.
+
+### IgnoreTypes
+
+This parameter specifies the full names of types or type accelerators to exclude from compatibility
+checks. It accepts an array of type-name strings. The default value is `@()`.
 
 <!-- link references -->
 

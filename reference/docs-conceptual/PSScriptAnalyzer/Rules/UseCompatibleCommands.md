@@ -86,16 +86,30 @@ If a command isn't in the union profile, the rule assumes it's local to your env
 it. If a command is in the union profile but missing from a target profile, the rule flags it as
 incompatible with that target.
 
-## Configuration settings
+## Example
 
-| Configuration key |                                     Meaning                                      |                                     Accepted values                                     |                                   Mandatory                                    |                                                            Example                                                            |
-| ----------------- | -------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------- |
-| `Enable`          | Activates the rule                                                               | bool (`$true`/`$false`)                                                                 | No (default: `$false`)                                                         | `$true`                                                                                                                       |
-| `TargetProfiles`  | The list of PowerShell profiles to target                                        | string[]: absolute paths to profile files or names of profiles in the profile directory | No (default: `@()`)                                                            | `@('ubuntu_x64_18.04_6.1.3_x64_4.0.30319.42000_core', 'win-48_x64_10.0.17763.0_5.1.17763.316_x64_4.0.30319.42000_framework')` |
-| `ProfileDirPath`  | The location to search for profiles by name and use for union profile generation | string: absolute path to new profile dir                                                | No (defaults to `compatibility_profiles` directory in PSScriptAnalyzer module) | `C:\Users\me\Documents\pssaCompatProfiles`                                                                                    |
-| `IgnoreCommands`  | Commands to exclude from compatibility checks in scripts                         | string[]: names of commands to ignore                                                   | No (default: `@()`)                                                            | `@('Get-ChildItem','Import-Module')`                                                                                          |
+The following examples assume `TargetProfiles` includes
+`ubuntu_x64_18.04_6.2.4_x64_4.0.30319.42000_core` (Ubuntu 18.04, PowerShell 6.2).
 
-An example configuration might look like:
+### Noncompliant
+
+```powershell
+function Get-OsInfo {
+    $os = Get-WmiObject -Class Win32_OperatingSystem
+    return $os.Caption
+}
+```
+
+### Compliant
+
+```powershell
+function Get-OsInfo {
+    $os = Get-CimInstance -ClassName Win32_OperatingSystem
+    return $os.Caption
+}
+```
+
+## Configure rule
 
 ```powershell
 @{
@@ -140,6 +154,30 @@ You can also suppress it for specific parameters:
 [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSUseCompatibleCommands',
     'Import-Module/FullyQualifiedName')]
 ```
+
+## Parameters
+
+### Enable
+
+This parameter controls whether ScriptAnalyzer checks the code against this rule. It accepts a
+boolean value. To enable this rule, set this parameter to `$true`. The default value is `$false`.
+
+### TargetProfiles
+
+This parameter specifies the list of platform profiles to check compatibility against. It accepts
+an array of strings. Each value can be a platform name, a filename, or an absolute path to a
+profile file. The default value is `@()`.
+
+### ProfileDirPath
+
+This parameter controls the directory that ScriptAnalyzer searches for profiles by name and uses
+to generate the union profile. It accepts a string containing an absolute path. The default
+location is the `compatibility_profiles` directory in the PSScriptAnalyzer module.
+
+### IgnoreCommands
+
+This parameter specifies commands to exclude from compatibility checks. It accepts an array of
+command-name strings. The default value is `@()`.
 
 <!-- link references -->
 

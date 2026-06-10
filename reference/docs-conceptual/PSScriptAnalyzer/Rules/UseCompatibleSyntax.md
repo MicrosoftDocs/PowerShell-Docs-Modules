@@ -31,15 +31,13 @@ $displayName = $name ?? 'Unknown'
 ```powershell
 if ($IsReady) {
     $message = 'Ready'
-}
-else {
+} else {
     $message = 'Not ready'
 }
 
 if ($name -ne $null) {
     $displayName = $name
-}
-else {
+} else {
     $displayName = 'Unknown'
 }
 ```
@@ -60,3 +58,16 @@ else {
     }
 }
 ```
+
+## Parameters
+
+### Enable
+
+This parameter controls whether ScriptAnalyzer checks the code against this rule. It accepts a
+boolean value. To enable this rule, set this parameter to `$true`. The default value is `$false`.
+
+### TargetVersions
+
+This parameter specifies the PowerShell versions your code must be compatible with. It accepts an
+array of version strings, such as `'7.0'`, `'5.1'`, or `'4.0'`. ScriptAnalyzer flags syntax that's
+not supported in any version you target.

@@ -37,12 +37,10 @@ enforced.
 > The rule performs a simple text check for signature blocks and doesn't validate signature
 > authenticity or certificate trust. PowerShell performs actual signature validation at runtime.
 
-## CLM restrictions
+## CLM restriction and remediation reference
 
 Use the following table for a consolidated view of each CLM restriction, what it means, the
 recommended remediation, and whether checks apply to signed scripts, unsigned scripts, or both.
-
-## CLM restriction and remediation reference
 
 |         Restriction          |                                                                                       What it means                                                                                        |                                                                  Recommended remediation                                                                   |                                             Enforced for                                              |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |

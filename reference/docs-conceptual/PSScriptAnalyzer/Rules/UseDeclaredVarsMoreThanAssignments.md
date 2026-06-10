@@ -11,7 +11,7 @@ title: UseDeclaredVarsMoreThanAssignments
 ## Description
 
 This rule detects variables that are assigned a value but never used. A variable counts as "used"
-only when code references it in the same scriptblock as its assignment. Variables that exist only
+only when code references it in the same script block as its assignment. Variables that exist only
 as assignments add noise to the code and should be removed.
 
 ## Example

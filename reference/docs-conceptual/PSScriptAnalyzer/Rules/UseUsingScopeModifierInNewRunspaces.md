@@ -10,8 +10,11 @@ title: UseUsingScopeModifierInNewRunspaces
 
 ## Description
 
-If a scriptblock is intended to be run in a new runspace, variables inside it should use the
-`$using:` scope modifier, or be initialized within the scriptblock. This applies to:
+This rule detects when scriptblocks running in new runspaces reference parent scope variables
+without the `$using:` scope modifier. When a scriptblock is intended to run in a new runspace, it
+can't directly access variables from the parent scope. You must either use the `$using:` scope
+modifier to explicitly reference a parent scope variable, or initialize the variable within the
+scriptblock itself. This rule applies to:
 
 - `Invoke-Command`- Only with the **ComputerName** or **Session** parameter.
 - `Workflow { InlineScript {} }`
@@ -21,21 +24,16 @@ If a scriptblock is intended to be run in a new runspace, variables inside it sh
 - The `Script` resource in DSC configurations, specifically for the `GetScript`, `TestScript` and
   `SetScript` properties.
 
-## How to Fix
-
-Within the ScriptBlock, instead of just using a variable from the parent scope, you have to add the
-`using:` scope modifier to it.
-
 ## Example
 
-### Wrong
+### Noncompliant
 
 ```powershell
 $var = 'foo'
 1..2 | ForEach-Object -Parallel { $var }
 ```
 
-### Correct
+### Compliant
 
 ```powershell
 $var = 'foo'

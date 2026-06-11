@@ -1,5 +1,5 @@
 ---
-description: Use $using scope modifier in runspace scriptblocks
+description: Use the '$using:' scope modifier in runspace scriptblocks
 ms.date: 06/11/2026
 ms.topic: reference
 title: UseUsingScopeModifierInNewRunspaces
@@ -18,7 +18,8 @@ You must either use the `$using:` scope modifier to explicitly reference a paren
 initialize the variable within the scriptblock itself. This rule applies to:
 
 - `Invoke-Command`- Only with the **ComputerName** or **Session** parameter.
-- `Workflow { InlineScript {} }`
+- `Workflow { InlineScript {} }` (supported only in Windows PowerShell 5.1 and earlier; not
+  available in PowerShell 7+)
 - `Foreach-Object` - Only with the **Parallel** parameter
 - `Start-Job`
 - `Start-ThreadJob`

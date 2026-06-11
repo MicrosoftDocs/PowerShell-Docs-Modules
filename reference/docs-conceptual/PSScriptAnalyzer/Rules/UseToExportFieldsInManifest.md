@@ -1,5 +1,5 @@
 ---
-description: Use the FunctionToExport module manifest field
+description: Use the *ToExport module manifest fields
 ms.date: 06/11/2026
 ms.topic: reference
 title: UseToExportFieldsInManifest
@@ -33,5 +33,5 @@ FunctionsToExport = $null
 ### Compliant
 
 ```powershell
-FunctionToExport = @()
+FunctionsToExport = @()
 ```

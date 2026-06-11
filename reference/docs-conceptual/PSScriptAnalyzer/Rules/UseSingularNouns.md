@@ -66,6 +66,6 @@ boolean value. To disable this rule, set this parameter to `$false`. The default
 
 ### NounAllowList
 
-This parameter specifies which noun commands to exclude from this rule. Both `Data` and `Windows`
-are common false positives, and are excluded by default. It accepts a string value. Default values
-are `'Data'` and `'Windows'`
+This parameter specifies which noun commands to exclude from this rule. It accepts a string value.
+Both `Data` and `Windows` are common false positives and excluded by default. Default values are
+`'Data'` and `'Windows'`.

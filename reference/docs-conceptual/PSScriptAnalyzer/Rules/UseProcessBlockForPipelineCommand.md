@@ -1,5 +1,5 @@
 ---
-description: Use process block for commands that accept input from pipelines
+description: Use process block for commands that accept input from a pipeline
 ms.date: 06/11/2026
 ms.topic: reference
 title: UseProcessBlockForPipelineCommand

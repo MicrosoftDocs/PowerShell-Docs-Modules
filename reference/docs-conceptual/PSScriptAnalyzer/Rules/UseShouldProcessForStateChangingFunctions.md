@@ -23,7 +23,7 @@ your function:
 - The **WhatIf** parameter displays the changes the command would make without actually running the
   command.
 
-Verbs that support `ShouldProcess`:
+Verbs that should support `ShouldProcess`:
 
 - `New`
 - `Set`

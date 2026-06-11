@@ -18,30 +18,17 @@ functionally equivalent.
 
 ## Example
 
-When the rule sets parameters definition kind to `Inline`:
+### Noncompliant
 
 ```powershell
-# Noncompliant
-function g {
-    param([Parameter()]$FirstParam)
-    return
-}
-
-# Compliant
 function f([Parameter()]$FirstParam) {
     return
 }
 ```
 
-When the rule sets parameters definition kind to `ParamBlock`:
+### Compliant
 
 ```powershell
-# Noncompliant
-function f([Parameter()]$FirstParam) {
-    return
-}
-
-# Compliant
 function g {
     param([Parameter()]$FirstParam)
     return

@@ -1,6 +1,6 @@
 ---
 description: Avoid Default Value For Mandatory Parameter
-ms.date: 05/28/2026
+ms.date: 06/12/2026
 ms.topic: reference
 title: AvoidDefaultValueForMandatoryParameter
 ---
@@ -10,9 +10,10 @@ title: AvoidDefaultValueForMandatoryParameter
 
 ## Description
 
-Mandatory parameters shouldn't have default values because there isn't a scenario where the default
-can be used. PowerShell prompts for a value if the parameter value isn't specified when calling the
-function.
+This rule detects when mandatory parameters have default values assigned. Mandatory parameters
+shouldn't have default values because they can't be used. When a parameter is marked as mandatory,
+PowerShell always prompts the user for a value if one isn't supplied when calling the function. Any
+default value assigned to a mandatory parameter is unreachable and serves no purpose.
 
 ## Example
 
@@ -31,7 +32,7 @@ function Test
 }
 ```
 
-### Preferred
+### Compliant
 
 ```powershell
 function Test

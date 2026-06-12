@@ -15,7 +15,7 @@ names. PowerShell automatically defines variables that store internal state info
 them on its own. Even though you _can_ override many automatic variables, doing so can have
 unexpected effects for users and make your code harder to maintain and debug.
 
-Use only nonautomatic variable names in your functions and parameters. Reserve automatic variables
+Avoid using automatic variable names in your functions and parameters. Reserve automatic variables
 for PowerShell's internal use only, and rely on them only to read state information.
 
 To learn more, see [about_Automatic_Variables][01].

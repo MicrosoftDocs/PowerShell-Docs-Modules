@@ -1,5 +1,5 @@
 ---
-description: Switch parameters shouldn't default to $true
+description: Switch parameters should not default to $true
 ms.date: 06/12/2026
 ms.topic: reference
 title: AvoidDefaultValueSwitchParameter

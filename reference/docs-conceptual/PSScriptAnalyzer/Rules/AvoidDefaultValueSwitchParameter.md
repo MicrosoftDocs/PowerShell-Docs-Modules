@@ -1,6 +1,6 @@
 ---
-description: Switch Parameters Should Not Default To True
-ms.date: 05/28/2026
+description: Switch parameters shouldn't default to $true
+ms.date: 06/12/2026
 ms.topic: reference
 title: AvoidDefaultValueSwitchParameter
 ---
@@ -10,24 +10,20 @@ title: AvoidDefaultValueSwitchParameter
 
 ## Description
 
-If your parameter takes only `true` and `false`, define the parameter as type `[Switch]`. PowerShell
-treats a switch parameter as `true` when it's used with a command. If the parameter isn't included
-with the command, PowerShell considers the parameter to be false. Don't define `[Boolean]`
-parameters.
+This rule detects switch parameters that are assigned a default value of `$true`. Switch parameters
+shouldn't have default values. By design, a switch parameter is `$false` when not specified and
+`$true` when included in the command. Assigning a default value of `$true` to a switch parameter
+violates this design principle and can cause unexpected behavior.
 
-Don't define a switch parameter with a default value of `$true` because a switch parameter is
-already `$false` when it isn't specified. Leave the switch parameter without a default value so it
-behaves as designed.
+If your parameter needs to accept only `true` and `false` values, use the `[Switch]` type instead of
+`[Boolean]`. PowerShell automatically handles switch parameters correctly without requiring a
+default value.
 
-## How
+To fix this issue, remove the default value from the switch parameter declaration. The switch
+naturally defaults to `$false` when not specified, allowing your logic to respond appropriately to
+the caller's input.
 
-To fix this issue, don't assign a default value of `$true` to a `[switch]` parameter. Declare the
-switch without a default value and write your logic so the parameter is treated as `$false` when
-the caller doesn't supply it.
-
-## More information
-
-See [Strongly Encouraged Development Guidelines][01].
+To learn more, see [Strongly Encouraged Development Guidelines][01].
 
 ## Example
 
@@ -49,7 +45,7 @@ function Test-Script
 }
 ```
 
-### Preferred
+### Compliant
 
 ```powershell
 function Test-Script

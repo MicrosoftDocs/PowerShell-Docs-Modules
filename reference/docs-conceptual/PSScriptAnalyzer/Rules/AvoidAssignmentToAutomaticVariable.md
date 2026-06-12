@@ -1,6 +1,6 @@
 ---
 description: Changing automatic variables might have undesired side effects
-ms.date: 05/28/2026
+ms.date: 06/12/2026
 ms.topic: reference
 title: AvoidAssignmentToAutomaticVariable
 ---
@@ -10,16 +10,15 @@ title: AvoidAssignmentToAutomaticVariable
 
 ## Description
 
-PowerShell automatically defines variables that store internal state information and manages them on
-its own. Even though you _can_ override many automatic variables, doing so can have unexpected
-effects for users. Assign automatic variables only in advanced, intentional scenarios.
+This rule detects assignments to automatic variables and parameter names that use automatic variable
+names. PowerShell automatically defines variables that store internal state information and manages
+them on its own. Even though you _can_ override many automatic variables, doing so can have
+unexpected effects for users and make your code harder to maintain and debug.
 
-This rule helps you avoid assignments to automatic variables, which reduces hard-to-diagnose bugs
-and keeps function behavior predictable.
+Use only nonautomatic variable names in your functions and parameters. Reserve automatic variables
+for PowerShell's internal use only, and rely on them only to read state information.
 
-Also use variable names in functions or parameters that don't conflict with automatic variables.
-
-To learn more about automatic variables, see [about_Automatic_Variables][01].
+To learn more, see [about_Automatic_Variables][01].
 
 ## Example
 
@@ -36,7 +35,7 @@ function foo($Error){ }
 function Get-CustomErrorMessage($ErrorMessage){ $Error = "Error occurred: $ErrorMessage" }
 ```
 
-### Preferred
+### Compliant
 
 ```powershell
 function Get-CustomErrorMessage($ErrorMessage){ $FinalErrorMessage = "Error occurred: $ErrorMessage" }

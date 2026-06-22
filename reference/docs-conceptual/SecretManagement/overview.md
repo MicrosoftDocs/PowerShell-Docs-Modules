@@ -5,7 +5,7 @@ title: Overview of the SecretManagement and SecretStore modules
 ---
 # Overview of the SecretManagement and SecretStore modules
 
-[!INCLUDE[secrets-modules-deprecated](../../../includes/secret-modules-deprecated.md)]
+[!INCLUDE[secrets-modules-deprecated](../../includes/secret-modules-deprecated.md)]
 
 The **SecretManagement** module helps users manage secrets by providing a common set of cmdlets that
 interface with secrets vaults. **SecretManagement** provides an extensible model where local and

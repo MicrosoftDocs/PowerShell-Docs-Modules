@@ -5,7 +5,7 @@ title: Understanding the security features of SecretManagement and SecretStore
 ---
 # Understanding the security features of SecretManagement and SecretStore
 
-[!INCLUDE[secrets-modules-deprecated](../../../includes/secret-modules-deprecated.md)]
+[!INCLUDE[secrets-modules-deprecated](../../includes/secret-modules-deprecated.md)]
 
 The security of **SecretManagement** is dependent on the extension vaults it hosts. These vaults
 perform the actual functions of storing and retrieving the secrets. **SecretManagement** does not

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.PowerShell.SecretManagement.dll-Help.xml
 Module Name: Microsoft.PowerShell.SecretManagement
-ms.date: 05/23/2025
+ms.date: 06/22/2026
 online version: https://learn.microsoft.com/powershell/module/microsoft.powershell.secretmanagement/set-secret?view=ps-modules&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
@@ -35,6 +35,8 @@ Set-Secret -SecretInfo <SecretInformation> [-Vault] <String> [-NoClobber] [-What
 ```
 
 ## DESCRIPTION
+
+[!INCLUDE[secrets-modules-deprecated](../../includes/secret-modules-deprecated.md)]
 
 This cmdlet adds a secret value by name to a vault. When no vault name is specified, the secret is
 added to the default vault. If a secret with that name exists, it's overwritten. Additional data

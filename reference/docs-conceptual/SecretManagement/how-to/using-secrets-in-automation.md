@@ -1,9 +1,11 @@
 ---
 description: This article explains how to use a SecretStore vault in an automation scenario to securely retrieve an use passwords or other secret material.
-ms.date: 03/06/2024
+ms.date: 06/22/2026
 title: Use the SecretStore in automation
 ---
 # Use the SecretStore in automation
+
+[!INCLUDE[secrets-modules-deprecated](../../../includes/secret-modules-deprecated.md)]
 
 This article provides an example for using a **Microsoft.PowerShell.SecretStore** vault in an
 automation scenario. A **SecretStore** vault provides you a way to securely store and retrieve the

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.PowerShell.SecretStore.dll-Help.xml
 Module Name: Microsoft.PowerShell.SecretStore
-ms.date: 05/23/2025
+ms.date: 06/22/2026
 online version: https://learn.microsoft.com/powershell/module/microsoft.powershell.secretstore/reset-secretstore?view=ps-modules&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
@@ -20,6 +20,8 @@ Reset-SecretStore [-Scope <SecureStoreScope>] [-Authentication <Authenticate>]
 ```
 
 ## DESCRIPTION
+
+[!INCLUDE[secrets-modules-deprecated](../../includes/secret-modules-deprecated.md)]
 
 This cmdlet completely resets the **SecretStore** by deleting all secret data it may contain, and
 resetting configuration options to their default values. It's intended to be used only if a required

@@ -1,9 +1,11 @@
 ---
 description: This article explains how to use an Azure Key Vault module, as a SecretManagement extension vault, in an automation scenario to securely retrieve and use passwords or other secret material.
-ms.date: 12/05/2023
+ms.date: 06/22/2026
 title: Use Azure Key Vault in automation
 ---
 # Use Azure Key Vault in automation
+
+[!INCLUDE[secrets-modules-deprecated](../../../includes/secret-modules-deprecated.md)]
 
 This article provides an example for using Azure Key Vault in an automation scenario. Azure Key
 Vault provides you a way to securely store and retrieve the passwords, tokens and other secrets,

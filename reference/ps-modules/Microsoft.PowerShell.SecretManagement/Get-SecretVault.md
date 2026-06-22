@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.PowerShell.SecretManagement.dll-Help.xml
 Module Name: Microsoft.PowerShell.SecretManagement
-ms.date: 05/23/2025
+ms.date: 06/22/2026
 online version: https://learn.microsoft.com/powershell/module/microsoft.powershell.secretmanagement/get-secretvault?view=ps-modules&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
@@ -18,6 +18,8 @@ Get-SecretVault [[-Name] <String[]>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
+[!INCLUDE[secrets-modules-deprecated](../../includes/secret-modules-deprecated.md)]
 
 This cmdlet finds and returns information about registered vaults. By default, it returns
 information for every registered vault.

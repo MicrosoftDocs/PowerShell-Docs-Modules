@@ -1,9 +1,11 @@
 ---
 description: Explains how to manage a local SecretStore vault
-ms.date: 06/28/2023
+ms.date: 06/22/2026
 title: Managing a SecretStore vault
 ---
 # Managing a SecretStore vault
+
+[!INCLUDE[secrets-modules-deprecated](../../../includes/secret-modules-deprecated.md)]
 
 The **SecretStore** module is an extension vault for the PowerShell **SecretManagement** module. It
 stores secrets, locally, in files for the current user account context, and uses .NET crypto APIs to

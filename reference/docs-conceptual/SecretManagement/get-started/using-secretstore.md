@@ -1,9 +1,11 @@
 ---
 description: How to install and use the SecretManagement and SecretStore modules
-ms.date: 11/10/2023
+ms.date: 06/22/2026
 title: Get started with the SecretStore module
 ---
 # Get started with the SecretStore module
+
+[!INCLUDE[secrets-modules-deprecated](../../../includes/secret-modules-deprecated.md)]
 
 The **SecretManagement** and **SecretStore** modules are available from the PowerShell Gallery and
 can be installed using **PowerShellGet** commands.

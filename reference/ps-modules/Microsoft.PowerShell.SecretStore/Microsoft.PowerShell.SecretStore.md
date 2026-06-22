@@ -1,7 +1,7 @@
 ---
 Module Name: Microsoft.PowerShell.SecretStore
 Module Guid: 6b983e67-c297-431a-916c-f4ce24dd7bac
-ms.date: 05/23/2025
+ms.date: 06/22/2026
 Download Help Link: https://aka.ms/ps-modules-help
 Help Version: 0.1.0.0
 Locale: en-US
@@ -10,6 +10,8 @@ Locale: en-US
 # Microsoft.PowerShell.SecretStore Module
 
 ## Description
+
+[!INCLUDE[secrets-modules-deprecated](../../includes/secret-modules-deprecated.md)]
 
 Local secure store extension vault for Microsoft.PowerShell.SecretManagement module.
 

@@ -1,7 +1,7 @@
 ---
 Module Name: Microsoft.PowerShell.SecretManagement
 Module Guid: a5c858f6-4a8e-41f1-b1ee-0ff8f6ad69d3
-ms.date: 05/23/2025
+ms.date: 06/22/2026
 Download Help Link: https://aka.ms/ps-modules-help
 Help Version: 0.1.0.0
 Locale: en-US
@@ -10,6 +10,8 @@ Locale: en-US
 # Microsoft.PowerShell.SecretManagement Module
 
 ## Description
+
+[!INCLUDE[secrets-modules-deprecated](../../includes/secret-modules-deprecated.md)]
 
 PowerShell SecretManagement module provides a convenient way for a user to store and retrieve
 secrets. The secrets are stored in SecretManagement extension vaults. An extension vault is a

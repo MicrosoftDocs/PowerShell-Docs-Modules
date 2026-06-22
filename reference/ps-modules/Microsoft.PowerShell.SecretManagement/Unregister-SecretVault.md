@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.PowerShell.SecretManagement.dll-Help.xml
 Module Name: Microsoft.PowerShell.SecretManagement
-ms.date: 05/23/2025
+ms.date: 06/22/2026
 online version: https://learn.microsoft.com/powershell/module/microsoft.powershell.secretmanagement/unregister-secretvault?view=ps-modules&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
@@ -26,6 +26,8 @@ Unregister-SecretVault [-SecretVault] <SecretVaultInfo> [-WhatIf] [-Confirm] [<C
 ```
 
 ## DESCRIPTION
+
+[!INCLUDE[secrets-modules-deprecated](../../includes/secret-modules-deprecated.md)]
 
 This cmdlet un-registers the specified extension vault. Once un-registered, the vault is no longer
 available to **SecretManagement** for the current user.

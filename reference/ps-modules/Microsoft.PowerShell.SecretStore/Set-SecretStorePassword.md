@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.PowerShell.SecretStore.dll-Help.xml
 Module Name: Microsoft.PowerShell.SecretStore
-ms.date: 05/23/2025
+ms.date: 06/22/2026
 online version: https://learn.microsoft.com/powershell/module/microsoft.powershell.secretstore/set-secretstorepassword?view=ps-modules&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
@@ -20,11 +20,14 @@ Set-SecretStorePassword [<CommonParameters>]
 ```
 
 ### ParameterSet
+
 ```
 Set-SecretStorePassword -NewPassword <SecureString> [-Password <SecureString>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
+[!INCLUDE[secrets-modules-deprecated](../../includes/secret-modules-deprecated.md)]
 
 This cmdlet updates the password for **SecretStore**.
 

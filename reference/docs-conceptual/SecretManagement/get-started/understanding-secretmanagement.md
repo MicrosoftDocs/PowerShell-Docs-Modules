@@ -5,6 +5,8 @@ title: Understanding the SecretManagement module
 ---
 # Understanding the SecretManagement module
 
+[!INCLUDE[secrets-modules-deprecated](../../../includes/secret-modules-deprecated.md)]
+
 The purpose of the **SecretManagement** module is to provide secure storage and access of secrets
 through registered extension vaults. The registered extension vaults are PowerShell modules that
 conform to **SecretManagement** module requirements. The extension vaults perform the actual work of

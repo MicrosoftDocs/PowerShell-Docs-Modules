@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.PowerShell.SecretStore.dll-Help.xml
 Module Name: Microsoft.PowerShell.SecretStore
-ms.date: 05/23/2025
+ms.date: 06/22/2026
 online version: https://learn.microsoft.com/powershell/module/microsoft.powershell.secretstore/set-secretstoreconfiguration?view=ps-modules&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
@@ -14,6 +14,7 @@ Configures the **SecretStore**.
 ## SYNTAX
 
 ### ParameterSet (Default)
+
 ```
 Set-SecretStoreConfiguration [-Scope <SecureStoreScope>] [-Authentication <Authenticate>]
  [-PasswordTimeout <Int32>] [-Interaction <Interaction>] [-Password <SecureString>] [-PassThru]
@@ -28,6 +29,8 @@ Set-SecretStoreConfiguration [-Default] [-Password <SecureString>] [-PassThru] [
 ```
 
 ## DESCRIPTION
+
+[!INCLUDE[secrets-modules-deprecated](../../includes/secret-modules-deprecated.md)]
 
 This cmdlet configures the **SecretStore** for the current user.
 

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.PowerShell.SecretManagement.dll-Help.xml
 Module Name: Microsoft.PowerShell.SecretManagement
-ms.date: 05/23/2025
+ms.date: 06/22/2026
 online version: https://learn.microsoft.com/powershell/module/microsoft.powershell.secretmanagement/set-secretvaultdefault?view=ps-modules&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
@@ -32,6 +32,8 @@ Set-SecretVaultDefault [-ClearDefault] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
+[!INCLUDE[secrets-modules-deprecated](../../includes/secret-modules-deprecated.md)]
 
 This cmdlet updates the vault registry to set the provided vault name as the default vault. Only one
 registered vault can be the default vault.

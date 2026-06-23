@@ -17,8 +17,8 @@ This documentation set contains cmdlet reference for the following modules.
 
 Deprecated modules
 
-- [Microsoft.PowerShell.SecretManagement][03]
-- [Microsoft.PowerShell.SecretStore][04]
+- [Microsoft.PowerShell.SecretManagement][03]  - **Deprecated June 2026**
+- [Microsoft.PowerShell.SecretStore][04]  - **Deprecated June 2026**
 - [Microsoft.PowerShell.Crescendo][02] - **Deprecated May 2026**
 - [AIShell][01] - **Deprecated January 2026**
 

@@ -76,10 +76,10 @@ The **DiagnosticRecord** should have at least four properties:
 
 ```powershell
 $result = [Microsoft.Windows.PowerShell.ScriptAnalyzer.Generic.DiagnosticRecord[]]@{
-    "Message"  = "This is a sample rule"
-    "Extent"   = $ast.Extent
-    "RuleName" = $PSCmdlet.MyInvocation.InvocationName
-    "Severity" = "Warning"
+    Message  = 'This is a sample rule'
+    Extent   = $ast.Extent
+    RuleName = $PSCmdlet.MyInvocation.InvocationName
+    Severity = 'Warning'
 }
 ```
 
@@ -87,13 +87,13 @@ Since version 1.17.0, you can include a **SuggestedCorrections** property of typ
 **IEnumerable\<CorrectionExtent\>**. Make sure to specify the correct type. For example:
 
 ```powershell
-[int]$startLineNumber =  $ast.Extent.StartLineNumber
-[int]$endLineNumber = $ast.Extent.EndLineNumber
-[int]$startColumnNumber = $ast.Extent.StartColumnNumber
-[int]$endColumnNumber = $ast.Extent.EndColumnNumber
-[string]$correction = 'Correct text that replaces Extent text'
-[string]$file = $MyInvocation.MyCommand.Definition
-[string]$optionalDescription = 'Useful but optional description text'
+$startLineNumber =  $ast.Extent.StartLineNumber
+$endLineNumber = $ast.Extent.EndLineNumber
+$startColumnNumber = $ast.Extent.StartColumnNumber
+$endColumnNumber = $ast.Extent.EndColumnNumber
+$correction = 'Correct text that replaces Extent text'
+$file = $MyInvocation.MyCommand.Definition
+$optionalDescription = 'Useful but optional description text'
 $objParams = @{
   TypeName = 'Microsoft.Windows.PowerShell.ScriptAnalyzer.Generic.CorrectionExtent'
   ArgumentList = $startLineNumber, $endLineNumber, $startColumnNumber,
@@ -104,12 +104,12 @@ $suggestedCorrections = New-Object System.Collections.ObjectModel.Collection[$($
 $suggestedCorrections.add($correctionExtent) | Out-Null
 
 [Microsoft.Windows.Powershell.ScriptAnalyzer.Generic.DiagnosticRecord]@{
-    "Message"              = "This is a rule with a suggested correction"
-    "Extent"               = $ast.Extent
-    "RuleName"             = $PSCmdlet.MyInvocation.InvocationName
-    "Severity"             = "Warning"
-    "RuleSuppressionID"    = "MyRuleSuppressionID"
-    "SuggestedCorrections" = $suggestedCorrections
+    Message              = 'This is a rule with a suggested correction'
+    Extent               = $ast.Extent
+    RuleName             = $PSCmdlet.MyInvocation.InvocationName
+    Severity             = 'Warning'
+    RuleSuppressionID    = 'MyRuleSuppressionID'
+    SuggestedCorrections = $suggestedCorrections
 }
 ```
 
@@ -165,59 +165,26 @@ function Measure-RequiresRunAsAdministrator {
         ) -join ' '
 
         # Finds specific method, IsInRole.
-        [ScriptBlock]$predicate1 = {
-            param ([System.Management.Automation.Language.Ast]$Ast)
-            [bool]$returnValue = $false
-            if ($Ast -is [System.Management.Automation.Language.MemberExpressionAst]) {
-                [System.Management.Automation.Language.MemberExpressionAst]$meAst = $Ast
-                if ($meAst.Member -is [System.Management.Automation.Language.StringConstantExpressionAst]) {
-                    [System.Management.Automation.Language.StringConstantExpressionAst]$sceAst = $meAst.Member
-                    if ($sceAst.Value -eq 'IsInRole') {
-                        $returnValue = $true
-                    }
-                }
-            }
-            return $returnValue
-        }
-
-        # Finds specific value, [System.Security.Principal.WindowsBuiltInRole]::Administrator.
-        [ScriptBlock]$predicate2 = {
-            param ([System.Management.Automation.Language.Ast]$Ast)
-            [bool]$returnValue = $false
-            if ($Ast -is [System.Management.Automation.Language.AssignmentStatementAst]) {
-                [System.Management.Automation.Language.AssignmentStatementAst]$asAst = $Ast
-                if ($asAst.Right.ToString() -eq '[System.Security.Principal.WindowsBuiltInRole]::Administrator') {
-                    $returnValue = $true
-                }
-            }
-            return $returnValue
+        [ScriptBlock]$predicate = {
+            param($Ast)
+            return $Ast.Member.Value -eq 'IsInRole'
         }
     }
 
     process {
-        # Find ASTs that match the predicates.
-        [System.Management.Automation.Language.Ast[]]$methodAst = $ScriptBlockAst.FindAll($predicate1, $true)
-        [System.Management.Automation.Language.Ast[]]$assignmentAst = $ScriptBlockAst.FindAll($predicate2, $true)
-
-        if ($null -ne $ScriptBlockAst.ScriptRequirements) {
-            if ((!$ScriptBlockAst.ScriptRequirements.IsElevationRequired) -and
-                ($methodAst.Count -ne 0) -and ($assignmentAst.Count -ne 0)) {
-                [Microsoft.Windows.PowerShell.ScriptAnalyzer.Generic.DiagnosticRecord]@{
-                    'Message'  = $MeasureRequiresAdmin
-                    'Extent'   = $assignmentAst.Extent
-                    'RuleName' = $PSCmdlet.MyInvocation.InvocationName
-                    'Severity' = 'Information'
-                }
-            }
-            return
+        # Exit early if the script block has a #Requires -RunAsAdministrator statement.
+        if ($ScriptBlockAst.ScriptRequirements.IsElevationRequired) {
+          return
         }
 
-        if (($methodAst.Count -ne 0) -and ($assignmentAst.Count -ne 0)) {
+        # Test for calls to IsInRole() method
+        [System.Management.Automation.Language.Ast]$methodAst = $ScriptBlockAst.Find($predicate, $true)
+        if ($methodAst) {
             [Microsoft.Windows.PowerShell.ScriptAnalyzer.Generic.DiagnosticRecord]@{
-                'Message'  = $MeasureRequiresAdmin
-                'Extent'   = $assignmentAst.Extent
-                'RuleName' = $PSCmdlet.MyInvocation.InvocationName
-                'Severity' = 'Information'
+                Message  = $MeasureRequiresAdmin
+                Extent   = $methodAst.Extent
+                RuleName = $PSCmdlet.MyInvocation.InvocationName
+                Severity = 'Information'
             }
         }
     }

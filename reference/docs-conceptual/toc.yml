@@ -181,53 +181,55 @@ items:
             href: PSScriptAnalyzer/Rules/UseUsingScopeModifierInNewRunspaces.md
           - name: UseUTF8EncodingForHelpFile
             href: PSScriptAnalyzer/Rules/UseUTF8EncodingForHelpFile.md
-  - name: SecretManagement and SecretStore
+  - name: Archived modules
     items:
-      - name: Overview
-        href: SecretManagement/overview.md
-      - name: Understanding the security features of SecretManagement
-        href: SecretManagement/security-concepts.md
-      - name: Get started
+      - name: SecretManagement and SecretStore
         items:
-          - name: Get started with the SecretStore module
-            href: SecretManagement/get-started/using-secretstore.md
-          - name: Understanding the SecretManagement module
-            href: SecretManagement/get-started/understanding-secretmanagement.md
-      - name: How to
+          - name: Overview
+            href: SecretManagement/overview.md
+          - name: Understanding the security features of SecretManagement
+            href: SecretManagement/security-concepts.md
+          - name: Get started
+            items:
+              - name: Get started with the SecretStore module
+                href: SecretManagement/get-started/using-secretstore.md
+              - name: Understanding the SecretManagement module
+                href: SecretManagement/get-started/understanding-secretmanagement.md
+          - name: How to
+            items:
+              - name: Managing a SecretStore vault
+                href: SecretManagement/how-to/manage-secretstore.md
+              - name: Use the SecretStore in automation
+                href: SecretManagement/how-to/using-secrets-in-automation.md
+              - name: Use Azure Key Vault in automation
+                href: SecretManagement/how-to/using-azure-keyvault.md
+      - name: AIShell
+        href: AIShell/toc.yml
+      - name: Crescendo
         items:
-          - name: Managing a SecretStore vault
-            href: SecretManagement/how-to/manage-secretstore.md
-          - name: Use the SecretStore in automation
-            href: SecretManagement/how-to/using-secrets-in-automation.md
-          - name: Use Azure Key Vault in automation
-            href: SecretManagement/how-to/using-azure-keyvault.md
-  - name: AIShell
-    href: AIShell/toc.yml
-  - name: Crescendo
-    items:
-      - name: Overview
-        href: Crescendo/overview.md
-      - name: Get started
-        items:
-          - name: Install Crescendo
-            href: Crescendo/get-started/install-crescendo.md
-          - name: Choose a command-line tool
-            href: Crescendo/get-started/choose-command-line-tool.md
-          - name: Decide which features to amplify
-            href: Crescendo/get-started/research-tool.md
-          - name: Create a Crescendo cmdlet
-            href: Crescendo/get-started/create-new-cmdlet.md
-          - name: Generate and test a Crescendo module
-            href: Crescendo/get-started/generate-module.md
-      - name: What's new in Crescendo
-        items:
-          - name: What's new in Crescendo 1.1
-            href: Crescendo/whats-new/whats-new-in-crescendo-11.md
-      - name: Advanced topics
-        items:
-          - name: Create a configuration using the cmdlets
-            href: Crescendo/advanced/using-crescendo-cmdlets.md
-          - name: Handling errors in Crescendo
-            href: Crescendo/advanced/handling-errors.md
-          - name: Transforming arguments in Crescendo
-            href: Crescendo/advanced/transforming-arguments.md
+          - name: Overview
+            href: Crescendo/overview.md
+          - name: Get started
+            items:
+              - name: Install Crescendo
+                href: Crescendo/get-started/install-crescendo.md
+              - name: Choose a command-line tool
+                href: Crescendo/get-started/choose-command-line-tool.md
+              - name: Decide which features to amplify
+                href: Crescendo/get-started/research-tool.md
+              - name: Create a Crescendo cmdlet
+                href: Crescendo/get-started/create-new-cmdlet.md
+              - name: Generate and test a Crescendo module
+                href: Crescendo/get-started/generate-module.md
+          - name: What's new in Crescendo
+            items:
+              - name: What's new in Crescendo 1.1
+                href: Crescendo/whats-new/whats-new-in-crescendo-11.md
+          - name: Advanced topics
+            items:
+              - name: Create a configuration using the cmdlets
+                href: Crescendo/advanced/using-crescendo-cmdlets.md
+              - name: Handling errors in Crescendo
+                href: Crescendo/advanced/handling-errors.md
+              - name: Transforming arguments in Crescendo
+                href: Crescendo/advanced/transforming-arguments.md

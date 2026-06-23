@@ -15,12 +15,12 @@ This documentation set contains cmdlet reference for the following modules.
 - [PlatyPS][05]
 - [PSScriptAnalyzer][06]
 
-Deprecated modules
+Archived modules
 
-- [Microsoft.PowerShell.SecretManagement][03]  - **Deprecated June 2026**
-- [Microsoft.PowerShell.SecretStore][04]  - **Deprecated June 2026**
-- [Microsoft.PowerShell.Crescendo][02] - **Deprecated May 2026**
-- [AIShell][01] - **Deprecated January 2026**
+- [Microsoft.PowerShell.SecretManagement][03]  - **Retired June 2026**
+- [Microsoft.PowerShell.SecretStore][04]  - **Retired June 2026**
+- [Microsoft.PowerShell.Crescendo][02] - **Retired May 2026**
+- [AIShell][01] - **Retired January 2026**
 
 <!-- link references -->
 [01]: ./AIShell/overview.md

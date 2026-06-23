@@ -1,6 +1,6 @@
 ---
 description: Avoid global variables
-ms.date: 05/28/2026
+ms.date: 06/23/2026
 ms.topic: reference
 title: AvoidGlobalVars
 ---
@@ -10,11 +10,14 @@ title: AvoidGlobalVars
 
 ## Description
 
+You should avoid modifying global variables in your scripts and functions because other scripts or
+functions that run in the same session can depend on them. This can lead to unexpected behavior and
+make it difficult to debug your code.
+
 This rule detects usage of variables with the global scope modifier. PowerShell controls access to
 variables, functions, aliases, and drives through a mechanism known as scoping. Variables and
-functions that are present when PowerShell starts have been created in the global scope.
-
-Globally scoped variables include:
+functions that are present when PowerShell starts were created in the global scope. Globally scoped
+variables include:
 
 - Automatic variables
 - Preference variables
@@ -34,21 +37,23 @@ Use local or script scope for variables instead of the global scope. To learn mo
 ### Noncompliant
 
 ```powershell
-$Global:var1 = $null
-function Test-NotGlobal ($var)
-{
-    $a = $var + $var1
+$var1 = 'foo'
+function Test-NotGlobal ($var) {
+    $Global:var1 = $var
 }
+Test-NotGlobal 'bar'
+$var1
 ```
 
 ### Compliant
 
 ```powershell
-$var1 = $null
-function Test-NotGlobal ($var1, $var2)
-{
-    $a = $var1 + $var2
+$var1 = 'foo'
+function Test-NotGlobal ($var) {
+    $var1 = $var
 }
+Test-NotGlobal 'bar'
+$var1
 ```
 
 <!-- link references -->

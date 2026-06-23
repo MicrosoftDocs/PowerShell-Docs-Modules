@@ -25,8 +25,7 @@ To learn more, see [Approved Verbs for PowerShell Commands][01].
 ### Noncompliant
 
 ```powershell
-function Change-Item
-{
+function Change-Item {
     ...
 }
 ```
@@ -34,8 +33,7 @@ function Change-Item
 ### Compliant
 
 ```powershell
-function Update-Item
-{
+function Update-Item {
     ...
 }
 ```

@@ -130,7 +130,7 @@ Export-ModuleMember -Function (FunctionName)
     .DESCRIPTION
     The #Requires statement prevents a script from running unless the Windows PowerShell
     version, modules, snap-ins, and module and snap-in version prerequisites are met.
-    From Windows PowerShell 4.0, the #Requires statement let script developers require that
+    Since Windows PowerShell 4.0, the #Requires statement lets script developers require that
     sessions be run with elevated user rights (run as Administrator). Script developers do
     not need to write their own methods any more. To fix a violation of this rule, please
     consider using #Requires -RunAsAdministrator instead of your own methods.

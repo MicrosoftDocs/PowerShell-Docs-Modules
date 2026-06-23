@@ -11,7 +11,7 @@ title: AvoidGlobalVars
 ## Description
 
 You should avoid modifying global variables in your scripts and functions because other scripts or
-function that run in the same session can depend of them. This can lead to unexpected behavior and
+functions that run in the same session can depend on them. This can lead to unexpected behavior and
 make it difficult to debug your code.
 
 This rule detects usage of variables with the global scope modifier. PowerShell controls access to
@@ -48,7 +48,7 @@ $var1
 ### Compliant
 
 ```powershell
-$var1 = "foo"
+$var1 = 'foo'
 function Test-NotGlobal ($var) {
     $var1 = $var
 }

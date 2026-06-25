@@ -1,6 +1,6 @@
 ---
 description: Use a single ValueFromPipeline parameter per parameter set
-ms.date: 06/11/2026
+ms.date: 06/25/2026
 ms.topic: reference
 title: UseSingleValueFromPipelineParameter
 ---
@@ -59,8 +59,8 @@ function Process-Data {
 
 ## Suppression
 
-To suppress this rule for a specific parameter set, use the `SuppressMessage` attribute with the
-parameter set name:
+This rule is disabled by default. If you have enabled it in your configuration but want to suppress
+it for a specific function, you can use the `SuppressMessage` attribute:
 
 ```powershell
 function Process-Data {

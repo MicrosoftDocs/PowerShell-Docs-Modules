@@ -11,6 +11,11 @@ configurable rules by setting the `Enable` property to `$false` in a custom rule
 Rules listed as _Always enabled_ can't be disabled using configuration. However, there are two ways
 to avoid rules you don't want to use:
 
+ The PSScriptAnalyzer module includes the following built-in rule definitions. For rules that
+ support settings, you can enable or disable them by setting the `Enable` configuration property in
+ a custom settings file. Rules listed as _Always enabled_ don't expose a per-rule `Enable` property.
+ There are two way to avoid using these rules:
+
 - Create a custom rule configuration file to include only the rules you want or exclude the rules
   you don't want.
 - Add the appropriate rule suppression attributes to your code to suppress the rule for specific
@@ -96,7 +101,7 @@ to avoid rules you don't want to use:
 | [UseUTF8EncodingForHelpFile][76]                   | Warning     | Always enabled |              |
 
 <!-- link references -->
-[01]: ../Using-PSScriptAnalyzer.md#suppressing-rules
+[01]: ../using-scriptanalyzer.md#suppressing-rules
 [02]: AlignAssignmentStatement.md
 [03]: AvoidAssignmentToAutomaticVariable.md
 [04]: AvoidDefaultValueForMandatoryParameter.md

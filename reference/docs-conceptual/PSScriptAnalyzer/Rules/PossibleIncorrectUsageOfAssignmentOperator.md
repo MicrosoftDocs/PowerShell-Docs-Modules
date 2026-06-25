@@ -1,5 +1,5 @@
 ---
-description: Use equality operator instead of an equal signs
+description: Use the PowerShell equality operator (-eq) instead of assignment (=) in conditional statements
 ms.date: 06/05/2026
 ms.topic: reference
 title: PossibleIncorrectUsageOfAssignmentOperator

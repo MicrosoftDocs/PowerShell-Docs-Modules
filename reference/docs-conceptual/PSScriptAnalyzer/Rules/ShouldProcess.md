@@ -22,7 +22,7 @@ Violations occur when:
 To fix this violation, ensure that `ShouldProcess` calls are paired with the `SupportsShouldProcess`
 attribute declaration.
 
-To learn more, see the following articles:
+For more information, see the following articles:
 
 - [about_Functions_Advanced_Methods][01]
 - [about_Functions_CmdletBindingAttribute][02]
@@ -75,7 +75,6 @@ function Set-File
 ```
 
 <!-- link references -->
-
 [01]: /powershell/module/microsoft.powershell.core/about/about_functions_advanced_methods
 [02]: /powershell/module/microsoft.powershell.core/about/about_Functions_CmdletBindingAttribute
 [03]: /powershell/scripting/learn/deep-dives/everything-about-shouldprocess

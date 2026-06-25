@@ -48,5 +48,4 @@ function Get-Foo
 ```
 
 <!-- link references -->
-
 [01]: /powershell/module/microsoft.powershell.core/about/about_functions_outputtypeattribute

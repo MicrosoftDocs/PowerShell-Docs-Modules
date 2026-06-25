@@ -41,5 +41,4 @@ Function Test-Function
 ```
 
 <!-- links reference -->
-
 [01]: /powershell/module/microsoft.powershell.utility/write-verbose

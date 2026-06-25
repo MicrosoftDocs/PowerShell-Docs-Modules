@@ -41,7 +41,7 @@ Get-Command -Noun ChildItem -Module Microsoft.PowerShell.Management
 Rules = @{
     PSAvoidUsingPositionalParameters = @{
         CommandAllowList = 'Join-Path', 'MyCmdletOrScript'
-        Enable = $true
+        Enable           = $true
     }
 }
 ```

@@ -37,5 +37,4 @@ function myFunction {
 ```
 
 <!-- link references -->
-
 [01]: /powershell/module/microsoft.powershell.core/about/about_reserved_words

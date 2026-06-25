@@ -49,5 +49,4 @@ All other keys are optional and the order you place them doesn't matter. To lear
 ```
 
 <!-- link references -->
-
 [01]: /powershell/module/microsoft.powershell.core/about/about_module_manifests

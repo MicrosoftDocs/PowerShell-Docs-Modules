@@ -19,7 +19,7 @@ initialize the variable within the scriptblock itself. This rule applies to:
 
 - `Invoke-Command`- Only with the **ComputerName** or **Session** parameter.
 - `Workflow { InlineScript {} }` (supported only in Windows PowerShell 5.1 and earlier; not
-  available in PowerShell 7+)
+  available in PowerShell 6 or higher)
 - `Foreach-Object` - Only with the **Parallel** parameter
 - `Start-Job`
 - `Start-ThreadJob`

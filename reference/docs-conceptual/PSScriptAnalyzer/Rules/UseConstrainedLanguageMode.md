@@ -279,7 +279,6 @@ Use `IgnoreSignatures = $true` when:
 - [PowerShell Constrained Language Mode and the Dot-Source Operator][02]
 
 <!-- link references -->
-
 [01]: /powershell/module/microsoft.powershell.core/about/about_language_modes
 [02]: https://devblogs.microsoft.com/powershell/powershell-constrained-language-mode-and-the-dot-source-operator/
 [03]: https://devblogs.microsoft.com/powershell/powershell-constrained-language-mode/

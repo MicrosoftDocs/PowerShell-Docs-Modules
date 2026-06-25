@@ -39,5 +39,4 @@ function Update-Item {
 ```
 
 <!-- link references -->
-
 [01]: /powershell/scripting/developer/cmdlet/approved-verbs-for-windows-powershell-commands

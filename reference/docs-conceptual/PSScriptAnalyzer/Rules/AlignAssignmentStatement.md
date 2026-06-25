@@ -85,6 +85,37 @@ This parameter controls whether ScriptAnalyzer includes hashtable key-value pair
 intervening comment when determining alignment. It accepts a boolean value. To exclude these lines,
 set this parameter to `$false`. The default value is `$true`.
 
+Consider the following:
+
+```powershell
+$hashtable = @{
+    property = 'value'
+    anotherProperty <#A Comment#> = 'another value'
+    anotherDifferentProperty = 'yet another value'
+}
+```
+
+With this setting disabled, the line with the comment is ignored. The equal signs are aligned for
+the remaining lines:
+
+```powershell
+$hashtable = @{
+    property                 = 'value'
+    anotherProperty <#A Comment#> = 'another value'
+    anotherDifferentProperty = 'yet another value'
+}
+```
+
+With this setting enabled, the equal signs are aligned for all lines:
+
+```powershell
+$hashtable = @{
+    property                      = 'value'
+    anotherProperty <#A Comment#> = 'another value'
+    anotherDifferentProperty      = 'yet another value'
+}
+```
+
 ### CheckEnum
 
 This parameter controls whether ScriptAnalyzer checks assignment alignment in enum member
@@ -102,3 +133,34 @@ parameter to `$false`. The default value is `$true`.
 This parameter controls whether ScriptAnalyzer includes enum members without explicitly assigned
 values when determining alignment. It accepts a boolean value. To exclude valueless members, set
 this parameter to `$false`. The default value is `$true`.
+
+Consider the following:
+
+```powershell
+enum Enum {
+    member = 1
+    anotherMember = 2
+    anotherDifferentMember
+}
+```
+
+With this setting disabled, the third line, which has no value, isn't considered when choosing where
+to align assignments.
+
+```powershell
+enum Enum {
+    member        = 1
+    anotherMember = 2
+    anotherDifferentMember
+}
+```
+
+With it enabled, the valueless member is included in alignment as if it had a value:
+
+```powershell
+enum Enum {
+    member                 = 1
+    anotherMember          = 2
+    anotherDifferentMember
+}
+```

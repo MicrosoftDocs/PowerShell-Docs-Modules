@@ -59,6 +59,7 @@ function Test-Script
         [switch]
         $Switch
     )
+
     ...
 }
 ```

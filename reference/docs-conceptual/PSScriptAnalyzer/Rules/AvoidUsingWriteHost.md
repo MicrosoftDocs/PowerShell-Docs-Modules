@@ -42,22 +42,19 @@ Use `Write-Verbose` for informational messages. The user can decide whether to s
 providing the **Verbose** parameter.
 
 ```powershell
-function Get-MeaningOfLife
-{
+function Get-MeaningOfLife {
     [CmdletBinding()]Param() # makes it possible to support Verbose output
 
     Write-Verbose 'Computing the answer to the ultimate question of life, the universe and everything'
     Write-Output 42
 }
 
-function Show-Something
-{
+function Show-Something {
     Write-Host 'Show something on screen'
 }
 ```
 
 <!-- links reference -->
-
 [01]: /powershell/module/microsoft.powershell.utility/write-host
 [02]: /powershell/module/microsoft.powershell.utility/write-output
 [03]: /powershell/module/microsoft.powershell.utility/write-verbose

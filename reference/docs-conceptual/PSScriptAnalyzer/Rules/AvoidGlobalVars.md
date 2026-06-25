@@ -1,5 +1,5 @@
 ---
-description: Avoid global variables
+description: Avoid global variables.
 ms.date: 06/23/2026
 ms.topic: reference
 title: AvoidGlobalVars
@@ -57,7 +57,6 @@ $var1
 ```
 
 <!-- link references -->
-
 [01]: /powershell/module/microsoft.powershell.core/about/about_automatic_variables
 [02]: /powershell/module/microsoft.powershell.core/about/about_preference_variables
 [03]: /powershell/module/microsoft.powershell.core/about/about_scopes

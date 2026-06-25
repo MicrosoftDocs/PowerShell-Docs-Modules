@@ -62,5 +62,4 @@ The `core-6.0.2-*` files were removed in PSScriptAnalyzer 1.18 because PowerShel
 end of life.
 
 <!-- link references -->
-
 [01]: https://github.com/PowerShell/PSScriptAnalyzer/blob/main/Utils/New-CommandDataFile.ps1

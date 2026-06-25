@@ -20,6 +20,15 @@ for PowerShell's internal use only, and rely on them only to read state informat
 
 To learn more, see [about_Automatic_Variables][01].
 
+<!-- TODO
+Ability to suppress was added in https://github.com/PowerShell/PSScriptAnalyzer/pull/1896
+Need documentation for how to configure suppression of this rule.
+-->
+
+## How
+
+Use variable names in functions or their parameters that do not conflict with automatic variables.
+
 ## Example
 
 ### Noncompliant

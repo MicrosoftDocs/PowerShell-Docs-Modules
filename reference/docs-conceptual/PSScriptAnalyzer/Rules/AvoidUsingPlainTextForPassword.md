@@ -60,5 +60,4 @@ function Test-Script
 ```
 
 <!-- link references -->
-
 [01]: /dotnet/api/system.security.securestring

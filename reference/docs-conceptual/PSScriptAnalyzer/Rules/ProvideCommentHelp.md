@@ -126,7 +126,6 @@ The possible values are:
 - `end`: The comment is placed at the end of the function definition body
 
 <!-- link references -->
-
 [01]: /powershell/scripting/developer/help/writing-comment-based-help-topics
 [02]: /powershell/scripting/developer/help/writing-help-for-windows-powershell-cmdlets
 [03]: /powershell/utility-modules/platyps/create-help-using-platyps

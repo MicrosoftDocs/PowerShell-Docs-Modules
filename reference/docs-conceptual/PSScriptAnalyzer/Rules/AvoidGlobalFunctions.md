@@ -33,5 +33,4 @@ function functionName {}
 ```
 
 <!-- link references -->
-
 [01]: /powershell/module/microsoft.powershell.core/about/about_scopes

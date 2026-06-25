@@ -33,9 +33,12 @@ $MyVar = !$true
 $MyVar = -not $true
 ```
 
-## Configure rule
+## Parameters
 
-To enable this rule, run the following command:
+### Enable
+
+This parameter controls whether ScriptAnalyzer checks the code against this rule. It accepts a
+boolean value. To enable this rule, set this parameter to `$true`. The default value is `$false`.
 
 ```powershell
 Rules = @{
@@ -44,10 +47,3 @@ Rules = @{
     }
 }
 ```
-
-## Parameters
-
-### Enable
-
-This parameter controls whether ScriptAnalyzer checks the code against this rule. It accepts a
-boolean value. To enable this rule, set this parameter to `$true`. The default value is `$false`.

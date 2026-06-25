@@ -202,6 +202,5 @@ This parameter specifies the full names of types or type accelerators to exclude
 checks. It accepts an array of type-name strings. The default value is `@()`.
 
 <!-- link references -->
-
 [01]: https://github.com/PowerShell/PSScriptAnalyzer/tree/main/PSCompatibilityCollector
 [02]: https://github.com/PowerShell/PSScriptAnalyzer/tree/main/PSCompatibilityCollector/optional_profiles

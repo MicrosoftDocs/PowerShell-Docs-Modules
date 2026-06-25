@@ -72,5 +72,4 @@ Function GoodFuncHelpMessage
 ```
 
 <!-- link references -->
-
 [01]: /powershell/module/microsoft.powershell.core/about/about_functions_advanced_parameters#helpmessage-argument

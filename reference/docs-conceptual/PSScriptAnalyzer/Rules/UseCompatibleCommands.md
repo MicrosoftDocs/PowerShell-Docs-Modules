@@ -180,6 +180,5 @@ This parameter specifies commands to exclude from compatibility checks. It accep
 command-name strings. The default value is `@()`.
 
 <!-- link references -->
-
 [01]: https://github.com/PowerShell/PSScriptAnalyzer/tree/main/PSCompatibilityCollector
 [02]: https://github.com/PowerShell/PSScriptAnalyzer/tree/main/PSCompatibilityCollector/optional_profiles

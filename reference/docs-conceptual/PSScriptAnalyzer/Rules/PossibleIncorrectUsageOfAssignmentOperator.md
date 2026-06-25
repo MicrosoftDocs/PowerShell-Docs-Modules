@@ -1,5 +1,5 @@
 ---
-description: Use equality operator (==) instead of an equal sign (=) as an assignment operator
+description: Use equality operator instead of an equal signs
 ms.date: 06/05/2026
 ms.topic: reference
 title: PossibleIncorrectUsageOfAssignmentOperator
@@ -33,8 +33,7 @@ expression in extra parentheses. An exception applies when `$null` is used on th
 because there's no use case for it. For example:
 
 ```powershell
-if (($shortVariableName = $SuperLongVariableName['SpecialItem']['AnotherItem']))
-{
+if (($shortVariableName = $SuperLongVariableName['SpecialItem']['AnotherItem'])) {
     ...
 }
 ```
@@ -74,6 +73,5 @@ if ($a = Get-Something) # Only execute action if command returns something and a
 ```
 
 <!-- link references -->
-
 [01]: /powershell/module/microsoft.powershell.core/about/about_assignment_operators
 [02]: /powershell/module/microsoft.powershell.core/about/about_comparison_operators#-eq-and--ne

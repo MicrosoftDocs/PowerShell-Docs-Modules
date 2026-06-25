@@ -39,6 +39,5 @@ $SecureUserInput = Read-Host 'Please enter your secure code' -AsSecureString
 ```
 
 <!-- links reference -->
-
 [01]: /dotnet/api/system.security.securestring
 [02]: https://www.powershellgallery.com/packages/Microsoft.PowerShell.SecretStore

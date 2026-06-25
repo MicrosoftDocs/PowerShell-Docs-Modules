@@ -10,8 +10,8 @@ title: AvoidShouldContinueWithoutForce
 
 ## Description
 
-This rule detects functions that use `ShouldContinue` without a boolean `Force` parameter. Functions
-that use `ShouldContinue` should have a boolean `Force` parameter to allow users to bypass the
+This rule detects functions that use `ShouldContinue` without a **Force** parameter. Functions that
+use `ShouldContinue` should have a boolean `Force` parameter to allow users to bypass the
 confirmation prompt.
 
 When using `ShouldContinue` in advanced functions, call it after the
@@ -60,6 +60,5 @@ Function Test-ShouldContinue
 ```
 
 <!-- link references -->
-
 [01]: /powershell/module/microsoft.powershell.core/about/about_functions_cmdletbindingattribute
 [02]: /powershell/module/microsoft.powershell.core/about/about_functions_advanced_methods

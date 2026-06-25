@@ -34,6 +34,5 @@ Invoke-WebRequest foo
 ```
 
 <!-- links reference -->
-
 [01]: /powershell/module/microsoft.powershell.utility/invoke-webrequest
 [02]: /powershell/module/microsoft.powershell.utility/invoke-restmethod

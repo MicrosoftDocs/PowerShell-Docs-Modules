@@ -1,5 +1,5 @@
 ---
-description: Avoid invoking empty members
+description: Avoid invoking empty members.
 ms.date: 05/28/2026
 ms.topic: reference
 title: AvoidInvokingEmptyMembers
@@ -34,5 +34,4 @@ $MyString.('length')
 ```
 
 <!-- link references -->
-
 [01]: /powershell/module/microsoft.powershell.core/about/about_operators#member-access-operator-

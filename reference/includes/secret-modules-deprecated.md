@@ -7,9 +7,9 @@ ms.topic: include
 <!-- markdownlint-disable first-line-h1 -->
 
 > [!IMPORTANT]
-> The PowerShell team has decided that Secret modules are is feature complete and will no longer
-> be actively developed. The modules will continue to be supported for security and critical bug
-> fixes. The code repository will be archived.
+> The PowerShell team has decided that Secret modules are feature complete and will no longer be
+> actively developed. The modules will continue to be supported for security and critical bug fixes.
+> The code repository has been archived.
 >
 > The latest versions published are:
 > - [Microsoft.PowerShell.SecretManagement v1.1.2][1.1.2]

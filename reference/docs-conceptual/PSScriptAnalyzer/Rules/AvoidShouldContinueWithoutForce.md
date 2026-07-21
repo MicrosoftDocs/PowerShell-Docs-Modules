@@ -74,4 +74,4 @@ this rule:
 <!-- Link references -->
 [01]: /powershell/module/microsoft.powershell.core/about/about_functions_cmdletbindingattribute
 [02]: /powershell/module/microsoft.powershell.core/about/about_functions_advanced_methods
-[03]: ../using-scriptanalyzer.md<!-- link references -->
+[03]: ../using-scriptanalyzer.md

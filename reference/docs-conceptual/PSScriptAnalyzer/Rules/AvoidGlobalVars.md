@@ -68,8 +68,6 @@ this rule:
 - Add the appropriate rule suppression attributes to your code to suppress the rule for specific
   code blocks. For more information, see the _Suppressing rules_ section of [Using PSScriptAnalyzer][04].
 
-<!-- Link references -->
-
 <!-- link references -->
 [01]: /powershell/module/microsoft.powershell.core/about/about_automatic_variables
 [02]: /powershell/module/microsoft.powershell.core/about/about_preference_variables

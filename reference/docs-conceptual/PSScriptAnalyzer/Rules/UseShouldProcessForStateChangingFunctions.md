@@ -8,7 +8,7 @@ title: UseShouldProcessForStateChangingFunctions
 
 **Severity Level: Warning**
 
-
+**Default state: Always enabled**
 
 ## Description
 

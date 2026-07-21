@@ -1,12 +1,14 @@
 ---
 description: Use single cmdlet nouns
-ms.date: 06/11/2026
+ms.date: 07/21/2026
 ms.topic: reference
 title: UseSingularNouns
 ---
 # UseSingularNouns
 
 **Severity Level: Warning**
+
+**Default state: Enabled**
 
 ## Description
 
@@ -46,7 +48,7 @@ function Get-File
 }
 ```
 
-## Configuration
+## Configure rule
 
 ```powershell
 Rules = @{

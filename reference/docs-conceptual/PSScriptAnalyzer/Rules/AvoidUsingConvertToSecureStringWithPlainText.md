@@ -1,12 +1,14 @@
 ---
 description: Avoid Using SecureString With Plain Text
-ms.date: 06/01/2026
+ms.date: 07/21/2026
 ms.topic: reference
 title: AvoidUsingConvertToSecureStringWithPlainText
 ---
 # AvoidUsingConvertToSecureStringWithPlainText
 
 **Severity Level: Error**
+
+**Default state: Always enabled**
 
 ## Description
 
@@ -38,6 +40,17 @@ $EncryptedInput = ConvertTo-SecureString -String $UserInput -AsPlainText -Force
 $SecureUserInput = Read-Host 'Please enter your secure code' -AsSecureString
 ```
 
-<!-- links reference -->
+## Configure rule
+
+This rule is always enabled and isn't configurable. Use one of the following methods to avoid using
+this rule:
+
+- Create a custom rule configuration file to include only the rules you want or exclude the rules
+  you don't want.
+- Add the appropriate rule suppression attributes to your code to suppress the rule for specific
+  code blocks. For more information, see the _Suppressing rules_ section of [Using PSScriptAnalyzer][03].
+
+<!-- Link references -->
 [01]: /dotnet/api/system.security.securestring
 [02]: https://www.powershellgallery.com/packages/Microsoft.PowerShell.SecretStore
+[03]: ../using-scriptanalyzer.md

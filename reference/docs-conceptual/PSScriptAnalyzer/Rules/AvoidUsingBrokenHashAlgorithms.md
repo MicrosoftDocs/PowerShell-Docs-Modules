@@ -1,12 +1,14 @@
 ---
 description: Avoid using broken hash algorithms
-ms.date: 06/01/2026
+ms.date: 07/21/2026
 ms.topic: reference
 title: AvoidUsingBrokenHashAlgorithms
 ---
 # AvoidUsingBrokenHashAlgorithms
 
 **Severity Level: Warning**
+
+**Default state: Always enabled**
 
 ## Description
 
@@ -30,3 +32,16 @@ Get-FileHash foo.txt -Algorithm MD5
 ```powershell
 Get-FileHash foo.txt -Algorithm SHA256
 ```
+
+## Configure rule
+
+This rule is always enabled and isn't configurable. Use one of the following methods to avoid using
+this rule:
+
+- Create a custom rule configuration file to include only the rules you want or exclude the rules
+  you don't want.
+- Add the appropriate rule suppression attributes to your code to suppress the rule for specific
+  code blocks. For more information, see the _Suppressing rules_ section of [Using PSScriptAnalyzer][02].
+
+<!-- Link references -->
+[02]: ../using-scriptanalyzer.md

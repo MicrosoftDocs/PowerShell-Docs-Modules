@@ -1,12 +1,14 @@
 ---
 description: Avoid sending credentials and secrets over unencrypted connections
-ms.date: 06/01/2026
+ms.date: 07/21/2026
 ms.topic: reference
 title: AvoidUsingAllowUnencryptedAuthentication
 ---
 # AvoidUsingAllowUnencryptedAuthentication
 
 **Severity Level: Warning**
+
+**Default state: Always enabled**
 
 ## Description
 
@@ -33,6 +35,17 @@ Invoke-WebRequest foo -AllowUnencryptedAuthentication
 Invoke-WebRequest foo
 ```
 
-<!-- links reference -->
+## Configure rule
+
+This rule is always enabled and isn't configurable. Use one of the following methods to avoid using
+this rule:
+
+- Create a custom rule configuration file to include only the rules you want or exclude the rules
+  you don't want.
+- Add the appropriate rule suppression attributes to your code to suppress the rule for specific
+  code blocks. For more information, see the _Suppressing rules_ section of [Using PSScriptAnalyzer][03].
+
+<!-- Link references -->
 [01]: /powershell/module/microsoft.powershell.utility/invoke-webrequest
 [02]: /powershell/module/microsoft.powershell.utility/invoke-restmethod
+[03]: ../using-scriptanalyzer.md

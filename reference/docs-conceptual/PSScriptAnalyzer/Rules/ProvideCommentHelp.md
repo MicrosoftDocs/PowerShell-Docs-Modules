@@ -1,12 +1,14 @@
 ---
 description: Basic comment help
-ms.date: 06/05/2026
+ms.date: 07/21/2026
 ms.topic: reference
 title: ProvideCommentHelp
 ---
 # ProvideCommentHelp
 
-**Severity Level: Info**
+**Severity Level: Information**
+
+**Default state: Enabled**
 
 ## Description
 
@@ -74,7 +76,7 @@ function Get-File
 }
 ```
 
-## Configuration
+## Configure rule
 
 ```powershell
 Rules = @{

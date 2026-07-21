@@ -1,12 +1,14 @@
 ---
 description: Use consistent whitespace in PowerShell code
-ms.date: 06/10/2026
+ms.date: 07/21/2026
 ms.topic: reference
 title: UseConsistentWhitespace
 ---
 # UseConsistentWhitespace
 
 **Severity Level: Warning**
+
+**Default state: Disabled**
 
 ## Description
 

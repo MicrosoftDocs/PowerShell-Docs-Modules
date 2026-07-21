@@ -1,6 +1,6 @@
 ---
 description: Avoid long lines
-ms.date: 06/01/2026
+ms.date: 07/21/2026
 ms.topic: reference
 title: AvoidLongLines
 ---
@@ -8,11 +8,12 @@ title: AvoidLongLines
 
 **Severity Level: Warning**
 
+**Default state: Disabled**
+
 ## Description
 
 This rule detects lines that exceed the configured maximum length, including leading spaces
-(indentation). The default maximum line length is 120 characters. This rule is **disabled** by
-default and must be explicitly enabled through rule configuration settings.
+(indentation). The default maximum line length is 120 characters.
 
 ## Example
 

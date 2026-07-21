@@ -1,12 +1,14 @@
 ---
 description: Use exact casing for cmdlet names, functions, and parameters
-ms.date: 06/10/2026
+ms.date: 07/21/2026
 ms.topic: reference
 title: UseCorrectCasing
 ---
 # UseCorrectCasing
 
 **Severity Level: Information**
+
+**Default state: Disabled**
 
 ## Description
 
@@ -46,7 +48,7 @@ foreach ($file in Get-ChildItem -Recurse) {
 Invoke-Command { 'foo' } -RunAsAdministrator
 ```
 
-## Configuration
+## Configure rule
 
 ```powershell
 Rules = @{

@@ -1,12 +1,14 @@
 ---
 description: Use compatible types
-ms.date: 06/09/2026
+ms.date: 07/21/2026
 ms.topic: reference
 title: UseCompatibleTypes
 ---
 # UseCompatibleTypes
 
 **Severity Level: Warning**
+
+**Default state: Disabled**
 
 ## Description
 
@@ -154,29 +156,6 @@ PSUseCompatibleTypes    Warning                 1     The type 'System.Managemen
                                                       '5.1.17763.316' on platform 'Microsoft Windows 10 Pro'
 ```
 
-## Suppression
-
-As with other rules, you can suppress type compatibility diagnostics by adding a suppression
-attribute to the `param` block of a scriptblock.
-
-```powershell
-[System.Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSUseCompatibleTypes', '')]
-```
-
-You can also suppress the rule for specific types:
-
-```powershell
-[System.Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSUseCompatibleTypes',
-    'System.Management.Automation.Security.SystemPolicy')]
-```
-
-You can also suppress it for specific type members:
-
-```powershell
-[System.Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSUseCompatibleTypes',
-    'System.Management.Automation.LanguagePrimitives/ConvertTypeNameToPSTypeName')]
-```
-
 ## Parameters
 
 ### Enable
@@ -204,3 +183,26 @@ checks. It accepts an array of type-name strings. The default value is `@()`.
 <!-- link references -->
 [01]: https://github.com/PowerShell/PSScriptAnalyzer/tree/main/PSCompatibilityCollector
 [02]: https://github.com/PowerShell/PSScriptAnalyzer/tree/main/PSCompatibilityCollector/optional_profiles
+
+## Suppression
+
+As with other rules, you can suppress type compatibility diagnostics by adding a suppression
+attribute to the `param` block of a scriptblock.
+
+```powershell
+[System.Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSUseCompatibleTypes', '')]
+```
+
+You can also suppress the rule for specific types:
+
+```powershell
+[System.Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSUseCompatibleTypes',
+    'System.Management.Automation.Security.SystemPolicy')]
+```
+
+You can also suppress it for specific type members:
+
+```powershell
+[System.Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSUseCompatibleTypes',
+    'System.Management.Automation.LanguagePrimitives/ConvertTypeNameToPSTypeName')]
+```

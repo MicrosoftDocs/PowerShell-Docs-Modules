@@ -1,12 +1,14 @@
 ---
 description: Use patterns compatible with Constrained Language Mode (CLM)
-ms.date: 06/10/2026
+ms.date: 07/21/2026
 ms.topic: reference
 title: UseConstrainedLanguageMode
 ---
 # UseConstrainedLanguageMode
 
 **Severity Level: Warning**
+
+**Default state: Disabled**
 
 ## Description
 

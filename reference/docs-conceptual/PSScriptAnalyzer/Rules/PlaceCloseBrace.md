@@ -1,6 +1,6 @@
 ---
 description: Place close braces consistently
-ms.date: 06/05/2026
+ms.date: 07/21/2026
 ms.topic: reference
 title: PlaceCloseBrace
 ---
@@ -8,11 +8,13 @@ title: PlaceCloseBrace
 
 **Severity Level: Warning**
 
+**Default state: Disabled**
+
 ## Description
 
 This rule detects closing braces (`}`) that aren't placed on a new line by themselves or that are
 followed by empty lines. Close brace placement should follow a consistent style. It should be on a
-new line by itself and shouldn't be followed by an empty line. This rule is **disabled** by default.
+new line by itself and shouldn't be followed by an empty line.
 
 ## Example
 
@@ -33,7 +35,7 @@ if ($true) {
 Get-Process
 ```
 
-## Configuration
+## Configure rule
 
 ```powershell
 Rules = @{

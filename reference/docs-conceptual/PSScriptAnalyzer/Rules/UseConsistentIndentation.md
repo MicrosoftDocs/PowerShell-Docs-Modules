@@ -1,6 +1,6 @@
 ---
 description: Use consistent indentation
-ms.date: 06/09/2026
+ms.date: 07/21/2026
 ms.topic: reference
 title: UseConsistentIndentation
 ---
@@ -8,10 +8,12 @@ title: UseConsistentIndentation
 
 **Severity Level: Warning**
 
+**Default state: Disabled**
+
 ## Description
 
 This rule detects inconsistent indentation patterns within a source file. Indentation should be
-consistent throughout your script. This rule is **disabled** by default.
+consistent throughout your script.
 
 ## Example
 

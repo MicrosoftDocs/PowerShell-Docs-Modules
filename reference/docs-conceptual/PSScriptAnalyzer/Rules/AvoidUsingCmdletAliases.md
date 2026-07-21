@@ -59,10 +59,8 @@ file content to the following.
 }
 ```
 
-## Configure rule
-
-This rule is always enabled and isn't configurable. Use one of the following methods to avoid using
-this rule:
+While this rule is configurable, it's always enabled. Use one of the following methods to avoid
+using this rule:
 
 - Create a custom rule configuration file to include only the rules you want or exclude the rules
   you don't want.

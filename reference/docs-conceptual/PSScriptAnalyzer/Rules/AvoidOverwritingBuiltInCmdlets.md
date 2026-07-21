@@ -54,9 +54,9 @@ following lines in your settings file.
 
 ```powershell
 @{
-    Enable  = $true
     Rules = @{
         PSAvoidOverwritingBuiltInCmdlets = @{
+            Enable            = $true
             PowerShellVersion = @('core-7.0.0-windows')
         }
     }

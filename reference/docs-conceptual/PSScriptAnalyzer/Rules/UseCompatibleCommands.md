@@ -1,12 +1,14 @@
 ---
 description: Use compatible commands
-ms.date: 06/09/2026
+ms.date: 07/21/2026
 ms.topic: reference
 title: UseCompatibleCommands
 ---
 # UseCompatibleCommands
 
 **Severity Level: Warning**
+
+**Default state: Disabled**
 
 ## Description
 
@@ -132,29 +134,6 @@ function Get-OsInfo {
 }
 ```
 
-## Suppression
-
-As with other rules, you can suppress command compatibility diagnostics by adding a suppression
-attribute to the `param` block of a scriptblock.
-
-```powershell
-[System.Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSUseCompatibleCommands', '')]
-```
-
-You can also suppress the rule for specific commands:
-
-```powershell
-[System.Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSUseCompatibleCommands',
-    'Start-Service')]
-```
-
-You can also suppress it for specific parameters:
-
-```powershell
-[System.Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSUseCompatibleCommands',
-    'Import-Module/FullyQualifiedName')]
-```
-
 ## Parameters
 
 ### Enable
@@ -182,3 +161,26 @@ command-name strings. The default value is `@()`.
 <!-- link references -->
 [01]: https://github.com/PowerShell/PSScriptAnalyzer/tree/main/PSCompatibilityCollector
 [02]: https://github.com/PowerShell/PSScriptAnalyzer/tree/main/PSCompatibilityCollector/optional_profiles
+
+## Suppression
+
+As with other rules, you can suppress command compatibility diagnostics by adding a suppression
+attribute to the `param` block of a scriptblock.
+
+```powershell
+[System.Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSUseCompatibleCommands', '')]
+```
+
+You can also suppress the rule for specific commands:
+
+```powershell
+[System.Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSUseCompatibleCommands',
+    'Start-Service')]
+```
+
+You can also suppress it for specific parameters:
+
+```powershell
+[System.Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSUseCompatibleCommands',
+    'Import-Module/FullyQualifiedName')]
+```

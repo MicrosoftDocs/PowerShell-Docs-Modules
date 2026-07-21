@@ -1,12 +1,14 @@
 ---
 description: Align assignment statement
-ms.date: 06/12/2026
+ms.date: 07/21/2026
 ms.topic: reference
 title: AlignAssignmentStatement
 ---
 # AlignAssignmentStatement
 
 **Severity Level: Warning**
+
+**Default state: Disabled**
 
 ## Description
 
@@ -51,7 +53,7 @@ enum Enum {
 }
 ```
 
-## Configuration
+## Configure rule
 
 ```powershell
 Rules = @{

@@ -1,6 +1,6 @@
 ---
 description: Changing automatic variables might have undesired side effects
-ms.date: 06/12/2026
+ms.date: 07/21/2026
 ms.topic: reference
 title: AvoidAssignmentToAutomaticVariable
 ---
@@ -8,26 +8,20 @@ title: AvoidAssignmentToAutomaticVariable
 
 **Severity Level: Warning**
 
+**Default state: Always enabled**
+
 ## Description
 
-This rule detects assignments to automatic variables and parameter names that use automatic variable
-names. PowerShell automatically defines variables that store internal state information and manages
-them on its own. Even though you _can_ override many automatic variables, doing so can have
-unexpected effects for users and make your code harder to maintain and debug.
+Avoid using automatic variable names in your functions and parameters. This rule detects assignments
+to automatic variables and parameter names that use automatic variable names. PowerShell
+automatically defines variables that store internal state information and manages them on its own.
+Even though you _can_ override many automatic variables, doing so can have unexpected effects for
+users and make your code harder to maintain and debug.
 
-Avoid using automatic variable names in your functions and parameters. Reserve automatic variables
-for PowerShell's internal use only, and rely on them only to read state information.
+Reserve automatic variables for PowerShell's internal use only, and rely on them only to read state
+information.
 
 To learn more, see [about_Automatic_Variables][01].
-
-<!-- TODO
-Ability to suppress was added in https://github.com/PowerShell/PSScriptAnalyzer/pull/1896
-Need documentation for how to configure suppression of this rule.
--->
-
-## How
-
-Use variable names in functions or their parameters that do not conflict with automatic variables.
 
 ## Example
 
@@ -50,6 +44,16 @@ function Get-CustomErrorMessage($ErrorMessage){ $Error = "Error occurred: $Error
 function Get-CustomErrorMessage($ErrorMessage){ $FinalErrorMessage = "Error occurred: $ErrorMessage" }
 ```
 
-<!-- Link reference definitions -->
+## Configure rule
 
+This rule is always enabled and isn't configurable. Use one of the following methods to avoid using
+this rule:
+
+- Create a custom rule configuration file to include only the rules you want or exclude the rules
+  you don't want.
+- Add the appropriate rule suppression attributes to your code to suppress the rule for specific
+  code blocks. For more information, see the _Suppressing rules_ section of [Using PSScriptAnalyzer][02].
+
+<!-- Link references -->
 [01]: /powershell/module/microsoft.powershell.core/about/about_automatic_variables
+[02]: ../using-scriptanalyzer.md

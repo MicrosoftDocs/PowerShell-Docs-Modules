@@ -1,12 +1,14 @@
 ---
 description: Use compatible cmdlets
-ms.date: 06/08/2026
+ms.date: 07/21/2026
 ms.topic: reference
 title: UseCompatibleCmdlets
 ---
 # UseCompatibleCmdlets
 
 **Severity Level: Warning**
+
+**Default state: Always enabled**
 
 ## Description
 
@@ -25,7 +27,7 @@ Where:
 - `<psversion>` is the PowerShell version
 - `<os>` is `Windows`, `Linux`, `Linux-Arm`, or `MacOS`
 
-## Example
+## Configure rule
 
 To check whether your script is compatible with PowerShell Core 6.1 on Windows, add this
 configuration:
@@ -61,5 +63,14 @@ name under `compatibility`.
 The `core-6.0.2-*` files were removed in PSScriptAnalyzer 1.18 because PowerShell 6.0 reached its
 end of life.
 
+While the rule is configurable, the rule is always enabled. Use one of the following methods to
+avoid using this rule:
+
+- Create a custom rule configuration file to include only the rules you want or exclude the rules
+  you don't want.
+- Add the appropriate rule suppression attributes to your code to suppress the rule for specific
+  code blocks. For more information, see the _Suppressing rules_ section of [Using PSScriptAnalyzer][02].
+
 <!-- link references -->
 [01]: https://github.com/PowerShell/PSScriptAnalyzer/blob/main/Utils/New-CommandDataFile.ps1
+[02]: ../using-scriptanalyzer.md

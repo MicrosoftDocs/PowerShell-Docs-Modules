@@ -1,12 +1,14 @@
 ---
 description: Use the PowerShell equality operator (-eq) instead of assignment (=) in conditional statements
-ms.date: 06/05/2026
+ms.date: 07/21/2026
 ms.topic: reference
 title: PossibleIncorrectUsageOfAssignmentOperator
 ---
 # PossibleIncorrectUsageOfAssignmentOperator
 
 **Severity Level: Information**
+
+**Default state: Always enabled**
 
 ## Description
 
@@ -72,6 +74,17 @@ if ($a = Get-Something) # Only execute action if command returns something and a
 }
 ```
 
+## Configure rule
+
+This rule is always enabled and isn't configurable. Use one of the following methods to avoid using
+this rule:
+
+- Create a custom rule configuration file to include only the rules you want or exclude the rules
+  you don't want.
+- Add the appropriate rule suppression attributes to your code to suppress the rule for specific
+  code blocks. For more information, see the _Suppressing rules_ section of [Using PSScriptAnalyzer][03].
+
 <!-- link references -->
 [01]: /powershell/module/microsoft.powershell.core/about/about_assignment_operators
 [02]: /powershell/module/microsoft.powershell.core/about/about_comparison_operators#-eq-and--ne
+[03]: ../using-scriptanalyzer.md

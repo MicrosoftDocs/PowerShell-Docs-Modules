@@ -1,12 +1,14 @@
 ---
 description: Avoid using double quotes if the string is constant
-ms.date: 06/01/2026
+ms.date: 07/21/2026
 ms.topic: reference
 title: AvoidUsingDoubleQuotesForConstantString
 ---
 # AvoidUsingDoubleQuotesForConstantString
 
 **Severity Level: Information**
+
+**Default state: Disabled**
 
 ## Description
 
@@ -37,3 +39,20 @@ $constantValue = "I Love PowerShell"
 ```powershell
 $constantValue = 'I Love PowerShell'
 ```
+
+## Configure rule
+
+```powershell
+Rules = @{
+    PSAvoidUsingDoubleQuotesForConstantString  = @{
+        Enable = $true
+    }
+}
+```
+
+## Parameters
+
+### Enable
+
+This parameter controls whether ScriptAnalyzer checks the code against this rule. It accepts a
+boolean value. To enable this rule, set this parameter to `$true`. The default value is `$false`.

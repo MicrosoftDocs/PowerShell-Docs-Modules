@@ -1,6 +1,6 @@
 ---
 description: List of PSScriptAnalyzer rules
-ms.date: 06/25/2026
+ms.date: 07/21/2026
 ms.topic: reference
 title: List of PSScriptAnalyzer rules
 ---
@@ -46,7 +46,7 @@ title: List of PSScriptAnalyzer rules
 | [AvoidUsingEmptyCatchBlock][26]                    | Warning     | Always enabled |              |
 | [AvoidUsingInvokeExpression][27]                   | Warning     | Always enabled |              |
 | [AvoidUsingPlainTextForPassword][28]               | Warning     | Always enabled |              |
-| [AvoidUsingPositionalParameters][29]               | Warning     | Always enabled |              |
+| [AvoidUsingPositionalParameters][29]               | Information |    Enabled     |     Yes      |
 | [AvoidUsingUsernameAndPasswordParams][30]          | Error       | Always enabled |              |
 | [AvoidUsingWMICmdlet][31]                          | Warning     | Always enabled |              |
 | [AvoidUsingWriteHost][32]                          | Warning     | Always enabled |              |

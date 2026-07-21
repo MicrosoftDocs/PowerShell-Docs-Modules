@@ -1,12 +1,14 @@
 ---
 description: Use a single ValueFromPipeline parameter per parameter set
-ms.date: 06/25/2026
+ms.date: 07/21/2026
 ms.topic: reference
 title: UseSingleValueFromPipelineParameter
 ---
 # UseSingleValueFromPipelineParameter
 
 **Severity Level: Warning**
+
+**Default state: Disabled**
 
 ## Description
 
@@ -56,6 +58,23 @@ function Process-Data {
     }
 }
 ```
+
+## Configure rule
+
+```powershell
+Rules = @{
+    PSUseSingleValueFromPipelineParameter  = @{
+        Enable = $true
+    }
+}
+```
+
+## Parameters
+
+### Enable
+
+This parameter controls whether ScriptAnalyzer checks the code against this rule. It accepts a
+boolean value. To enable this rule, set this parameter to `$true`. The default value is `$false`.
 
 ## Suppression
 

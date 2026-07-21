@@ -1,6 +1,6 @@
 ---
 description: Place open braces consistently
-ms.date: 06/05/2026
+ms.date: 07/21/2026
 ms.topic: reference
 title: PlaceOpenBrace
 ---
@@ -8,11 +8,13 @@ title: PlaceOpenBrace
 
 **Severity Level: Warning**
 
+**Default state: Disabled**
+
 ## Description
 
 This rule detects opening braces (`{`) that don't follow a consistent style. Opening braces can be
 required on the same line as the preceding keyword or on the next line, based on configuration. You
-can also require a new line after the opening brace. This rule is **disabled** by default.
+can also require a new line after the opening brace.
 
 ## Example
 
@@ -33,7 +35,7 @@ if ($true) {
 }
 ```
 
-## Configuration
+## Configure rule
 
 ```powershell
 Rules = @{

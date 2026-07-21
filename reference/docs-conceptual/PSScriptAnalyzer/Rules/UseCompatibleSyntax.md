@@ -1,12 +1,14 @@
 ---
 description: Use compatible syntax
-ms.date: 06/09/2026
+ms.date: 07/21/2026
 ms.topic: reference
 title: UseCompatibleSyntax
 ---
 # UseCompatibleSyntax
 
 **Severity Level: Warning**
+
+**Default state: Disabled**
 
 ## Description
 

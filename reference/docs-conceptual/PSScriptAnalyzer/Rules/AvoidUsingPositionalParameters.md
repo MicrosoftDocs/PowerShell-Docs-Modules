@@ -1,12 +1,14 @@
 ---
 description: Avoid using positional parameters
-ms.date: 06/01/2026
+ms.date: 07/21/2026
 ms.topic: reference
 title: AvoidUsingPositionalParameters
 ---
 # AvoidUsingPositionalParameters
 
 **Severity Level: Information**
+
+**Default state: Enabled**
 
 ## Description
 

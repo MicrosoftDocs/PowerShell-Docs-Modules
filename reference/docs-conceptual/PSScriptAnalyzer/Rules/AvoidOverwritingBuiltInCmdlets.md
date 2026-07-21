@@ -1,12 +1,14 @@
 ---
 description: Avoid overwriting built-in cmdlets
-ms.date: 06/01/2026
+ms.date: 07/21/2026
 ms.topic: reference
 title: AvoidOverwritingBuiltInCmdlets
 ---
 # AvoidOverwritingBuiltInCmdlets
 
 **Severity Level: Warning**
+
+**Default state: Enabled**
 
 ## Description
 
@@ -52,9 +54,10 @@ following lines in your settings file.
 
 ```powershell
 @{
-    'Rules' = @{
-        'PSAvoidOverwritingBuiltInCmdlets' = @{
-            'PowerShellVersion' = @('core-7.0.0-windows')
+    Rules = @{
+        PSAvoidOverwritingBuiltInCmdlets = @{
+            Enable            = $true
+            PowerShellVersion = @('core-7.0.0-windows')
         }
     }
 }

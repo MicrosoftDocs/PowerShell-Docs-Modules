@@ -1,6 +1,6 @@
 ---
 description: Use consistent parameter set names and proper parameter set configuration
-ms.date: 06/09/2026
+ms.date: 07/21/2026
 ms.topic: reference
 title: UseConsistentParameterSetName
 ---
@@ -8,6 +8,8 @@ title: UseConsistentParameterSetName
 # UseConsistentParameterSetName
 
 **Severity Level: Warning**
+
+**Default state: Disabled**
 
 ## Description
 
@@ -122,7 +124,7 @@ function Get-Data {
 }
 ```
 
-## Configuration
+## Configure rule
 
 ```powershell
 Rules = @{

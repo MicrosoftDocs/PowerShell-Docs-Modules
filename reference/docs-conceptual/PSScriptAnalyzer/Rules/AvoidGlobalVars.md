@@ -1,12 +1,14 @@
 ---
 description: Avoid global variables.
-ms.date: 06/23/2026
+ms.date: 07/21/2026
 ms.topic: reference
 title: AvoidGlobalVars
 ---
 # AvoidGlobalVars
 
 **Severity Level: Warning**
+
+**Default state: Always enabled**
 
 ## Description
 
@@ -56,7 +58,18 @@ Test-NotGlobal 'bar'
 $var1
 ```
 
+## Configure rule
+
+This rule is always enabled and isn't configurable. Use one of the following methods to avoid using
+this rule:
+
+- Create a custom rule configuration file to include only the rules you want or exclude the rules
+  you don't want.
+- Add the appropriate rule suppression attributes to your code to suppress the rule for specific
+  code blocks. For more information, see the _Suppressing rules_ section of [Using PSScriptAnalyzer][04].
+
 <!-- link references -->
 [01]: /powershell/module/microsoft.powershell.core/about/about_automatic_variables
 [02]: /powershell/module/microsoft.powershell.core/about/about_preference_variables
 [03]: /powershell/module/microsoft.powershell.core/about/about_scopes
+[04]: ../using-scriptanalyzer.md

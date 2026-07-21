@@ -1,12 +1,14 @@
 ---
 description: Avoid semicolons as line terminators
-ms.date: 06/01/2026
+ms.date: 07/21/2026
 ms.topic: reference
 title: AvoidSemicolonsAsLineTerminators
 ---
 # AvoidSemicolonsAsLineTerminators
 
 **Severity Level: Warning**
+
+**Default state: Disabled**
 
 ## Description
 
@@ -15,8 +17,7 @@ line-ending semicolons are redundant and detract from code readability. Although
 statement separators on a single line, using them as line terminators is discouraged. Avoid using
 semicolons at the end of lines.
 
-This rule promotes cleaner, more maintainable code by removing unnecessary semicolons. This rule
-isn't enabled by default.
+This rule promotes cleaner, more maintainable code by removing unnecessary semicolons.
 
 ## Example
 
@@ -42,7 +43,7 @@ Install-Module -Name PSScriptAnalyzer
 $a = 1 + $b
 ```
 
-## Configuration
+## Configure rule
 
 ```powershell
 Rules = @{

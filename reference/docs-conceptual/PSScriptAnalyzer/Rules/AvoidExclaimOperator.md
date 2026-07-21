@@ -1,12 +1,14 @@
 ---
 description: Avoid exclaim operator
-ms.date: 05/28/2026
+ms.date: 07/21/2026
 ms.topic: reference
 title: AvoidExclaimOperator
 ---
 # AvoidExclaimOperator
 
 **Severity Level: Warning**
+
+**Default state: Disabled**
 
 ## Description
 
@@ -15,9 +17,6 @@ the `-not` operator instead for improved readability and consistency with PowerS
 
 The `-not` operator is more explicit and aligns with PowerShell's verbose style, making code
 easier to understand at a glance.
-
-This rule is **disabled** by default. Enable it explicitly during ScriptAnalyzer invocation if
-desired.
 
 ## Example
 
@@ -33,12 +32,7 @@ $MyVar = !$true
 $MyVar = -not $true
 ```
 
-## Parameters
-
-### Enable
-
-This parameter controls whether ScriptAnalyzer checks the code against this rule. It accepts a
-boolean value. To enable this rule, set this parameter to `$true`. The default value is `$false`.
+## Configure rule
 
 ```powershell
 Rules = @{
@@ -47,3 +41,10 @@ Rules = @{
     }
 }
 ```
+
+## Parameters
+
+### Enable
+
+This parameter controls whether ScriptAnalyzer checks the code against this rule. It accepts a
+boolean value. To enable this rule, set this parameter to `$true`. The default value is `$false`.

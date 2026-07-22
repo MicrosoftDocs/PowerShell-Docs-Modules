@@ -1,6 +1,6 @@
 ---
 description: List of PSScriptAnalyzer rules
-ms.date: 07/21/2026
+ms.date: 07/22/2026
 ms.topic: reference
 title: List of PSScriptAnalyzer rules
 ---
@@ -35,7 +35,7 @@ title: List of PSScriptAnalyzer rules
 | [AvoidReservedWordsAsFunctionNames][15]            | Warning     | Always enabled |              |
 | [AvoidSemicolonsAsLineTerminators][16]             | Warning     |    Disabled    |     Yes      |
 | [AvoidShouldContinueWithoutForce][17]              | Warning     | Always enabled |              |
-| [AvoidTrailingWhitespace][18]                      | Warning     | Always enabled |              |
+| [AvoidTrailingWhitespace][18]                      | Information | Always enabled |              |
 | [AvoidUsingAllowUnencryptedAuthentication][19]     | Warning     | Always enabled |              |
 | [AvoidUsingBrokenHashAlgorithms][20]               | Warning     | Always enabled |              |
 | [AvoidUsingCmdletAliases][21]                      | Warning     | Always enabled |     Yes      |
@@ -56,14 +56,14 @@ title: List of PSScriptAnalyzer rules
 | [DSCStandardDSCFunctionsInResource][36]            | Error       | Always enabled |              |
 | [DSCUseIdenticalMandatoryParametersForDSC][37]     | Error       | Always enabled |              |
 | [DSCUseIdenticalParametersForDSC][38]              | Error       | Always enabled |              |
-| [DSCUseVerboseMessageInDSCResource][39]            | Error       | Always enabled |              |
+| [DSCUseVerboseMessageInDSCResource][39]            | Information | Always enabled |              |
 | [MisleadingBacktick][40]                           | Warning     | Always enabled |              |
 | [MissingModuleManifestField][41]                   | Warning     | Always enabled |              |
 | [PlaceCloseBrace][42]                              | Warning     |    Disabled    |     Yes      |
 | [PlaceOpenBrace][43]                               | Warning     |    Disabled    |     Yes      |
 | [PossibleIncorrectComparisonWithNull][44]          | Warning     | Always enabled |              |
-| [PossibleIncorrectUsageOfAssignmentOperator][45]   | Warning     | Always enabled |              |
-| [PossibleIncorrectUsageOfRedirectionOperator][46]  | Warning     | Always enabled |              |
+| [PossibleIncorrectUsageOfAssignmentOperator][45]   | Information | Always enabled |              |
+| [PossibleIncorrectUsageOfRedirectionOperator][46]  | Information | Always enabled |              |
 | [ProvideCommentHelp][47]                           | Information |    Enabled     |     Yes      |
 | [ReservedCmdletChar][48]                           | Error       | Always enabled |              |
 | [ReservedParams][49]                               | Error       | Always enabled |              |

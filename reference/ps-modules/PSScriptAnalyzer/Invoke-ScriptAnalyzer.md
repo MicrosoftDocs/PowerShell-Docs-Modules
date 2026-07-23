@@ -551,8 +551,9 @@ Valid values are:
 
 You can specify one or more severity values.
 
-The parameter filters the rules violations only after running all rules, regardless of severity. To
-filter rules efficiently, use `Get-ScriptAnalyzerRule` to select the rules you want to run.
+The parameter filters the rules violations output only after running all rules. It doesn't filter
+which rules are run. To filter rules efficiently, use `Get-ScriptAnalyzerRule` to select the rules
+you want to run.
 
 ```yaml
 Type: String[]

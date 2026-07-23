@@ -55,7 +55,7 @@ Rules = @{
 This parameter controls whether ScriptAnalyzer checks the code against this rule. It accepts a
 boolean value. To enable this rule, set this parameter to `$true`. The default value is `$false`.
 
-## ParametersKind
+### ParametersKind
 
 Use this parameter to specify the type of parameter definition pattern that should be used
 consistently across all functions. It accepts a string value, which can be either `Inline` or

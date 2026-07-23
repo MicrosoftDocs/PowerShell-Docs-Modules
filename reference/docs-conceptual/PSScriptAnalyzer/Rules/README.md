@@ -63,9 +63,9 @@ title: List of PSScriptAnalyzer rules
 | [PlaceOpenBrace][43]                               | Warning     |    Disabled    |     Yes      |
 | [PossibleIncorrectComparisonWithNull][44]          | Warning     | Always enabled |              |
 | [PossibleIncorrectUsageOfAssignmentOperator][45]   | Information | Always enabled |              |
-| [PossibleIncorrectUsageOfRedirectionOperator][46]  | Information | Always enabled |              |
+| [PossibleIncorrectUsageOfRedirectionOperator][46]  | Warning     | Always enabled |              |
 | [ProvideCommentHelp][47]                           | Information |    Enabled     |     Yes      |
-| [ReservedCmdletChar][48]                           | Error       | Always enabled |              |
+| [ReservedCmdletChar][48]                           | Warning     | Always enabled |              |
 | [ReservedParams][49]                               | Error       | Always enabled |              |
 | [ReviewUnusedParameter][50]                        | Warning     | Always enabled |     Yes      |
 | [ShouldProcess][51]                                | Warning     | Always enabled |              |
@@ -74,7 +74,7 @@ title: List of PSScriptAnalyzer rules
 | [UseCmdletCorrectly][54]                           | Warning     | Always enabled |              |
 | [UseCompatibleCmdlets][55]                         | Warning     | Always enabled |     Yes      |
 | [UseCompatibleCommands][56]                        | Warning     |    Disabled    |     Yes      |
-| [UseCompatibleSyntax][57]                          | Warning     |    Disabled    |     Yes      |
+| [UseCompatibleSyntax][57]                          | Error       |    Disabled    |     Yes      |
 | [UseCompatibleTypes][58]                           | Warning     |    Disabled    |     Yes      |
 | [UseConsistentIndentation][59]                     | Warning     |    Disabled    |     Yes      |
 | [UseConsistentParameterSetName][60]                | Warning     |    Disabled    |     Yes      |

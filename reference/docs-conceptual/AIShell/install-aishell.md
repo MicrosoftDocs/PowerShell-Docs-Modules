@@ -93,7 +93,7 @@ To manually install AI Shell, follow the instructions for your platform:
 1. Install the AI Shell module from the PowerShell Gallery.
 
    ```powershell
-   Install-PSResource -Name AIShell -Preview
+   Install-PSResource -Name AIShell -Prerelease
    ```
 
 ### [macOS](#tab/macos)

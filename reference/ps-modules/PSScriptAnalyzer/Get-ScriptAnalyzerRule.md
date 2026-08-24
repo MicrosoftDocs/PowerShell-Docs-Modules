@@ -1,4 +1,4 @@
-﻿---
+---
 document type: cmdlet
 external help file: Microsoft.Windows.PowerShell.ScriptAnalyzer.dll-Help.xml
 HelpUri: https://learn.microsoft.com/powershell/module/psscriptanalyzer/get-scriptanalyzerrule?view=ps-modules&wt.mc_id=ps-gethelp

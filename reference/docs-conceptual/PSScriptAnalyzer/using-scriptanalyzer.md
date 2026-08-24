@@ -156,10 +156,8 @@ Param()
 You can create settings that describe the ScriptAnalyzer rules to include or exclude based on
 **Severity**. Use the **Settings** parameter of `Invoke-ScriptAnalyzer` to specify configuration.
 The **Settings** parameter allows you to create a custom configuration for a specific environment.
-ScriptAnalyzer support the following modes for specifying the settings file:
 
-This parameter accepts the
-following types of objects:
+This parameter accepts the following types of objects:
 
 - A path to a `.psd1` file containing a user-defined profile
 - A hashtable object containing settings

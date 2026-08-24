@@ -1,14 +1,16 @@
 ---
+document type: cmdlet
 external help file: Microsoft.Windows.PowerShell.ScriptAnalyzer.dll-Help.xml
+HelpUri: https://learn.microsoft.com/powershell/module/psscriptanalyzer/invoke-scriptanalyzer?view=ps-modules&wt.mc_id=ps-gethelp
 Module Name: PSScriptAnalyzer
-ms.date: 07/23/2026
-online version: https://learn.microsoft.com/powershell/module/psscriptanalyzer/invoke-scriptanalyzer?view=ps-modules&wt.mc_id=ps-gethelp
-schema: 2.0.0
+ms.date: 08/24/2026
+PlatyPS schema version: 2024-05-01
 ---
 
 # Invoke-ScriptAnalyzer
 
 ## SYNOPSIS
+
 Evaluates a script or module based on selected best practice rules
 
 ## SYNTAX
@@ -26,30 +28,30 @@ Invoke-ScriptAnalyzer [-Path] <string> [-CustomRulePath <string[]>] [-RecurseCus
 
 ```
 Invoke-ScriptAnalyzer [-Path] <string> -IncludeSuppressed [-CustomRulePath <string[]>]
- [-RecurseCustomRulePath] [-IncludeDefaultRules] [-ExcludeRule <string[]>]
- [-IncludeRule <string[]>] [-Severity <string[]>] [-Recurse] [-Fix] [-EnableExit]
- [-Settings <Object>] [-SaveDscDependency] [-ReportSummary] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-RecurseCustomRulePath] [-IncludeDefaultRules] [-ExcludeRule <string[]>] [-IncludeRule <string[]>]
+ [-Severity <string[]>] [-Recurse] [-Fix] [-EnableExit] [-Settings <Object>] [-SaveDscDependency]
+ [-ReportSummary] [-WhatIf] [-Confirm]
 ```
 
 ### ScriptDefinition_IncludeSuppressed
 
 ```
 Invoke-ScriptAnalyzer [-ScriptDefinition] <string> -IncludeSuppressed [-CustomRulePath <string[]>]
- [-RecurseCustomRulePath] [-IncludeDefaultRules] [-ExcludeRule <string[]>]
- [-IncludeRule <string[]>] [-Severity <string[]>] [-Recurse] [-EnableExit] [-Settings <Object>]
- [-SaveDscDependency] [-ReportSummary] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-RecurseCustomRulePath] [-IncludeDefaultRules] [-ExcludeRule <string[]>] [-IncludeRule <string[]>]
+ [-Severity <string[]>] [-Recurse] [-EnableExit] [-Settings <Object>] [-SaveDscDependency]
+ [-ReportSummary] [-WhatIf] [-Confirm]
 ```
 
 ### ScriptDefinition_SuppressedOnly
 
 ```
 Invoke-ScriptAnalyzer [-ScriptDefinition] <string> [-CustomRulePath <string[]>]
- [-RecurseCustomRulePath] [-IncludeDefaultRules] [-ExcludeRule <string[]>]
- [-IncludeRule <string[]>] [-Severity <string[]>] [-Recurse] [-SuppressedOnly] [-EnableExit]
- [-Settings <Object>] [-SaveDscDependency] [-ReportSummary] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-RecurseCustomRulePath] [-IncludeDefaultRules] [-ExcludeRule <string[]>] [-IncludeRule <string[]>]
+ [-Severity <string[]>] [-Recurse] [-SuppressedOnly] [-EnableExit] [-Settings <Object>]
+ [-SaveDscDependency] [-ReportSummary] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
+
+## ALIASES
 
 ## DESCRIPTION
 
@@ -234,6 +236,28 @@ When you use the **ScriptDefinition** parameter, the **FileName** property of th
 
 ## PARAMETERS
 
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+DefaultValue: False
+SupportsWildcards: false
+Aliases:
+- cf
+ParameterSets:
+- Name: (All)
+  Position: Named
+  IsRequired: false
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
+```
+
 ### -CustomRulePath
 
 Enter the path to a file that defines rules or a directory that contains files that define rules.
@@ -245,15 +269,21 @@ To add rules defined in subdirectories of the path, use the **RecurseCustomRuleP
 include the built-in rules, add the **IncludeDefaultRules** parameter.
 
 ```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases: CustomizedRulePath
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: True
+Type: System.String[]
+DefaultValue: None
+SupportsWildcards: true
+Aliases:
+- CustomizedRulePath
+ParameterSets:
+- Name: (All)
+  Position: Named
+  IsRequired: false
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### -EnableExit
@@ -262,15 +292,20 @@ On completion of the analysis, this parameter exits the PowerShell sessions and 
 equal to the number of error records. This can be useful in continuous integration (CI) pipeline.
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
+Type: System.Management.Automation.SwitchParameter
+DefaultValue: False
+SupportsWildcards: false
+Aliases: []
+ParameterSets:
+- Name: (All)
+  Position: Named
+  IsRequired: false
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### -ExcludeRule
@@ -289,15 +324,20 @@ If a rule is specified in both the **ExcludeRule** and **IncludeRule** collectio
 excluded.
 
 ```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: All rules are included.
-Accept pipeline input: False
-Accept wildcard characters: True
+Type: System.String[]
+DefaultValue: All rules are included.
+SupportsWildcards: true
+Aliases: []
+ParameterSets:
+- Name: (All)
+  Position: Named
+  IsRequired: false
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### -Fix
@@ -309,15 +349,26 @@ sure that you have a backup of your files when using this parameter. It tries to
 encoding but there are still some cases where the encoding can change.
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: Path_SuppressedOnly, Path_IncludeSuppressed
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
+Type: System.Management.Automation.SwitchParameter
+DefaultValue: False
+SupportsWildcards: false
+Aliases: []
+ParameterSets:
+- Name: Path_IncludeSuppressed
+  Position: Named
+  IsRequired: false
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+- Name: Path_SuppressedOnly
+  Position: Named
+  IsRequired: false
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### -IncludeDefaultRules
@@ -325,15 +376,20 @@ Accept wildcard characters: False
 Invoke default rules along with Custom rules.
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
+Type: System.Management.Automation.SwitchParameter
+DefaultValue: False
+SupportsWildcards: false
+Aliases: []
+ParameterSets:
+- Name: (All)
+  Position: Named
+  IsRequired: false
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### -IncludeRule
@@ -355,15 +411,20 @@ The **Severity** parameter takes precedence over **IncludeRule**. For example, i
 `Error`, you cannot use **IncludeRule** to include a `Warning` rule.
 
 ```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: All rules are included.
-Accept pipeline input: False
-Accept wildcard characters: True
+Type: System.String[]
+DefaultValue: All rules are included.
+SupportsWildcards: true
+Aliases: []
+ParameterSets:
+- Name: (All)
+  Position: Named
+  IsRequired: false
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### -IncludeSuppressed
@@ -371,15 +432,26 @@ Accept wildcard characters: True
 Include suppressed diagnostics in output.
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: Path_IncludeSuppressed, ScriptDefinition_IncludeSuppressed
-Aliases:
-
-Required: True
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
+Type: System.Management.Automation.SwitchParameter
+DefaultValue: False
+SupportsWildcards: false
+Aliases: []
+ParameterSets:
+- Name: Path_IncludeSuppressed
+  Position: Named
+  IsRequired: true
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+- Name: ScriptDefinition_IncludeSuppressed
+  Position: Named
+  IsRequired: true
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### -Path
@@ -393,15 +465,27 @@ To analyze files that are not in the root directory of the specified path, use a
 (`C:\Modules\MyModule\*`) or the **Recurse** parameter.
 
 ```yaml
-Type: String
-Parameter Sets: Path_SuppressedOnly, Path_IncludeSuppressed
-Aliases: PSPath
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: True
+Type: System.String
+DefaultValue: None
+SupportsWildcards: true
+Aliases:
+- PSPath
+ParameterSets:
+- Name: Path_IncludeSuppressed
+  Position: 0
+  IsRequired: true
+  ValueFromPipeline: true
+  ValueFromPipelineByPropertyName: true
+  ValueFromRemainingArguments: false
+- Name: Path_SuppressedOnly
+  Position: 0
+  IsRequired: true
+  ValueFromPipeline: true
+  ValueFromPipelineByPropertyName: true
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### -Recurse
@@ -412,15 +496,20 @@ Recurse applies only to the Path parameter value. To search the **CustomRulePath
 the **RecurseCustomRulePath** parameter.
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
+Type: System.Management.Automation.SwitchParameter
+DefaultValue: False
+SupportsWildcards: false
+Aliases: []
+ParameterSets:
+- Name: (All)
+  Position: Named
+  IsRequired: false
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### -RecurseCustomRulePath
@@ -430,15 +519,20 @@ Adds rules defined in subdirectories of the **CustomRulePath** location. By defa
 include the built-in rules, use the **IncludeDefaultRules** parameter.
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
+Type: System.Management.Automation.SwitchParameter
+DefaultValue: False
+SupportsWildcards: false
+Aliases: []
+ParameterSets:
+- Name: (All)
+  Position: Named
+  IsRequired: false
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### -ReportSummary
@@ -446,15 +540,20 @@ Accept wildcard characters: False
 Write a summary of the violations found to the host.
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
+Type: System.Management.Automation.SwitchParameter
+DefaultValue: False
+SupportsWildcards: false
+Aliases: []
+ParameterSets:
+- Name: (All)
+  Position: Named
+  IsRequired: false
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### -SaveDscDependency
@@ -471,15 +570,20 @@ module to a temp path. The temp path is then added to `$env:PSModulePath` for du
 The temp location can be found in `$LOCALAPPDATA/PSScriptAnalyzer/TempModuleDir`.
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
+Type: System.Management.Automation.SwitchParameter
+DefaultValue: False
+SupportsWildcards: false
+Aliases: []
+ParameterSets:
+- Name: (All)
+  Position: Named
+  IsRequired: false
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### -ScriptDefinition
@@ -488,53 +592,57 @@ Runs the analysis on commands, functions, or expressions in a string. You can us
 analyze statements, expressions, and functions, independent of their script context.
 
 ```yaml
-Type: String
-Parameter Sets: ScriptDefinition_IncludeSuppressed, ScriptDefinition_SuppressedOnly
-Aliases:
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: False
+Type: System.String
+DefaultValue: None
+SupportsWildcards: false
+Aliases: []
+ParameterSets:
+- Name: ScriptDefinition_IncludeSuppressed
+  Position: 0
+  IsRequired: true
+  ValueFromPipeline: true
+  ValueFromPipelineByPropertyName: true
+  ValueFromRemainingArguments: false
+- Name: ScriptDefinition_SuppressedOnly
+  Position: 0
+  IsRequired: true
+  ValueFromPipeline: true
+  ValueFromPipelineByPropertyName: true
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### -Settings
 
-A path to a file containing a user-defined profile or a hashtable object containing settings for
-ScriptAnalyzer.
+Runs `Invoke-ScriptAnalyzer` with the parameters and values specified. This parameter accepts the
+following types of objects:
 
-Runs `Invoke-ScriptAnalyzer` with the parameters and values specified in the file or hashtable.
+- A path to a `.psd1` file containing a user-defined profile
+- A hashtable object containing settings
+- The name of a built-in preset
 
-If the path or the content of the file or hashtable is invalid, it is ignored. The parameters and
-values in the profile take precedence over the same parameter and values specified at the command
-line.
-
-A Script Analyzer profile file is a text file that contains a hashtable with one or more of the
-following keys:
-
-- CustomRulePath
-- ExcludeRules
-- IncludeDefaultRules
-- IncludeRules
-- RecurseCustomRulePath
-- Rules
-- Severity
-
-The keys and values in the profile are interpreted as if they were standard parameters and values of
-`Invoke-ScriptAnalyzer`, similar to splatting. For more information, see
-[about_Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
+The parameters and values in the profile take precedence over the same parameter and values
+specified at the command line. Invalid values are ignored. You can specify multiple presets by
+separating them with a comma. You can use tab completion to see the available presets.
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: Profile
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
+Type: System.Object
+DefaultValue: None
+SupportsWildcards: false
+Aliases:
+- Profile
+ParameterSets:
+- Name: (All)
+  Position: Named
+  IsRequired: false
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### -Severity
@@ -556,15 +664,20 @@ which rules are run. To filter rules efficiently, use `Get-ScriptAnalyzerRule` t
 you want to run.
 
 ```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: All rule violations
-Accept pipeline input: False
-Accept wildcard characters: False
+Type: System.String[]
+DefaultValue: All rule violations
+SupportsWildcards: false
+Aliases: []
+ParameterSets:
+- Name: (All)
+  Position: Named
+  IsRequired: false
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### -SuppressedOnly
@@ -577,31 +690,26 @@ Returns a **SuppressedRecord** object
 To suppress a rule, use the **SuppressMessageAttribute**. For help, see the examples.
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: Path_SuppressedOnly, ScriptDefinition_SuppressedOnly
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
+Type: System.Management.Automation.SwitchParameter
+DefaultValue: False
+SupportsWildcards: false
+Aliases: []
+ParameterSets:
+- Name: Path_SuppressedOnly
+  Position: Named
+  IsRequired: false
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+- Name: ScriptDefinition_SuppressedOnly
+  Position: Named
+  IsRequired: false
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### -WhatIf
@@ -609,29 +717,35 @@ Accept wildcard characters: False
 Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
+Type: System.Management.Automation.SwitchParameter
+DefaultValue: False
+SupportsWildcards: false
+Aliases:
+- wi
+ParameterSets:
+- Name: (All)
+  Position: Named
+  IsRequired: false
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### CommonParameters
 
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
--InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
--WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+-InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+-ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-### None
+### System.String
 
-You cannot pipe input to this cmdlet.
+The **Path** and **ScriptDefinition** parameters accept a string values from the pipeline.
 
 ## OUTPUTS
 
@@ -646,8 +760,40 @@ If you use the **SuppressedOnly** parameter, `Invoke-ScriptAnalyzer` instead ret
 
 ## NOTES
 
+A Script Analyzer profile file is a `.psd1` file that contains a hashtable with one or more of the
+following keys:
+
+- CustomRulePath
+- ExcludeRules
+- IncludeDefaultRules
+- IncludeRules
+- RecurseCustomRulePath
+- Rules
+- Severity
+
+The keys and values in the profile are interpreted as if they were standard parameters and values of
+`Invoke-ScriptAnalyzer`, similar to splatting. For more information, see
+[about_Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
+
+The PSScriptAnalyzer module includes a set of built-in presets that you can use with the
+**Settings** parameter. The built-in presets are:
+
+- CmdletDesign
+- CodeFormatting
+- CodeFormattingAllman
+- CodeFormattingOTBS
+- CodeFormattingStroustrup
+- DSC
+- PSGallery
+- ScriptFunctions
+- ScriptingStyle
+- ScriptSecurity
+
+You can specify multiple presets by separating them with a comma. You can use tab completion to see
+the available presets.
+
 ## RELATED LINKS
 
-[Get-ScriptAnalyzerRule](Get-ScriptAnalyzerRule.md)
-
-[PSScriptAnalyzer on GitHub](https://github.com/PowerShell/PSScriptAnalyzer)
+- [Get-ScriptAnalyzerRule](Get-ScriptAnalyzerRule.md)
+- [PSScriptAnalyzer on GitHub](https://github.com/PowerShell/PSScriptAnalyzer)
+- [Using PSScriptAnalyzer](/powershell/utility-modules/psscriptanalyzer/using-scriptanalyzer)

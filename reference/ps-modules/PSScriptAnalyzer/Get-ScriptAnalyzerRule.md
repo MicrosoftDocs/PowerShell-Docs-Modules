@@ -1,22 +1,28 @@
 ---
+document type: cmdlet
 external help file: Microsoft.Windows.PowerShell.ScriptAnalyzer.dll-Help.xml
+HelpUri: https://learn.microsoft.com/powershell/module/psscriptanalyzer/get-scriptanalyzerrule?view=ps-modules&wt.mc_id=ps-gethelp
 Module Name: PSScriptAnalyzer
-ms.date: 12/12/2024
-online version: https://learn.microsoft.com/powershell/module/psscriptanalyzer/get-scriptanalyzerrule?view=ps-modules&wt.mc_id=ps-gethelp
-schema: 2.0.0
+ms.date: 08/24/2026
+PlatyPS schema version: 2024-05-01
 ---
 
 # Get-ScriptAnalyzerRule
 
 ## SYNOPSIS
+
 Gets the script analyzer rules on the local computer.
 
 ## SYNTAX
 
+### __AllParameterSets
+
 ```
 Get-ScriptAnalyzerRule [[-Name] <string[]>] [-CustomRulePath <string[]>] [-RecurseCustomRulePath]
- [-Severity <string[]>] [<CommonParameters>]
+ [-Severity <string[]>]
 ```
+
+## ALIASES
 
 ## DESCRIPTION
 
@@ -96,15 +102,21 @@ You can create custom rules using a .NET assembly or a PowerShell module, such a
 in the GitHub repository.
 
 ```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases: CustomizedRulePath
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: True
+Type: System.String[]
+DefaultValue: None
+SupportsWildcards: true
+Aliases:
+- CustomizedRulePath
+ParameterSets:
+- Name: (All)
+  Position: Named
+  IsRequired: false
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### -Name
@@ -113,15 +125,20 @@ Gets only rules with the specified names or name patterns. Wildcards are support
 multiple names or patterns, it gets all rules that match any of the name patterns.
 
 ```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: All rules
-Accept pipeline input: False
-Accept wildcard characters: True
+Type: System.String[]
+DefaultValue: All rules
+SupportsWildcards: true
+Aliases: []
+ParameterSets:
+- Name: (All)
+  Position: 1
+  IsRequired: false
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### -RecurseCustomRulePath
@@ -130,15 +147,20 @@ Searches the **CustomRulePath** location recursively to add rules defined in fil
 of the path. By default, `Get-ScriptAnalyzerRule` adds only the custom rules in the specified path.
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
+Type: System.Management.Automation.SwitchParameter
+DefaultValue: False
+SupportsWildcards: false
+Aliases: []
+ParameterSets:
+- Name: (All)
+  Position: Named
+  IsRequired: false
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### -Severity
@@ -150,23 +172,28 @@ Gets only rules with the specified severity values. Valid values are:
 - Error
 
 ```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: All rules
-Accept pipeline input: False
-Accept wildcard characters: False
+Type: System.String[]
+DefaultValue: All rules
+SupportsWildcards: false
+Aliases: []
+ParameterSets:
+- Name: (All)
+  Position: Named
+  IsRequired: false
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### CommonParameters
 
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
--InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
--WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+-InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+-ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -184,6 +211,5 @@ The **RuleInfo** object is a custom object created specifically for Script Analy
 
 ## RELATED LINKS
 
-[Invoke-ScriptAnalyzer](Invoke-ScriptAnalyzer.md)
-
-[PSScriptAnalyzer on GitHub](https://github.com/PowerShell/PSScriptAnalyzer)
+- [Invoke-ScriptAnalyzer](Invoke-ScriptAnalyzer.md)
+- [PSScriptAnalyzer on GitHub](https://github.com/PowerShell/PSScriptAnalyzer)

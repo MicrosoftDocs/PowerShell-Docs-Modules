@@ -1,9 +1,10 @@
 ---
+document type: cmdlet
 external help file: Microsoft.Windows.PowerShell.ScriptAnalyzer.dll-Help.xml
+HelpUri: https://learn.microsoft.com/powershell/module/psscriptanalyzer/invoke-formatter?view=ps-modules&wt.mc_id=ps-gethelp
 Module Name: PSScriptAnalyzer
-ms.date: 10/07/2021
-online version: https://learn.microsoft.com/powershell/module/psscriptanalyzer/invoke-formatter?view=ps-modules&wt.mc_id=ps-gethelp
-schema: 2.0.0
+ms.date: 08/24/2026
+PlatyPS schema version: 2024-05-01
 ---
 
 # Invoke-Formatter
@@ -14,10 +15,13 @@ Formats a script text based on the input settings or default settings.
 
 ## SYNTAX
 
+### __AllParameterSets
+
 ```
 Invoke-Formatter [-ScriptDefinition] <string> [[-Settings] <Object>] [[-Range] <int[]>]
- [<CommonParameters>]
 ```
+
+## ALIASES
 
 ## DESCRIPTION
 
@@ -97,15 +101,20 @@ values in this order:
 - ending column number
 
 ```yaml
-Type: Int32[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 3
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
+Type: System.Int32[]
+DefaultValue: None
+SupportsWildcards: false
+Aliases: []
+ParameterSets:
+- Name: (All)
+  Position: 3
+  IsRequired: false
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: true
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### -ScriptDefinition
@@ -114,15 +123,20 @@ The text of the script to be formatted represented as a string. This is not a **
 object.
 
 ```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: False
+Type: System.String
+DefaultValue: None
+SupportsWildcards: false
+Aliases: []
+ParameterSets:
+- Name: (All)
+  Position: 1
+  IsRequired: true
+  ValueFromPipeline: true
+  ValueFromPipelineByPropertyName: true
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### -Settings
@@ -130,25 +144,42 @@ Accept wildcard characters: False
 A settings hashtable or a path to a PowerShell data file (`.psd1`) that contains the settings.
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 2
-Default value: CodeFormatting
-Accept pipeline input: True
-Accept wildcard characters: False
+Type: System.Object
+DefaultValue: CodeFormatting
+SupportsWildcards: false
+Aliases: []
+ParameterSets:
+- Name: (All)
+  Position: 2
+  IsRequired: false
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: true
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### CommonParameters
 
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
--InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
--WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+-InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+-ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
+
+### System.String
+
+The **ScriptDefinition** parameter accepts a string from the pipeline.
+
+### System.Object
+
+The **Settings** parameter accepts values from the pipeline.
+
+### System.Int32[]
+
+The **Range** parameter accepts input  from the pipeline.
 
 ## OUTPUTS
 
@@ -159,3 +190,5 @@ The formatted string result.
 ## NOTES
 
 ## RELATED LINKS
+
+- [Using PSScriptAnalyzer](/powershell/utility-modules/psscriptanalyzer/using-scriptanalyzer)

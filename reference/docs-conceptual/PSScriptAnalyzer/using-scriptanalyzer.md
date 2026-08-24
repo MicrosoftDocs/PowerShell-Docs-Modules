@@ -1,6 +1,6 @@
 ---
 description: This article describes various features of PSScriptAnalyzer and how to use them.
-ms.date: 01/28/2026
+ms.date: 08/24/2026
 title: Using PSScriptAnalyzer
 ---
 # Using PSScriptAnalyzer
@@ -156,56 +156,71 @@ Param()
 You can create settings that describe the ScriptAnalyzer rules to include or exclude based on
 **Severity**. Use the **Settings** parameter of `Invoke-ScriptAnalyzer` to specify configuration.
 The **Settings** parameter allows you to create a custom configuration for a specific environment.
-ScriptAnalyzer support the following modes for specifying the settings file:
+
+This parameter accepts the following types of objects:
+
+- A path to a `.psd1` file containing a user-defined profile
+- A hashtable object containing settings
+- The name of a built-in preset
 
 ### Built-in Presets
 
-ScriptAnalyzer ships a set of built-in presets that can be used to analyze scripts. For example, if
-you want to run _PowerShell Gallery_ rules on your module, use the following command:
+ScriptAnalyzer ships a set of built-in presets that can be used to analyze scripts. The
+PSScriptAnalyzer module includes a set of built-in presets that you can use with the **Settings**
+parameter. For example, if you want to run _PowerShell Gallery_ rules on your module, use the
+following command:
 
 ```powershell
 Invoke-ScriptAnalyzer -Path /path/to/module/ -Settings PSGallery -Recurse
 ```
 
-Additionally, you can use other built-in presets, including **DSC** and **CodeFormatting**.
-These presets can be tab completed for the **Settings** parameter.
+You can specify multiple presets by separating them with a comma. You can use tab completion to see
+the available presets. The built-in presets are stored in the `Settings` folder of the
+**PSScriptAnalyzer** module. You can list the built-in presets by running the following command:
+
+```powershell
+Get-ChildItem "$($(Get-Module PSScriptAnalyzer).ModuleBase)\Settings\*.psd1"
+```
+
+```Output
+    Directory: C:\Users\sewhee\Documents\PowerShell\Modules\psscriptAnalyzer\1.25.0\Settings
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---           3/20/2026  6:41 PM          15025 CmdletDesign.psd1
+-a---           3/20/2026  6:41 PM          16330 CodeFormatting.psd1
+-a---           3/20/2026  6:41 PM          16331 CodeFormattingAllman.psd1
+-a---           3/20/2026  6:41 PM          16331 CodeFormattingOTBS.psd1
+-a---           3/20/2026  6:41 PM          16375 CodeFormattingStroustrup.psd1
+-a---           3/20/2026  6:41 PM          14674 DSC.psd1
+-a---           3/20/2026  6:41 PM          15735 PSGallery.psd1
+-a---           3/20/2026  6:41 PM          15157 ScriptFunctions.psd1
+-a---           3/20/2026  6:41 PM          14736 ScriptingStyle.psd1
+-a---           3/20/2026  6:41 PM          14985 ScriptSecurity.psd1
+```
+
+To see the rules included in a preset, you can open the `.psd1` file in a text editor.
 
 ### Explicit
 
-The following example excludes two rules from the default set of rules and any rule with a
-severity other than **Error** and **Warning**.
+The following example shows how to invoke Script Analyzer with settings that exclude two rules from
+the default set of rules and any rule with a severity other than **Error** and **Warning**.
 
 ```powershell
-# PSScriptAnalyzerSettings.psd1
-@{
+$pssaSettings = @{
     Severity=@('Error','Warning')
     ExcludeRules=@('PSAvoidUsingCmdletAliases', 'PSAvoidUsingWriteHost')
 }
+Invoke-ScriptAnalyzer -Path MyScript.ps1 -Settings $pssaSettings
 ```
 
-You can then invoke that settings file with `Invoke-ScriptAnalyzer`:
+You could also save that hashtable to a `.psd1` file and then invoke Script Analyzer with that settings file.
 
 ```powershell
 Invoke-ScriptAnalyzer -Path MyScript.ps1 -Settings PSScriptAnalyzerSettings.psd1
 ```
 
-The next example selects a few rules to execute instead of all the default rules.
-
-```powershell
-# PSScriptAnalyzerSettings.psd1
-@{
-    IncludeRules=@('PSAvoidUsingPlainTextForPassword',
-                'PSAvoidUsingConvertToSecureStringWithPlainText')
-}
-```
-
-You can then invoke that settings file:
-
-```powershell
-Invoke-ScriptAnalyzer -Path MyScript.ps1 -Settings PSScriptAnalyzerSettings.psd1
-```
-
-### Implicit
+### Implicit search
 
 If you place a settings file named `PSScriptAnalyzerSettings.psd1` in your project root,
 **PSScriptAnalyzer** discovers it when you pass the project root as the **Path** parameter.

@@ -7,7 +7,7 @@ resources:
     - repository: ReferenceAutomation
       type: git
       name: Content CI/ReferenceAutomation
-      ref: refs/heads/xdanni/dotnet10-cabgen-e2e
+      ref: refs/heads/xdanni/dotnet10
 
 extends:
   template: PowerShell/cabgen.yml@ReferenceAutomation
